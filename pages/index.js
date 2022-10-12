@@ -1,15 +1,20 @@
-import { HomeLanding } from "../comps/HomeComps/Landing/Landing";
-import About from "../comps/HomeComps/AboutUs/";
-import Objectives from "../comps/HomeComps/objectives/";
-import Projects from "../comps/projects/projects";
+import { useState } from "react";
+import Sidebar from "../comps/globalComps/sidebar";
+import HomeComp from "../comps/sect/home";
+import LGAs from "../comps/sect/LGAs";
+import StatesComp from "../comps/sect/States";
+import SummaryComp from "../comps/sect/Summary";
 
 export default function Home() {
+  const [widgetIndex, setWidgetIndex] = useState(0);
+  var Widgets = [SummaryComp, LGAs, StatesComp, HomeComp];
   return (
     <>
-      <HomeLanding />
-      <Objectives />
-      <Projects />
-      <About />
+      <Sidebar comp={setWidgetIndex} />
+      <HomeComp />
+      <LGAs />
+      <StatesComp />
+      <SummaryComp />
     </>
   );
 }

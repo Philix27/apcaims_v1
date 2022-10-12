@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "./Navbar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
@@ -9,30 +8,30 @@ export default function Navbar() {
   const _path = router.pathname;
   return (
     <>
-      <div className={styles.nav}>
-        <input type="checkbox" id="check" className={styles.check} />
-        <div className={styles.bars}>
+      <div className="nav">
+        <input type="checkbox" id="check" className="check" />
+        <div className="bars">
           <label htmlFor="check">
             <FaBars />
           </label>
         </div>
 
-        <div className={styles.nav_start}>
+        <div className="nav_start">
           <Link href="/">
             <a>
               <img
-                className={styles.logo}
+                className="logo"
                 src="/images/logo.png"
                 width={90}
                 height={45}
               />
             </a>
           </Link>
-          {/* <Image className={styles.logo} src="/images/logo.png" width={90} height={45}/> */}
-          <div className={styles.nav_bg}>
-            <ul className={styles.nav_start_list}>
-              <li className={styles.nav_start_list_item}>
-                <div className={styles.bars_close}>
+          {/* <Image className={logo} src="/images/logo.png" width={90} height={45}/> */}
+          <div className="nav_bg">
+            <ul className="nav_start_list">
+              <li className="nav_start_list_item">
+                <div className="bars_close">
                   <label htmlFor="check">
                     <FaTimes />
                   </label>
@@ -42,55 +41,51 @@ export default function Navbar() {
               <li
                 className={
                   _path == "/projects"
-                    ? styles.active_list_item
-                    : styles.nav_start_list_item
+                    ? "active_list_item"
+                    : "nav_start_list_item"
                 }
               >
                 <Link href="/projects">
-                  <a className={styles.link}>Projects</a>
+                  <a className="link">Projects</a>
                 </Link>
               </li>
               <li
                 className={
                   _path == "/pharmacist"
-                    ? styles.active_list_item
-                    : styles.nav_start_list_item
+                    ? "active_list_item"
+                    : "nav_start_list_item"
                 }
               >
                 <Link href="/pharmacist">
-                  <a className={styles.link}>Pharmacist</a>
+                  <a className="link">Pharmacist</a>
                 </Link>
               </li>
               <li
                 className={
-                  _path == "/blogs"
-                    ? styles.active_list_item
-                    : styles.nav_start_list_item
+                  _path == "/blogs" ? "active_list_item" : "nav_start_list_item"
                 }
               >
                 <Link href="/blogs">
-                  <a className={styles.link}>Blogs</a>
+                  <a className="link">Blogs</a>
                 </Link>
               </li>
               <li
                 className={
-                  _path == "/books"
-                    ? styles.active_list_item
-                    : styles.nav_start_list_item
+                  _path == "/books" ? "active_list_item" : "nav_start_list_item"
                 }
               >
                 <Link href="/books">
-                  <a className={styles.link}>Book</a>
+                  <a className="link">Book</a>
                 </Link>
               </li>
-              {/* <li className={_path == "/videos" ? styles.active_list_item : styles.nav_start_list_item}>
+              {/* <li className={_path == "/videos" ? active_list_item : nav_start_list_item}>
                                 <Link href="/videos">
-                                    <a className={styles.link}> Videos</a>
+                                    <a className={link}> Videos</a>
                                 </Link>
                             </li>
-                            <li className={_path == "/#courses" ? styles.active_list_item : styles.nav_start_list_item}>
+                            <li className={_path == "/#courses" ? active_list_item : nav_start_list_item}>
                                 <Link href="/#courses">
-                                    <a className={styles.link}> Courses</a>
+                                    <a className={link}> Courses</a>
                                 </Link>
                             </li> */}
             </ul>
