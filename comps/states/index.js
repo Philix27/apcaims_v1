@@ -8,7 +8,6 @@ import { states } from "../../constants/states";
 
 export default function StatesComp() {
   const [statesToDisplay, setStatesToDisplay] = useState(states);
-  const [deleted, setDeleted] = useState(false);
   const router = useRouter();
 
   const onSearch = (e) => {
@@ -20,6 +19,8 @@ export default function StatesComp() {
 
     setStatesToDisplay(tempList);
   };
+
+  console.log(router);
 
   return (
     <div className="section">
@@ -35,15 +36,14 @@ export default function StatesComp() {
           <tr>
             <th>No</th>
             <th>LGA</th>
-            <th>State</th>
+            <th>No. LGA</th>
           </tr>
           {statesToDisplay.map((state, index) => (
             <tr>
               <td>{index + 1}.</td>
               <td>{state.name}</td>
-
               <td>
-                <AiFillDelete onClick={(event) => deleteProduct(product)} />
+                <a href={`states/${state.statecode}`}> 12 </a>
               </td>
             </tr>
           ))}

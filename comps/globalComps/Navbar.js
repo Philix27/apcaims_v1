@@ -40,24 +40,13 @@ export default function Navbar() {
 
               <li
                 className={
-                  _path == "/projects"
-                    ? "active_list_item"
-                    : "nav_start_list_item"
-                }
-              >
-                <Link href="/projects">
-                  <a className="link">Projects</a>
-                </Link>
-              </li>
-              <li
-                className={
                   _path == "/pharmacist"
                     ? "active_list_item"
                     : "nav_start_list_item"
                 }
               >
                 <Link href="/pharmacist">
-                  <a className="link">Pharmacist</a>
+                  <a className="link">LOGIN</a>
                 </Link>
               </li>
               <li
@@ -66,7 +55,7 @@ export default function Navbar() {
                 }
               >
                 <Link href="/blogs">
-                  <a className="link">Blogs</a>
+                  <a className="link">Email</a>
                 </Link>
               </li>
               <li
@@ -75,19 +64,9 @@ export default function Navbar() {
                 }
               >
                 <Link href="/books">
-                  <a className="link">Book</a>
+                  <a className="link">USER</a>
                 </Link>
               </li>
-              {/* <li className={_path == "/videos" ? active_list_item : nav_start_list_item}>
-                                <Link href="/videos">
-                                    <a className={link}> Videos</a>
-                                </Link>
-                            </li>
-                            <li className={_path == "/#courses" ? active_list_item : nav_start_list_item}>
-                                <Link href="/#courses">
-                                    <a className={link}> Courses</a>
-                                </Link>
-                            </li> */}
             </ul>
           </div>
         </div>

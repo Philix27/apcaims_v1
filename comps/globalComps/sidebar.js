@@ -1,6 +1,4 @@
 import React from "react";
-import Link from "next/link";
-import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Sidebar() {
   return (
@@ -26,6 +24,9 @@ export default function Sidebar() {
             </a>
             <a className="link" href="/">
               <li className="sidebar_start_list_item">SUMMARY</li>
+            </a>
+            <a className="link" href="/">
+              <li className="sidebar_start_list_item">AGENTS</li>
             </a>
           </ul>
         </div>

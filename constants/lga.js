@@ -243,28 +243,81 @@ export const lgas = [
     statecode: "AKWA-IBOM",
     name: "Obot Akara",
   },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Okobo",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Onna",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Oron",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Oruk Anam",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Udung-Uko",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Ukanafun",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Uruan",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Urue-Offong/Oruko",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Uyo",
+  },
+  // Anambra State
+  {
+    statecode: "ANAMBRA",
+    name: "Aguata",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Anambra East",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Anambra West",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Anaocha",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Awka North",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Awka South",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Ayamelum",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Dunukofia",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Ekwusigo",
+  },
 ];
 
-// Okobo
-// Onna
-// Oron
-// Oruk Anam
-// Udung-Uko
-// Ukanafun
-// Uruan
-// Urue-Offong/Oruko
-// Uyo
-
-// Anambra State
-// Aguata
-// Anambra East
-// Anambra West
-// Anaocha
-// Awka North
-// Awka South
-// Ayamelum
-// Dunukofia
-// Ekwusigo
 // Idemili North
 // Idemili South
 // Ihiala

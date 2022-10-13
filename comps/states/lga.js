@@ -2,7 +2,7 @@ import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { states } from "../../constants/states";
+import { lgas } from "../../constants/states";
 
 export default function ShowLGA({ state }) {
   const [statesToDisplay, setStatesToDisplay] = useState(states);
