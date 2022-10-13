@@ -1,15 +1,14 @@
 import React from "react";
 import Head from "next/head";
 import Footer from "./globalComps/Footer/Footer";
-import Navbar from "./globalComps/Navbar/Navbar";
+import Navbar from "./globalComps/Navbar";
 
 export default function Layout(props) {
   return (
     <>
       <Head>
-        <title>Eligbue Felix</title>
+        <title>APC State | LGAs | Wards </title>
         <meta name="portfolio" content="Created by Eligbue" />
-        {/* <link rel="stylesheet" href="/styles/index.css" /> */}
       </Head>
       <Navbar />
       {props.children}
