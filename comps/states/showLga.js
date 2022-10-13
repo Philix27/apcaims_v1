@@ -1,20 +1,17 @@
 import React from "react";
 import { AiFillDelete } from "react-icons/ai";
-import { TiEdit } from "react-icons/ti";
 import { useState } from "react";
-import Axios from "axios";
 import { useRouter } from "next/router";
-import { lgas } from "../../constants/lga";
+import { states } from "../../constants/states";
 
-export default function LGAs() {
-  const [statesToDisplay, setStatesToDisplay] = useState(lgas);
+export default function ShowLGA({ state }) {
+  const [statesToDisplay, setStatesToDisplay] = useState(states);
   const router = useRouter();
 
-  // console.log(lgas);
   const onSearch = (e) => {
     const searchTerm = e.target.value;
     const tempList = [];
-    tempList = lgas.filter((product) =>
+    tempList = states.filter((product) =>
       product.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
@@ -27,7 +24,7 @@ export default function LGAs() {
         <div>
           <input
             type="search"
-            placeholder="Find a LGA..."
+            placeholder="Search for a state..."
             onChange={onSearch}
           />
         </div>
@@ -36,13 +33,16 @@ export default function LGAs() {
           <tr>
             <th>No</th>
             <th>LGA</th>
-            <th>State Code</th>
+            <th>State</th>
           </tr>
           {statesToDisplay.map((state, index) => (
             <tr>
               <td>{index + 1}.</td>
               <td>{state.name}</td>
-              <td>{state.statecode}</td>
+
+              <td>
+                <AiFillDelete onClick={(event) => deleteProduct(product)} />
+              </td>
             </tr>
           ))}
         </table>

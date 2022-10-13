@@ -31,10 +31,13 @@
   table tr {
     border-bottom: 1px solid #dddddd;
   }
-  tr:hover {
-    color: $primaryColor;
+
+  table tr:hover {
+    background-color: $primaryColor;
+    color: #fff;
     font-weight: 600;
   }
+
   tr:nth-of-type(even) {
     background-color: #f3f3f3;
   }

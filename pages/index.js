@@ -2,7 +2,7 @@ import { useState } from "react";
 import Sidebar from "../comps/globalComps/sidebar";
 import HomeComp from "../comps/sect/home";
 import LGAs from "../comps/sect/LGAs";
-import StatesComp from "../comps/sect/States";
+import StatesComp from "../comps/states";
 import SummaryComp from "../comps/sect/Summary";
 
 export default function Home() {
@@ -16,7 +16,6 @@ export default function Home() {
   if (widgetIndex == 0) {
     return (
       <div className="wrapper">
-        <Sidebar comp={setWidgetIndex} />
         <div className="comp">
           <StatesComp />
         </div>
@@ -25,28 +24,24 @@ export default function Home() {
   } else if (widgetIndex == 0) {
     return (
       <div>
-        <Sidebar comp={setWidgetIndex} />
         <LGAs />
       </div>
     );
   } else if (widgetIndex == 1) {
     return (
       <div>
-        <Sidebar comp={setWidgetIndex} />
         <StatesComp />
       </div>
     );
   } else if (widgetIndex == 2) {
     return (
       <div>
-        <Sidebar comp={setWidgetIndex} />
         <HomeComp />
       </div>
     );
   } else if (widgetIndex == 3) {
     return (
       <div>
-        <Sidebar comp={setWidgetIndex} />
         <StatesComp />
       </div>
     );

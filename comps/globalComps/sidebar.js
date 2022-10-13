@@ -9,36 +9,24 @@ export default function Sidebar() {
         <div className="sidebar_start">
           <img className="logo" src="/images/logo.png" width={90} height={45} />
           <ul className="sidebar_start_list">
-            <li className="sidebar_start_list_item">
-              <Link href="/">
-                <a className="link">HOME</a>
-              </Link>
-            </li>
-            <li className="sidebar_start_list_item">
-              <Link href="#about">
-                <a className="link">STATES</a>
-              </Link>
-            </li>
-            <li className="sidebar_start_list_item">
-              <Link href="/project">
-                <a className="link">LGAs</a>
-              </Link>
-            </li>
-            <li className="sidebar_start_list_item">
-              <Link href="#blogs">
-                <a className="link">WARDS</a>
-              </Link>
-            </li>
-            <li className="sidebar_start_list_item">
-              <Link href="#blogs">
-                <a className="link">POLLING</a>
-              </Link>
-            </li>
-            <li className="sidebar_start_list_item">
-              <Link href="#blogs">
-                <a className="link">SUMMARY</a>
-              </Link>
-            </li>
+            <a className="link" href="/">
+              <li className="sidebar_start_list_item">HOME</li>
+            </a>
+            <a className="link" href="/states">
+              <li className="sidebar_start_list_item">STATES</li>
+            </a>
+            <a className="link" href="/lga">
+              <li className="sidebar_start_list_item">LGAs</li>
+            </a>
+            <a className="link" href="/">
+              <li className="sidebar_start_list_item">WARDS</li>
+            </a>
+            <a className="link" href="/">
+              <li className="sidebar_start_list_item">POLLING</li>
+            </a>
+            <a className="link" href="/">
+              <li className="sidebar_start_list_item">SUMMARY</li>
+            </a>
           </ul>
         </div>
       </div>

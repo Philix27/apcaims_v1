@@ -1,68 +1,250 @@
-// var lgas = [];
-
 // Abia State
-// Aba North
-// Aba South
-// Arochukwu
-// Bende
-// Ikwuano
-// Isiala Ngwa North
-// Isiala Ngwa South
-// Isuikwuato
-// Obi Ngwa
-// Ohafia
-// Osisioma
-// Ugwunagbo
-// Ukwa East
-// Ukwa West
-// Umuahia North
-// Umuahia South
-// Umu Nneochi
-// Adamawa State
-// Demsa
-// Fufure
-// Ganye
-// Gayuk
-// Girei
-// Gombi
-// Hong
-// Jada
-// Lamurde
-// Madagali
-// Maiha
-// Mayo Belwa
-// Michika
-// Mubi North
-// Mubi South
-// Numan
-// Shelleng
-// Song
-// Toungo
-// Yola North
-// Yola South
-// Akwa Ibom State
-// Abak
-// Eastern Obolo
-// Eket
-// Esit Eket
-// Essien Udim
-// Etim Ekpo
-// Etinan
-// Ibeno
-// Ibesikpo Asutan
-// Ibiono-Ibom
-// Ika
-// Ikono
-// Ikot Abasi
-// Ikot Ekpene
-// Ini
-// Itu
-// Mbo
-// Mkpat-Enin
-// Nsit-Atai
-// Nsit-Ibom
-// Nsit-Ubium
-// Obot Akara
+export const lgas = [
+  {
+    statecode: "ABIA",
+    name: "Aba North",
+  },
+  {
+    statecode: "ABIA",
+    name: "Aba South",
+  },
+  {
+    statecode: "ABIA",
+    name: "Arochukwu",
+  },
+  {
+    statecode: "ABIA",
+    name: "Bende",
+  },
+  {
+    statecode: "ABIA",
+    name: "Ikwuano",
+  },
+  {
+    statecode: "ABIA",
+    name: "Isiala Ngwa North",
+  },
+  {
+    statecode: "ABIA",
+    name: "Isiala Ngwa South",
+  },
+  {
+    statecode: "ABIA",
+    name: "Isuikwuato",
+  },
+  {
+    statecode: "ABIA",
+    name: "Obi Ngwa",
+  },
+  {
+    statecode: "ABIA",
+    name: "Ohafia",
+  },
+  {
+    statecode: "ABIA",
+    name: "Osisioma",
+  },
+  {
+    statecode: "ABIA",
+    name: "Ugwunagbo",
+  },
+  {
+    statecode: "ABIA",
+    name: "Ukwa East",
+  },
+  {
+    statecode: "ABIA",
+    name: "Ukwa West",
+  },
+  {
+    statecode: "ABIA",
+    name: "Umuahia North",
+  },
+  {
+    statecode: "ABIA",
+    name: "Umuahia South",
+  },
+  {
+    statecode: "ABIA",
+    name: "Umu Nneochi",
+  },
+
+  // Adamawa State
+  {
+    statecode: "ADAMAWA",
+    name: "Demsa",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Fufure",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Ganye",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Gayuk",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Girei",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Gombi",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Hong",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Jada",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Lamurde",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Madagali",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Maiha",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Mayo Belwa",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Michika",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Mubi North",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Mubi South",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Numan",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Shelleng",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Song",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Toungo",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Yola North",
+  },
+  {
+    statecode: "ADAMAWA",
+    name: "Yola South",
+  },
+  // Akwa Ibom State
+  {
+    statecode: "AKWA-IBOM",
+    name: "Abak",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Eastern Obolo",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Eket",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Esit Eket",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Essien Udim",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Etim Ekpo",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Etinan",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Ibeno",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Ibesikpo Asutan",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Ibiono-Ibom",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Ika",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Ikono",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Ikot Abasi",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Ikot Ekpene",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Ini",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Itu",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Mbo",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Mkpat-Enin",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Nsit-Atai",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Nsit-Ibom",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Nsit-Ubium",
+  },
+  {
+    statecode: "AKWA-IBOM",
+    name: "Obot Akara",
+  },
+];
+
 // Okobo
 // Onna
 // Oron
@@ -72,6 +254,7 @@
 // Uruan
 // Urue-Offong/Oruko
 // Uyo
+
 // Anambra State
 // Aguata
 // Anambra East
