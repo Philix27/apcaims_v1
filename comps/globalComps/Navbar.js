@@ -45,7 +45,7 @@ export default function Navbar() {
                     : "nav_start_list_item"
                 }
               >
-                <Link href="/pharmacist">
+                <Link href="/">
                   <a className="link">LOGIN</a>
                 </Link>
               </li>
@@ -54,7 +54,7 @@ export default function Navbar() {
                   _path == "/blogs" ? "active_list_item" : "nav_start_list_item"
                 }
               >
-                <Link href="/blogs">
+                <Link href="/">
                   <a className="link">Email</a>
                 </Link>
               </li>
@@ -63,7 +63,7 @@ export default function Navbar() {
                   _path == "/books" ? "active_list_item" : "nav_start_list_item"
                 }
               >
-                <Link href="/books">
+                <Link href="/">
                   <a className="link">USER</a>
                 </Link>
               </li>

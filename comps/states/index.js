@@ -20,8 +20,6 @@ export default function StatesComp() {
     setStatesToDisplay(tempList);
   };
 
-  console.log(router);
-
   return (
     <div className="section">
       <div className="tableSection">
