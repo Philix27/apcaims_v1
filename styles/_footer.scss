@@ -1,0 +1,59 @@
+.footer {
+  background-color: #1662b0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20vw;
+  padding-bottom: 20px;
+  //   padding: 10px;
+  margin: 10px 0 auto;
+  @include tabletSS {
+    padding: 25px 25px;
+  }
+  @include mobileSS {
+    padding: 20px 20px;
+  }
+
+  .list_headers {
+    font-weight: 600;
+  }
+
+  .contact_list {
+    padding: 15px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    // background-color: $primaryColor;
+    padding: 20px 50px;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    line-height: 1.6;
+    bottom: 0;
+    width: 100%;
+    @include tabletSS {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 20px;
+      padding: 15px 40px;
+    }
+    @include mobileSS {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 20px;
+      padding: 10px 10px;
+    }
+  }
+
+  .Linka {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  .copyright {
+    font-size: 1.2rem;
+  }
+}

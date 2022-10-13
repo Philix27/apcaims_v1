@@ -15,9 +15,11 @@ export default function Home() {
 
   if (widgetIndex == 0) {
     return (
-      <div>
-        <StatesComp comp={setWidgetIndex} />
-        <LGAs />
+      <div className="wrapper">
+        <Sidebar comp={setWidgetIndex} />
+        <div className="comp">
+          <StatesComp />
+        </div>
       </div>
     );
   } else if (widgetIndex == 0) {

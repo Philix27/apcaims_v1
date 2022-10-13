@@ -7,6 +7,7 @@
 @import "screensize";
 @import "layouts";
 @import "typos";
+@import "table";
 @import "buttons";
 @import "navbar";
 @import "sidebar";
@@ -14,7 +15,9 @@
 @import "post_page";
 @import "posts";
 @import "pharmacist";
+@import "footer";
 @import "books_list";
+@import "footer";
 
 :root {
   --fontFamily: "Roboto", sans-serif;
@@ -27,4 +30,13 @@ body {
 
 .none {
   display: none;
+}
+
+.wrapper {
+  // padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  .comp {
+    padding-left: 20vw;
+  }
 }
