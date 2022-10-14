@@ -1,5 +1,12 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { RiDashboardFill, RiHome5Fill } from "react-icons/ri";
+import {
+  MdOutlineSupportAgent,
+  MdLocationPin,
+  MdMyLocation,
+  MdOutlineShareLocation,
+} from "react-icons/md";
 
 export default function Sidebar() {
   const router = useRouter();
@@ -17,6 +24,9 @@ export default function Sidebar() {
                   _path == "/" ? "activeItem" : "sidebar_start_list_item"
                 }
               >
+                <span>
+                  <RiHome5Fill />
+                </span>
                 HOME
               </li>
             </a>
@@ -28,6 +38,9 @@ export default function Sidebar() {
                     : "sidebar_start_list_item"
                 }
               >
+                <span>
+                  <RiDashboardFill />
+                </span>
                 DASHBOARD
               </li>
             </a>
@@ -37,6 +50,9 @@ export default function Sidebar() {
                   _path == "/states" ? "activeItem" : "sidebar_start_list_item"
                 }
               >
+                <span>
+                  <MdLocationPin />
+                </span>
                 STATES
               </li>
             </a>
@@ -46,6 +62,9 @@ export default function Sidebar() {
                   _path == "/lga" ? "activeItem" : "sidebar_start_list_item"
                 }
               >
+                <span>
+                  <MdMyLocation />
+                </span>
                 LGAs
               </li>
             </a>
@@ -55,6 +74,9 @@ export default function Sidebar() {
                   _path == "/wards" ? "activeItem" : "sidebar_start_list_item"
                 }
               >
+                <span>
+                  <MdOutlineShareLocation />{" "}
+                </span>
                 WARDS
               </li>
             </a>
@@ -65,6 +87,9 @@ export default function Sidebar() {
                   _path == "/agents" ? "activeItem" : "sidebar_start_list_item"
                 }
               >
+                <span>
+                  <MdOutlineSupportAgent />
+                </span>
                 AGENTS
               </li>
             </a>
