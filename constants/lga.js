@@ -1,5 +1,5 @@
 // Abia State
-export const lgas = [
+const ABIA = [
   {
     statecode: "ABIA",
     name: "Aba North",
@@ -68,8 +68,8 @@ export const lgas = [
     statecode: "ABIA",
     name: "Umu Nneochi",
   },
-
-  // Adamawa State
+];
+const ADAMAWA = [
   {
     statecode: "ADAMAWA",
     name: "Demsa",
@@ -154,7 +154,8 @@ export const lgas = [
     statecode: "ADAMAWA",
     name: "Yola South",
   },
-  // Akwa Ibom State
+];
+const AKWAIBOM = [
   {
     statecode: "AKWA-IBOM",
     name: "Abak",
@@ -279,7 +280,8 @@ export const lgas = [
     statecode: "AKWA-IBOM",
     name: "Uyo",
   },
-  // Anambra State
+];
+const ANAMBRA = [
   {
     statecode: "ANAMBRA",
     name: "Aguata",
@@ -316,102 +318,158 @@ export const lgas = [
     statecode: "ANAMBRA",
     name: "Ekwusigo",
   },
+  {
+    statecode: "ANAMBRA",
+    name: "Idemili North",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Idemili South",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Ihiala",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Njikoka",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Nnewi North",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Nnewi South",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Ogbaru",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Onitsha North",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Onitsha South",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Orumba North",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Orumba South",
+  },
+  {
+    statecode: "ANAMBRA",
+    name: "Oyi",
+  },
 ];
 
-// Idemili North
-// Idemili South
-// Ihiala
-// Njikoka
-// Nnewi North
-// Nnewi South
-// Ogbaru
-// Onitsha North
-// Onitsha South
-// Orumba North
-// Orumba South
-// Oyi
-// Bauchi State
-// Alkaleri
-// Bauchi
-// Bogoro
-// Damban
-// Darazo
-// Dass
-// Gamawa
-// Ganjuwa
-// Giade
-// Itas/Gadau
-// Jama'are
-// Katagum
-// Kirfi
-// Misau
-// Ningi
-// Shira
-// Tafawa Balewa
-// Toro
-// Warji
-// Zaki
-// Bayelsa State
-// Brass
-// Ekeremor
-// Kolokuma/Opokuma
-// Nembe
-// Ogbia
-// Sagbama
-// Southern Ijaw
-// Yenagoa
-// Benue State
-// Ado
-// Agatu
-// Apa
-// Buruku
-// Gboko
-// Guma
-// Gwer East
-// Gwer West
-// Katsina-Ala
-// Konshisha
-// Kwande
-// Logo
-// Makurdi
-// Obi
-// Ogbadibo
-// Ohimini
-// Oju
-// Okpokwu
-// Oturkpo
-// Tarka
-// Ukum
-// Ushongo
-// Vandeikya
+const BAUCHI = [
+  {
+    statecode: "BAUCHI",
+    name: "Alkaleri",
+  },
+  {
+    statecode: "BAUCHI",
+    name: "Bauchi",
+  },
+  {
+    statecode: "BAUCHI",
+    name: "Bogoro",
+  },
+  { statecode: "BAUCHI", name: "Bauchi" },
+  { statecode: "BAUCHI", name: "Bogoro" },
+  { statecode: "BAUCHI", name: "Damban" },
+  { statecode: "BAUCHI", name: "Darazo" },
+  { statecode: "BAUCHI", name: "Dass" },
+  { statecode: "BAUCHI", name: "Gamawa" },
+  { statecode: "BAUCHI", name: "Ganjuwa" },
+  { statecode: "BAUCHI", name: "Giade" },
+  { statecode: "BAUCHI", name: "Itas/Gadau," },
+  { statecode: "BAUCHI", name: "Jama'are" },
+  { statecode: "BAUCHI", name: "Katagum" },
+  { statecode: "BAUCHI", name: "Kirfi" },
+  { statecode: "BAUCHI", name: "Misau" },
+  { statecode: "BAUCHI", name: "Ningi" },
+  { statecode: "BAUCHI", name: "Shira" },
+  { statecode: "BAUCHI", name: "Tafawa Bal,ewa" },
+  { statecode: "BAUCHI", name: "Toro" },
+  { statecode: "BAUCHI", name: "Warji" },
+  { statecode: "BAUCHI", name: "Zaki" },
+];
+
+const BAYELSA = [
+  { statecode: "BAYELSA", name: "BAYELSA" },
+  { statecode: "BAYELSA", name: "Brass" },
+  { statecode: "BAYELSA", name: "Ekeremor" },
+  { statecode: "BAYELSA", name: "Kolokuma/Opokuma" },
+  { statecode: "BAYELSA", name: "Nembe" },
+  { statecode: "BAYELSA", name: "Ogbia" },
+  { statecode: "BAYELSA", name: "Sagbama" },
+  { statecode: "BAYELSA", name: "Southern Ijaw" },
+  { statecode: "BAYELSA", name: "Yenagoa" },
+];
+const BENUE = [
+  { statecode: "BENUE", name: "Ado" },
+  { statecode: "BENUE", name: "Agatu" },
+  { statecode: "BENUE", name: "Apa" },
+  { statecode: "BENUE", name: "Buruku" },
+  { statecode: "BENUE", name: "Gboko" },
+  { statecode: "BENUE", name: "Guma" },
+  { statecode: "BENUE", name: "Gwer East" },
+  { statecode: "BENUE", name: "Gwer West" },
+  { statecode: "BENUE", name: "Katsina-Ala" },
+  { statecode: "BENUE", name: "Konshisha" },
+  { statecode: "BENUE", name: "Kwande" },
+  { statecode: "BENUE", name: "Logo" },
+  { statecode: "BENUE", name: "Makurdi" },
+  { statecode: "BENUE", name: "Obi" },
+  { statecode: "BENUE", name: "Ogbadibo" },
+  { statecode: "BENUE", name: "Ohimini" },
+  { statecode: "BENUE", name: "Oju" },
+  { statecode: "BENUE", name: "Okpokwu" },
+  { statecode: "BENUE", name: "Oturkpo" },
+  { statecode: "BENUE", name: "Tarka" },
+  { statecode: "BENUE", name: "Ukum" },
+  { statecode: "BENUE", name: "Ushongo" },
+  { statecode: "BENUE", name: "Vandeikya" },
+];
+
 // Borno State
-// Abadam
-// Askira/Uba
-// Bama
-// Bayo
-// Biu
-// Chibok
-// Damboa
-// Dikwa
-// Gubio
-// Guzamala
-// Gwoza
-// Hawul
-// Jere
-// Kaga
-// Kala/Balge
-// Konduga
-// Kukawa
-// Kwaya Kusar
-// Mafa
-// Magumeri
-// Maiduguri
-// Marte
-// Mobbar
-// Monguno
-// Ngala
-// Nganzai
-// Shani
+const BORNO = [
+  { statecode: "BORNO", name: "Abadam" },
+  { statecode: "BORNO", name: "Askira/Uba" },
+  { statecode: "BORNO", name: "Bama" },
+  { statecode: "BORNO", name: "Bayo" },
+  { statecode: "BORNO", name: "Biu" },
+  { statecode: "BORNO", name: "Chibok" },
+  { statecode: "BORNO", name: "Damboa" },
+  { statecode: "BORNO", name: "Dikwa" },
+  { statecode: "BORNO", name: "Gubio" },
+  { statecode: "BORNO", name: "Guzamala" },
+  { statecode: "BORNO", name: "Gwoza" },
+  { statecode: "BORNO", name: "Hawul" },
+  { statecode: "BORNO", name: "Jere" },
+  { statecode: "BORNO", name: "Kaga" },
+  { statecode: "BORNO", name: "Kala/Balge" },
+  { statecode: "BORNO", name: "Konduga" },
+  { statecode: "BORNO", name: "Kukawa" },
+  { statecode: "BORNO", name: "Kwaya Kusar" },
+  { statecode: "BORNO", name: "Mafa" },
+  { statecode: "BORNO", name: "Magumeri" },
+  { statecode: "BORNO", name: "Maiduguri" },
+  { statecode: "BORNO", name: "Marte" },
+  { statecode: "BORNO", name: "Mobbar" },
+  { statecode: "BORNO", name: "Monguno" },
+  { statecode: "BORNO", name: "Ngala" },
+  { statecode: "BORNO", name: "Nganzai" },
+  { statecode: "BORNO", name: "Shani" },
+];
+
 // Cross River State
 // Cross River State is divided into the following LGAs.[3]
 
@@ -433,6 +491,7 @@ export const lgas = [
 // Ogoja
 // Yakuur
 // Yala
+
 // Delta State
 // Aniocha North
 // Aniocha South
@@ -459,6 +518,7 @@ export const lgas = [
 // Warri North
 // Warri South
 // Warri South West
+
 // Ebonyi State
 // Abakaliki
 // Afikpo North
@@ -473,6 +533,7 @@ export const lgas = [
 // Ohaozara
 // Ohaukwu
 // Onicha
+
 // Edo State
 // Akoko-Edo
 // Egor
@@ -492,6 +553,7 @@ export const lgas = [
 // Owan East
 // Owan West
 // Uhunmwonde
+
 // Ekiti State
 // Ado Ekiti
 // Efon
@@ -509,6 +571,7 @@ export const lgas = [
 // Ise/Orun
 // Moba
 // Oye
+
 // Enugu State
 // Aninri
 // Awgu
@@ -527,6 +590,7 @@ export const lgas = [
 // Udenu
 // Udi
 // Uzo-Uwani
+
 // Gombe State
 // Akko
 // Balanga
@@ -539,6 +603,7 @@ export const lgas = [
 // Nafada
 // Shongom
 // Yamaltu/Deba
+
 // Imo State
 // Aboh Mbaise
 // Ahiazu Mbaise
@@ -567,6 +632,7 @@ export const lgas = [
 // Owerri North
 // Owerri West
 // Unuimo
+
 // Jigawa State
 // Auyo
 // Babura
@@ -699,6 +765,7 @@ export const lgas = [
 // Safana
 // Sandamu
 // Zango
+
 // Kebbi State
 // Aleiro
 // Arewa
@@ -721,6 +788,7 @@ export const lgas = [
 // Danko-Wasagu
 // Yauri
 // Zuru
+
 // Kogi State
 // Adavi
 // Ajaokuta
@@ -743,6 +811,7 @@ export const lgas = [
 // Omala
 // Yagba East
 // Yagba West
+
 // Kwara State
 // Asa
 // Baruten
@@ -760,6 +829,7 @@ export const lgas = [
 // Oke Ero
 // Oyun
 // Pategi
+
 // Lagos State
 // Agege
 // Ajeromi-Ifelodun
@@ -781,6 +851,7 @@ export const lgas = [
 // Oshodi-Isolo
 // Shomolu
 // Surulere
+
 // Nasarawa State
 // Akwanga
 // Awe
@@ -795,6 +866,7 @@ export const lgas = [
 // Obi
 // Toto
 // Wamba
+
 // Niger State
 // Agaie
 // Agwara
@@ -821,6 +893,7 @@ export const lgas = [
 // Suleja
 // Tafa
 // Wushishi
+
 // Ogun State
 // Abeokuta North
 // Abeokuta South
@@ -861,6 +934,7 @@ export const lgas = [
 // Ondo West
 // Ose
 // Owo
+
 // Osun State
 // Aiyedaade
 // Aiyedire
@@ -892,6 +966,7 @@ export const lgas = [
 // Oriade
 // Orolu
 // Osogbo
+
 // Oyo State
 // Afijio
 // Akinyele
@@ -926,6 +1001,7 @@ export const lgas = [
 // Saki East
 // Saki West
 // Surulere
+
 // Plateau State
 // Bokkos
 // Barkin Ladi
@@ -944,6 +1020,7 @@ export const lgas = [
 // Riyom
 // Shendam
 // Wase
+
 // Rivers State
 // Abua/Odual
 // Ahoada East
@@ -968,6 +1045,7 @@ export const lgas = [
 // Oyigbo
 // Port Harcourt
 // Tai
+
 // Sokoto State
 // Binji
 // Bodinga
@@ -992,6 +1070,7 @@ export const lgas = [
 // Wamako
 // Wurno
 // Yabo
+
 // Taraba State
 // Ardo Kola
 // Bali
@@ -1009,6 +1088,7 @@ export const lgas = [
 // Wukari
 // Yorro
 // Zing
+
 // Yobe State
 // Bade
 // Bursari
@@ -1027,6 +1107,7 @@ export const lgas = [
 // Tarmuwa
 // Yunusari
 // Yusufari
+
 // Zamfara State
 // Anka
 // Bakura
@@ -1049,3 +1130,14 @@ export const lgas = [
 // Gwagwalada
 // Kuje
 // Kwali
+
+export const lgas = [
+  ...ABIA,
+  ...ADAMAWA,
+  ...AKWAIBOM,
+  ...ANAMBRA,
+  ...BAUCHI,
+  ...BAYELSA,
+  ...BENUE,
+  ...BORNO,
+];

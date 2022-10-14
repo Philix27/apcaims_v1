@@ -1,33 +1,10 @@
 import React from "react";
-import { AiFillDelete } from "react-icons/ai";
-import { useState } from "react";
-import { useRouter } from "next/router";
 import { lgas } from "../../constants/lga";
 
 export default function ShowLGA({ code }) {
-  const [statesToDisplay, setStatesToDisplay] = useState(lgas);
-
-  const onSearch = (e) => {
-    const searchTerm = e.target.value;
-    const tempList = [];
-    tempList = states.filter((product) =>
-      product.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-
-    setStatesToDisplay(tempList);
-  };
-
   return (
     <div className="section specificLGA">
       <div className="tableSection">
-        <div>
-          <input
-            type="search"
-            placeholder="Search for a state..."
-            onChange={onSearch}
-          />
-        </div>
-
         <table>
           <tr>
             <th>No</th>
@@ -63,13 +40,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context;
-
-  // console.log("Params Parameter");
-  // console.log(params);
   const filteredLga = lgas.filter((v) =>
     v.statecode.toLowerCase().includes(params.lga.toLowerCase())
   );
-  // console.log(`Filtered: ${filteredLga}`);
   return {
     props: {
       code: filteredLga,
