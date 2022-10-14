@@ -20,6 +20,17 @@ export default function Sidebar() {
                 HOME
               </li>
             </a>
+            <a className="link" href="/dashboard">
+              <li
+                className={
+                  _path == "/dashboard"
+                    ? "activeItem"
+                    : "sidebar_start_list_item"
+                }
+              >
+                DASHBOARD
+              </li>
+            </a>
             <a className="link" href="/states">
               <li
                 className={
@@ -48,15 +59,6 @@ export default function Sidebar() {
               </li>
             </a>
 
-            <a className="link" href="/">
-              <li
-                className={
-                  _path == "/summary" ? "activeItem" : "sidebar_start_list_item"
-                }
-              >
-                SUMMARY
-              </li>
-            </a>
             <a className="link" href="/">
               <li
                 className={
