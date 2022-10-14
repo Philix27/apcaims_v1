@@ -1,12 +1,11 @@
 .sidebar {
   height: 100vh;
-  /* align-items: center; */
   background-color: $primaryColor;
   /* background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)); */
   display: flex;
   width: 20vw;
-  height: 100%;
-  /* position: absolute; */
+  // height: 100%;
+  align-content: space-between;
   position: fixed;
   top: 0;
   /* right: 0; */
@@ -23,7 +22,12 @@
     /* margin-right: 40px; */
     /* mar  */
   }
-
+  .sidebar_end {
+    align-items: center;
+    // display: block;
+    // width: 100%;
+    color: #fff;
+  }
   .sidebar_start_list {
     display: flex;
     flex-direction: column;
@@ -43,6 +47,15 @@
     display: block;
     border-bottom: #112d4e solid 1px;
     // font-size: 2rem;
+  }
+  .activeItem {
+    padding: 19px 20px;
+    align-items: center;
+    display: block;
+    border-bottom: #112d4e solid 1px;
+    color: $primaryColor;
+    font-weight: 700;
+    background-color: $background1;
   }
 
   .sidebar_start_list_item:hover {

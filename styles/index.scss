@@ -42,6 +42,14 @@ body {
       padding-left: 0;
     }
   }
+  img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    @include mobileSS {
+      height: 55vh;
+    }
+  }
 }
 
 .specificLGA {

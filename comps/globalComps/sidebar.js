@@ -1,6 +1,10 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 export default function Sidebar() {
+  const router = useRouter();
+  const _path = router.pathname;
+
   return (
     <>
       <div className="sidebar">
@@ -8,25 +12,59 @@ export default function Sidebar() {
           <img className="logo" src="/images/logo.png" width={90} height={45} />
           <ul className="sidebar_start_list">
             <a className="link" href="/">
-              <li className="sidebar_start_list_item">HOME</li>
+              <li
+                className={
+                  _path == "/" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                HOME
+              </li>
             </a>
             <a className="link" href="/states">
-              <li className="sidebar_start_list_item">STATES</li>
+              <li
+                className={
+                  _path == "/states" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                STATES
+              </li>
             </a>
             <a className="link" href="/lga">
-              <li className="sidebar_start_list_item">LGAs</li>
+              <li
+                className={
+                  _path == "/lga" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                LGAs
+              </li>
             </a>
             <a className="link" href="/">
-              <li className="sidebar_start_list_item">WARDS</li>
+              <li
+                className={
+                  _path == "/wards" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                WARDS
+              </li>
+            </a>
+
+            <a className="link" href="/">
+              <li
+                className={
+                  _path == "/summary" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                SUMMARY
+              </li>
             </a>
             <a className="link" href="/">
-              <li className="sidebar_start_list_item">POLLING</li>
-            </a>
-            <a className="link" href="/">
-              <li className="sidebar_start_list_item">SUMMARY</li>
-            </a>
-            <a className="link" href="/">
-              <li className="sidebar_start_list_item">AGENTS</li>
+              <li
+                className={
+                  _path == "/agents" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                AGENTS
+              </li>
             </a>
           </ul>
         </div>
