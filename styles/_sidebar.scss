@@ -13,6 +13,9 @@
   @include mobileSS {
     display: none;
   }
+  @include tabletSS {
+    display: none;
+  }
   .sidebar_start {
     align-items: center;
     display: block;

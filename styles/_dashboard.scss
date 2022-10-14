@@ -1,0 +1,53 @@
+.dashboard {
+  display: grid;
+  padding-left: 22vw;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 80px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  @include tabletSS {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 80px 20px;
+  }
+  @include mobileSS {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 80px 20px;
+  }
+
+  .card {
+    min-height: 100px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    display: block;
+
+    .topbar {
+      height: 15px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      //   background-color: rgb(157, 8, 8);
+    }
+    .content {
+      padding: 20px;
+    }
+
+    .red {
+      background-color: rgb(157, 8, 8);
+    }
+    .green {
+      background-color: green;
+    }
+    .orange {
+      background-color: orange;
+    }
+    .teal {
+      background-color: rgb(4, 122, 169);
+    }
+    .purple {
+      background-color: rgb(125, 4, 169);
+    }
+  }
+}
