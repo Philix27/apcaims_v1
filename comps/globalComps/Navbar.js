@@ -22,12 +22,14 @@ export default function Navbar() {
               <img
                 className="logo"
                 src="/images/logo.png"
-                width={90}
-                height={45}
+                width={50}
+                height={40}
               />
             </a>
           </Link>
-          {/* <Image className={logo} src="/images/logo.png" width={90} height={45}/> */}
+          <div className="title">
+            <h3>APC DATA CAPTURE</h3>
+          </div>
           <div className="nav_bg">
             <ul className="nav_start_list">
               <li className="nav_start_list_item">

@@ -14,6 +14,16 @@
   position: fixed;
   top: 0;
 
+  .title {
+    color: #fff;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    height: 100%;
+    padding-left: 50px;
+    padding-top: 10px;
+  }
+
   .nav_start {
     display: flex;
     width: 100%;
