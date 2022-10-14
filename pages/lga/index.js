@@ -1,5 +1,5 @@
 import React from "react";
-import LGAs from "../comps/sect/LGAs";
+import LGAs from "../../comps/lga";
 
 export default function States() {
   return (
