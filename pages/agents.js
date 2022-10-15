@@ -1,5 +1,13 @@
 import React from "react";
+import Head from "next/head";
 
 export default function AgentsPage() {
-  return <div>AgentsPage</div>;
+  return (
+    <div>
+      <Head>
+        <title>APCAIMS | Agents</title>
+      </Head>
+      AgentsPage
+    </div>
+  );
 }

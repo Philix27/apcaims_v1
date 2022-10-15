@@ -80,6 +80,18 @@ export default function Sidebar() {
                 WARDS
               </li>
             </a>
+            <a className="link" href="/">
+              <li
+                className={
+                  _path == "/wards" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                <span>
+                  <MdOutlineShareLocation />{" "}
+                </span>
+                Polling Units
+              </li>
+            </a>
 
             <a className="link" href="/">
               <li

@@ -1,8 +1,13 @@
 import React from "react";
+import Head from "next/head";
 
 export default function Dashboard() {
   return (
     <div className="dashboard">
+      <Head>
+        <title>APCAIMS | Dashboard</title>
+      </Head>
+
       <div className="card">
         <div className="topbar red"></div>
         <div className="content">
