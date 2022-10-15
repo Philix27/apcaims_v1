@@ -1,8 +1,5 @@
 import React from "react";
-import { AiFillDelete } from "react-icons/ai";
-import { TiEdit } from "react-icons/ti";
 import { useState } from "react";
-import Axios from "axios";
 import { useRouter } from "next/router";
 import { states } from "../../constants/states";
 
@@ -23,7 +20,7 @@ export default function StatesComp() {
   return (
     <div className="section">
       <div className="tableSection">
-        <div>
+        <div className="input">
           <input
             type="search"
             placeholder="Search for a state..."

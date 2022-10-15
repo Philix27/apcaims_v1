@@ -24,7 +24,7 @@ export default function LGAs() {
   return (
     <div className="section">
       <div className="tableSection">
-        <div>
+        <div className="input">
           <input
             type="search"
             placeholder="Find a LGA..."

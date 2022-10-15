@@ -6,7 +6,7 @@ export const agents = [
     name: "Philix",
     lga: "Arugungu",
     statecode: "KEBBI",
-    img: "",
+    img: "images/profile2.jpg",
     userStatus: "LG-AGENT",
   },
   {
@@ -16,7 +16,7 @@ export const agents = [
     name: "Iyanu",
     lga: "Arugungu",
     statecode: "KEBBI",
-    img: "",
+    img: "images/profile2.jpg",
     userStatus: "LG-AGENT",
   },
   {
@@ -26,7 +26,7 @@ export const agents = [
     name: "Kabri",
     lga: "Arugungu",
     statecode: "KEBBI",
-    img: "",
+    img: "images/profile.jpeg",
     userStatus: "LG-AGENT",
   },
   {
@@ -36,7 +36,7 @@ export const agents = [
     name: "Ochuko",
     lga: "Arugungu",
     statecode: "KEBBI",
-    img: "",
+    img: "images/profile2.jpg",
     userStatus: "LG-AGENT",
   },
   {
@@ -46,7 +46,7 @@ export const agents = [
     name: "Mustapha",
     lga: "Arugungu",
     statecode: "KEBBI",
-    img: "",
+    img: "images/profile.jpeg",
     userStatus: "LG-AGENT",
   },
 ];

@@ -23,16 +23,17 @@ export default function AgentsComp() {
   return (
     <div className="section">
       <div className="tableSection">
-        <div>
+        <div className="input">
           <input
             type="search"
-            placeholder="Search for a state..."
+            placeholder="Search for an agent"
             onChange={onSearch}
           />
         </div>
         <table>
           <tr>
             <th>No</th>
+            <th>Img</th>
             <th>Name</th>
             <th>Email</th>
             <th>LGA</th>
@@ -44,6 +45,9 @@ export default function AgentsComp() {
           {statesToDisplay.map((state, index) => (
             <tr>
               <td>{index + 1}.</td>
+              <td>
+                <img src={state.img} alt={state.name}></img>
+              </td>
               <td>{state.name}</td>
               <td>{state.email}</td>
               <td>{state.lga}</td>
