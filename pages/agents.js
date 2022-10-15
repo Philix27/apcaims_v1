@@ -1,13 +1,16 @@
 import React from "react";
 import Head from "next/head";
+import AgentsComp from "../comps/agents";
 
 export default function AgentsPage() {
   return (
-    <div>
+    <div className="wrapper">
       <Head>
         <title>APCAIMS | Agents</title>
       </Head>
-      AgentsPage
+      <div className="comp">
+        <AgentsComp />
+      </div>
     </div>
   );
 }

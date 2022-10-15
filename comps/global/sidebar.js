@@ -6,6 +6,7 @@ import {
   MdLocationPin,
   MdMyLocation,
   MdOutlineShareLocation,
+  MdGroups,
 } from "react-icons/md";
 
 export default function Sidebar() {
@@ -92,15 +93,14 @@ export default function Sidebar() {
                 Polling Units
               </li>
             </a>
-
-            <a className="link" href="/">
+            <a className="link" href="/agents">
               <li
                 className={
                   _path == "/agents" ? "activeItem" : "sidebar_start_list_item"
                 }
               >
                 <span>
-                  <MdOutlineSupportAgent />
+                  <MdGroups />
                 </span>
                 AGENTS
               </li>
