@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { states } from "../constants/states";
-import { lgas } from "../constants/lga";
+import { states } from "../../constants/states";
+import { lgas } from "../../constants/lga";
 
 export default function AddPepNotesComp({ title }) {
   // const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}pep_note/`;

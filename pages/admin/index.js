@@ -13,11 +13,11 @@ export default function Dashboard() {
           <h3>AGENTS</h3>
           <p>All agents</p>
           <div className="btnDiv">
-            <Link className="btn" href="/">
-              View All
+            <Link href="/">
+              <a className="btn">View All</a>
             </Link>
-            <Link className="btn" href="/addagent">
-              Add
+            <Link href="/admin/addagent">
+              <a className="btn"> Add</a>
             </Link>
           </div>
         </div>
@@ -28,11 +28,11 @@ export default function Dashboard() {
           <h3>State Representative</h3>
           <p>Each representing a state </p>
           <div className="btnDiv">
-            <Link className="btn" href="/">
-              View All
+            <Link href="/">
+              <a className="btn">View All</a>
             </Link>
-            <Link className="btn" href="/">
-              Add
+            <Link href="/">
+              <a className="btn"> Add</a>
             </Link>
           </div>
         </div>
@@ -43,11 +43,11 @@ export default function Dashboard() {
           <h3>LGA</h3>
           <p>All Local Government Areas</p>
           <div className="btnDiv">
-            <Link className="btn" href="/">
-              View All
+            <Link href="/">
+              <a className="btn">View All</a>
             </Link>
-            <Link className="btn" href="/">
-              Add
+            <Link href="/">
+              <a className="btn"> Add</a>
             </Link>
           </div>
         </div>
@@ -58,11 +58,11 @@ export default function Dashboard() {
           <h3>Ward</h3>
           <p>Wards under each Local Government</p>
           <div className="btnDiv">
-            <Link className="btn" href="/">
-              View All
+            <Link href="/">
+              <a className="btn">View All</a>
             </Link>
-            <Link className="btn" href="/">
-              Add
+            <Link href="/">
+              <a className="btn"> Add</a>
             </Link>
           </div>
         </div>
@@ -74,11 +74,11 @@ export default function Dashboard() {
           <h3>Polling Units</h3>
           <p>Units in each Wards</p>
           <div className="btnDiv">
-            <Link className="btn" href="/">
-              View All
+            <Link href="/">
+              <a className="btn">View All</a>
             </Link>
-            <Link className="btn" href="/">
-              Add
+            <Link href="/">
+              <a className="btn"> Add</a>
             </Link>
           </div>
         </div>
