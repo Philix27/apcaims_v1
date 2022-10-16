@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { states } from "../../constants/states";
-import { lgas } from "../../constants/lga";
+import { states } from "../constants/states";
+import { lgas } from "../constants/lga";
 
 export default function AddPepNotesComp({ title }) {
   // const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}pep_note/`;
@@ -23,28 +23,28 @@ export default function AddPepNotesComp({ title }) {
     "HOUSE OF REP",
     "STATE HOUSE OF ASSEMBLY",
   ];
-  function postArticle(_article) {
-    Axios.post("https://rxedu-api.vercel.app/api/v1/pep_mcq_demo", article)
-      .then((response) => {
-        setIsSuccessful(true);
+  //   function postArticle(_article) {
+  //     Axios.post("https://rxedu-api.vercel.app/api/v1/pep_mcq_demo", article)
+  //       .then((response) => {
+  //         setIsSuccessful(true);
 
-        setArticle({
-          category: "PEP",
-          title: "",
-          content: "",
-          imageUrl: "",
-        });
-        // console.log("Successfully Sent to: " + apiUrl);
+  //         setArticle({
+  //           category: "PEP",
+  //           title: "",
+  //           content: "",
+  //           imageUrl: "",
+  //         });
+  //         // console.log("Successfully Sent to: " + apiUrl);
 
-        setTimeout(() => {
-          setIsSuccessful(false);
-        }, 5000);
-      })
-      .catch((e) => {
-        console.log(e);
-        console.log("Opps an error ocured");
-      });
-  }
+  //         setTimeout(() => {
+  //           setIsSuccessful(false);
+  //         }, 5000);
+  //       })
+  //       .catch((e) => {
+  //         console.log(e);
+  //         console.log("Opps an error ocured");
+  //       });
+  //   }
 
   const handleChange = (e) => {
     const name = e.target.name;

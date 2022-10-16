@@ -1,11 +1,11 @@
-import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Dashboard() {
   return (
     <div className="dashboard">
       <Head>
-        <title>APCAIMS | Dashboard</title>
+        <title>APCAIMS | ADMIN</title>
       </Head>
       <div className="card">
         <div className="topbar red"></div>
@@ -13,10 +13,12 @@ export default function Dashboard() {
           <h3>AGENTS</h3>
           <p>All agents</p>
           <div className="btnDiv">
-            <a className="btn"> View All</a>
-            <a className="btn" href="/admin/addagent">
+            <Link className="btn" href="/">
+              View All
+            </Link>
+            <Link className="btn" href="/addagent">
               Add
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -26,8 +28,12 @@ export default function Dashboard() {
           <h3>State Representative</h3>
           <p>Each representing a state </p>
           <div className="btnDiv">
-            <a className="btn"> View All</a>
-            <a className="btn"> Add</a>
+            <Link className="btn" href="/">
+              View All
+            </Link>
+            <Link className="btn" href="/">
+              Add
+            </Link>
           </div>
         </div>
       </div>
@@ -37,8 +43,12 @@ export default function Dashboard() {
           <h3>LGA</h3>
           <p>All Local Government Areas</p>
           <div className="btnDiv">
-            <a className="btn"> View All</a>
-            <a className="btn"> Add</a>
+            <Link className="btn" href="/">
+              View All
+            </Link>
+            <Link className="btn" href="/">
+              Add
+            </Link>
           </div>
         </div>
       </div>
@@ -48,8 +58,12 @@ export default function Dashboard() {
           <h3>Ward</h3>
           <p>Wards under each Local Government</p>
           <div className="btnDiv">
-            <a className="btn"> View All</a>
-            <a className="btn"> Add</a>
+            <Link className="btn" href="/">
+              View All
+            </Link>
+            <Link className="btn" href="/">
+              Add
+            </Link>
           </div>
         </div>
       </div>
@@ -60,8 +74,12 @@ export default function Dashboard() {
           <h3>Polling Units</h3>
           <p>Units in each Wards</p>
           <div className="btnDiv">
-            <a className="btn"> View All</a>
-            <a className="btn"> Add</a>
+            <Link className="btn" href="/">
+              View All
+            </Link>
+            <Link className="btn" href="/">
+              Add
+            </Link>
           </div>
         </div>
       </div>
