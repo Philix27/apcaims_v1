@@ -33,18 +33,22 @@ export default function LGAs() {
         </div>
 
         <table>
-          <tr>
-            <th>No</th>
-            <th>LGA</th>
-            <th>State Code</th>
-          </tr>
-          {statesToDisplay.map((state, index) => (
+          <thead>
             <tr>
-              <td>{index + 1}.</td>
-              <td>{state.name}</td>
-              <td>{state.statecode}</td>
+              <th>No</th>
+              <th>LGA</th>
+              <th>State Code</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {statesToDisplay.map((state, index) => (
+              <tr key={index}>
+                <td>{index + 1}.</td>
+                <td>{state.name}</td>
+                <td>{state.statecode}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>

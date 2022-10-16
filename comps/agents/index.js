@@ -31,42 +31,46 @@ export default function AgentsComp() {
           />
         </div>
         <table>
-          <tr>
-            <th>No</th>
-            <th>Img</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>LGA</th>
-            <th>Phone</th>
-            <th>Status</th>
-            <th>Edit Status</th>
-            <th>Delete</th>
-          </tr>
-          {statesToDisplay.map((state, index) => (
+          <thead>
             <tr>
-              <td>{index + 1}.</td>
-              <td>
-                <img src={state.img} alt={state.name}></img>
-              </td>
-              <td>{state.name}</td>
-              <td>{state.email}</td>
-              <td>{state.lga}</td>
-              <td>{state.phone}</td>
-              <td>
-                {state.isApproved ? (
-                  <FcApproval className="icon" />
-                ) : (
-                  <FcDisapprove className="icon" />
-                )}
-              </td>
-              <td>
-                <AiFillEdit className="green icon" />
-              </td>
-              <td>
-                <AiFillDelete className="red icon" />
-              </td>
+              <th>No</th>
+              <th>Img</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>LGA</th>
+              <th>Phone</th>
+              <th>Status</th>
+              <th>Edit Status</th>
+              <th>Delete</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {statesToDisplay.map((state, index) => (
+              <tr key={index}>
+                <td>{index + 1}.</td>
+                <td>
+                  <img src={state.img} alt={state.name}></img>
+                </td>
+                <td>{state.name}</td>
+                <td>{state.email}</td>
+                <td>{state.lga}</td>
+                <td>{state.phone}</td>
+                <td>
+                  {state.isApproved ? (
+                    <FcApproval className="icon" />
+                  ) : (
+                    <FcDisapprove className="icon" />
+                  )}
+                </td>
+                <td>
+                  <AiFillEdit className="green icon" />
+                </td>
+                <td>
+                  <AiFillDelete className="red icon" />
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>

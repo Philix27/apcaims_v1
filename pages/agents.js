@@ -4,7 +4,7 @@ import AgentsComp from "../comps/agents";
 
 export default function AgentsPage() {
   return (
-    <div className="wrapper">
+    <div className="agentsWrapper">
       <Head>
         <title>APCAIMS | Agents</title>
       </Head>
