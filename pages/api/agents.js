@@ -1,4 +1,4 @@
-import connectMongo from "../../utils/connectMongo";
+import connectMongo from "../../api/connectMongo";
 import AgentsKit from "../../api/controller/agents";
 import express from "express";
 

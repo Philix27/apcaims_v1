@@ -1,6 +1,6 @@
 import { Schema, model, models } from "mongoose";
 
-const StateRepSchema = new Schema({
+const stateRepSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -11,7 +11,19 @@ const StateRepSchema = new Schema({
   },
 });
 
-const StateRep = models.StateRepSchema || model("staterep", StateRepSchema);
+// const StateRep = () => {
+//   if (models.StateRep) {
+//     // StateRep = models.StateRepSchema;
+//     return models.StateRepSchema;
+//   } else {
+//     // models.StateRepSchema;
+//     return model("staterep", StateRepSchema);
+//   }
+// };
+
+// const StateRep = models.StateRep || model("staterep", stateRepSchema);
 // const StateRep = model("staterep", StateRepSchema);
 
-export default StateRep;
+module.exports = models.Staterep || model("Staterep", stateRepSchema);
+
+// export default StateRep;

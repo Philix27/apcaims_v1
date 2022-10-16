@@ -2,8 +2,14 @@ import mongoose from "mongoose";
 
 const connectMongo = async () => {
   console.log("Connecting to mongo");
-  mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URI);
-  console.log("CONNECTED to mongo");
+
+  if (mongoose.connections[0].readyState) {
+    console.log(`connected already`);
+  } else {
+    mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URI, () => {
+      console.log("CONNECTED to mongo");
+    });
+  }
 };
 
 export default connectMongo;

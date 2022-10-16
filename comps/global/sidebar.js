@@ -7,6 +7,7 @@ import {
   MdMyLocation,
   MdOutlineShareLocation,
   MdGroups,
+  MdAdminPanelSettings,
 } from "react-icons/md";
 
 export default function Sidebar() {
@@ -103,6 +104,18 @@ export default function Sidebar() {
                   <MdGroups />
                 </span>
                 AGENTS
+              </li>
+            </a>
+            <a className="link" href="/admin">
+              <li
+                className={
+                  _path == "/agents" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                <span>
+                  <MdAdminPanelSettings />
+                </span>
+                ADMIN
               </li>
             </a>
           </ul>

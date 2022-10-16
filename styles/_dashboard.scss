@@ -33,6 +33,20 @@
     .content {
       padding: 20px;
     }
+    .btnDiv {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .btn {
+      background-color: $primaryColor;
+      width: 35%;
+    }
+
+    .btn:hover {
+      background-color: #022044;
+    }
 
     .red {
       background-color: rgb(157, 8, 8);

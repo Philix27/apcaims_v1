@@ -2,10 +2,10 @@ import asyncWrapper from "../asyncWrapper";
 import StateRep from "../models/stateRep";
 import customError from "../customErrors";
 
-const getAll = asyncWrapper(async (req, res, next) => {
+const getAll = async (req, res) => {
   const data = await StateRep.find().sort("name");
   res.status(201).json({ data, length: data.length });
-});
+};
 
 const create = asyncWrapper(async (req, res) => {
   const data = await StateRep.create(req.body);
