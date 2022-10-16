@@ -6,7 +6,7 @@
   width: 30vw;
   height: 3.5rem;
   margin: 20px 0;
-  background-color: #022044;
+  background-color: $primaryColor;
   font-size: 1.45rem;
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@
   color: #fff;
 
   &:hover {
-    background-color: $primaryColor;
+    background-color: #022044;
   }
 
   &:focus {

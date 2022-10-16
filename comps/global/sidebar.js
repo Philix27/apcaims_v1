@@ -109,7 +109,7 @@ export default function Sidebar() {
             <a className="link" href="/admin">
               <li
                 className={
-                  _path == "/admin" ? "activeItem" : "sidebar_start_list_item"
+                  _path == "/admin/" ? "activeItem" : "sidebar_start_list_item"
                 }
               >
                 <span>

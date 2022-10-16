@@ -5,6 +5,7 @@
 @import "colors";
 @import "mixins";
 @import "screensize";
+@import "dashboard";
 @import "layouts";
 @import "typos";
 @import "table";
@@ -18,7 +19,7 @@
 @import "footer";
 @import "books_list";
 @import "footer";
-@import "dashboard";
+@import "form";
 
 :root {
   --fontFamily: "Roboto", sans-serif;
@@ -59,6 +60,19 @@ body {
     padding-left: 0;
   }
 }
+
+.formsPage {
+  padding-left: 20vw;
+  @include mobileSS {
+    padding-left: 0;
+  }
+
+  .h2 {
+    font-weight: lighter;
+    font-size: small;
+  }
+}
+
 .red {
   color: rgb(195, 8, 8);
 }

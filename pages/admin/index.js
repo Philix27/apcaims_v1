@@ -7,7 +7,6 @@ export default function Dashboard() {
       <Head>
         <title>APCAIMS | Dashboard</title>
       </Head>
-
       <div className="card">
         <div className="topbar red"></div>
         <div className="content">
@@ -15,7 +14,9 @@ export default function Dashboard() {
           <p>All agents</p>
           <div className="btnDiv">
             <a className="btn"> View All</a>
-            <a className="btn"> Add</a>
+            <a className="btn" href="/admin/addagent">
+              Add
+            </a>
           </div>
         </div>
       </div>
@@ -52,6 +53,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+
       <div className="card">
         <div className="topbar purple"></div>
         <div className="content">
