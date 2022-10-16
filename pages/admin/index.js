@@ -13,7 +13,7 @@ export default function Dashboard() {
           <h3>AGENTS</h3>
           <p>All agents</p>
           <div className="btnDiv">
-            <Link href="/">
+            <Link href="/agents">
               <a className="btn">View All</a>
             </Link>
             <Link href="/admin/addagent">
@@ -25,8 +25,8 @@ export default function Dashboard() {
       <div className="card">
         <div className="topbar orange"></div>
         <div className="content">
-          <h3>State Representative</h3>
-          <p>Each representing a state </p>
+          <h3>PRESIDENTIAL</h3>
+          <p>45 Agents</p>
           <div className="btnDiv">
             <Link href="/">
               <a className="btn">View All</a>
@@ -40,8 +40,8 @@ export default function Dashboard() {
       <div className="card">
         <div className="topbar green"></div>
         <div className="content">
-          <h3>LGA</h3>
-          <p>All Local Government Areas</p>
+          <h3>GUBERNATORIAL</h3>
+          <p>76 Agents</p>
           <div className="btnDiv">
             <Link href="/">
               <a className="btn">View All</a>
@@ -55,8 +55,8 @@ export default function Dashboard() {
       <div className="card">
         <div className="topbar teal"></div>
         <div className="content">
-          <h3>Ward</h3>
-          <p>Wards under each Local Government</p>
+          <h3>SENATORIAL</h3>
+          <p>89 Agents</p>
           <div className="btnDiv">
             <Link href="/">
               <a className="btn">View All</a>
@@ -67,12 +67,26 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-
       <div className="card">
         <div className="topbar purple"></div>
         <div className="content">
-          <h3>Polling Units</h3>
-          <p>Units in each Wards</p>
+          <h3>HOUSE OF REPRESENTATIVES</h3>
+          <p>67 Agents</p>
+          <div className="btnDiv">
+            <Link href="/">
+              <a className="btn">View All</a>
+            </Link>
+            <Link href="/">
+              <a className="btn"> Add</a>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="card">
+        <div className="topbar blood"></div>
+        <div className="content">
+          <h3>STATE HOUSE OF ASSEMBLY</h3>
+          <p>67 Agents</p>
           <div className="btnDiv">
             <Link href="/">
               <a className="btn">View All</a>

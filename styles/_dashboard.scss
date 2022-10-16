@@ -2,7 +2,7 @@
   display: grid;
   padding-left: 22vw;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 40px;
   padding-top: 80px;
   padding-right: 40px;
   padding-bottom: 40px;
@@ -63,6 +63,9 @@
     }
     .purple {
       background-color: rgb(125, 4, 169);
+    }
+    .blood {
+      background-color: rgb(213, 62, 8);
     }
   }
 }

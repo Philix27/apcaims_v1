@@ -4,7 +4,7 @@ import Head from "next/head";
 
 export default function States() {
   return (
-    <div className="wrapper">
+    <div className="lgaWrapper">
       <div className="comp">
         <Head>
           <title>APCAIMS | LGA</title>

@@ -20,7 +20,7 @@ export default function AddPepNotesComp({ title }) {
     "PRESIDENTIAL",
     "GUBERNATORIAL",
     "SENATORIAL",
-    "HOUSE OF REP",
+    "HOUSE OF REPRESENTATIVES",
     "STATE HOUSE OF ASSEMBLY",
   ];
   //   function postArticle(_article) {

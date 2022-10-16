@@ -32,7 +32,7 @@ export default function Sidebar() {
                 HOME
               </li>
             </a>
-            <a className="link" href="/dashboard">
+            {/* <a className="link" href="/dashboard">
               <li
                 className={
                   _path == "/dashboard"
@@ -45,7 +45,7 @@ export default function Sidebar() {
                 </span>
                 DASHBOARD
               </li>
-            </a>
+            </a> */}
             <a className="link" href="/states">
               <li
                 className={
@@ -70,7 +70,7 @@ export default function Sidebar() {
                 LGAs
               </li>
             </a>
-            <a className="link" href="/">
+            {/* <a className="link" href="/">
               <li
                 className={
                   _path == "/wards" ? "activeItem" : "sidebar_start_list_item"
@@ -81,8 +81,8 @@ export default function Sidebar() {
                 </span>
                 WARDS
               </li>
-            </a>
-            <a className="link" href="/">
+            </a> */}
+            {/* <a className="link" href="/">
               <li
                 className={
                   _path == "/wards" ? "activeItem" : "sidebar_start_list_item"
@@ -93,8 +93,8 @@ export default function Sidebar() {
                 </span>
                 Polling Units
               </li>
-            </a>
-            <a className="link" href="/agents">
+            </a> */}
+            {/* <a className="link" href="/agents">
               <li
                 className={
                   _path == "/agents" ? "activeItem" : "sidebar_start_list_item"
@@ -105,7 +105,7 @@ export default function Sidebar() {
                 </span>
                 AGENTS
               </li>
-            </a>
+            </a> */}
             <a className="link" href="/admin">
               <li
                 className={

@@ -4,7 +4,7 @@ import Head from "next/head";
 
 export default function States() {
   return (
-    <div className="wrapper">
+    <div className="statesWrapper">
       <Head>
         <title>APCAIMS | States</title>
       </Head>

@@ -1,0 +1,22 @@
+.statesWrapper {
+  display: flex;
+  flex-direction: row;
+
+  .comp {
+    padding-left: 20vw;
+    @include mobileSS {
+      padding-left: 0;
+    }
+  }
+}
+.lgaWrapper {
+  display: flex;
+  flex-direction: row;
+
+  .comp {
+    padding-left: 20vw;
+    @include mobileSS {
+      padding-left: 0;
+    }
+  }
+}
