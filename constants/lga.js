@@ -655,311 +655,325 @@ const JIGAWA = [
   { statecode: "JIGAWA", name: "Yankwashi" },
 ];
 
-//  { statecode: "EBONYI", name: Kaduna State
-//  { statecode: "EBONYI", name: Birnin Gwari
-//  { statecode: "EBONYI", name: Chikun
-//  { statecode: "EBONYI", name: Giwa
-//  { statecode: "EBONYI", name: Igabi
-//  { statecode: "EBONYI", name: Ikara
-//  { statecode: "EBONYI", name: Jaba
-//  { statecode: "EBONYI", name: Jema'a
-//  { statecode: "EBONYI", name: Kachia
-//  { statecode: "EBONYI", name: Kaduna North
-//  { statecode: "EBONYI", name: Kaduna South
-//  { statecode: "EBONYI", name: Kagarko
-//  { statecode: "EBONYI", name: Kajuru
-//  { statecode: "EBONYI", name: Kaura
-//  { statecode: "EBONYI", name: Kauru
-//  { statecode: "EBONYI", name: Kubau
-//  { statecode: "EBONYI", name: Kudan
-//  { statecode: "EBONYI", name: Lere
-//  { statecode: "EBONYI", name: Makarfi
-//  { statecode: "EBONYI", name: Sabon Gari
-//  { statecode: "EBONYI", name: Sanga
-//  { statecode: "EBONYI", name: Soba
-//  { statecode: "EBONYI", name: Zangon Kataf
-//  { statecode: "EBONYI", name: Zaria
-//  { statecode: "EBONYI", name: Kano State
-//  { statecode: "EBONYI", name: Ajingi
-//  { statecode: "EBONYI", name: Albasu
-//  { statecode: "EBONYI", name: Bagwai
-//  { statecode: "EBONYI", name: Bebeji
-//  { statecode: "EBONYI", name: Bichi
-//  { statecode: "EBONYI", name: Bunkure
-//  { statecode: "EBONYI", name: Dala
-//  { statecode: "EBONYI", name: Dambatta
-//  { statecode: "EBONYI", name: Dawakin Kudu
-//  { statecode: "EBONYI", name: Dawakin Tofa
-//  { statecode: "EBONYI", name: Doguwa
-//  { statecode: "EBONYI", name: Fagge
-//  { statecode: "EBONYI", name: Gabasawa
-//  { statecode: "EBONYI", name: Garko
-//  { statecode: "EBONYI", name: Garun Mallam
-//  { statecode: "EBONYI", name: Gaya
-//  { statecode: "EBONYI", name: Gezawa
-//  { statecode: "EBONYI", name: Gwale
-//  { statecode: "EBONYI", name: Gwarzo
-//  { statecode: "EBONYI", name: Kabo
-//  { statecode: "EBONYI", name: Kano Municipal
-//  { statecode: "EBONYI", name: Karaye
-//  { statecode: "EBONYI", name: Kibiya
-//  { statecode: "EBONYI", name: Kiru
-//  { statecode: "EBONYI", name: Kumbotso
-//  { statecode: "EBONYI", name: Kunchi
-//  { statecode: "EBONYI", name: Kura
-//  { statecode: "EBONYI", name: Madobi
-//  { statecode: "EBONYI", name: Makoda
-//  { statecode: "EBONYI", name: Minjibir
-//  { statecode: "EBONYI", name: Nasarawa
-//  { statecode: "EBONYI", name: Rano
-//  { statecode: "EBONYI", name: Rimin Gado
-//  { statecode: "EBONYI", name: Rogo
-//  { statecode: "EBONYI", name: Shanono
-//  { statecode: "EBONYI", name: Sumaila
-//  { statecode: "EBONYI", name: Takai
-//  { statecode: "EBONYI", name: Tarauni
-//  { statecode: "EBONYI", name: Tofa
-//  { statecode: "EBONYI", name: Tsanyawa
-//  { statecode: "EBONYI", name: Tudun Wada
-//  { statecode: "EBONYI", name: Ungogo
-//  { statecode: "EBONYI", name: Warawa
-//  { statecode: "EBONYI", name: Wudil
-//  { statecode: "EBONYI", name: Katsina State
-//  { statecode: "EBONYI", name: Bakori
-//  { statecode: "EBONYI", name: Batagarawa
-//  { statecode: "EBONYI", name: Batsari
-//  { statecode: "EBONYI", name: Baure
-//  { statecode: "EBONYI", name: Bindawa
-//  { statecode: "EBONYI", name: Charanchi
-//  { statecode: "EBONYI", name: Dandume
-//  { statecode: "EBONYI", name: Danja
-//  { statecode: "EBONYI", name: Dan Musa
-//  { statecode: "EBONYI", name: Daura
-//  { statecode: "EBONYI", name: Dutsi
-//  { statecode: "EBONYI", name: Dutsin Ma
-//  { statecode: "EBONYI", name: Faskari
-//  { statecode: "EBONYI", name: Funtua
-//  { statecode: "EBONYI", name: Ingawa
-//  { statecode: "EBONYI", name: Jibia
-//  { statecode: "EBONYI", name: Kafur
-//  { statecode: "EBONYI", name: Kaita
-//  { statecode: "EBONYI", name: Kankara
-//  { statecode: "EBONYI", name: Kankia
-//  { statecode: "EBONYI", name: Katsina
-//  { statecode: "EBONYI", name: Kurfi
-//  { statecode: "EBONYI", name: Kusada
-//  { statecode: "EBONYI", name: Mai'Adua
-//  { statecode: "EBONYI", name: Malumfashi
-//  { statecode: "EBONYI", name: Mani
-//  { statecode: "EBONYI", name: Mashi
-//  { statecode: "EBONYI", name: Matazu
-//  { statecode: "EBONYI", name: Musawa
-//  { statecode: "EBONYI", name: Rimi
-//  { statecode: "EBONYI", name: Sabuwa
-//  { statecode: "EBONYI", name: Safana
-//  { statecode: "EBONYI", name: Sandamu
-//  { statecode: "EBONYI", name: Zango
-//  { statecode: "EBONYI", name:
-//  { statecode: "EBONYI", name: Kebbi State
-//  { statecode: "EBONYI", name: Aleiro
-//  { statecode: "EBONYI", name: Arewa
-//  { statecode: "EBONYI", name: Argungu
-//  { statecode: "EBONYI", name: Augie
-//  { statecode: "EBONYI", name: Bagudo
-//  { statecode: "EBONYI", name: Birnin Kebbi
-//  { statecode: "EBONYI", name: Bunza
-//  { statecode: "EBONYI", name: Dandi
-//  { statecode: "EBONYI", name: Fakai
-//  { statecode: "EBONYI", name: Gwandu
-//  { statecode: "EBONYI", name: Jega
-//  { statecode: "EBONYI", name: Kalgo
-//  { statecode: "EBONYI", name: Koko/Besse
-//  { statecode: "EBONYI", name: Maiyama
-//  { statecode: "EBONYI", name: Ngaski
-//  { statecode: "EBONYI", name: Sakaba
-//  { statecode: "EBONYI", name: Shanga
-//  { statecode: "EBONYI", name: Suru
-//  { statecode: "EBONYI", name: Danko-Wasagu
-//  { statecode: "EBONYI", name: Yauri
-//  { statecode: "EBONYI", name: Zuru
-//  { statecode: "EBONYI", name:
-//  { statecode: "EBONYI", name: Kogi State
-//  { statecode: "EBONYI", name: Adavi
-//  { statecode: "EBONYI", name: Ajaokuta
-//  { statecode: "EBONYI", name: Ankpa
-//  { statecode: "EBONYI", name: Bassa
-//  { statecode: "EBONYI", name: Dekina
-//  { statecode: "EBONYI", name: Ibaji
-//  { statecode: "EBONYI", name: Idah
-//  { statecode: "EBONYI", name: Igalamela Odolu
-//  { statecode: "EBONYI", name: Ijumu
-//  { statecode: "EBONYI", name: Kabba/Bunu
-//  { statecode: "EBONYI", name: Kogi
-//  { statecode: "EBONYI", name: Lokoja
-//  { statecode: "EBONYI", name: Mopa Muro
-//  { statecode: "EBONYI", name: Ofu
-//  { statecode: "EBONYI", name: Ogori/Magongo
-//  { statecode: "EBONYI", name: Okehi
-//  { statecode: "EBONYI", name: Okene
-//  { statecode: "EBONYI", name: Olamaboro
-//  { statecode: "EBONYI", name: Omala
-//  { statecode: "EBONYI", name: Yagba East
-//  { statecode: "EBONYI", name: Yagba West
-//  { statecode: "EBONYI", name:
-//  { statecode: "EBONYI", name: Kwara State
-//  { statecode: "EBONYI", name: Asa
-//  { statecode: "EBONYI", name: Baruten
-//  { statecode: "EBONYI", name: Edu
-//  { statecode: "EBONYI", name: Ekiti
-//  { statecode: "EBONYI", name: Ifelodun
-//  { statecode: "EBONYI", name: Ilorin East
-//  { statecode: "EBONYI", name: Ilorin South
-//  { statecode: "EBONYI", name: Ilorin West
-//  { statecode: "EBONYI", name: Irepodun
-//  { statecode: "EBONYI", name: Isin
-//  { statecode: "EBONYI", name: Kaiama
-//  { statecode: "EBONYI", name: Moro
-//  { statecode: "EBONYI", name: Offa
-//  { statecode: "EBONYI", name: Oke Ero
-//  { statecode: "EBONYI", name: Oyun
-//  { statecode: "EBONYI", name: Pategi
-//  { statecode: "EBONYI", name:
-//  { statecode: "EBONYI", name: Lagos State
-//  { statecode: "EBONYI", name: Agege
-//  { statecode: "EBONYI", name: Ajeromi-Ifelodun
-//  { statecode: "EBONYI", name: Alimosho
-//  { statecode: "EBONYI", name: Amuwo-Odofin
-//  { statecode: "EBONYI", name: Apapa
-//  { statecode: "EBONYI", name: Badagry
-//  { statecode: "EBONYI", name: Epe
-//  { statecode: "EBONYI", name: Eti Osa
-//  { statecode: "EBONYI", name: Ibeju-Lekki
-//  { statecode: "EBONYI", name: Ifako-Ijaiye
-//  { statecode: "EBONYI", name: Ikeja
-//  { statecode: "EBONYI", name: Ikorodu
-//  { statecode: "EBONYI", name: Kosofe
-//  { statecode: "EBONYI", name: Lagos Island
-//  { statecode: "EBONYI", name: Lagos Mainland
-//  { statecode: "EBONYI", name: Mushin
-//  { statecode: "EBONYI", name: Ojo
-//  { statecode: "EBONYI", name: Oshodi-Isolo
-//  { statecode: "EBONYI", name: Shomolu
-//  { statecode: "EBONYI", name: Surulere
-//  { statecode: "EBONYI", name:
-//  { statecode: "EBONYI", name: Nasarawa State
-//  { statecode: "EBONYI", name: Akwanga
-//  { statecode: "EBONYI", name: Awe
-//  { statecode: "EBONYI", name: Doma
-//  { statecode: "EBONYI", name: Karu
-//  { statecode: "EBONYI", name: Keana
-//  { statecode: "EBONYI", name: Keffi
-//  { statecode: "EBONYI", name: Kokona
-//  { statecode: "EBONYI", name: Lafia
-//  { statecode: "EBONYI", name: Nasarawa
-//  { statecode: "EBONYI", name: Nasarawa Egon
-//  { statecode: "EBONYI", name: Obi
-//  { statecode: "EBONYI", name: Toto
-//  { statecode: "EBONYI", name: Wamba
-//  { statecode: "EBONYI", name:
-//  { statecode: "EBONYI", name: Niger State
-//  { statecode: "EBONYI", name: Agaie
-//  { statecode: "EBONYI", name: Agwara
-//  { statecode: "EBONYI", name: Bida
-//  { statecode: "EBONYI", name: Borgu
-//  { statecode: "EBONYI", name: Bosso
-//  { statecode: "EBONYI", name: Chanchaga
-//  { statecode: "EBONYI", name: Edati
-//  { statecode: "EBONYI", name: Gbako
-//  { statecode: "EBONYI", name: Gurara
-//  { statecode: "EBONYI", name: Katcha
-//  { statecode: "EBONYI", name: Kontagora
-//  { statecode: "EBONYI", name: Lapai
-//  { statecode: "EBONYI", name: Lavun
-//  { statecode: "EBONYI", name: Magama
-//  { statecode: "EBONYI", name: Mariga
-//  { statecode: "EBONYI", name: Mashegu
-//  { statecode: "EBONYI", name: Mokwa
-//  { statecode: "EBONYI", name: Moya
-//  { statecode: "EBONYI", name: Paikoro
-//  { statecode: "EBONYI", name: Rafi
-//  { statecode: "EBONYI", name: Rijau
-//  { statecode: "EBONYI", name: Shiroro
-//  { statecode: "EBONYI", name: Suleja
-//  { statecode: "EBONYI", name: Tafa
-//  { statecode: "EBONYI", name: Wushishi
-//  { statecode: "EBONYI", name:
-//  { statecode: "EBONYI", name: Ogun State
-//  { statecode: "EBONYI", name: Abeokuta North
-//  { statecode: "EBONYI", name: Abeokuta South
-//  { statecode: "EBONYI", name: Ado-Odo/Ota
-//  { statecode: "EBONYI", name: Ewekoro
-//  { statecode: "EBONYI", name: Ifo
-//  { statecode: "EBONYI", name: Ijebu East
-//  { statecode: "EBONYI", name: Ijebu North
-//  { statecode: "EBONYI", name: Ijebu North East
-//  { statecode: "EBONYI", name: Ijebu Ode
-//  { statecode: "EBONYI", name: Ikenne
-//  { statecode: "EBONYI", name: Imeko Afon
-//  { statecode: "EBONYI", name: Ipokia
-//  { statecode: "EBONYI", name: Obafemi Owode
-//  { statecode: "EBONYI", name: Odeda
-//  { statecode: "EBONYI", name: Odogbolu
-//  { statecode: "EBONYI", name: Ogun Waterside
-//  { statecode: "EBONYI", name: Remo North
-//  { statecode: "EBONYI", name: Shagamu
-//  { statecode: "EBONYI", name: Yewa North
-//  { statecode: "EBONYI", name: Yewa South
-//  { statecode: "EBONYI", name: Ondo State
-//  { statecode: "EBONYI", name: Akoko North-East
-//  { statecode: "EBONYI", name: Akoko North-West
-//  { statecode: "EBONYI", name: Akoko South-East
-//  { statecode: "EBONYI", name: Akoko South-West
-//  { statecode: "EBONYI", name: Akure North
-//  { statecode: "EBONYI", name: Akure South
-//  { statecode: "EBONYI", name: Ese Odo
-//  { statecode: "EBONYI", name: Idanre
-//  { statecode: "EBONYI", name: Ifedore
-//  { statecode: "EBONYI", name: Ilaje
-//  { statecode: "EBONYI", name: Ile Oluji/Okeigbo
-//  { statecode: "EBONYI", name: Irele
-//  { statecode: "EBONYI", name: Odigbo
-//  { statecode: "EBONYI", name: Okitipupa
-//  { statecode: "EBONYI", name: Ondo East
-//  { statecode: "EBONYI", name: Ondo West
-//  { statecode: "EBONYI", name: Ose
-//  { statecode: "EBONYI", name: Owo
-//  { statecode: "EBONYI", name:
-//  { statecode: "EBONYI", name: Osun State
-//  { statecode: "EBONYI", name: Aiyedaade
-//  { statecode: "EBONYI", name: Aiyedire
-//  { statecode: "EBONYI", name: Atakunmosa East
-//  { statecode: "EBONYI", name: Atakunmosa West
-//  { statecode: "EBONYI", name: Boluwaduro
-//  { statecode: "EBONYI", name: Boripe
-//  { statecode: "EBONYI", name: Ede North
-//  { statecode: "EBONYI", name: Ede South
-//  { statecode: "EBONYI", name: Egbedore
-//  { statecode: "EBONYI", name: Ejigbo
-//  { statecode: "EBONYI", name: Ife Central
-//  { statecode: "EBONYI", name: Ife East
-//  { statecode: "EBONYI", name: Ife North
-//  { statecode: "EBONYI", name: Ife South
-//  { statecode: "EBONYI", name: Ifedayo
-//  { statecode: "EBONYI", name: Ifelodun
-//  { statecode: "EBONYI", name: Ila
-//  { statecode: "EBONYI", name: Ilesa East
-//  { statecode: "EBONYI", name: Ilesa West
-//  { statecode: "EBONYI", name: Irepodun
-//  { statecode: "EBONYI", name: Irewole
-//  { statecode: "EBONYI", name: Isokan
-//  { statecode: "EBONYI", name: Iwo
-//  { statecode: "EBONYI", name: Obokun
-//  { statecode: "EBONYI", name: Odo Otin
-//  { statecode: "EBONYI", name: Ola Oluwa
-//  { statecode: "EBONYI", name: Olorunda
-//  { statecode: "EBONYI", name: Oriade
-//  { statecode: "EBONYI", name: Orolu
-//  { statecode: "EBONYI", name: Osogbo
+const KADUNA = [
+  { statecode: "KADUNA", name: "Birnin Gwari" },
+  { statecode: "KADUNA", name: "Chikun" },
+  { statecode: "KADUNA", name: "Giwa" },
+  { statecode: "KADUNA", name: "Igabi" },
+  { statecode: "KADUNA", name: "Ikara" },
+  { statecode: "KADUNA", name: "Jaba" },
+  { statecode: "KADUNA", name: "Jema'a" },
+  { statecode: "KADUNA", name: "Kachia" },
+  { statecode: "KADUNA", name: "Kaduna North" },
+  { statecode: "KADUNA", name: "Kaduna South" },
+  { statecode: "KADUNA", name: "Kagarko" },
+  { statecode: "KADUNA", name: "Kajuru" },
+  { statecode: "KADUNA", name: "Kaura" },
+  { statecode: "KADUNA", name: "Kauru" },
+  { statecode: "KADUNA", name: "Kubau" },
+  { statecode: "KADUNA", name: "Kudan" },
+  { statecode: "KADUNA", name: "Lere" },
+  { statecode: "KADUNA", name: "Makarfi" },
+  { statecode: "KADUNA", name: "Sabon Gari" },
+  { statecode: "KADUNA", name: "Sanga" },
+  { statecode: "KADUNA", name: "Soba" },
+  { statecode: "KADUNA", name: "Zangon Kataf" },
+  { statecode: "KADUNA", name: "Zaria" },
+];
+
+const KANO = [
+  { statecode: "KANO", name: "Ajingi" },
+  { statecode: "KANO", name: "Albasu" },
+  { statecode: "KANO", name: "Bagwai" },
+  { statecode: "KANO", name: "Bebeji" },
+  { statecode: "KANO", name: "Bichi" },
+  { statecode: "KANO", name: "Bunkure" },
+  { statecode: "KANO", name: "Dala" },
+  { statecode: "KANO", name: "Dambatta" },
+  { statecode: "KANO", name: "Dawakin Kudu" },
+  { statecode: "KANO", name: "Dawakin Tofa" },
+  { statecode: "KANO", name: "Doguwa" },
+  { statecode: "KANO", name: "Fagge" },
+  { statecode: "KANO", name: "Gabasawa" },
+  { statecode: "KANO", name: "Garko" },
+  { statecode: "KANO", name: "Garun Mallam" },
+  { statecode: "KANO", name: "Gaya" },
+  { statecode: "KANO", name: "Gezawa" },
+  { statecode: "KANO", name: "Gwale" },
+  { statecode: "KANO", name: "Gwarzo" },
+  { statecode: "KANO", name: "Kabo" },
+  { statecode: "KANO", name: "Kano Municipal" },
+  { statecode: "KANO", name: "Karaye" },
+  { statecode: "KANO", name: "Kibiya" },
+  { statecode: "KANO", name: "Kiru" },
+  { statecode: "KANO", name: "Kumbotso" },
+  { statecode: "KANO", name: "Kunchi" },
+  { statecode: "KANO", name: "Kura" },
+  { statecode: "KANO", name: "Madobi" },
+  { statecode: "KANO", name: "Makoda" },
+  { statecode: "KANO", name: "Minjibir" },
+  { statecode: "KANO", name: "Nasarawa" },
+  { statecode: "KANO", name: "Rano" },
+  { statecode: "KANO", name: "Rimin Gado" },
+  { statecode: "KANO", name: "Rogo" },
+  { statecode: "KANO", name: "Shanono" },
+  { statecode: "KANO", name: "Sumaila" },
+  { statecode: "KANO", name: "Takai" },
+  { statecode: "KANO", name: "Tarauni" },
+  { statecode: "KANO", name: "Tofa" },
+  { statecode: "KANO", name: "Tsanyawa" },
+  { statecode: "KANO", name: "Tudun Wada" },
+  { statecode: "KANO", name: "Ungogo" },
+  { statecode: "KANO", name: "Warawa" },
+  { statecode: "KANO", name: "Wudil" },
+];
+const KASTINA = [
+  { statecode: "KATSINA", name: "Bakori" },
+  { statecode: "KATSINA", name: "Batagarawa" },
+  { statecode: "KATSINA", name: "Batsari" },
+  { statecode: "KATSINA", name: "Baure" },
+  { statecode: "KATSINA", name: "Bindawa" },
+  { statecode: "KATSINA", name: "Charanchi" },
+  { statecode: "KATSINA", name: "Dandume" },
+  { statecode: "KATSINA", name: "Danja" },
+  { statecode: "KATSINA", name: "Dan Musa" },
+  { statecode: "KATSINA", name: "Daura" },
+  { statecode: "KATSINA", name: "Dutsi" },
+  { statecode: "KATSINA", name: "Dutsin Ma" },
+  { statecode: "KATSINA", name: "Faskari" },
+  { statecode: "KATSINA", name: "Funtua" },
+  { statecode: "KATSINA", name: "Ingawa" },
+  { statecode: "KATSINA", name: "Jibia" },
+  { statecode: "KATSINA", name: "Kafur" },
+  { statecode: "KATSINA", name: "Kaita" },
+  { statecode: "KATSINA", name: "Kankara" },
+  { statecode: "KATSINA", name: "Kankia" },
+  { statecode: "KATSINA", name: "Katsina" },
+  { statecode: "KATSINA", name: "Kurfi" },
+  { statecode: "KATSINA", name: "Kusada" },
+  { statecode: "KATSINA", name: "Mai'Adua" },
+  { statecode: "KATSINA", name: "Malumfashi" },
+  { statecode: "KATSINA", name: "Mani" },
+  { statecode: "KATSINA", name: "Mashi" },
+  { statecode: "KATSINA", name: "Matazu" },
+  { statecode: "KATSINA", name: "Musawa" },
+  { statecode: "KATSINA", name: "Rimi" },
+  { statecode: "KATSINA", name: "Sabuwa" },
+  { statecode: "KATSINA", name: "Safana" },
+  { statecode: "KATSINA", name: "Sandamu" },
+  { statecode: "KATSINA", name: "Zango" },
+];
+const KEBBI = [
+  { statecode: "KEBBI", name: "Aleiro" },
+  { statecode: "KEBBI", name: "Arewa" },
+  { statecode: "KEBBI", name: "Argungu" },
+  { statecode: "KEBBI", name: "Augie" },
+  { statecode: "KEBBI", name: "Bagudo" },
+  { statecode: "KEBBI", name: "Birnin Kebbi" },
+  { statecode: "KEBBI", name: "Bunza" },
+  { statecode: "KEBBI", name: "Dandi" },
+  { statecode: "KEBBI", name: "Fakai" },
+  { statecode: "KEBBI", name: "Gwandu" },
+  { statecode: "KEBBI", name: "Jega" },
+  { statecode: "KEBBI", name: "Kalgo" },
+  { statecode: "KEBBI", name: "Koko/Besse" },
+  { statecode: "KEBBI", name: "Maiyama" },
+  { statecode: "KEBBI", name: "Ngaski" },
+  { statecode: "KEBBI", name: "Sakaba" },
+  { statecode: "KEBBI", name: "Shanga" },
+  { statecode: "KEBBI", name: "Suru" },
+  { statecode: "KEBBI", name: "Danko-Wasagu" },
+  { statecode: "KEBBI", name: "Yauri" },
+  { statecode: "KEBBI", name: "Zuru" },
+];
+
+const KOGI = [
+  { statecode: "KOGI", name: "Adavi" },
+  { statecode: "KOGI", name: "Ajaokuta" },
+  { statecode: "KOGI", name: "Ankpa" },
+  { statecode: "KOGI", name: "Bassa" },
+  { statecode: "KOGI", name: "Dekina" },
+  { statecode: "KOGI", name: "Ibaji" },
+  { statecode: "KOGI", name: "Idah" },
+  { statecode: "KOGI", name: "Igalamela Odolu" },
+  { statecode: "KOGI", name: "Ijumu" },
+  { statecode: "KOGI", name: "Kabba / Bunu" },
+  { statecode: "KOGI", name: "Kogi" },
+  { statecode: "KOGI", name: "Lokoja" },
+  { statecode: "KOGI", name: "Mopa Muro" },
+  { statecode: "KOGI", name: "Ofu" },
+  { statecode: "KOGI", name: "Ogori / Magongo" },
+  { statecode: "KOGI", name: "Okehi" },
+  { statecode: "KOGI", name: "Okene" },
+  { statecode: "KOGI", name: "Olamaboro" },
+  { statecode: "KOGI", name: "Omala" },
+  { statecode: "KOGI", name: "Yagba East" },
+  { statecode: "KOGI", name: "Yagba West" },
+];
+
+const KWARA = [
+  { statecode: "KWARA", name: "Asa" },
+  { statecode: "KWARA", name: "Baruten" },
+  { statecode: "KWARA", name: "Edu" },
+  { statecode: "KWARA", name: "Ekiti" },
+  { statecode: "KWARA", name: "Ifelodun" },
+  { statecode: "KWARA", name: "Ilorin East" },
+  { statecode: "KWARA", name: "Ilorin South" },
+  { statecode: "KWARA", name: "Ilorin West" },
+  { statecode: "KWARA", name: "Irepodun" },
+  { statecode: "KWARA", name: "Isin" },
+  { statecode: "KWARA", name: "Kaiama" },
+  { statecode: "KWARA", name: "Moro" },
+  { statecode: "KWARA", name: "Offa" },
+  { statecode: "KWARA", name: "Oke Ero" },
+  { statecode: "KWARA", name: "Oyun" },
+  { statecode: "KWARA", name: "Pategi" },
+];
+
+const LAGOS = [
+  { statecode: "LAGOS", name: "Agege" },
+  { statecode: "LAGOS", name: "Ajeromi-Ifelodun" },
+  { statecode: "LAGOS", name: "Alimosho" },
+  { statecode: "LAGOS", name: "Amuwo-Odofin" },
+  { statecode: "LAGOS", name: "Apapa" },
+  { statecode: "LAGOS", name: "Badagry" },
+  { statecode: "LAGOS", name: "Epe" },
+  { statecode: "LAGOS", name: "Eti Osa" },
+  { statecode: "LAGOS", name: "Ibeju-Lekki" },
+  { statecode: "LAGOS", name: "Ifako-Ijaiye" },
+  { statecode: "LAGOS", name: "Ikeja" },
+  { statecode: "LAGOS", name: "Ikorodu" },
+  { statecode: "LAGOS", name: "Kosofe" },
+  { statecode: "LAGOS", name: "Lagos Island" },
+  { statecode: "LAGOS", name: "Lagos Mainland" },
+  { statecode: "LAGOS", name: "Mushin" },
+  { statecode: "LAGOS", name: "Ojo" },
+  { statecode: "LAGOS", name: "Oshodi-Isolo" },
+  { statecode: "LAGOS", name: "Shomolu" },
+  { statecode: "LAGOS", name: "Surulere" },
+];
+
+const NASARAWA = [
+  { statecode: "NASARAWA", name: "Akwanga" },
+  { statecode: "NASARAWA", name: "Awe" },
+  { statecode: "NASARAWA", name: "Doma" },
+  { statecode: "NASARAWA", name: "Karu" },
+  { statecode: "NASARAWA", name: "Keana" },
+  { statecode: "NASARAWA", name: "Keffi" },
+  { statecode: "NASARAWA", name: "Kokona" },
+  { statecode: "NASARAWA", name: "Lafia" },
+  { statecode: "NASARAWA", name: "Nasarawa" },
+  { statecode: "NASARAWA", name: "Nasarawa Egon" },
+  { statecode: "NASARAWA", name: "Obi" },
+  { statecode: "NASARAWA", name: "Toto" },
+  { statecode: "NASARAWA", name: "Wamba" },
+];
+const NIGER = [
+  { statecode: "NIGER", name: "Agaie" },
+  { statecode: "NIGER", name: "Agwara" },
+  { statecode: "NIGER", name: "Bida" },
+  { statecode: "NIGER", name: "Borgu" },
+  { statecode: "NIGER", name: "Bosso" },
+  { statecode: "NIGER", name: "Chanchaga" },
+  { statecode: "NIGER", name: "Edati" },
+  { statecode: "NIGER", name: "Gbako" },
+  { statecode: "NIGER", name: "Gurara" },
+  { statecode: "NIGER", name: "Katcha" },
+  { statecode: "NIGER", name: "Kontagora" },
+  { statecode: "NIGER", name: "Lapai" },
+  { statecode: "NIGER", name: "Lavun" },
+  { statecode: "NIGER", name: "Magama" },
+  { statecode: "NIGER", name: "Mariga" },
+  { statecode: "NIGER", name: "Mashegu" },
+  { statecode: "NIGER", name: "Mokwa" },
+  { statecode: "NIGER", name: "Moya" },
+  { statecode: "NIGER", name: "Paikoro" },
+  { statecode: "NIGER", name: "Rafi" },
+  { statecode: "NIGER", name: "Rijau" },
+  { statecode: "NIGER", name: "Shiroro" },
+  { statecode: "NIGER", name: "Suleja" },
+  { statecode: "NIGER", name: "Tafa" },
+  { statecode: "NIGER", name: "Wushishi" },
+];
+
+const OGUN = [
+  { statecode: "OGUN", name: "Abeokuta North" },
+  { statecode: "OGUN", name: "Abeokuta South" },
+  { statecode: "OGUN", name: "Ado-Odo/Ota" },
+  { statecode: "OGUN", name: "Ewekoro" },
+  { statecode: "OGUN", name: "Ifo" },
+  { statecode: "OGUN", name: "Ijebu East" },
+  { statecode: "OGUN", name: "Ijebu North" },
+  { statecode: "OGUN", name: "Ijebu North East" },
+  { statecode: "OGUN", name: "Ijebu Ode" },
+  { statecode: "OGUN", name: "Ikenne" },
+  { statecode: "OGUN", name: "Imeko Afon" },
+  { statecode: "OGUN", name: "Ipokia" },
+  { statecode: "OGUN", name: "Obafemi Owode" },
+  { statecode: "OGUN", name: "Odeda" },
+  { statecode: "OGUN", name: "Odogbolu" },
+  { statecode: "OGUN", name: "Ogun Waterside" },
+  { statecode: "OGUN", name: "Remo North" },
+  { statecode: "OGUN", name: "Shagamu" },
+  { statecode: "OGUN", name: "Yewa North" },
+  { statecode: "OGUN", name: "Yewa South" },
+];
+
+const ONDO = [
+  { statecode: "ONDO", name: "Akoko North-East" },
+  { statecode: "ONDO", name: "Akoko North-West" },
+  { statecode: "ONDO", name: "Akoko South-East" },
+  { statecode: "ONDO", name: "Akoko South-West" },
+  { statecode: "ONDO", name: "Akure North" },
+  { statecode: "ONDO", name: "Akure South" },
+  { statecode: "ONDO", name: "Ese Odo" },
+  { statecode: "ONDO", name: "Idanre" },
+  { statecode: "ONDO", name: "Ifedore" },
+  { statecode: "ONDO", name: "Ilaje" },
+  { statecode: "ONDO", name: "Ile Oluji/Okeigbo" },
+  { statecode: "ONDO", name: "Irele" },
+  { statecode: "ONDO", name: "Odigbo" },
+  { statecode: "ONDO", name: "Okitipupa" },
+  { statecode: "ONDO", name: "Ondo East" },
+  { statecode: "ONDO", name: "Ondo West" },
+  { statecode: "ONDO", name: "Ose" },
+  { statecode: "ONDO", name: "Owo" },
+];
+
+const OSUN = [
+  { statecode: "OSUN", name: "Osun State" },
+  { statecode: "OSUN", name: "Aiyedaade" },
+  { statecode: "OSUN", name: "Aiyedire" },
+  { statecode: "OSUN", name: "Atakunmosa East" },
+  { statecode: "OSUN", name: "Atakunmosa West" },
+  { statecode: "OSUN", name: "Boluwaduro" },
+  { statecode: "OSUN", name: "Boripe" },
+  { statecode: "OSUN", name: "Ede North" },
+  { statecode: "OSUN", name: "Ede South" },
+  { statecode: "OSUN", name: "Egbedore" },
+  { statecode: "OSUN", name: "Ejigbo" },
+  { statecode: "OSUN", name: "Ife Central" },
+  { statecode: "OSUN", name: "Ife East" },
+  { statecode: "OSUN", name: "Ife North" },
+  { statecode: "OSUN", name: "Ife South" },
+  { statecode: "OSUN", name: "Ifedayo" },
+  { statecode: "OSUN", name: "Ifelodun" },
+  { statecode: "OSUN", name: "Ila" },
+  { statecode: "OSUN", name: "Ilesa East" },
+  { statecode: "OSUN", name: "Ilesa West" },
+  { statecode: "OSUN", name: "Irepodun" },
+  { statecode: "OSUN", name: "Irewole" },
+  { statecode: "OSUN", name: "Isokan" },
+  { statecode: "OSUN", name: "Iwo" },
+  { statecode: "OSUN", name: "Obokun" },
+  { statecode: "OSUN", name: "Odo Otin" },
+  { statecode: "OSUN", name: "Ola Oluwa" },
+  { statecode: "OSUN", name: "Olorunda" },
+  { statecode: "OSUN", name: "Oriade" },
+  { statecode: "OSUN", name: "Orolu" },
+  { statecode: "OSUN", name: "Osogbo" },
+];
+
 //  { statecode: "EBONYI", name:
 //  { statecode: "EBONYI", name: Oyo State
 //  { statecode: "EBONYI", name: Afijio
@@ -1143,4 +1157,16 @@ export const lgas = [
   ...GOMBE,
   ...IMO,
   ...JIGAWA,
+  ...KADUNA,
+  ...KANO,
+  ...KASTINA,
+  ...KEBBI,
+  ...KOGI,
+  ...KWARA,
+  ...LAGOS,
+  ...NASARAWA,
+  ...NIGER,
+  ...OGUN,
+  ...ONDO,
+  ...OSUN,
 ];

@@ -1,5 +1,6 @@
 export const states = [
   { name: "Abia", statecode: "ABIA" },
+  { name: "Adamawa", statecode: "ADAMAWA" },
   { name: "Akwa Ibom", statecode: "AKWA-IBOM" },
   { name: "Anambra", statecode: "ANAMBRA" },
   { name: "Bauchi", statecode: "BAUCHI" },
