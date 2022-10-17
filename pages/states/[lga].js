@@ -2,10 +2,10 @@ import React from "react";
 import { lgas } from "../../constants/lga";
 import { states } from "../../constants/states";
 
-export default function ShowLGA({ code, selectedState }) {
+export default function ShowLGA({ code }) {
   return (
     <div className="section specificLGA">
-      <h2>{selectedState.name} State Local Government Areas</h2>
+      {/* <h2>{selectedState.name} State Local Government Areas</h2> */}
       <div className="tableSection">
         <table>
           <thead>
@@ -56,7 +56,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       code: filteredLga,
-      selectedState: uniqueState[0],
+      // selectedState: JSON.parse(uniqueState[0]),
     },
   };
 }
