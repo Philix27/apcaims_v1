@@ -49,9 +49,17 @@ body {
   background-size: cover;
   background-position: center;
 
-  div {
-    // background-color: aquamarine;
+  .textArea {
+    background-color: rgba(0, 0, 0, 0.598);
     margin: 0 auto;
+    padding: 40px 40px;
+    color: #fff;
+    max-width: 35vw;
+    p {
+      padding: 15px 0;
+      line-height: 2.3rem;
+      font-weight: 400;
+    }
   }
   .comp {
     padding-left: 20vw;

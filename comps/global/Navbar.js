@@ -40,31 +40,12 @@ export default function Navbar() {
                 </div>
               </li>
 
-              <li
-                className={
-                  _path == "/pharmacist"
-                    ? "active_list_item"
-                    : "nav_start_list_item"
-                }
-              >
-                <Link href="/">
-                  <a className="link">LOGIN</a>
-                </Link>
-              </li>
-              <li
-                className={
-                  _path == "/blogs" ? "active_list_item" : "nav_start_list_item"
-                }
-              >
+              <li className="nav_start_list_item">
                 <Link href="/">
                   <a className="link">Email</a>
                 </Link>
               </li>
-              <li
-                className={
-                  _path == "/books" ? "active_list_item" : "nav_start_list_item"
-                }
-              >
+              <li className="nav_start_list_item">
                 <Link href="/">
                   <a className="link">USER</a>
                 </Link>
