@@ -1,72 +1,65 @@
 const ABIA = [
-  {
-    statecode: "ABIA",
-    name: "Aba North",
-  },
-  {
-    statecode: "ABIA",
-    name: "Aba South",
-  },
-  {
-    statecode: "ABIA",
-    name: "Arochukwu",
-  },
-  {
-    statecode: "ABIA",
-    name: "Bende",
-  },
-  {
-    statecode: "ABIA",
-    name: "Ikwuano",
-  },
+  { statecode: "ABIA", lgacode: "ABANORTH", name: "Aba North" },
+  { statecode: "ABIA", name: "Aba South", lgacode: "ABASOUTH" },
+  { statecode: "ABIA", name: "Arochukwu", lgacode: "AROCHUKWU" },
+  { statecode: "ABIA", name: "Bende", lgacode: "BENDE" },
+  { statecode: "ABIA", name: "Ikwuano", lgacode: "IKWUANO" },
   {
     statecode: "ABIA",
     name: "Isiala Ngwa North",
+    lgacode: "ISIALA NGWA NORTH",
   },
   {
     statecode: "ABIA",
     name: "Isiala Ngwa South",
+    lgacode: "ISIALA NGWA SOUTH",
   },
   {
     statecode: "ABIA",
     name: "Isuikwuato",
+    lgacode: "ISUIKWUATO",
   },
   {
     statecode: "ABIA",
     name: "Obi Ngwa",
+    lgacode: "OBI NGWA",
   },
   {
     statecode: "ABIA",
     name: "Ohafia",
+    lgacode: "OHAFIA",
   },
   {
     statecode: "ABIA",
     name: "Osisioma",
+    lgacode: "OSISIOMA",
   },
   {
     statecode: "ABIA",
     name: "Ugwunagbo",
+    lgacode: "UGWUNAGBO",
   },
   {
     statecode: "ABIA",
     name: "Ukwa East",
+    lgacode: "UKWA EAST",
   },
   {
     statecode: "ABIA",
     name: "Ukwa West",
+    lgacode: "UKWA WEST",
   },
   {
     statecode: "ABIA",
     name: "Umuahia North",
+    lgacode: "UMUAHIA NORTH",
   },
   {
     statecode: "ABIA",
     name: "Umuahia South",
+    lgacode: "UMUAHIA SOUTH",
   },
-  {
-    statecode: "ABIA",
-    name: "Umu Nneochi",
-  },
+  { statecode: "ABIA", name: "Umu Nneochi", lgacode: "UMU NNEOCHI" },
 ];
 const ADAMAWA = [
   {
