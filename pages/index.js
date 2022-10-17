@@ -66,7 +66,7 @@ export default function Home() {
   };
 
   function fetchUser() {
-    return localStorage.getItem("user");
+    return JSON.parse(localStorage.getItem("user"));
   }
 
   const handleChange = (e) => {

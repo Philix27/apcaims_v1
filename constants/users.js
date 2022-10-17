@@ -1,6 +1,6 @@
 export const usersList = [
   {
-    name: "Example User",
+    name: "Mustapha Joe",
     email: "example@gmail.com",
     phone: "08108850572",
     isApproved: true,
