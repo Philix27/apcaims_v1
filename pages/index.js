@@ -91,14 +91,11 @@ export default function Home() {
         <div className="textArea">
           <h3>Welcome {user.name}</h3>
           <p>
-            This is a Data Capture Application aimed at making the collection
-            and organisation of data easy and also for monitoring electoral
-            activities in the country.
+            This is a Poll Agent Data Capture Application designed specifically
+            for the All Progressive Congress (APC) for the purpose of election
+            monitoring, reporting and forensics.
           </p>
-          <p>
-            This is software is designed specifically for APC and only a
-            authorized persons can have access to the full data.
-          </p>
+          <p>Only an authorized person can have acces to the full data.</p>
         </div>
       ) : (
         <div className="section formsPage">

@@ -37,6 +37,7 @@ export default function AgentsComp() {
               <th>Img</th>
               <th>Name</th>
               <th>Email</th>
+              <th>State</th>
               <th>LGA</th>
               <th>Phone</th>
               <th>Status</th>
@@ -53,6 +54,7 @@ export default function AgentsComp() {
                 </td>
                 <td>{state.name}</td>
                 <td>{state.email}</td>
+                <td>{state.statecode}</td>
                 <td>{state.lga}</td>
                 <td>{state.phone}</td>
                 <td>
