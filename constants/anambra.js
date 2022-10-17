@@ -1,89 +1,89 @@
-const ADAMAWA = {
-  state: "Adamawa",
+const ANAMBRA = {
+  state: "ANAMBRA",
   lga: [
     {
       wards: [],
-      name: "Demsa",
+      name: "Aguata",
     },
     {
       wards: [],
-      name: "Fufure",
+      name: "Anambra East",
     },
     {
       wards: [],
-      name: "Ganye",
+      name: "Anambra West",
     },
     {
       wards: [],
-      name: "Gayuk",
+      name: "Anaocha",
     },
     {
       wards: [],
-      name: "Girei",
+      name: "Awka North",
     },
     {
       wards: [],
-      name: "Gombi",
+      name: "Awka South",
     },
     {
       wards: [],
-      name: "Hong",
+      name: "Ayamelum",
     },
     {
       wards: [],
-      name: "Jada",
+      name: "Dunukofia",
     },
     {
       wards: [],
-      name: "Lamurde",
+      name: "Ekwusigo",
     },
     {
       wards: [],
-      name: "Madagali",
+      name: "Idemili North",
     },
     {
       wards: [],
-      name: "Maiha",
+      name: "Idemili South",
     },
     {
       wards: [],
-      name: "Mayo Belwa",
+      name: "Ihiala",
     },
     {
       wards: [],
-      name: "Michika",
+      name: "Njikoka",
     },
     {
       wards: [],
-      name: "Mubi North",
+      name: "Nnewi North",
     },
     {
       wards: [],
-      name: "Mubi South",
+      name: "Nnewi South",
     },
     {
       wards: [],
-      name: "Numan",
+      name: "Ogbaru",
     },
     {
       wards: [],
-      name: "Shelleng",
+      name: "Onitsha North",
     },
     {
       wards: [],
-      name: "Song",
+      name: "Onitsha South",
     },
     {
       wards: [],
-      name: "Toungo",
+      name: "Orumba North",
     },
     {
       wards: [],
-      name: "Yola North",
+      name: "Orumba South",
     },
     {
       wards: [],
-      name: "Yola South",
+      name: "Oyi",
     },
   ],
 };
