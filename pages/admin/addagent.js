@@ -5,13 +5,24 @@ import { states } from "../../constants/states";
 import { lgas } from "../../constants/lga";
 import { data } from "../../constants";
 import { motion } from "framer-motion";
+import { storage } from "../../utils/firebase";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { v4 } from "uuid";
 
 export default function AddAgentsPage({ title }) {
   const [isSuccessful, setIsSuccessful] = useState(false);
   const [localGov, setLocalGov] = useState([]);
   const [wards, setWards] = useState([]);
-  const [isSaved, setIsSaved] = useState(false);
-
+  const [saveStep1, setSaveStep1] = useState(false);
+  const [profileImage, setProfileImage] = useState(null);
+  const [imgUrl, setImgUrl] = useState(null);
+  const styleHide = "hide";
+  const [agent, setAgent] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
+  });
   const agentTypes = [
     "PRESIDENTIAL",
     "GUBERNATORIAL",
@@ -48,18 +59,55 @@ export default function AddAgentsPage({ title }) {
     const value = e.target.value;
 
     if (name == "state") {
+      setWards([]);
+      setLocalGov([]);
       const selectedState = data.filter((_val) => _val.state == value);
       setLocalGov(selectedState[0].lga);
     } else if (name == "lga") {
       const selectedLocalGov = localGov.filter((_val) => _val.name == value);
       setWards(selectedLocalGov[0].wards);
+    } else if (name == "image") {
+      const _file = e.target.files[0];
+      if (_file) {
+        if (_file.size < 100000) {
+          setProfileImage(_file);
+          console.log("Hurray! we have a file");
+        } else {
+          console.log(_file);
+          console.log("Image is above 50kb");
+        }
+      } else {
+        console.log("no file yet");
+      }
     }
+    setAgent({ ...user, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handlePrev = (e) => {
+    setSaveStep1(false);
+  };
+  const handleNext = () => {
+    setSaveStep1(true);
+  };
+
+  async function uploadImageToFb() {
+    if (profileImage == null) return;
+    const imageRef = ref(storage, `apcaims/${profileImage.name + v4()}`);
+    uploadBytes(imageRef, profileImage).then((res) => {
+      getDownloadURL(res.ref).then((url) => {
+        setImgUrl(url);
+        console.log(url);
+      });
+      // alert("Image Uploaded at ");
+    });
+  }
+
+  const handleSubmit = async (e) => {
     if (article.title && article.content) {
       e.preventDefault();
-      postArticle(article);
+      //  await uploadImageToFb()
+      await uploadImageToFb();
+      postAgent(article);
     } else {
       console.log("Something is missing");
     }
@@ -79,13 +127,16 @@ export default function AddAgentsPage({ title }) {
   return (
     <div className="addAgent">
       <div className="section formsPage">
-        {/* <h2>Step 1</h2> */}
         <div className="successDiv">
           {isSuccessful && <p>Sent Successfully </p>}
         </div>
-        <div className="sect">
+        <motion.div
+          className={`sect step1 ${saveStep1 && styleHide}`}
+          initial={{ x: "-100vw", opacity: 0.1 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.7, delay: 1, type: "tween" }}
+        >
           <form action="#" className="form">
-            {/* <p>Personal Details</p> */}
             <h2>Step 1</h2>
 
             <div className="input_box">
@@ -151,6 +202,7 @@ export default function AddAgentsPage({ title }) {
                 type="file"
                 id="form-image"
                 name="image"
+                onChange={handleChange}
                 accept="image/*"
               />
             </div>
@@ -158,13 +210,27 @@ export default function AddAgentsPage({ title }) {
           <div className="buttons">
             <input
               type="submit"
-              value="Save"
-              onClick={handleSubmit}
+              value="Next"
+              // onClick={handleSubmit}
+              onClick={handleNext}
               className="btn"
             />
           </div>
-        </div>
-        <div className="sect">
+        </motion.div>
+        <motion.div
+          className={`sect step2 ${!saveStep1 && styleHide}`}
+          initial={{ x: "-100vw", opacity: 0.1 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.7, delay: 1, type: "tween" }}
+        >
+          <div className=" buttons">
+            <input
+              type="submit"
+              value="Go Back"
+              onClick={handlePrev}
+              className="btn"
+            />
+          </div>
           <form action="#" className="form">
             <h2>Step 2</h2>
             <div className="input_box">
@@ -250,7 +316,7 @@ export default function AddAgentsPage({ title }) {
               className="btn"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
