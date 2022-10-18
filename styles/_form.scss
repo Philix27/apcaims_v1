@@ -29,6 +29,11 @@
       font-weight: 400;
     }
   }
+  select {
+    background-color: $background1;
+    // border: thin solid blue;
+    // border-radius: 4px;
+  }
 
   /* .textarea_box textarea, */
   .input_box input {
@@ -36,7 +41,7 @@
     width: 100%;
     border-radius: 5px;
     border: none;
-    background: #c2e5f0;
+    background: $background1;
     font-weight: 400;
     font-size: 1.6rem;
     padding: 15px 12px;
@@ -47,7 +52,7 @@
     width: 100%;
     border-radius: 5px;
     border: none;
-    background: #c2e5f0;
+    background: $background1;
     font-weight: 400;
     font-size: 1.6rem;
     padding: 15px 12px;
@@ -58,7 +63,7 @@
     width: 100%;
     border-radius: 5px;
     border: none;
-    /* background: #c2e5f0; */
+    /* background: $background1; */
     font-weight: 400;
     font-size: 1.6rem;
     padding: 15px 12px;

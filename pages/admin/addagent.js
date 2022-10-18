@@ -3,19 +3,14 @@ import { useRouter } from "next/router";
 import Axios from "axios";
 import { states } from "../../constants/states";
 import { lgas } from "../../constants/lga";
+import { data } from "../../constants";
+import { motion } from "framer-motion";
 
-export default function AddPepNotesComp({ title }) {
-  // const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}pep_note/`;
-  //   const [emptyField, setEmptyField] = useState(false);
+export default function AddAgentsPage({ title }) {
   const [isSuccessful, setIsSuccessful] = useState(false);
-  const [localGov, setLocalGov] = useState(lgas);
-
-  const [article, setArticle] = useState({
-    category: "PEP",
-    title: "",
-    content: "",
-    imageUrl: "",
-  });
+  const [localGov, setLocalGov] = useState([]);
+  const [wards, setWards] = useState([]);
+  const [isSaved, setIsSaved] = useState(false);
 
   const agentTypes = [
     "PRESIDENTIAL",
@@ -52,23 +47,13 @@ export default function AddPepNotesComp({ title }) {
     const name = e.target.name;
     const value = e.target.value;
 
-    setArticle({ ...article, [name]: value });
-
-    console.log("Article Objj");
-    console.log(article);
-    // console.log(apiUrl);
-  };
-
-  const onStateChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-
-    setArticle({ ...article, [name]: value });
-    const sel = lgas.filter((_val) => _val.statecode == value);
-    setLocalGov(sel);
-    console.log("LGA Objj");
-    console.log(sel);
-    // console.log(apiUrl);
+    if (name == "state") {
+      const selectedState = data.filter((_val) => _val.state == value);
+      setLocalGov(selectedState[0].lga);
+    } else if (name == "lga") {
+      const selectedLocalGov = localGov.filter((_val) => _val.name == value);
+      setWards(selectedLocalGov[0].wards);
+    }
   };
 
   const handleSubmit = (e) => {
@@ -92,15 +77,17 @@ export default function AddPepNotesComp({ title }) {
   }
 
   return (
-    <div className="comp">
+    <div className="addAgent">
       <div className="section formsPage">
         {/* <h2>Step 1</h2> */}
         <div className="successDiv">
           {isSuccessful && <p>Sent Successfully </p>}
         </div>
-        <div>
+        <div className="sect">
           <form action="#" className="form">
+            {/* <p>Personal Details</p> */}
             <h2>Step 1</h2>
+
             <div className="input_box">
               <label htmlFor="form-name" className="label">
                 Name
@@ -158,6 +145,27 @@ export default function AddPepNotesComp({ title }) {
                 onChange={handleChange}
               />
             </div>
+            <div className="input_box">
+              <label htmlFor="form-image">Profile Image</label>
+              <input
+                type="file"
+                id="form-image"
+                name="image"
+                accept="image/*"
+              />
+            </div>
+          </form>
+          <div className="buttons">
+            <input
+              type="submit"
+              value="Save"
+              onClick={handleSubmit}
+              className="btn"
+            />
+          </div>
+        </div>
+        <div className="sect">
+          <form action="#" className="form">
             <h2>Step 2</h2>
             <div className="input_box">
               <label htmlFor="form-category">Agent Type</label>
@@ -182,15 +190,15 @@ export default function AddPepNotesComp({ title }) {
               <select
                 name="state"
                 defaultValue="Abia"
-                onChange={onStateChange}
+                onChange={handleChange}
                 id="form-category"
               >
                 {/* <option selected="selected">Pharmacology</option> */}
 
-                {states.map((_val, index) => {
+                {data.map((_val, index) => {
                   return (
-                    <option value={_val.statecode} key={index}>
-                      {_val.name}
+                    <option value={_val.state} key={index}>
+                      {_val.state}
                     </option>
                   );
                 })}
@@ -199,7 +207,7 @@ export default function AddPepNotesComp({ title }) {
             <div className="input_box">
               <label htmlFor="form-lga">LGA</label>
               <select
-                name="state"
+                name="lga"
                 // defaultValue="Abia"
                 onChange={handleChange}
                 id="form-lga"
@@ -208,8 +216,25 @@ export default function AddPepNotesComp({ title }) {
 
                 {localGov.map((_val, index) => {
                   return (
-                    <option value={_val.statecode} key={index}>
+                    <option value={_val.name} key={index}>
                       {_val.name}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            <div className="input_box">
+              <label htmlFor="form-ward">Wards</label>
+              <select
+                name="ward"
+                // defaultValue="Abia"
+                onChange={handleChange}
+                id="form-ward"
+              >
+                {wards.map((_val, index) => {
+                  return (
+                    <option value={_val} key={index}>
+                      {_val}
                     </option>
                   );
                 })}

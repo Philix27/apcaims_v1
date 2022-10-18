@@ -16,7 +16,7 @@ import { GOMBE } from "./gombe";
 import { IMO } from "./imo";
 import { JIGAWA } from "./jigawa";
 
-export default data = [
+export const data = [
   ADAMAWA,
   AKWAIBOM,
   ANAMBRA,
