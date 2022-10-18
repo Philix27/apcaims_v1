@@ -1,4 +1,5 @@
-const DELTA = {
+
+export const DELTA = {
     state: "DELTA",
     lga: [
       {

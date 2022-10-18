@@ -26,6 +26,7 @@ export default function Navbar() {
 
   const logOut = () => {
     localStorage.clear();
+    setUser({ email: "", name: "" });
     router.push("/");
   };
   return (
@@ -69,7 +70,7 @@ export default function Navbar() {
                 </li>
               ) : (
                 <li className="nav_start_list_item">
-                  <Link href="/#">
+                  <Link href="/">
                     <a className="link">Not Signed In</a>
                   </Link>
                 </li>

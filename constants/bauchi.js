@@ -1,3 +1,4 @@
+
 const BAUCHI = {
     state: "BAUCHI",
     lga: [

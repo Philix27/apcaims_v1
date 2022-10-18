@@ -1,6 +1,7 @@
-const ADAMAWA = {
-    state: "ADAMAWA",
-    lga: [
+
+export const ADAMAWA = {
+  state: "ADAMAWA",
+  lga: [
     {
       wards: [
       "BILLE",
