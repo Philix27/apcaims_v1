@@ -1,0 +1,23 @@
+export const CROSSRIVER = {
+  state: "CROSS RIVER",
+  lga: [
+    { wards: [], name: "Abi" },
+    { wards: [], name: "Akamkpa" },
+    { wards: [], name: "Akpabuyo" },
+    { wards: [], name: "Bakassi" },
+    { wards: [], name: "Bekwarra" },
+    { wards: [], name: "Biase" },
+    { wards: [], name: "Boki" },
+    { wards: [], name: "Calabar Municipal" },
+    { wards: [], name: "Calabar South" },
+    { wards: [], name: "Etung" },
+    { wards: [], name: "Ikom" },
+    { wards: [], name: "Obanliku" },
+    { wards: [], name: "Obubra" },
+    { wards: [], name: "Obudu" },
+    { wards: [], name: "Odukpani" },
+    { wards: [], name: "Ogoja" },
+    { wards: [], name: "Yakuur" },
+    { wards: [], name: "Yala" },
+  ],
+};

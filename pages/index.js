@@ -59,12 +59,6 @@ export default function Home() {
     // console.log("Logged in successfully");
   }
 
-  const logOut = () => {
-    localStorage.clear();
-    console.log("local Storage cleared");
-    // router.push("/");
-  };
-
   function fetchUser() {
     return JSON.parse(localStorage.getItem("user"));
   }

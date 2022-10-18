@@ -1,7 +1,21 @@
 import Head from "next/head";
 import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Dashboard() {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!fetchUser()) {
+      router.push("/");
+      console.log(fetchUser());
+    }
+  }, []);
+  function fetchUser() {
+    return JSON.parse(localStorage.getItem("user"));
+  }
+
   return (
     <div className="dasboardWrapper">
       <Head>

@@ -1,0 +1,36 @@
+export const BAUCHI = {
+  state: "BAUCHI",
+  lga: [
+    {
+      wards: [],
+      name: "Alkaleri",
+    },
+    {
+      wards: [],
+      name: "Bauchi",
+    },
+    {
+      wards: [],
+      name: "Bogoro",
+    },
+    { wards: [], name: "Bauchi" },
+    { wards: [], name: "Bogoro" },
+    { wards: [], name: "Damban" },
+    { wards: [], name: "Darazo" },
+    { wards: [], name: "Dass" },
+    { wards: [], name: "Gamawa" },
+    { wards: [], name: "Ganjuwa" },
+    { wards: [], name: "Giade" },
+    { wards: [], name: "Itas/Gadau," },
+    { wards: [], name: "Jama'are" },
+    { wards: [], name: "Katagum" },
+    { wards: [], name: "Kirfi" },
+    { wards: [], name: "Misau" },
+    { wards: [], name: "Ningi" },
+    { wards: [], name: "Shira" },
+    { wards: [], name: "Tafawa Bal,ewa" },
+    { wards: [], name: "Toro" },
+    { wards: [], name: "Warji" },
+    { wards: [], name: "Zaki" },
+  ],
+};

@@ -1,4 +1,4 @@
-const ADAMAWA = {
+export const ADAMAWA = {
   state: "Adamawa",
   lga: [
     {
