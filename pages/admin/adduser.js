@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Axios from "axios";
 import { states } from "../../constants/states";
 
@@ -66,6 +67,19 @@ export default function AddUser({ title }) {
       console.log("Something is missing");
     }
   };
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!fetchUser()) {
+      router.push("/");
+      // console.log(fetchUser());
+    }
+  }, []);
+
+  function fetchUser() {
+    return JSON.parse(localStorage.getItem("user"));
+  }
 
   return (
     <div className="comp">

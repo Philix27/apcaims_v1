@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Axios from "axios";
 import { states } from "../../constants/states";
 import { lgas } from "../../constants/lga";
@@ -20,9 +21,10 @@ export default function AddPepNotesComp({ title }) {
     "PRESIDENTIAL",
     "GUBERNATORIAL",
     "SENATORIAL",
-    "HOUSE OF REPRESENTATIVES",
+    "HOUSE OF REP",
     "STATE HOUSE OF ASSEMBLY",
   ];
+
   //   function postArticle(_article) {
   //     Axios.post("https://rxedu-api.vercel.app/api/v1/pep_mcq_demo", article)
   //       .then((response) => {
@@ -77,6 +79,17 @@ export default function AddPepNotesComp({ title }) {
       console.log("Something is missing");
     }
   };
+
+  useEffect(() => {
+    if (!fetchUser()) {
+      router.push("/");
+      // console.log(fetchUser());
+    }
+  }, []);
+
+  function fetchUser() {
+    return JSON.parse(localStorage.getItem("user"));
+  }
 
   return (
     <div className="comp">
