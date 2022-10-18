@@ -1,8 +1,8 @@
-const EBONYI = {
-    state: "EBONYI",
-    lga: [
-      {
-        wards: [
+export const EBONYI = {
+  state: "EBONYI",
+  lga: [
+    {
+      wards: [
         "ABAKPA",
         "AMACHI (NDEBO)",
         "AMACHI (NDEGU)",
@@ -17,11 +17,11 @@ const EBONYI = {
         "OKPOITUMO NDEBOR",
         "OKPOITUMO NDIEGU",
         "TIMBER SHED",
-    ],
-        name: "ABAKALIKI",
-      },
-      {
-        wards: [
+      ],
+      name: "ABAKALIKI",
+    },
+    {
+      wards: [
         "AMAEKE",
         "AMANGWU EDDA",
         "AMAOSO",
@@ -33,11 +33,11 @@ const EBONYI = {
         "NGUZU",
         "OSO",
         "OWUTU",
-    ],
-        name: "AFIKPO SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "AFIKPO SOUTH",
+    },
+    {
+      wards: [
         "AMATA-AKPOHA",
         "AMOGU AKPOHA",
         "EZEKE AMASIRI",
@@ -50,11 +50,11 @@ const EBONYI = {
         "UGWUEGU AFIKPO",
         "UWANA AFIKPO 1",
         "UWANA AFIKPO II",
-    ],
-        name: "AFIKPO NORTH",
-      },
-      {
-        wards: [
+      ],
+      name: "AFIKPO NORTH",
+    },
+    {
+      wards: [
         "(ABAKPA)",
         "ABOFIA",
         "AGALEGU",
@@ -68,11 +68,11 @@ const EBONYI = {
         "NDIEGU",
         "ONUENYIM",
         "URBAN NEW LAYOUT",
-    ],
-        name: "EBONYI",
-      },
-      {
-        wards: [
+      ],
+      name: "EBONYI",
+    },
+    {
+      wards: [
         "AMUDA/AMA WULA",
         "EKKA",
         "INYERE",
@@ -84,11 +84,11 @@ const EBONYI = {
         "ORIUZOR",
         "OSHIEGBE UMUEZ EOKOHA",
         "UMUEZEOKA",
-    ],
-        name: "EZZA NORTH",
-      },
-      {
-        wards: [
+      ],
+      name: "EZZA NORTH",
+    },
+    {
+      wards: [
         "AMAEKA",
         "AMAEZEKWE",
         "AMAGU/NSOKARA",
@@ -100,11 +100,11 @@ const EBONYI = {
         "IKWUATOR/IDEMBIA",
         "ONUEKE",
         "UMUNWAGU / IDEMBIA",
-    ],
-        name: "EZZA SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "EZZA SOUTH",
+    },
+    {
+      wards: [
         "AMA INYIMA",
         "ECHIALIKE",
         "EKA AWOKE",
@@ -125,11 +125,11 @@ const EBONYI = {
         "NDUFU AWKE",
         "NDUFU ECHARA",
         "NOYE ALIKE",
-    ],
-        name: "IKWO",
-      },
-      {
-        wards: [
+      ],
+      name: "IKWO",
+    },
+    {
+      wards: [
         "AGBA",
         "AMAEZU",
         "AZUINYABA 'A'",
@@ -146,11 +146,11 @@ const EBONYI = {
         "OHOFIA",
         "OKPOTO",
         "UMUHUALI",
-    ],
-        name: "ISHIELU",
-      },
-      {
-        wards: [
+      ],
+      name: "ISHIELU",
+    },
+    {
+      wards: [
         "AKAEZE ISHIAGU",
         "AKAEZE UKWU",
         "AMAGU",
@@ -162,11 +162,11 @@ const EBONYI = {
         "OBINAGU",
         "OKUE",
         "UMOBO",
-    ],
-        name: "IVO",
-      },
-      {
-        wards: [
+      ],
+      name: "IVO",
+    },
+    {
+      wards: [
         "AGBAJA ANYANWUIGWE",
         "AGBAJA OFFIA ONWE",
         "AGBAJA(MGBO)",
@@ -181,11 +181,11 @@ const EBONYI = {
         "MGBALAKU INYIMAGU II",
         "NDIEZE INYIMAGU 11 NDIABOR ISHIAGU",
         "NDIEZE INYIMAGU MGBABELUZOR",
-    ],
-        name: "IZZI",
-      },
-      {
-        wards: [
+      ],
+      name: "IZZI",
+    },
+    {
+      wards: [
         "AMAECHI OKPOSI",
         "ENENA EZERAKU",
         "MGBOM OKPOSI",
@@ -197,11 +197,11 @@ const EBONYI = {
         "UMIC HIMA",
         "UMUNAGA",
         "UMUOBUNA",
-    ],
-        name: "OHAOZARA",
-      },
-      {
-        wards: [
+      ],
+      name: "OHAOZARA",
+    },
+    {
+      wards: [
         "EFFIUM II",
         "EFFIUM I",
         "EZZAMGBO",
@@ -217,11 +217,11 @@ const EBONYI = {
         "WIGBEKE I",
         "WIGBEKE II",
         "WIGBEKE III",
-    ],
-        name: "OHAUKWU",
-      },
-      {
-        wards: [
+      ],
+      name: "OHAUKWU",
+    },
+    {
+      wards: [
         "ABAOMEGE",
         "AGBABOR-ISU",
         "AMANATOR-ISU",
@@ -234,9 +234,8 @@ const EBONYI = {
         "OKUZU-UKAWU",
         "UGWU-OSHIRI",
         "UMUDOMI-ONICHA",
-    ],
-        name: "ONICHA",
-      },
-    ],
-  };
-  
+      ],
+      name: "ONICHA",
+    },
+  ],
+};

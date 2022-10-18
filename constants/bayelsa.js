@@ -1,9 +1,8 @@
-
-const BAYELSA = {
-    state: "BAYELSA",
-    lga: [
-      {
-        wards: [
+export const BAYELSA = {
+  state: "BAYELSA",
+  lga: [
+    {
+      wards: [
         "BRASS I",
         "BRASS WARD II",
         "CAPE FARMOSA",
@@ -14,11 +13,11 @@ const BAYELSA = {
         "OKPOAMA",
         "OS-INIBIRI",
         "SANGANA",
-        ],
-        name: "BRASS",
-      },
-      {
-        wards: [
+      ],
+      name: "BRASS",
+    },
+    {
+      wards: [
         "EDUWINI I",
         "EDUWINI II",
         "OPOROMOR I",
@@ -31,11 +30,11 @@ const BAYELSA = {
         "OYIAKIRI III",
         "OYIAKIRI IV",
         "TARAKIRI",
-        ],
-        name: "EKEROMOR",
-      },
-      {
-        wards: [
+      ],
+      name: "EKEROMOR",
+    },
+    {
+      wards: [
         "IGBEDI",
         "KAIAMA",
         "KAIAMA/OLOBIRI",
@@ -47,12 +46,11 @@ const BAYELSA = {
         "OPOKUMASOUTH",
         "SAMPOU/KALAMA",
         "SEIBOKOROGHA (SABAGREIA) 1",
-    ],
-        name: "KOLOKUMA/OPOKUMA",
-
-      },
-      {
-        wards: [
+      ],
+      name: "KOLOKUMA/OPOKUMA",
+    },
+    {
+      wards: [
         "BASSAMBIRI 1",
         "BASSAMBIRI 11",
         "BASSAMBIRI 111",
@@ -66,11 +64,11 @@ const BAYELSA = {
         "OKOROMA 1",
         "OKOROMA 11",
         "OLUASIRI",
-    ],
-        name: "NEMBE",
-      },
-      {
-        wards: [
+      ],
+      name: "NEMBE",
+    },
+    {
+      wards: [
         "ANYAMA",
         "EMEYAL",
         "IMIRINGI",
@@ -84,11 +82,11 @@ const BAYELSA = {
         "OTUABULA",
         "OTUASEGA",
         "OTUOKPOTI",
-    ],
-        name: "OGBIA",
-      },
-      {
-        wards: [
+      ],
+      name: "OGBIA",
+    },
+    {
+      wards: [
         "ADAGBABIRI",
         "ADONI",
         "AGBERE",
@@ -103,11 +101,11 @@ const BAYELSA = {
         "SAGBAMA",
         "TORU-EBENI",
         "TROFANI",
-    ],
-        name: "SAGBAMA",
-      },
-      {
-        wards: [
+      ],
+      name: "SAGBAMA",
+    },
+    {
+      wards: [
         "AMASSOMA I",
         "AMASSOMA II",
         "AMASSOMA III",
@@ -125,11 +123,11 @@ const BAYELSA = {
         "OTUAN",
         "UKUBIE",
         "WEST BOMA",
-    ],
-        name: "SOUTHERN IJAW",
-      },
-      {
-        wards: [
+      ],
+      name: "SOUTHERN IJAW",
+    },
+    {
+      wards: [
         "ATTISSA I",
         "ATTISSA II",
         "ATTISSA III",
@@ -145,9 +143,8 @@ const BAYELSA = {
         "GBARAIN III",
         "OKORDIA",
         "ZARAMA",
-    ],
-        name: "YENAGOA",
-      },
-    ],
-  };
-  
+      ],
+      name: "YENAGOA",
+    },
+  ],
+};

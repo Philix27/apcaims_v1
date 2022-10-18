@@ -1,119 +1,117 @@
-const  = {
-    state: "",
-    lga: [
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-  
-    ],
-  };
-  
+export const JIGAWA = {
+  state: "",
+  lga: [
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+    {
+      wards: [],
+      name: "",
+    },
+  ],
+};

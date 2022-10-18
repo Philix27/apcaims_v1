@@ -1,4 +1,4 @@
-const  = {
+export const IMO  = {
     state: "",
     lga: [
       {

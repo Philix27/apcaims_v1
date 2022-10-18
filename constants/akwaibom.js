@@ -1,5 +1,4 @@
-
-const AKWAIBOM = {
+export const AKWAIBOM = {
     state: "AKWAIBOM",
     lga: [
       {

@@ -1,9 +1,8 @@
-
-const BAUCHI = {
-    state: "BAUCHI",
-    lga: [
-      {
-        wards: [
+export const BAUCHI = {
+  state: "BAUCHI",
+  lga: [
+    {
+      wards: [
         "ALKALERI",
         "BIRIN/ GIGARA/ YANKARI",
         "DAN KUNGIBAR",
@@ -14,12 +13,12 @@ const BAUCHI = {
         "MAIMADI",
         "PALI",
         "YALO",
-        "YULI/ LIM"
-    ],
-        name: "ALKALERI",
-      },
-      {
-        wards: [
+        "YULI/ LIM",
+      ],
+      name: "ALKALERI",
+    },
+    {
+      wards: [
         "B O I 'A'",
         "B O I 'B'",
         "B O I 'C'",
@@ -30,11 +29,11 @@ const BAUCHI = {
         "LUSA  'A'",
         "LUSA  'B'",
         "LUSA  'C'",
-        ],
-        name: "BOGORO",
-      },
-      {
-        wards: [
+      ],
+      name: "BOGORO",
+    },
+    {
+      wards: [
         "BIRSHI/MIRI",
         "DANDANGO/YAMRAT",
         "DAN'IYA HARDO",
@@ -47,11 +46,11 @@ const BAUCHI = {
         "MAKAMA/SARKI BAKI",
         "MUN/MUNSAL",
         "ZUNGUR/LIMAN  KATAGUM",
-        ],
-        name: "BAUCHI",
-      },
-      {
-        wards: [
+      ],
+      name: "BAUCHI",
+    },
+    {
+      wards: [
         "DAGAUDA",
         "DAMBAM",
         "GARGAWA",
@@ -62,11 +61,11 @@ const BAUCHI = {
         "YAME",
         "YANDA",
         "ZAURA",
-        ],
-        name: "DAMBAM",
-      },
-      {
-        wards: [
+      ],
+      name: "DAMBAM",
+    },
+    {
+      wards: [
         "DARAZO",
         "GABARIN",
         "GABCIYARI",
@@ -78,11 +77,11 @@ const BAUCHI = {
         "TAUYA",
         "WAHU",
         "YAUTARE",
-        ],
-        name: "DARAZO",
-      },
-      {
-        wards: [
+      ],
+      name: "DARAZO",
+    },
+    {
+      wards: [
         "BAGEL/BAJAR",
         "BARAZA",
         "BUNDOT",
@@ -93,11 +92,11 @@ const BAUCHI = {
         "POLCHI",
         "WANDI",
         "ZUMBUL/LUKSHI",
-        ],
-        name: "DASS",
-      },
-      {
-        wards: [
+      ],
+      name: "DASS",
+    },
+    {
+      wards: [
         "ALAGARNO/JADORI",
         "GADIYA",
         "GAMAWA",
@@ -108,11 +107,11 @@ const BAUCHI = {
         "TARMASUWA",
         "TUMBI",
         "UDUBO",
-        ],
-        name: "GAMAWA",
-      },
-      {
-        wards: [
+      ],
+      name: "GAMAWA",
+    },
+    {
+      wards: [
         "ZINDI",
         "Ganjuwa",
         "Gungura",
@@ -125,11 +124,11 @@ const BAUCHI = {
         "NASARAWA SOUTH",
         "NASARAWA NORTH",
         "YALI",
-        ],
-        name: "GANJUWA",
-      },
-      {
-        wards: [
+      ],
+      name: "GANJUWA",
+    },
+    {
+      wards: [
         "CHINKANI",
         "DOGUWA  SOUTH",
         "DOGUWA CENTRAL",
@@ -140,11 +139,11 @@ const BAUCHI = {
         "UZUM 'B'",
         "ZABI",
         "ZIRRAMI",
-        ],
-        name: "GIADE",
-      },
-      {
-        wards: [
+      ],
+      name: "GIADE",
+    },
+    {
+      wards: [
         "ABDALLAWA/MAGARYA",
         "BAMBAL",
         "BILKICHERI",
@@ -155,11 +154,11 @@ const BAUCHI = {
         "KASHURI",
         "MASHEMA",
         "ZUBUKI",
-        ],
-        name: "ITAS/GADAU",
-      },
-      {
-        wards: [
+      ],
+      name: "ITAS/GADAU",
+    },
+    {
+      wards: [
         "DOGON JEJI 'A'",
         "DOGON JEJI 'B'",
         "DOGON JEJI 'C'",
@@ -170,11 +169,11 @@ const BAUCHI = {
         "JAMA'ARE 'C'",
         "JAMA'ARE 'D'",
         "JURARA",
-    ],
-        name: "JAMA'ARE",
-      },
-      {
-        wards: [
+      ],
+      name: "JAMA'ARE",
+    },
+    {
+      wards: [
         "BULKACHUWA/DAGARO",
         "BUSKURI",
         "CHINADE",
@@ -186,11 +185,11 @@ const BAUCHI = {
         "RAGWAM/MAGONSHI",
         "TSAKUWA KOFAR GABAS/ KOFAR KUKA",
         "YAYU",
-        ],
-        name: "KATAGUM",
-      },
-      {
-        wards: [
+      ],
+      name: "KATAGUM",
+    },
+    {
+      wards: [
         "BADARA",
         "BARA",
         "BENI 'A'",
@@ -201,11 +200,11 @@ const BAUCHI = {
         "SHANGO",
         "TUBULE",
         "WANKA",
-        ],
-        name: "KIRFI",
-      },
-      {
-        wards: [
+      ],
+      name: "KIRFI",
+    },
+    {
+      wards: [
         "AJILIN/GUGULIN",
         "BETI",
         "GWARAM",
@@ -216,11 +215,11 @@ const BAUCHI = {
         "SIRKO",
         "TOFU",
         "ZADAWA",
-        ],
-        name: "MISAU",
-      },
-      {
-        wards: [
+      ],
+      name: "MISAU",
+    },
+    {
+      wards: [
         "BALMA",
         "BASHE",
         "BURRA / KYATA",
@@ -232,11 +231,11 @@ const BAUCHI = {
         "NINGI",
         "SAMA",
         "TIFFI / GUDA",
-        ],
-        name: "NINGI",
-      },
-      {
-        wards: [
+      ],
+      name: "NINGI",
+    },
+    {
+      wards: [
         "ANDUBUN",
         "BELI/GAGIDABA",
         "BUKUL/BANGIRE",
@@ -248,27 +247,27 @@ const BAUCHI = {
         "TSAFI",
         "TUMFAFI",
         "ZUBO",
-        ],
-        name: "SHIRA",
-      },
-      {
-        wards: [
-            "BALL",
-            "BULA",
-            "BUNUNU",
-            "DAJIN",
-            "DULL",
-            "KARDAM 'A'",
-            "KARDAM 'B'",
-            "LERE  SOUTH",
-            "LERE NORTH",
-            "TAPSHIN",
-            "WAI"
-         ],
-        name: "TAFAWA BALEWA",
-      },
-      {
-        wards: [
+      ],
+      name: "SHIRA",
+    },
+    {
+      wards: [
+        "BALL",
+        "BULA",
+        "BUNUNU",
+        "DAJIN",
+        "DULL",
+        "KARDAM 'A'",
+        "KARDAM 'B'",
+        "LERE  SOUTH",
+        "LERE NORTH",
+        "TAPSHIN",
+        "WAI",
+      ],
+      name: "TAFAWA BALEWA",
+    },
+    {
+      wards: [
         "JAMA'A / ZARANDA",
         "LAME",
         "MARA / PALAMA",
@@ -280,11 +279,11 @@ const BAUCHI = {
         "TORO / TULAI",
         "WONU",
         "ZALAU / RISHI",
-        ],
-        name: "TORO",
-      },
-      {
-        wards: [
+      ],
+      name: "TORO",
+    },
+    {
+      wards: [
         "BAIMA  SOUTH/EAST",
         "BAIMA NORTH / WEST",
         "DAGU EAST",
@@ -296,11 +295,11 @@ const BAUCHI = {
         "TIYIN",
         "TUDUN WADA WEST",
         "ALANGAWARI / KAFIN / LARABAWA",
-        ],
-        name: "WARJI",
-      },
-      {
-        wards: [
+      ],
+      name: "WARJI",
+    },
+    {
+      wards: [
         "BURSALI",
         "GUMAI",
         "KATAGUM",
@@ -311,9 +310,8 @@ const BAUCHI = {
         "MURMUR NORTH",
         "SAKWA",
         "TASHENA / GADAI",
-        ],
-        name: "ZAKI",
-      },
-    ],
-  };
-  
+      ],
+      name: "ZAKI",
+    },
+  ],
+};
