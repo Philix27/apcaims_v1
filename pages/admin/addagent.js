@@ -17,12 +17,20 @@ export default function AddAgentsPage({ title }) {
   const [profileImage, setProfileImage] = useState(null);
   const [imgUrl, setImgUrl] = useState(null);
   const styleHide = "hide";
+
   const [agent, setAgent] = useState({
     name: "",
     email: "",
     phone: "",
     address: "",
+    agentType: "",
+    state: "",
+    lga: "",
+    ward: "",
+    imgUrl: "",
+    status: "NEW",
   });
+
   const agentTypes = [
     "PRESIDENTIAL",
     "GUBERNATORIAL",
@@ -31,28 +39,23 @@ export default function AddAgentsPage({ title }) {
     "STATE HOUSE OF ASSEMBLY",
   ];
 
-  //   function postArticle(_article) {
-  //     Axios.post("https://rxedu-api.vercel.app/api/v1/pep_mcq_demo", article)
-  //       .then((response) => {
-  //         setIsSuccessful(true);
+  function postAgent(agent) {
+    Axios.post("/api/agents", article)
+      .then((response) => {
+        setIsSuccessful(true);
 
-  //         setArticle({
-  //           category: "PEP",
-  //           title: "",
-  //           content: "",
-  //           imageUrl: "",
-  //         });
-  //         // console.log("Successfully Sent to: " + apiUrl);
+        console.log("Successfully Sent to: ");
+        alert("Successfully Added");
 
-  //         setTimeout(() => {
-  //           setIsSuccessful(false);
-  //         }, 5000);
-  //       })
-  //       .catch((e) => {
-  //         console.log(e);
-  //         console.log("Opps an error ocured");
-  //       });
-  //   }
+        setTimeout(() => {
+          setIsSuccessful(false);
+        }, 5000);
+      })
+      .catch((e) => {
+        console.log(e);
+        console.log("Opps an error ocured");
+      });
+  }
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -80,7 +83,8 @@ export default function AddAgentsPage({ title }) {
         console.log("no file yet");
       }
     }
-    setAgent({ ...user, [name]: value });
+    setAgent({ ...agent, [name]: value });
+    console.log(agent);
   };
 
   const handlePrev = (e) => {
@@ -103,11 +107,22 @@ export default function AddAgentsPage({ title }) {
   }
 
   const handleSubmit = async (e) => {
-    if (article.title && article.content) {
+    if (
+      agent.name &&
+      agent.email &&
+      agent.address &&
+      agent.phone &&
+      agent.state &&
+      agent.lga &&
+      agent.ward &&
+      agent.status &&
+      agent.agentType
+    ) {
       e.preventDefault();
       //  await uploadImageToFb()
       await uploadImageToFb();
-      postAgent(article);
+      setAgent({ ...agent, imgUrl: imgUrl });
+      postAgent(agent);
     } else {
       console.log("Something is missing");
     }
@@ -217,6 +232,7 @@ export default function AddAgentsPage({ title }) {
             />
           </div>
         </motion.div>
+
         <motion.div
           className={`sect step2 ${!saveStep1 && styleHide}`}
           initial={{ x: "-100vw", opacity: 0.1 }}
@@ -236,12 +252,11 @@ export default function AddAgentsPage({ title }) {
             <div className="input_box">
               <label htmlFor="form-category">Agent Type</label>
               <select
-                name="category"
-                defaultValue="pharmacology"
+                name="agentType"
+                id="form-category"
+                defaultValue={agentTypes[0]}
                 onChange={handleChange}
               >
-                {/* <option selected="selected">Pharmacology</option> */}
-
                 {agentTypes.map((_val, index) => {
                   return (
                     <option value={_val} key={index}>
@@ -255,7 +270,7 @@ export default function AddAgentsPage({ title }) {
               <label htmlFor="form-category">State</label>
               <select
                 name="state"
-                defaultValue="Abia"
+                defaultValue="ABIA"
                 onChange={handleChange}
                 id="form-category"
               >
@@ -311,7 +326,7 @@ export default function AddAgentsPage({ title }) {
           <div className="buttons">
             <input
               type="submit"
-              value="Next"
+              value="Submit"
               onClick={handleSubmit}
               className="btn"
             />
