@@ -209,14 +209,14 @@ export default function AddAgentsPage({ title }) {
               />
             </div>
             <div className="input_box">
-              <label htmlFor="form-category">State</label>
+              <label htmlFor="form-state">State</label>
               <select
                 name="state"
                 defaultValue="ABIA"
                 onChange={handleChange}
-                id="form-category"
+                id="form-state"
               >
-                {/* <option selected="selected">Pharmacology</option> */}
+                <option disabled="true">Select an state</option>
 
                 {data.states.map((_val, index) => {
                   return (
@@ -235,7 +235,7 @@ export default function AddAgentsPage({ title }) {
                 onChange={handleChange}
                 id="form-lga"
               >
-                {/* <option selected="selected">Pharmacology</option> */}
+                <option disabled="true">Select a LGA</option>
 
                 {localGov.map((_val, index) => {
                   return (
@@ -254,6 +254,7 @@ export default function AddAgentsPage({ title }) {
                 onChange={handleChange}
                 id="form-ward"
               >
+                <option disabled="true">Select an state</option>
                 {wards.map((_val, index) => {
                   return (
                     <option value={_val} key={index}>
@@ -288,13 +289,14 @@ export default function AddAgentsPage({ title }) {
               Step 2 <span>Type of Election</span>
             </h2>
             <div className="input_box">
-              <label htmlFor="form-election-typr">Election Type</label>
+              <label htmlFor="form-election-type">Election Type</label>
               <select
                 name="electionType"
-                id="form-election-typr"
-                defaultValue={agentParams.electionTypes[0]}
+                id="form-election-type"
+                defaultValue="Select an election type"
                 onChange={handleChange}
               >
+                <option disabled="true">Select an election type</option>
                 {agentParams.electionTypes.map((_val, index) => {
                   return (
                     <option value={_val} key={index}>
