@@ -1,8 +1,19 @@
-export const KADUNA = {
-    state: "KADUNA",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "KADUNA",
+  email: "kaduna@gmail.com",
+  password: "kaduna1",
+  phone: "08108850572",
+  statecode: "KADUNA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "KADUNA",
+  state: "KADUNA",
+  lga: [
+    {
+      wards: [
         "DOGON DAWA",
         "GAYAM",
         "KAKANGI",
@@ -14,11 +25,11 @@ export const KADUNA = {
         "MAGAJIN GARI III",
         "RANDAGI",
         "TABANNI",
-    ],
-        name: "BIRNIN GWARI",
-      },
-      {
-        wards: [
+      ],
+      name: "BIRNIN GWARI",
+    },
+    {
+      wards: [
         "CHIKUN",
         "GWAGWADA",
         "KAKAU",
@@ -31,11 +42,11 @@ export const KADUNA = {
         "S/GGARIN AREWA TIRKANIYA",
         "SABON TASHA",
         "UNG. YELWA",
-    ],
-        name: "CHIKUN",
-      },
-      {
-        wards: [
+      ],
+      name: "CHIKUN",
+    },
+    {
+      wards: [
         "DANMAHAWAYI",
         "GALADIMAWA",
         "GANGARA",
@@ -47,11 +58,11 @@ export const KADUNA = {
         "PAN HAUYA",
         "SHIKA",
         "YAKAWADA",
-    ],
-        name: "GWIWA",
-      },
-      {
-        wards: [
+      ],
+      name: "GWIWA",
+    },
+    {
+      wards: [
         "AFAKA",
         "BIRNIN YERO",
         "GADAN GAYAN",
@@ -64,11 +75,11 @@ export const KADUNA = {
         "SABON BIRNIN DAJI",
         "TURUNKU",
         "ZANGON AYA",
-    ],
-        name: "IGABI",
-      },
-      {
-        wards: [
+      ],
+      name: "IGABI",
+    },
+    {
+      wards: [
         "AUCHAN",
         "IKARA",
         "JANFALA",
@@ -79,11 +90,11 @@ export const KADUNA = {
         "RUMI",
         "SAULAWA",
         "SAYA-SAYA",
-    ],
-        name: "IKARA",
-      },
-      {
-        wards: [
+      ],
+      name: "IKARA",
+    },
+    {
+      wards: [
         "CHORI",
         "DADDU",
         "DURA/BITARO",
@@ -94,11 +105,11 @@ export const KADUNA = {
         "SABCHEM",
         "SABZURO",
         "SAMBAM",
-    ],
-        name: "JABA",
-      },
-      {
-        wards: [
+      ],
+      name: "JABA",
+    },
+    {
+      wards: [
         "ASSO",
         "ATUKU",
         "BEDDE",
@@ -111,11 +122,11 @@ export const KADUNA = {
         "KANINKON",
         "MAIGIZO 'A'",
         "TAKAU 'B'",
-    ],
-        name: "JEMA'A",
-      },
-      {
-        wards: [
+      ],
+      name: "JEMA'A",
+    },
+    {
+      wards: [
         "AGUNU",
         "ANKWA",
         "AWON",
@@ -128,11 +139,11 @@ export const KADUNA = {
         "KURMIN MUSA",
         "KWATURU",
         "SABON SARKI",
-    ],
-        name: "KACHIA",
-      },
-      {
-        wards: [
+      ],
+      name: "KACHIA",
+    },
+    {
+      wards: [
         "BADARAWA",
         "GABASAWA",
         "GAJI",
@@ -145,11 +156,11 @@ export const KADUNA = {
         "UNGUWAN LIMAN",
         "UNGUWAN SARKI",
         "UNGUWAN SHANU",
-    ],
-        name: "KADUNA NORTH",
-      },
-      {
-        wards: [
+      ],
+      name: "KADUNA NORTH",
+    },
+    {
+      wards: [
         "BADIKO",
         "BARNAWA",
         "KAKURI GWARI",
@@ -163,11 +174,11 @@ export const KADUNA = {
         "TUDUN WADA SOUTH",
         "TUDUN WADA WEST",
         "UNG. SANUSI",
-    ],
-        name: "KADUNA SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "KADUNA SOUTH",
+    },
+    {
+      wards: [
         "ARIBI",
         "IDDAH",
         "JERE NORTH",
@@ -178,11 +189,11 @@ export const KADUNA = {
         "KUKUI",
         "KURMIN JIBRIN",
         "KUSHE",
-    ],
-        name: "KAGARKO",
-      },
-      {
-        wards: [
+      ],
+      name: "KAGARKO",
+    },
+    {
+      wards: [
         "AFOGO",
         "BUDA",
         "IDON",
@@ -193,11 +204,11 @@ export const KADUNA = {
         "MARO",
         "RIMAU",
         "TANTATU",
-    ],
-        name: "KAJURU",
-      },
-      {
-        wards: [
+      ],
+      name: "KAJURU",
+    },
+    {
+      wards: [
         "AGBAN",
         "BONDON",
         "FADA",
@@ -208,11 +219,11 @@ export const KADUNA = {
         "MALLAGUM",
         "MANCHOK",
         "ZANKAN",
-    ],
-        name: "KAURA",
-      },
-      {
-        wards: [
+      ],
+      name: "KAURA",
+    },
+    {
+      wards: [
         "BADURUM SAMA",
         "BITAL",
         "DAMAKASUWA",
@@ -224,11 +235,11 @@ export const KADUNA = {
         "KWASSAM",
         "MAKAMI",
         "PARI",
-    ],
-        name: "KAURU",
-      },
-      {
-        wards: [
+      ],
+      name: "KAURU",
+    },
+    {
+      wards: [
         "ANCHAU",
         "DAMAU",
         "DUTSEN WAI",
@@ -240,11 +251,11 @@ export const KADUNA = {
         "PAMBEGUA",
         "ZABI",
         "ZUNTU",
-    ],
-        name: "KUBAU",
-      },
-      {
-        wards: [
+      ],
+      name: "KUBAU",
+    },
+    {
+      wards: [
         "DOKA",
         "GARU",
         "HUNKUYI",
@@ -255,11 +266,11 @@ export const KADUNA = {
         "SABON GARI HUNKUYI",
         "TABAN SANI",
         "ZABI",
-    ],
-        name: "KUDAN",
-      },
-      {
-        wards: [
+      ],
+      name: "KUDAN",
+    },
+    {
+      wards: [
         "ABADAWA",
         "DAN ALHAJI",
         "GARU",
@@ -271,11 +282,11 @@ export const KADUNA = {
         "SABON BIRNIN",
         "SAMINAKA",
         "YAR KASUWA",
-    ],
-        name: "LERE",
-      },
-      {
-        wards: [
+      ],
+      name: "LERE",
+    },
+    {
+      wards: [
         "DANDAMISA",
         "DANGUZIRI",
         "GAZARA",
@@ -286,11 +297,11 @@ export const KADUNA = {
         "MAYERE",
         "NASSARWAN DOYA",
         "TUDUN WADA",
-    ],
-        name: "MAKARFI",
-      },
-      {
-        wards: [
+      ],
+      name: "MAKARFI",
+    },
+    {
+      wards: [
         "BASAWA",
         "BOMO",
         "CHIKAJI",
@@ -302,11 +313,11 @@ export const KADUNA = {
         "SAMARU",
         "UNGUWAN GABAS",
         "ZABI",
-    ],
-        name: "SABON GARI",
-      },
-      {
-        wards: [
+      ],
+      name: "SABON GARI",
+    },
+    {
+      wards: [
         "ABORO",
         "ARAK",
         "AYU",
@@ -318,11 +329,11 @@ export const KADUNA = {
         "NINZAM SOUTH",
         "NINZAM WEST",
         "WASA STATION",
-    ],
-        name: "SANGA",
-      },
-      {
-        wards: [
+      ],
+      name: "SANGA",
+    },
+    {
+      wards: [
         "DAN WATA",
         "GAMAGIRA",
         "GARUN GWANKI",
@@ -334,11 +345,11 @@ export const KADUNA = {
         "RICHIFA",
         "SOBA",
         "TURAWA",
-    ],
-        name: "SOBA",
-      },
-      {
-        wards: [
+      ],
+      name: "SOBA",
+    },
+    {
+      wards: [
         "GIDAN JATAU",
         "GORA",
         "KAMANTAN",
@@ -350,11 +361,11 @@ export const KADUNA = {
         "ZANGO URBAN",
         "ZONKWA",
         "ZONZON",
-    ],
-        name: "ZANGON KATAF",
-      },
-      {
-        wards: [
+      ],
+      name: "ZANGON KATAF",
+    },
+    {
+      wards: [
         "DAMBO",
         "DUTSEN ABBA",
         "GYALLESU",
@@ -368,9 +379,10 @@ export const KADUNA = {
         "UNG. FATIKA",
         "UNG. JUMA",
         "WUCICCIRI",
-    ],
-        name: "ZARIA",
-      },
-    ],
-  };
-  
+      ],
+      name: "ZARIA",
+    },
+  ],
+};
+
+export const KADUNA = { states, SR };

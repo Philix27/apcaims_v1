@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { usersList } from "../constants/users/users";
+import { data } from "../constants/states/";
 import { useRouter } from "next/router";
-import { fetchUser } from "../api/auth";
-// import { fetchUser } from "../api/auth";
 
 export default function Home() {
   const router = useRouter();
@@ -24,38 +22,25 @@ export default function Home() {
     }
   }, {});
 
-  // function login(_user) {
-  //   Axios.post("/api/auth/login", _user)
-  //     .then((response) => {
-  //       setUser({
-  //         email: "",
-  //         password: "",
-  //       });
-  //       console.log("Successfully Sent to: " + apiUrl);
-  //       console.log(response);
-  //       setTimeout(() => {
-  //         setIsSuccessful(false);
-  //       }, 5000);
-  //     })
-  //     .catch((e) => {
-  //       console.log(e);
-  //       console.log("Opps an error ocured");
-  //     });
-  // }
-
   function login(_user) {
-    const userLoggedIn = usersList.filter((_v) => {
+    const userLoggedIn = data.sr.filter((_v) => {
       if (_v.email == _user.email && _v.password == _user.password) {
         return _v;
       }
     });
-
-    if (userLoggedIn) {
+    console.log(userLoggedIn);
+    if (
+      userLoggedIn[0].email == _user.email &&
+      userLoggedIn[0].password == _user.password
+    ) {
       setUserLoggedIn(true);
-      localStorage.setItem("user", JSON.stringify(userLoggedIn));
+      localStorage.setItem("user", JSON.stringify(userLoggedIn[0]));
 
-      router.push("/admin");
+      // router.push("/admin");
+      router.reload(window.location.pathname);
       console.log("Logged in successfully");
+    } else {
+      alert("Wrong Password");
     }
     // console.log("Logged in successfully");
   }
@@ -68,7 +53,7 @@ export default function Home() {
     const name = e.target.name;
     const value = e.target.value;
     setUser({ ...user, [name]: value });
-    console.log(user);
+    // console.log(user);
   };
 
   const handleSubmit = (e) => {

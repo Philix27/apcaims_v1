@@ -6,17 +6,13 @@ import { FaBars, FaTimes } from "react-icons/fa";
 export default function Navbar() {
   const router = useRouter();
   const _path = router.pathname;
-  const [user, setUser] = useState({
-    email: "",
-    name: "",
-  });
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     if (fetchUser()) {
-      setUser(fetchUser()[0]);
-      console.log(fetchUser());
+      setUser(fetchUser());
     } else {
-      setUser();
+      setUser(null);
     }
   }, []);
 
@@ -26,8 +22,9 @@ export default function Navbar() {
 
   const logOut = () => {
     localStorage.clear();
-    setUser({ email: "", name: "" });
-    router.push("/");
+    setUser({});
+    router.reload(window.location.pathname);
+    // router.push("/");
   };
   return (
     <>

@@ -6,6 +6,26 @@
     border-radius: 20px;
     margin-top: 30px;
     // display: none;
+    h2 {
+      font-size: 2rem;
+      span {
+        font-size: medium;
+        font-weight: 300;
+        padding-left: 10px;
+      }
+    }
+    .btnContainer {
+      width: 400px;
+      display: flex;
+
+      .buttons {
+        display: flex;
+        max-width: 50%;
+        justify-content: center;
+        margin: 20px auto;
+        padding: 0px 30px;
+      }
+    }
   }
   .show {
     // display: none;

@@ -1,8 +1,19 @@
-export const JIGAWA = {
-    state: "JIGAWA",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "JIGAWA",
+  email: "jigawa@gmail.com",
+  password: "jigawa1",
+  phone: "08108850572",
+  statecode: "JIGAWA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "JIGAWA",
+  state: "JIGAWA",
+  lga: [
+    {
+      wards: [
         "AUYAKAYI",
         "AUYO",
         "AYAMA",
@@ -14,10 +25,10 @@ export const JIGAWA = {
         "TSIDIR",
         "UNIK",
       ],
-        name: "AUYO",
-      },
-      {
-        wards: [
+      name: "AUYO",
+    },
+    {
+      wards: [
         "BABURA",
         "BATALI",
         "DORAWA",
@@ -30,10 +41,10 @@ export const JIGAWA = {
         "KYAMBO",
         "TAKWASA",
       ],
-        name: "BABURA",
-      },
-      {
-        wards: [
+      name: "BABURA",
+    },
+    {
+      wards: [
         "BIRNIN KUDU",
         "KANGIRE",
         "KANTOGA",
@@ -46,10 +57,10 @@ export const JIGAWA = {
         "WURNO",
         "YALWAN DAMAI",
       ],
-        name: "BIRNIN KUDU",
-      },
-      {
-        wards: [
+      name: "BIRNIN KUDU",
+    },
+    {
+      wards: [
         "BATU",
         "BIRNIWA",
         "DANGWALERI",
@@ -62,10 +73,10 @@ export const JIGAWA = {
         "MATAMU",
         "NGUWA",
       ],
-        name: "BIRNIWA",
-      },
-      {
-        wards: [
+      name: "BIRNIWA",
+    },
+    {
+      wards: [
         "AHOTO",
         "BUJI",
         "CHURBUN",
@@ -77,10 +88,10 @@ export const JIGAWA = {
         "MADABE",
         "Y/TUKUR",
       ],
-        name: "BUJI",
-      },
-      {
-        wards: [
+      name: "BUJI",
+    },
+    {
+      wards: [
         "ABAYA",
         "CHAMO",
         "DUNDUBUS",
@@ -93,10 +104,10 @@ export const JIGAWA = {
         "MADOBI",
         "SAKWAYA",
       ],
-        name: "DUTSE",
-      },
-      {
-        wards: [
+      name: "DUTSE",
+    },
+    {
+      wards: [
         "GAGARAWA GARI",
         "GAGARAWA TASHA",
         "GARIN CHIROMA",
@@ -108,10 +119,10 @@ export const JIGAWA = {
         "YALAWA",
         "ZARADA",
       ],
-        name: "GAGARAWA",
-      },
-      {
-        wards: [
+      name: "GAGARAWA",
+    },
+    {
+      wards: [
         "BUDURU",
         "DOKO",
         "GARKI",
@@ -124,10 +135,10 @@ export const JIGAWA = {
         "RAFIN MARKE",
         "SIYORI",
       ],
-        name: "GARKI",
-      },
-      {
-        wards: [
+      name: "GARKI",
+    },
+    {
+      wards: [
         "BAIKARYA",
         "DANAMA",
         "DANTANOMA",
@@ -140,10 +151,10 @@ export const JIGAWA = {
         "KOFAR YAMMA",
         "ZANGO",
       ],
-        name: "GUMEL",
-      },
-      {
-        wards: [
+      name: "GUMEL",
+    },
+    {
+      wards: [
         "ABUNABO",
         "ADIYANI",
         "DAWA",
@@ -155,10 +166,10 @@ export const JIGAWA = {
         "MATARA BABA",
         "MUSARI",
       ],
-        name: "GURI",
-      },
-      {
-        wards: [
+      name: "GURI",
+    },
+    {
+      wards: [
         "BASIRKA",
         "DINGAYA",
         "FAGAM",
@@ -171,10 +182,10 @@ export const JIGAWA = {
         "TSANGARWA",
         "ZANDAN NAGOGO",
       ],
-        name: "GWARAM",
-      },
-      {
-        wards: [
+      name: "GWARAM",
+    },
+    {
+      wards: [
         "BUNTUSU",
         "DABI",
         "DARINA",
@@ -187,10 +198,10 @@ export const JIGAWA = {
         "YOLA",
         "ZAUMAR SAINAWA",
       ],
-        name: "GWIWA",
-      },
-      {
-        wards: [
+      name: "GWIWA",
+    },
+    {
+      wards: [
         "ATAFI",
         "DUBANTU",
         "GAGULMARI",
@@ -203,10 +214,10 @@ export const JIGAWA = {
         "YANKOLI",
         "YAYARI",
       ],
-        name: "HADEJIA",
-      },
-      {
-        wards: [
+      name: "HADEJIA",
+    },
+    {
+      wards: [
         "AUJARA",
         "GANGAWA",
         "GAUZA TAZARA",
@@ -219,10 +230,10 @@ export const JIGAWA = {
         "KALE",
         "KANWA",
       ],
-        name: "JAHUN",
-      },
-      {
-        wards: [
+      name: "JAHUN",
+    },
+    {
+      wards: [
         "BALANGU",
         "DUMADUMIN TOKA",
         "GAFAYA",
@@ -235,10 +246,10 @@ export const JIGAWA = {
         "SARAWA",
         "ZAGO",
       ],
-        name: "KAFIN HAUSA",
-      },
-      {
-        wards: [
+      name: "KAFIN HAUSA",
+    },
+    {
+      wards: [
         "ARBUS",
         "ASKANDU",
         "DABUWARAN",
@@ -251,10 +262,10 @@ export const JIGAWA = {
         "UNGUWAR JIBRIN",
         "YALO",
       ],
-        name: "KAUGAMA",
-      },
-      {
-        wards: [
+      name: "KAUGAMA",
+    },
+    {
+      wards: [
         "BA'AUZINI",
         "DABA",
         "DABAZA",
@@ -267,10 +278,10 @@ export const JIGAWA = {
         "UNGUWAR GABAS",
         "UNGUWAR YAMMA",
       ],
-        name: "KAZAURE",
-      },
-      {
-        wards: [
+      name: "KAZAURE",
+    },
+    {
+      wards: [
         "BATURIYA",
         "BULUNCHAI",
         "DOLERI",
@@ -282,10 +293,10 @@ export const JIGAWA = {
         "TARABU",
         "TSHEGUWA",
       ],
-        name: "KIRIKA SAMMA",
-      },
-      {
-        wards: [
+      name: "KIRIKA SAMMA",
+    },
+    {
+      wards: [
         "ABALAGO",
         "ANDAZA",
         "FAKE",
@@ -298,10 +309,10 @@ export const JIGAWA = {
         "MAJE",
         "TSURMA",
       ],
-        name: "KIYAWA",
-      },
-      {
-        wards: [
+      name: "KIYAWA",
+    },
+    {
+      wards: [
         "BALARABE",
         "DANKUMBO",
         "FULATA",
@@ -314,10 +325,10 @@ export const JIGAWA = {
         "MATOYA",
         "TURBUS",
       ],
-        name: "MAIGATARI",
-      },
-      {
-        wards: [
+      name: "MAIGATARI",
+    },
+    {
+      wards: [
         "ARKI",
         "DUNARI",
         "FATEKA AKURYA",
@@ -330,10 +341,10 @@ export const JIGAWA = {
         "TASHENA",
         "TONIKUTARA",
       ],
-        name: "MALAM MADORI",
-      },
-      {
-        wards: [
+      name: "MALAM MADORI",
+    },
+    {
+      wards: [
         "DANGYATIN",
         "HANTSU",
         "HARBO",
@@ -345,10 +356,10 @@ export const JIGAWA = {
         "YANDUNA",
         "ZAREKU",
       ],
-        name: "MIGA",
-      },
-      {
-        wards: [
+      name: "MIGA",
+    },
+    {
+      wards: [
         "CHAI-CHAI",
         "DABI",
         "KAFIN BABUSHE",
@@ -360,10 +371,10 @@ export const JIGAWA = {
         "TOFA",
         "YANDUTSE",
       ],
-        name: "RINGIM",
-      },
-      {
-        wards: [
+      name: "RINGIM",
+    },
+    {
+      wards: [
         "AMARYAWA",
         "BARAGUMI",
         "DANSURE",
@@ -376,10 +387,10 @@ export const JIGAWA = {
         "YANZAKI",
         "ZUGAI",
       ],
-        name: "RONI",
-      },
-      {
-        wards: [
+      name: "RONI",
+    },
+    {
+      wards: [
         "ALBASU",
         "AMANGA",
         "DANGWANKI",
@@ -391,10 +402,10 @@ export const JIGAWA = {
         "TAKATSABA",
         "YANDAMO",
       ],
-        name: "SULE-TANKARKAR",
-      },
-      {
-        wards: [
+      name: "SULE-TANKARKAR",
+    },
+    {
+      wards: [
         "AJAURA",
         "CHAKWAIKWAIWA",
         "CHUKUTO",
@@ -406,10 +417,10 @@ export const JIGAWA = {
         "S/GARIN YAYA",
         "TAURA",
       ],
-        name: "TAURA",
-      },
-      {
-        wards: [
+      name: "TAURA",
+    },
+    {
+      wards: [
         "ACHILAFIYA",
         "BELAS",
         "DAWAN-GAWO",
@@ -421,7 +432,9 @@ export const JIGAWA = {
         "YANKWASHI",
         "ZUNBUMBA",
       ],
-        name: "YANKWASHI",
-      },
-    ],
-  };
+      name: "YANKWASHI",
+    },
+  ],
+};
+
+export const JIGAWA = { states, SR };

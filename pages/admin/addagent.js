@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Axios from "axios";
-import { data } from "../../constants";
+import { data } from "../../constants/states/";
+import { agentParams } from "../../constants/agentparams";
 import { motion } from "framer-motion";
 import { storage } from "../../utils/firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
@@ -29,14 +30,6 @@ export default function AddAgentsPage({ title }) {
     imgUrl: "",
     status: "NEW",
   });
-
-  const agentTypes = [
-    "PRESIDENTIAL",
-    "GUBERNATORIAL",
-    "SENATORIAL",
-    "HOUSE OF REP",
-    "STATE HOUSE OF ASSEMBLY",
-  ];
 
   function postAgent(agent) {
     Axios.post("/api/agents", article)
@@ -134,7 +127,6 @@ export default function AddAgentsPage({ title }) {
   useEffect(() => {
     if (!fetchUser()) {
       router.push("/");
-      // console.log(fetchUser());
     }
   }, []);
 
@@ -155,7 +147,9 @@ export default function AddAgentsPage({ title }) {
           transition={{ duration: 1.3, delay: 0.5, type: "tween" }}
         >
           <form action="#" className="form">
-            <h2>Step 1</h2>
+            <h2>
+              Step 1 <span>Personal Details</span>
+            </h2>
 
             <div className="input_box">
               <label htmlFor="form-name" className="label">
@@ -270,13 +264,16 @@ export default function AddAgentsPage({ title }) {
               </select>
             </div>
           </form>
-          <div className="buttons">
-            <input
-              type="submit"
-              value="Next"
-              onClick={handleNext}
-              className="btn"
-            />
+
+          <div className="btnContainer">
+            <div className="buttons">
+              <input
+                type="submit"
+                value="Next"
+                onClick={handleNext}
+                className="btn"
+              />
+            </div>
           </div>
         </motion.div>
 
@@ -286,25 +283,19 @@ export default function AddAgentsPage({ title }) {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.7, delay: 1, type: "tween" }}
         >
-          <div className=" buttons">
-            <input
-              type="submit"
-              value="Go Back"
-              onClick={handlePrev}
-              className="btn"
-            />
-          </div>
           <form action="#" className="form">
-            <h2>Step 2</h2>
+            <h2>
+              Step 2 <span>Type of Election</span>
+            </h2>
             <div className="input_box">
-              <label htmlFor="form-category">Agent Type</label>
+              <label htmlFor="form-election-typr">Election Type</label>
               <select
-                name="agentType"
-                id="form-category"
-                defaultValue={agentTypes[0]}
+                name="electionType"
+                id="form-election-typr"
+                defaultValue={agentParams.electionTypes[0]}
                 onChange={handleChange}
               >
-                {agentTypes.map((_val, index) => {
+                {agentParams.electionTypes.map((_val, index) => {
                   return (
                     <option value={_val} key={index}>
                       {_val}
@@ -314,13 +305,23 @@ export default function AddAgentsPage({ title }) {
               </select>
             </div>
           </form>
-          <div className="buttons">
-            <input
-              type="submit"
-              value="Next"
-              onClick={handleNext}
-              className="btn"
-            />
+          <div className="btnContainer">
+            <div className=" buttons">
+              <input
+                type="submit"
+                value="Go Back"
+                onClick={handlePrev}
+                className="btn"
+              />
+            </div>
+            <div className="buttons">
+              <input
+                type="submit"
+                value="Next"
+                onClick={handleNext}
+                className="btn"
+              />
+            </div>
           </div>
         </motion.div>
 
@@ -330,16 +331,63 @@ export default function AddAgentsPage({ title }) {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.7, delay: 1, type: "tween" }}
         >
-          <div className=" buttons">
-            <input
-              type="submit"
-              value="Go Back"
-              onClick={handlePrev}
-              className="btn"
-            />
-          </div>
           <form action="#" className="form">
-            <h2>Step 3</h2>
+            <h2>
+              Step 3 <span>Type of Agent</span>
+            </h2>
+            <div className="input_box">
+              <label htmlFor="form-category">Election Type</label>
+              <select
+                name="agentType"
+                id="form-category"
+                defaultValue={agentParams.electionTypes[0]}
+                onChange={handleChange}
+              >
+                {agentParams.agentTypes.map((_val, index) => {
+                  return (
+                    <option value={_val} key={index}>
+                      {_val}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+
+            <div className="input_box">
+              <label htmlFor="form-name" className="label">
+                BANK
+              </label>
+              <select
+                name="agentType"
+                id="form-category"
+                defaultValue={agentParams.bankNames[0]}
+                onChange={handleChange}
+              >
+                {agentParams.bankNames.map((_val, index) => {
+                  return (
+                    <option value={_val} key={index}>
+                      {_val}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+
+            <div className="input_box">
+              <label htmlFor="form-account-number" className="label">
+                Account Number
+              </label>
+              <input
+                type="text"
+                rows="1"
+                id="form-account-number"
+                placeholder="e.g 2091234567"
+                name="accountNumber"
+                // value={ques.category}
+                onChange={handleChange}
+              />
+            </div>
+
             <div className="input_box">
               <label htmlFor="form-image">Profile Image</label>
               <input
@@ -351,13 +399,23 @@ export default function AddAgentsPage({ title }) {
               />
             </div>
           </form>
-          <div className="buttons">
-            <input
-              type="submit"
-              value="Submit"
-              onClick={handleSubmit}
-              className="btn"
-            />
+          <div className="btnContainer">
+            <div className=" buttons">
+              <input
+                type="submit"
+                value="Go Back"
+                onClick={handlePrev}
+                className="btn"
+              />
+            </div>
+            <div className="buttons">
+              <input
+                type="submit"
+                value="Submit"
+                onClick={handleSubmit}
+                className="btn"
+              />
+            </div>
           </div>
         </motion.div>
       </div>

@@ -1,8 +1,19 @@
-export const EKITI = {
-    state: "EKITI",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "EKITI",
+  email: "ekiti@gmail.com",
+  password: "ekiti1",
+  phone: "08108850572",
+  statecode: "EKITI",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "EKITI",
+  state: "EKITI",
+  lga: [
+    {
+      wards: [
         "ADO 'A' IDOFIN",
         "ADO 'B' INISA",
         "ADO 'C' IDOLOFIN",
@@ -17,10 +28,10 @@ export const EKITI = {
         "ADO 'L' IGBEHIN",
         "ADO 'M' FARM SETTLEMENT",
       ],
-        name: "EDO EKITI",
-      },
-      {
-        wards: [
+      name: "EDO EKITI",
+    },
+    {
+      wards: [
         "EFON III",
         "EFON I",
         "EFON II",
@@ -32,10 +43,10 @@ export const EKITI = {
         "EFON IV",
         "EFON IX",
       ],
-        name: "EFON",
-      },
-      {
-        wards: [
+      name: "EFON",
+    },
+    {
+      wards: [
         "ARAROMI",
         "ILASA I",
         "ILASA II / IKUN / ARAROMI / EDA ILE",
@@ -49,10 +60,10 @@ export const EKITI = {
         "OMUO - OKE I",
         "OMUO OKE II",
       ],
-        name: "EKITI EAST",
-      },
-      {
-        wards: [
+      name: "EKITI EAST",
+    },
+    {
+      wards: [
         "IGBARA ODO I",
         "IGBARA ODO II",
         "ILAWE III",
@@ -65,10 +76,10 @@ export const EKITI = {
         "OGOTUN I",
         "OGOTUN II",
       ],
-        name: "EKITI SOUTH WEST",
-      },
-      {
-        wards: [
+      name: "EKITI SOUTH WEST",
+    },
+    {
+      wards: [
         "ARAMOKO I",
         "ARAMOKO II",
         "ARAMOKO III / ERIO",
@@ -81,10 +92,10 @@ export const EKITI = {
         "OKEMESI II",
         "OKEMESI III",
       ],
-        name: "EKITI WEST",
-      },
-      {
-        wards: [
+      name: "EKITI WEST",
+    },
+    {
+      wards: [
         "IDA MUDU II",
         "IDAMUDU I",
         "ODO - EMURE I",
@@ -96,10 +107,10 @@ export const EKITI = {
         "OKE EMURE I",
         "OKE EMURE II",
       ],
-        name: "EMURE",
-      },
-      {
-        wards: [
+      name: "EMURE",
+    },
+    {
+      wards: [
         "ADEGBA I",
         "ADEGBA II",
         "AGBADO",
@@ -111,10 +122,10 @@ export const EKITI = {
         "ODE II",
         "ODE III",
       ],
-        name: "GBONYIN",
-      },
-      {
-        wards: [
+      name: "GBONYIN",
+    },
+    {
+      wards: [
         "AYETORO I",
         "AYETORO II",
         "IDO I",
@@ -127,10 +138,10 @@ export const EKITI = {
         "OSI",
         "USI",
       ],
-        name: "IDO / OSI",
-      },
-      {
-        wards: [
+      name: "IDO / OSI",
+    },
+    {
+      wards: [
         "EKAMARUN WARD 'A'",
         "EKAMARUN WARD 'B'",
         "IJERO WARD 'A'",
@@ -144,10 +155,10 @@ export const EKITI = {
         "IPOTI WARD 'A'",
         "IPOTI WARD 'B'",
       ],
-        name: "EJERO",
-      },
-      {
-        wards: [
+      name: "EJERO",
+    },
+    {
+      wards: [
         "AFAO / KAJOLA / AYETORO",
         "AGBADO / OYO",
         "ARE ARAROMI",
@@ -160,10 +171,10 @@ export const EKITI = {
         "OKERUKU",
         "UGELE / AROKU",
       ],
-        name: "EKERE",
-      },
-      {
-        wards: [
+      name: "EKERE",
+    },
+    {
+      wards: [
         "ARAROMI / BOLORUNDURO",
         "IJESA ISU",
         "IKOLE EAST",
@@ -177,10 +188,10 @@ export const EKITI = {
         "ODO AYEDUN / AYEBODE",
         "OKE AYEDUN / ---",
       ],
-        name: "IKOLE",
-      },
-      {
-        wards: [
+      name: "IKOLE",
+    },
+    {
+      wards: [
         "EDA ONIYO",
         "EWU",
         "IJESAMODU",
@@ -192,10 +203,10 @@ export const EKITI = {
         "IYE III",
         "OBADA",
       ],
-        name: "ELEJEMEJE",
-      },
-      {
-        wards: [
+      name: "ELEJEMEJE",
+    },
+    {
+      wards: [
         "AFAO",
         "ARE",
         "AWO",
@@ -208,10 +219,10 @@ export const EKITI = {
         "IYIN I",
         "IYIN II",
       ],
-        name: "IREPODUN / IFELODUN",
-      },
-      {
-        wards: [
+      name: "IREPODUN / IFELODUN",
+    },
+    {
+      wards: [
         "ERINWA I",
         "ERINWA II",
         "ODO ISE I",
@@ -223,10 +234,10 @@ export const EKITI = {
         "ORUN I",
         "ORUN II",
       ],
-        name: "ISE / ORUN",
-      },
-      {
-        wards: [
+      name: "ISE / ORUN",
+    },
+    {
+      wards: [
         "ERINMOPE I",
         "ERINMOPE II",
         "IGOGO I",
@@ -239,10 +250,10 @@ export const EKITI = {
         "OTUN II",
         "OTUN III",
       ],
-        name: "MOBA",
-      },
-      {
-        wards: [
+      name: "MOBA",
+    },
+    {
+      wards: [
         "AYEDE NORTH",
         "AYEDE SOUTH ITAJI",
         "AYEGBAJU",
@@ -256,7 +267,9 @@ export const EKITI = {
         "OYE I",
         "OYE II",
       ],
-        name: "OYE",
-      },
-    ],
-  };
+      name: "OYE",
+    },
+  ],
+};
+
+export const EKITI = { states, SR };

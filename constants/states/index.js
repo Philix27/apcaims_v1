@@ -16,6 +16,7 @@ import { FCT } from "./fct";
 import { GOMBE } from "./gombe";
 import { IMO } from "./imo";
 import { JIGAWA } from "./jigawa";
+import { KADUNA } from "./kaduna";
 
 const states = [
   ABIA.states,
@@ -30,12 +31,13 @@ const states = [
   DELTA.states,
   EBONYI.states,
   EDO.states,
-  // EKITI,
-  // ENUGU,
-  // FCT,
-  // GOMBE,
-  // IMO,
-  // JIGAWA,
+  EKITI.states,
+  ENUGU.states,
+  FCT.states,
+  GOMBE.states,
+  IMO.states,
+  JIGAWA.states,
+  KADUNA.states,
 ];
 const sr = [
   ABIA.SR,
@@ -50,6 +52,13 @@ const sr = [
   DELTA.SR,
   EBONYI.SR,
   EDO.SR,
+  EKITI.SR,
+  ENUGU.SR,
+  FCT.SR,
+  GOMBE.SR,
+  IMO.SR,
+  JIGAWA.SR,
+  KADUNA.SR,
 ];
 
 export const data = { states, sr };
