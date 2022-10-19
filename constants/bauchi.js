@@ -9,8 +9,8 @@ const SR = {
 };
 
 const states = {
-  statecode: "BAUCHI",
   state: "BAUCHI",
+  statecode: "BAUCHI",
   lga: [
     {
       wards: [

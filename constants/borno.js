@@ -9,8 +9,8 @@ const SR = {
 };
 
 const states = {
-  statecode: "BORNO",
   state: "BORNO",
+  statecode: "BORNO",
   lga: [
     {
       wards: [
