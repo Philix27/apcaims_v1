@@ -1,4 +1,4 @@
-const EBONYI = {
+export const EBONYI = {
     state: "EBONYI",
     lga: [
       {

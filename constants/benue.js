@@ -1,5 +1,5 @@
 
-const BENUE = {
+export const BENUE = {
     state: "BENUE",
     lga: [
       {

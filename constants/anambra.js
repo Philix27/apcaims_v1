@@ -1,5 +1,5 @@
 
-const ANAMBRA = {
+export const ANAMBRA = {
     state: "ANAMBRA",
     lga: [
       {

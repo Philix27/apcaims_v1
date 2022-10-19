@@ -1,5 +1,5 @@
 
-const BORNO = {
+export const BORNO = {
   state: "BORNO",
   lga: [
     {

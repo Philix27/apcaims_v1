@@ -1,5 +1,5 @@
 
-const BAUCHI = {
+export const BAUCHI = {
     state: "BAUCHI",
     lga: [
       {

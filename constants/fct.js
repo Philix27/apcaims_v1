@@ -1,119 +1,97 @@
-const  = {
-    state: "",
-    lga: [
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-      {
-        wards: [],
-        name: "",
-      },
-  
+export const FCT = {
+  state: "FCT",
+  lga: [
+    {
+      wards: [
+      "ABAJI CENTRAL",
+      "ABAJI NORTH EAST",
+      "ABAJI SOUTH EAST",
+      "ALU MAMAGI",
+      "GAWU",
+      "GURDI",
+      "NUKU",
+      "RIMBA EBAGI",
+      "YABA",
+      "AGYANA/PANDAGI",
     ],
-  };
-  
+      name: "ABAJI",
+    },
+    {
+      wards: [
+      "BWARI CENTRAL",
+      "BYAZHIN",
+      "DUTSE",
+      "IGU",
+      "KAWU",
+      "KUBWA",
+      "KUDURU",
+      "SHERE",
+      "USHAFA",
+      "USUMA",
+    ],
+      name: "BWARI",
+    },
+    {
+      wards: [
+      "DOBI",
+      "GWAGWALADA CENTRAL",
+      "GWAKO",
+      "IBWA",
+      "IKWA",
+      "KUTUNKU",
+      "PAIKO",
+      "STAFF QUARTERS",
+      "TUNGA MAJE",
+      "ZUBA",
+    ],
+      name: "GWAGWALADA",
+    },
+    {
+      wards: [
+      "CHIBIRI",
+      "GAUBE",
+      "GUDUNKARIYA",
+      "GWARGWADA",
+      "KABI",
+      "KUJE CENTRAL",
+      "KUJEKWA",
+      "KWAKU",
+      "RUBOCHI",
+      "YENCHE",
+    ],
+      name: "KUJE",
+    },
+    {
+      wards: [
+      "ASHARA",
+      "DAFA",
+      "GUMBO",
+      "KILANKWA",
+      "KUNDU",
+      "KWALI CENTRAL",
+      "PAI",
+      "YANGOJI",
+      "YEBU",
+      "WAKO",
+    ],
+      name: "KWALI",
+    },
+    {
+      wards: [
+      "CITY CENTRE",
+      "GARKI",
+      "GUI",
+      "GWAGWA",
+      "GWARINPA",
+      "JIWA",
+      "KABUSA",
+      "KARSHI",
+      "KARU",
+      "NYANYA",
+      "OROZO",
+      "WUSE",
+    ],
+      name: "MUNICIPAL",
+    },
+  ],
+};

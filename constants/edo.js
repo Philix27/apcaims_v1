@@ -1,4 +1,4 @@
-const EDO = {
+export const EDO = {
     state: "EDO",
     lga: [
       {

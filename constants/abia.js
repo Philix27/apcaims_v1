@@ -1,4 +1,4 @@
-const ABIA = {
+export const ABIA = {
     state: "ABIA",
     lga: [
       {

@@ -1,5 +1,5 @@
 
-const BAYELSA = {
+export const BAYELSA = {
     state: "BAYELSA",
     lga: [
       {

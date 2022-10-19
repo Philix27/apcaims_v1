@@ -1,4 +1,4 @@
-const CROSSRIVERS = {
+export const CROSSRIVERS = {
     state: "CROSSRIVERS",
     lga: [
       {
