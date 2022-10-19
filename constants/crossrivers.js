@@ -1,5 +1,16 @@
-export const CROSSRIVERS = {
-  state: "CROSSRIVERS",
+const SR = {
+  name: "Cross Rivers",
+  email: "crossrivers@gmail.com",
+  password: "crossrivers1",
+  phone: "08108850572",
+  statecode: "CROSSRIVERS",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "CROSSRIVERS",
+  state: "CROSS RIVERS",
   lga: [
     {
       wards: [
@@ -275,3 +286,5 @@ export const CROSSRIVERS = {
     },
   ],
 };
+
+export const CROSSRIVERS = { states, SR };

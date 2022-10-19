@@ -1,4 +1,15 @@
-export const BAUCHI = {
+const SR = {
+  name: "Bauchi",
+  email: "bauchi@gmail.com",
+  password: "bauchi1",
+  phone: "08108850572",
+  statecode: "BAUCHI",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "BAUCHI",
   state: "BAUCHI",
   lga: [
     {
@@ -315,3 +326,5 @@ export const BAUCHI = {
     },
   ],
 };
+
+export const BAUCHI = { states, SR };

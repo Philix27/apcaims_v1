@@ -1,4 +1,15 @@
-export const BAYELSA = {
+const SR = {
+  name: "bayelsa",
+  email: "bayelsa@gmail.com",
+  password: "bayelsa1",
+  phone: "08108850572",
+  statecode: "BAYELSA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "BAYELSA",
   state: "BAYELSA",
   lga: [
     {
@@ -148,3 +159,5 @@ export const BAYELSA = {
     },
   ],
 };
+
+export const BAYELSA = { states, SR };

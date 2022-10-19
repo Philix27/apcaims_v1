@@ -1,4 +1,15 @@
-export const EBONYI = {
+const SR = {
+  name: "EBONYI",
+  email: "ebonyi@gmail.com",
+  password: "ebonyi1",
+  phone: "08108850572",
+  statecode: "EBONYI",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "EBONYI",
   state: "EBONYI",
   lga: [
     {
@@ -239,3 +250,5 @@ export const EBONYI = {
     },
   ],
 };
+
+export const EBONYI = { states, SR };

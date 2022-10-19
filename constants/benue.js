@@ -1,5 +1,15 @@
+const SR = {
+  name: "benue",
+  email: "benue@gmail.com",
+  password: "benue1",
+  phone: "08108850572",
+  statecode: "BENUE",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
 
-export const BENUE = {
+const states = {
+  statecode: "BENUE",
   state: "BENUE",
   lga: [
     {
@@ -395,4 +405,5 @@ export const BENUE = {
     },
   ],
 };
- 
+
+export const BENUE = { states, SR };

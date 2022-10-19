@@ -1,4 +1,15 @@
-export const DELTA = {
+const SR = {
+  name: "DELTA",
+  email: "delta@gmail.com",
+  password: "delta1",
+  phone: "08108850572",
+  statecode: "DELTA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "DELTA",
   state: "DELTA",
   lga: [
     {
@@ -393,3 +404,5 @@ export const DELTA = {
     },
   ],
 };
+
+export const DELTA = { states, SR };

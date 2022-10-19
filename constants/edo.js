@@ -1,4 +1,15 @@
-export const EDO = {
+const SR = {
+  name: "EDO",
+  email: "edo@gmail.com",
+  password: "edo1",
+  phone: "08108850572",
+  statecode: "EDO",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "EDO",
   state: "EDO",
   lga: [
     {
@@ -280,3 +291,5 @@ export const EDO = {
     },
   ],
 };
+
+export const EDO = { states, SR };

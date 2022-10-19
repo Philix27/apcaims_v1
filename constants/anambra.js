@@ -1,4 +1,15 @@
-export const ANAMBRA = {
+const SR = {
+  name: "Anambra",
+  email: "anambra@gmail.com",
+  password: "anambra1",
+  phone: "08108850572",
+  statecode: "ANAMBRA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "ANAMBRA",
   state: "ANAMBRA",
   lga: [
     {
@@ -435,3 +446,5 @@ export const ANAMBRA = {
     },
   ],
 };
+
+export const ANAMBRA = { states, SR };

@@ -1,4 +1,15 @@
-export const BORNO = {
+const SR = {
+  name: "borno",
+  email: "borno@gmail.com",
+  password: "borno1",
+  phone: "08108850572",
+  statecode: "BORNO",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "BORNO",
   state: "BORNO",
   lga: [
     {
@@ -450,3 +461,5 @@ export const BORNO = {
     },
   ],
 };
+
+export const BORNO = { states, SR };

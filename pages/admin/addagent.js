@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Axios from "axios";
-import { states } from "../../constants/states";
-import { lgas } from "../../constants/lga";
 import { data } from "../../constants";
 import { motion } from "framer-motion";
 import { storage } from "../../utils/firebase";
@@ -64,7 +62,7 @@ export default function AddAgentsPage({ title }) {
     if (name == "state") {
       setWards([]);
       setLocalGov([]);
-      const selectedState = data.filter((_val) => _val.state == value);
+      const selectedState = data.states.filter((_val) => _val.state == value);
       setLocalGov(selectedState[0].lga);
     } else if (name == "lga") {
       const selectedLocalGov = localGov.filter((_val) => _val.name == value);
@@ -276,7 +274,7 @@ export default function AddAgentsPage({ title }) {
               >
                 {/* <option selected="selected">Pharmacology</option> */}
 
-                {data.map((_val, index) => {
+                {data.states.map((_val, index) => {
                   return (
                     <option value={_val.state} key={index}>
                       {_val.state}
