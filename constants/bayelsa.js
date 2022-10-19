@@ -8,12 +8,11 @@ const SR = {
   userType: "STATEREP",
 };
 
-const states = {
-  statecode: "BAYELSA",
-  state: "BAYELSA",
-  lga: [
-    {
-      wards: [
+export const BAYELSA = {
+    state: "BAYELSA",
+    lga: [
+      {
+        wards: [
         "BRASS I",
         "BRASS WARD II",
         "CAPE FARMOSA",

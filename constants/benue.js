@@ -8,12 +8,11 @@ const SR = {
   userType: "STATEREP",
 };
 
-const states = {
-  statecode: "BENUE",
-  state: "BENUE",
-  lga: [
-    {
-      wards: [
+export const BENUE = {
+    state: "BENUE",
+    lga: [
+      {
+        wards: [
         "AKOGE/OGBILOLO",
         "APA",
         "EKILE",

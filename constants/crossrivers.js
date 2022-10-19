@@ -8,7 +8,7 @@ const SR = {
   userType: "STATEREP",
 };
 
-const states = {
+export const states = {
   statecode: "CROSSRIVERS",
   state: "CROSS RIVERS",
   lga: [

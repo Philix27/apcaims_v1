@@ -1,3 +1,4 @@
+
 const SR = {
   name: "EBONYI",
   email: "ebonyi@gmail.com",
@@ -8,7 +9,7 @@ const SR = {
   userType: "STATEREP",
 };
 
-const states = {
+export const states = {
   statecode: "EBONYI",
   state: "EBONYI",
   lga: [

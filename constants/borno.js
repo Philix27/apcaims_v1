@@ -8,8 +8,7 @@ const SR = {
   userType: "STATEREP",
 };
 
-const states = {
-  statecode: "BORNO",
+export const BORNO = {
   state: "BORNO",
   lga: [
     {

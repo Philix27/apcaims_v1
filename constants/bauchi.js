@@ -8,12 +8,11 @@ const SR = {
   userType: "STATEREP",
 };
 
-const states = {
-  statecode: "BAUCHI",
-  state: "BAUCHI",
-  lga: [
-    {
-      wards: [
+export const BAUCHI = {
+    state: "BAUCHI",
+    lga: [
+      {
+        wards: [
         "ALKALERI",
         "BIRIN/ GIGARA/ YANKARI",
         "DAN KUNGIBAR",
