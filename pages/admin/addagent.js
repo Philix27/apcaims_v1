@@ -15,7 +15,8 @@ export default function AddAgentsPage({ title }) {
   const [profileImage, setProfileImage] = useState(null);
   const [imgUrl, setImgUrl] = useState(null);
   const styleHide = "hide";
-
+  const styleShow = "show";
+  const [stepIndex, setStepIndex] = useState(0);
   const [agent, setAgent] = useState({
     name: "",
     email: "",
@@ -86,10 +87,14 @@ export default function AddAgentsPage({ title }) {
   };
 
   const handlePrev = (e) => {
-    setSaveStep1(false);
+    if (stepIndex > 0) {
+      setStepIndex(stepIndex - 1);
+    }
   };
   const handleNext = () => {
-    setSaveStep1(true);
+    if (stepIndex < 3) {
+      setStepIndex(stepIndex + 1);
+    }
   };
 
   async function uploadImageToFb() {
@@ -144,10 +149,10 @@ export default function AddAgentsPage({ title }) {
           {isSuccessful && <p>Sent Successfully </p>}
         </div>
         <motion.div
-          className={`sect step1 ${saveStep1 && styleHide}`}
+          className={`sect step1 ${stepIndex === 0 ? styleShow : styleHide}`}
           initial={{ x: "-100vw", opacity: 0.1 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.7, delay: 1, type: "tween" }}
+          transition={{ duration: 1.3, delay: 0.5, type: "tween" }}
         >
           <form action="#" className="form">
             <h2>Step 1</h2>
@@ -210,61 +215,6 @@ export default function AddAgentsPage({ title }) {
               />
             </div>
             <div className="input_box">
-              <label htmlFor="form-image">Profile Image</label>
-              <input
-                type="file"
-                id="form-image"
-                name="image"
-                onChange={handleChange}
-                accept="image/*"
-              />
-            </div>
-          </form>
-          <div className="buttons">
-            <input
-              type="submit"
-              value="Next"
-              // onClick={handleSubmit}
-              onClick={handleNext}
-              className="btn"
-            />
-          </div>
-        </motion.div>
-
-        <motion.div
-          className={`sect step2 ${!saveStep1 && styleHide}`}
-          initial={{ x: "-100vw", opacity: 0.1 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.7, delay: 1, type: "tween" }}
-        >
-          <div className=" buttons">
-            <input
-              type="submit"
-              value="Go Back"
-              onClick={handlePrev}
-              className="btn"
-            />
-          </div>
-          <form action="#" className="form">
-            <h2>Step 2</h2>
-            <div className="input_box">
-              <label htmlFor="form-category">Agent Type</label>
-              <select
-                name="agentType"
-                id="form-category"
-                defaultValue={agentTypes[0]}
-                onChange={handleChange}
-              >
-                {agentTypes.map((_val, index) => {
-                  return (
-                    <option value={_val} key={index}>
-                      {_val}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
-            <div className="input_box">
               <label htmlFor="form-category">State</label>
               <select
                 name="state"
@@ -320,7 +270,87 @@ export default function AddAgentsPage({ title }) {
               </select>
             </div>
           </form>
+          <div className="buttons">
+            <input
+              type="submit"
+              value="Next"
+              onClick={handleNext}
+              className="btn"
+            />
+          </div>
+        </motion.div>
 
+        <motion.div
+          className={`sect step2 ${stepIndex === 1 ? styleShow : styleHide}`}
+          initial={{ x: "-100vw", opacity: 0.1 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.7, delay: 1, type: "tween" }}
+        >
+          <div className=" buttons">
+            <input
+              type="submit"
+              value="Go Back"
+              onClick={handlePrev}
+              className="btn"
+            />
+          </div>
+          <form action="#" className="form">
+            <h2>Step 2</h2>
+            <div className="input_box">
+              <label htmlFor="form-category">Agent Type</label>
+              <select
+                name="agentType"
+                id="form-category"
+                defaultValue={agentTypes[0]}
+                onChange={handleChange}
+              >
+                {agentTypes.map((_val, index) => {
+                  return (
+                    <option value={_val} key={index}>
+                      {_val}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+          </form>
+          <div className="buttons">
+            <input
+              type="submit"
+              value="Next"
+              onClick={handleNext}
+              className="btn"
+            />
+          </div>
+        </motion.div>
+
+        <motion.div
+          className={`sect step2 ${stepIndex === 2 ? styleShow : styleHide}`}
+          initial={{ x: "-100vw", opacity: 0.1 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.7, delay: 1, type: "tween" }}
+        >
+          <div className=" buttons">
+            <input
+              type="submit"
+              value="Go Back"
+              onClick={handlePrev}
+              className="btn"
+            />
+          </div>
+          <form action="#" className="form">
+            <h2>Step 3</h2>
+            <div className="input_box">
+              <label htmlFor="form-image">Profile Image</label>
+              <input
+                type="file"
+                id="form-image"
+                name="image"
+                onChange={handleChange}
+                accept="image/*"
+              />
+            </div>
+          </form>
           <div className="buttons">
             <input
               type="submit"
