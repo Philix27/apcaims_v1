@@ -1,8 +1,20 @@
-export const EDO = {
-    state: "EDO",
-    lga: [
-      {
-        wards: [
+
+const SR = {
+  name: "EDO",
+  email: "edo@gmail.com",
+  password: "edo1",
+  phone: "08108850572",
+  statecode: "EDO",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+export const states = {
+  statecode: "EDO",
+  state: "EDO",
+  lga: [
+    {
+      wards: [
         "ENWAN/ATTE/IKPESHI/EGBIGELE",
         "IBILLO/ EKPESA/ EKOR/ IKIRAN-ILE/ OKE",
         "IGARRA I",
@@ -13,11 +25,11 @@ export const EDO = {
         "OSOSO",
         "SOMORIKA / OGBE / SASARO / ONUMU / ESHAWA / OGUGU IGBOSHI-AFE / IGBOSHI - ELE / AIYEGUNLE",
         "UNEME-NEKHUA/AKPAMA/ AIYETORO/ EKPEDO/ ERHURUN/ UNEME OSU",
-    ],
-        name: "AKOKO EDO",
-      },
-      {
-        wards: [
+      ],
+      name: "AKOKO EDO",
+    },
+    {
+      wards: [
         "EGOR",
         "EVBAREKE",
         "OGIDA/USE",
@@ -28,11 +40,11 @@ export const EDO = {
         "USELU I",
         "USELU II",
         "UWELU",
-    ],
-        name: "EGOR",
-      },
-      {
-        wards: [
+      ],
+      name: "EGOR",
+    },
+    {
+      wards: [
         "EWU I",
         "EWU II",
         "IKEKATO",
@@ -43,11 +55,11 @@ export const EDO = {
         "UNEAH",
         "UWESSAN I",
         "UWESSAN II",
-    ],
-        name: "ESAN CENTRAL",
-      },
-      {
-        wards: [
+      ],
+      name: "ESAN CENTRAL",
+    },
+    {
+      wards: [
         "AMEDOKHIAN",
         "ARUE",
         "EFANDION",
@@ -69,11 +81,11 @@ export const EDO = {
         "UBIAJA I",
         "UBIAJA II",
         "UGBOHA",
-    ],
-        name: "ESAN NORTH EAST",
-      },
-      {
-        wards: [
+      ],
+      name: "ESAN NORTH EAST",
+    },
+    {
+      wards: [
         "EGORO/IDOA/UKHUN",
         "EMAUDO/ EGUARE/ EKPOMA",
         "EMUHI/ UKPENU/ UJOELEN",
@@ -84,11 +96,11 @@ export const EDO = {
         "UHIELE",
         "UJIOGBA",
         "UROHI",
-    ],
-        name: "ESAN WEST",
-      },
-      {
-        wards: [
+      ],
+      name: "ESAN WEST",
+    },
+    {
+      wards: [
         "ANWAIN",
         "AUCHI",
         "AUCHI III",
@@ -101,11 +113,11 @@ export const EDO = {
         "UZAIRUE NORTH WEST",
         "UZAIRUE SOUTH EAST",
         "UZAIRUE SOUTH WEST",
-    ],
-        name: "ETSAKO WEST",
-      },
-      {
-        wards: [
+      ],
+      name: "ETSAKO WEST",
+    },
+    {
+      wards: [
         "EKPERI I",
         "EKPERI II",
         "EKPERI III",
@@ -116,11 +128,11 @@ export const EDO = {
         "OGBONA",
         "SOUTH UNEME I",
         "SOUTH UNEME II",
-    ],
-        name: "ETSAKO CENTRAL",
-      },
-      {
-        wards: [
+      ],
+      name: "ETSAKO CENTRAL",
+    },
+    {
+      wards: [
         "AGENEBODE",
         "OKPEKPE",
         "OKPELLA I",
@@ -131,11 +143,11 @@ export const EDO = {
         "WANNO I",
         "WANNO II",
         "WEPPA",
-    ],
-        name: "ETSAKO EAST",
-      },
-      {
-        wards: [
+      ],
+      name: "ETSAKO EAST",
+    },
+    {
+      wards: [
         "AFUDA/IDUMUOKA",
         "AMAHOR/UGUN",
         "EKEKHEN/IDUMU/OGO/EGBIKE",
@@ -146,11 +158,11 @@ export const EDO = {
         "OWU/ OKUTA/ EGUARE EBELLE",
         "UDO",
         "UHE/IDUMUOGBO/IDUMUEKE",
-    ],
-        name: "IGUEBEN",
-      },
-      {
-        wards: [
+      ],
+      name: "IGUEBEN",
+    },
+    {
+      wards: [
         "ADUWAWA / EVBO MODU",
         "GORRETTI",
         "IDOGBO",
@@ -161,11 +173,11 @@ export const EDO = {
         "OREGBENI",
         "ST. SAVIOUR",
         "UGBEKUN",
-    ],
-        name: "IKPOBA/OKHA",
-      },
-      {
-        wards: [
+      ],
+      name: "IKPOBA/OKHA",
+    },
+    {
+      wards: [
         "GRA/ETETE",
         "IBIWE/ IWEGIE/ UGBAGUE",
         "IHOGBE/ ISEKHERE/ OREOGHENE/ IBIWE/ ICE ROAD",
@@ -178,11 +190,11 @@ export const EDO = {
         "UNUERU/OGBOKA",
         "URUBI/EVBIEMWEN/IWEHEN",
         "UZEBU",
-    ],
-        name: "OREDO",
-      },
-      {
-        wards: [
+      ],
+      name: "OREDO",
+    },
+    {
+      wards: [
         "AIBIOKULA I",
         "AIBIOKULA II",
         "EVBOESI",
@@ -195,11 +207,11 @@ export const EDO = {
         "UKPATO",
         "URHONIGBE NORTH",
         "URHONIGBE SOUTH",
-    ],
-        name: "ORHIONMWON",
-      },
-      {
-        wards: [
+      ],
+      name: "ORHIONMWON",
+    },
+    {
+      wards: [
         "ADOLOR",
         "IGUOSHODIN",
         "ISIUWA",
@@ -213,11 +225,11 @@ export const EDO = {
         "UHEN",
         "UHIERE",
         "UTOKA",
-    ],
-        name: "OVIA NORTH EAST",
-      },
-      {
-        wards: [
+      ],
+      name: "OVIA NORTH EAST",
+    },
+    {
+      wards: [
         "IGUOBAZUWA EAST",
         "IGUOBAZUWA WEST",
         "NIKOROGHA",
@@ -228,11 +240,11 @@ export const EDO = {
         "UGBOGUI",
         "UMAZA",
         "USEN",
-    ],
-        name: "OVIA SOUTH WEST",
-      },
-      {
-        wards: [
+      ],
+      name: "OVIA SOUTH WEST",
+    },
+    {
+      wards: [
         "EMAI I",
         "EMAI II",
         "IGUE/IKAO",
@@ -244,11 +256,11 @@ export const EDO = {
         "OTUO II",
         "UOKHA/AKE",
         "WARRAKE",
-    ],
-        name: "OWAN EAST",
-      },
-      {
-        wards: [
+      ],
+      name: "OWAN EAST",
+    },
+    {
+      wards: [
         "AVBIOSI",
         "EME-ORA/OKE",
         "ERUERE",
@@ -260,11 +272,11 @@ export const EDO = {
         "UKHUSE -OSI",
         "UZEBBA I",
         "UZEBBA II",
-    ],
-        name: "OWAN WEST",
-      },
-      {
-        wards: [
+      ],
+      name: "OWAN WEST",
+    },
+    {
+      wards: [
         "EGBEDE",
         "EHOR",
         "IGIEDUMA",
@@ -275,9 +287,10 @@ export const EDO = {
         "UHI",
         "UMAGBAE NORTH",
         "UMAGBAE SOUTH",
-    ],
-        name: "UHUNMWODE",
-      },
-    ],
-  };
-  
+      ],
+      name: "UHUNMWODE",
+    },
+  ],
+};
+
+export const EDO = { states, SR };

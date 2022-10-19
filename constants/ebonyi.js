@@ -1,8 +1,20 @@
-export const EBONYI = {
-    state: "EBONYI",
-    lga: [
-      {
-        wards: [
+
+const SR = {
+  name: "EBONYI",
+  email: "ebonyi@gmail.com",
+  password: "ebonyi1",
+  phone: "08108850572",
+  statecode: "EBONYI",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+export const states = {
+  statecode: "EBONYI",
+  state: "EBONYI",
+  lga: [
+    {
+      wards: [
         "ABAKPA",
         "AMACHI (NDEBO)",
         "AMACHI (NDEGU)",
@@ -17,11 +29,11 @@ export const EBONYI = {
         "OKPOITUMO NDEBOR",
         "OKPOITUMO NDIEGU",
         "TIMBER SHED",
-    ],
-        name: "ABAKALIKI",
-      },
-      {
-        wards: [
+      ],
+      name: "ABAKALIKI",
+    },
+    {
+      wards: [
         "AMAEKE",
         "AMANGWU EDDA",
         "AMAOSO",
@@ -33,11 +45,11 @@ export const EBONYI = {
         "NGUZU",
         "OSO",
         "OWUTU",
-    ],
-        name: "AFIKPO SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "AFIKPO SOUTH",
+    },
+    {
+      wards: [
         "AMATA-AKPOHA",
         "AMOGU AKPOHA",
         "EZEKE AMASIRI",
@@ -50,11 +62,11 @@ export const EBONYI = {
         "UGWUEGU AFIKPO",
         "UWANA AFIKPO 1",
         "UWANA AFIKPO II",
-    ],
-        name: "AFIKPO NORTH",
-      },
-      {
-        wards: [
+      ],
+      name: "AFIKPO NORTH",
+    },
+    {
+      wards: [
         "(ABAKPA)",
         "ABOFIA",
         "AGALEGU",
@@ -68,11 +80,11 @@ export const EBONYI = {
         "NDIEGU",
         "ONUENYIM",
         "URBAN NEW LAYOUT",
-    ],
-        name: "EBONYI",
-      },
-      {
-        wards: [
+      ],
+      name: "EBONYI",
+    },
+    {
+      wards: [
         "AMUDA/AMA WULA",
         "EKKA",
         "INYERE",
@@ -84,11 +96,11 @@ export const EBONYI = {
         "ORIUZOR",
         "OSHIEGBE UMUEZ EOKOHA",
         "UMUEZEOKA",
-    ],
-        name: "EZZA NORTH",
-      },
-      {
-        wards: [
+      ],
+      name: "EZZA NORTH",
+    },
+    {
+      wards: [
         "AMAEKA",
         "AMAEZEKWE",
         "AMAGU/NSOKARA",
@@ -100,11 +112,11 @@ export const EBONYI = {
         "IKWUATOR/IDEMBIA",
         "ONUEKE",
         "UMUNWAGU / IDEMBIA",
-    ],
-        name: "EZZA SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "EZZA SOUTH",
+    },
+    {
+      wards: [
         "AMA INYIMA",
         "ECHIALIKE",
         "EKA AWOKE",
@@ -125,11 +137,11 @@ export const EBONYI = {
         "NDUFU AWKE",
         "NDUFU ECHARA",
         "NOYE ALIKE",
-    ],
-        name: "IKWO",
-      },
-      {
-        wards: [
+      ],
+      name: "IKWO",
+    },
+    {
+      wards: [
         "AGBA",
         "AMAEZU",
         "AZUINYABA 'A'",
@@ -146,11 +158,11 @@ export const EBONYI = {
         "OHOFIA",
         "OKPOTO",
         "UMUHUALI",
-    ],
-        name: "ISHIELU",
-      },
-      {
-        wards: [
+      ],
+      name: "ISHIELU",
+    },
+    {
+      wards: [
         "AKAEZE ISHIAGU",
         "AKAEZE UKWU",
         "AMAGU",
@@ -162,11 +174,11 @@ export const EBONYI = {
         "OBINAGU",
         "OKUE",
         "UMOBO",
-    ],
-        name: "IVO",
-      },
-      {
-        wards: [
+      ],
+      name: "IVO",
+    },
+    {
+      wards: [
         "AGBAJA ANYANWUIGWE",
         "AGBAJA OFFIA ONWE",
         "AGBAJA(MGBO)",
@@ -181,11 +193,11 @@ export const EBONYI = {
         "MGBALAKU INYIMAGU II",
         "NDIEZE INYIMAGU 11 NDIABOR ISHIAGU",
         "NDIEZE INYIMAGU MGBABELUZOR",
-    ],
-        name: "IZZI",
-      },
-      {
-        wards: [
+      ],
+      name: "IZZI",
+    },
+    {
+      wards: [
         "AMAECHI OKPOSI",
         "ENENA EZERAKU",
         "MGBOM OKPOSI",
@@ -197,11 +209,11 @@ export const EBONYI = {
         "UMIC HIMA",
         "UMUNAGA",
         "UMUOBUNA",
-    ],
-        name: "OHAOZARA",
-      },
-      {
-        wards: [
+      ],
+      name: "OHAOZARA",
+    },
+    {
+      wards: [
         "EFFIUM II",
         "EFFIUM I",
         "EZZAMGBO",
@@ -217,11 +229,11 @@ export const EBONYI = {
         "WIGBEKE I",
         "WIGBEKE II",
         "WIGBEKE III",
-    ],
-        name: "OHAUKWU",
-      },
-      {
-        wards: [
+      ],
+      name: "OHAUKWU",
+    },
+    {
+      wards: [
         "ABAOMEGE",
         "AGBABOR-ISU",
         "AMANATOR-ISU",
@@ -234,9 +246,10 @@ export const EBONYI = {
         "OKUZU-UKAWU",
         "UGWU-OSHIRI",
         "UMUDOMI-ONICHA",
-    ],
-        name: "ONICHA",
-      },
-    ],
-  };
-  
+      ],
+      name: "ONICHA",
+    },
+  ],
+};
+
+export const EBONYI = { states, SR };

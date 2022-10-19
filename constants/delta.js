@@ -1,9 +1,19 @@
+const SR = {
+  name: "DELTA",
+  email: "delta@gmail.com",
+  password: "delta1",
+  phone: "08108850572",
+  statecode: "DELTA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
 
-export const DELTA = {
-    state: "DELTA",
-    lga: [
-      {
-        wards: [
+const states = {
+  statecode: "DELTA",
+  state: "DELTA",
+  lga: [
+    {
+      wards: [
         "ABA - UNOR",
         "EJEME",
         "ISHEAGU-EWULU",
@@ -15,11 +25,11 @@ export const DELTA = {
         "UBULU - UKU II",
         "UBULU - UNOR",
         "UBULU OKITI",
-    ],
-        name: "ANIOCHA - SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "ANIOCHA - SOUTH",
+    },
+    {
+      wards: [
         "EZI",
         "IDUMUJE - UNOR",
         "ISSELE - AZAGBA",
@@ -30,11 +40,11 @@ export const DELTA = {
         "ONICHA - OLONA",
         "ONICHA UGBO",
         "UKWU - NZU",
-    ],
-        name: "ANIOCHA NORTH",
-      },
-      {
-        wards: [
+      ],
+      name: "ANIOCHA NORTH",
+    },
+    {
+      wards: [
         "AKUGBENE I",
         "AKUGBENE II",
         "AKUGBENE III",
@@ -45,11 +55,11 @@ export const DELTA = {
         "OGO - EZE",
         "OGRIAGBENE",
         "SYAMA",
-    ],
-        name: "BOMADI",
-      },
-      {
-        wards: [
+      ],
+      name: "BOMADI",
+    },
+    {
+      wards: [
         "BULOU - NDORO",
         "NGBILEBIRI I",
         "NGBILEBIRI II",
@@ -61,11 +71,11 @@ export const DELTA = {
         "TAMIGBE",
         "TORUGBENE",
         "TUOMO",
-    ],
-        name: "BURUTU",
-      },
-      {
-        wards: [
+      ],
+      name: "BURUTU",
+    },
+    {
+      wards: [
         "ABRAKA I",
         "ABRAKA II",
         "ABRAKA III",
@@ -77,11 +87,11 @@ export const DELTA = {
         "AGBON VI",
         "AGBON VII",
         "AGBON VIII",
-    ],
-        name: "ETHIOPE EAST",
-      },
-      {
-        wards: [
+      ],
+      name: "ETHIOPE EAST",
+    },
+    {
+      wards: [
         "JESSE I",
         "JESSE II",
         "JESSE III",
@@ -93,11 +103,11 @@ export const DELTA = {
         "OGHARA III",
         "OGHARA IV",
         "OGHARA V",
-    ],
-        name: "ETHIOPE WEST",
-      },
-      {
-        wards: [
+      ],
+      name: "ETHIOPE WEST",
+    },
+    {
+      wards: [
         "ABAVO I",
         "ABAVO II",
         "ABAVO III",
@@ -110,11 +120,11 @@ export const DELTA = {
         "IHIUIYASE I",
         "IHUIYASE II",
         "IHUOZOMOR (OZANOGOGO ALISIMIE)",
-    ],
-        name: "IKA - SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "IKA - SOUTH",
+    },
+    {
+      wards: [
         "AKUMAZI",
         "IDUMUESAH",
         "IGBODO",
@@ -129,11 +139,11 @@ export const DELTA = {
         "UMUNEDE",
         "UTE - OGBEJE",
         "UTE - OKPU",
-    ],
-        name: "IKA NORTH- EAST",
-      },
-      {
-        wards: [
+      ],
+      name: "IKA NORTH- EAST",
+    },
+    {
+      wards: [
         "ELLU",
         "EMEVOR",
         "ILUELOGBO",
@@ -147,11 +157,11 @@ export const DELTA = {
         "OZORO I",
         "OZORO II",
         "OZORO III",
-    ],
-        name: "ISOKO NORTH",
-      },
-      {
-        wards: [
+      ],
+      name: "ISOKO NORTH",
+    },
+    {
+      wards: [
         "AVIARA",
         "EMEDE",
         "ENHWE/OKPOLO",
@@ -163,11 +173,11 @@ export const DELTA = {
         "OLEH II",
         "OLOMORO",
         "UZERE",
-    ],
-        name: "ISOKO SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "ISOKO SOUTH",
+    },
+    {
+      wards: [
         "ABARRA/INYI/ONUABOH",
         "ABOH/AKARRAI",
         "AFOR/OBIKWELE",
@@ -178,11 +188,11 @@ export const DELTA = {
         "OKPAI/UTCHI/BENEKU",
         "ONYIA/ADIAI/OTUOKU/UMUOLU",
         "OSSISSA",
-    ],
-        name: "NDOKWA EAST",
-      },
-      {
-        wards: [
+      ],
+      name: "NDOKWA EAST",
+    },
+    {
+      wards: [
         "ABBI II",
         "ABBI I",
         "EMU",
@@ -193,11 +203,11 @@ export const DELTA = {
         "UTAGBA UNO I",
         "UTAGBA UNO II",
         "UTAGBA UNO III",
-    ],
-        name: "NDOKWA WEST",
-      },
-      {
-        wards: [
+      ],
+      name: "NDOKWA WEST",
+    },
+    {
+      wards: [
         "AGHALOKPE",
         "ARAGBA TOWN",
         "MEREJE I",
@@ -208,11 +218,11 @@ export const DELTA = {
         "OREROKPE",
         "OVIRI - OKPE",
         "UGHOTON",
-    ],
-        name: "OKPE",
-      },
-      {
-        wards: [
+      ],
+      name: "OKPE",
+    },
+    {
+      wards: [
         "AKWUKWU",
         "EBU",
         "IBUSA I",
@@ -223,11 +233,11 @@ export const DELTA = {
         "ILLAH",
         "OKPANAM",
         "UKALA",
-    ],
-        name: "OSHIMILI - NORTH",
-      },
-      {
-        wards: [
+      ],
+      name: "OSHIMILI - NORTH",
+    },
+    {
+      wards: [
         "AGU",
         "ANALA-AMAKOM",
         "CABLE POINT I",
@@ -239,11 +249,11 @@ export const DELTA = {
         "UMUEZEI",
         "UMUONAJE",
         "WEST END",
-    ],
-        name: "OSHIMILI - SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "OSHIMILI - SOUTH",
+    },
+    {
+      wards: [
         "ABARI",
         "AGOLOMA",
         "BOLOU - ANGIAMA",
@@ -254,11 +264,11 @@ export const DELTA = {
         "TAWARE/KOLOWARA AVEN",
         "TORU-ANGIAMA",
         "UDUOPHORI",
-    ],
-        name: "PATANI",
-      },
-      {
-        wards: [
+      ],
+      name: "PATANI",
+    },
+    {
+      wards: [
         "AMUOKPE",
         "ELUME",
         "OKOKPORO/UGBORHEN",
@@ -270,11 +280,11 @@ export const DELTA = {
         "SAPELE URBAN VIII",
         "SAPELE URBAN I",
         "SAPELE URBAN II",
-    ],
-        name: "SAPELE",
-      },
-      {
-        wards: [
+      ],
+      name: "SAPELE",
+    },
+    {
+      wards: [
         "ALADJA",
         "EKETE",
         "OPETE/ASSAGBA/EDJOPHE",
@@ -285,11 +295,11 @@ export const DELTA = {
         "UDU II",
         "UDU III",
         "UDU IV",
-    ],
-        name: "UDU",
-      },
-      {
-        wards: [
+      ],
+      name: "UDU",
+    },
+    {
+      wards: [
         "AGBARHA",
         "AGBARHO I",
         "AGBARHO II",
@@ -301,11 +311,11 @@ export const DELTA = {
         "UGHELLI II",
         "UGHELLI III",
         "UWHERU",
-    ],
-        name: "UGHELLI NORTH",
-      },
-      {
-        wards: [
+      ],
+      name: "UGHELLI NORTH",
+    },
+    {
+      wards: [
         "EFFURUN - OTOR",
         "EKAKPAMRE",
         "EWU I",
@@ -317,11 +327,11 @@ export const DELTA = {
         "JEREMI IV",
         "OLOMU I",
         "OLOMU II",
-    ],
-        name: "UGHELLI SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "UGHELLI SOUTH",
+    },
+    {
+      wards: [
         "AKOKU",
         "AMAI",
         "EBEDEI",
@@ -332,11 +342,11 @@ export const DELTA = {
         "UMUEBU",
         "UMUKWATA",
         "UMUTU",
-    ],
-        name: "UKWUANI",
-      },
-      {
-        wards: [
+      ],
+      name: "UKWUANI",
+    },
+    {
+      wards: [
         "ARMY BARRACKS AREA",
         "EFFURUN I",
         "EFFURUN II",
@@ -347,11 +357,11 @@ export const DELTA = {
         "UGBOMRO/UGBOLOKPOSO",
         "UGBORIKOKO",
         "UGBOROKE",
-    ],
-        name: "UVWIE",
-      },
-      {
-        wards: [
+      ],
+      name: "UVWIE",
+    },
+    {
+      wards: [
         "EBROHIMI",
         "EGHORO",
         "GBOKODA",
@@ -362,11 +372,11 @@ export const DELTA = {
         "OGBUDUGBUDU (EGBEMA IV)",
         "OGHEYE",
         "OPUAMA (EGBEMA I)",
-    ],
-        name: "WARRI NORTH",
-      },
-      {
-        wards: [
+      ],
+      name: "WARRI NORTH",
+    },
+    {
+      wards: [
         "BOWEN",
         "EDJEBA",
         "G.R.A.",
@@ -389,9 +399,10 @@ export const DELTA = {
         "OPOROZA",
         "ORERE",
         "UGBORODO",
-    ],
-        name: "WARRI SOUTH",
-      },
-    ],
-  };
-  
+      ],
+      name: "WARRI SOUTH",
+    },
+  ],
+};
+
+export const DELTA = { states, SR };

@@ -1,8 +1,19 @@
-export const CROSSRIVERS = {
-    state: "CROSSRIVERS",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "Cross Rivers",
+  email: "crossrivers@gmail.com",
+  password: "crossrivers1",
+  phone: "08108850572",
+  statecode: "CROSSRIVERS",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+export const states = {
+  statecode: "CROSSRIVERS",
+  state: "CROSS RIVERS",
+  lga: [
+    {
+      wards: [
         "ADADAMA",
         "AFAFANYI/IGONIGONI",
         "EBOM",
@@ -13,11 +24,11 @@ export const CROSSRIVERS = {
         "IMABANA II",
         "ITIGIDI",
         "USUMUTONG",
-    ],
-        name: "ABI",
-      },
-      {
-        wards: [
+      ],
+      name: "ABI",
+    },
+    {
+      wards: [
         "AKAMKPA URBAN",
         "AWI",
         "EKU",
@@ -28,11 +39,11 @@ export const CROSSRIVERS = {
         "OJUK NORTH",
         "OJUK SOUTH",
         "UYANGA",
-    ],
-        name: "AKAMKPA",
-      },
-      {
-        wards: [
+      ],
+      name: "AKAMKPA",
+    },
+    {
+      wards: [
         "ATIMBO EAST",
         "ATIMBO WEST",
         "ENEYO",
@@ -43,11 +54,11 @@ export const CROSSRIVERS = {
         "IKOT EDEM ODO",
         "IKOT EYO",
         "IKOT NAKANDA",
-    ],
-        name: "AKPABUYO",
-      },
-      {
-        wards: [
+      ],
+      name: "AKPABUYO",
+    },
+    {
+      wards: [
         "ABANA",
         "AKPANKANYA",
         "AKWA",
@@ -58,11 +69,11 @@ export const CROSSRIVERS = {
         "EFUT INWANG",
         "EKPOT ABIA",
         "ODIONG",
-    ],
-        name: "BAKASSI",
-      },
-      {
-        wards: [
+      ],
+      name: "BAKASSI",
+    },
+    {
+      wards: [
         "ABUOCHICHE",
         "AFRIKE OCHAGBE",
         "AFRIKE OKPECHE",
@@ -73,11 +84,11 @@ export const CROSSRIVERS = {
         "OTUKPURU",
         "UGBORO",
         "UKPAH",
-    ],
-        name: "BEKWARRA",
-      },
-      {
-        wards: [
+      ],
+      name: "BEKWARRA",
+    },
+    {
+      wards: [
         "ABAYONG",
         "ADIM",
         "AGWAGUNE/OKURIKE",
@@ -89,11 +100,11 @@ export const CROSSRIVERS = {
         "IKUN/ETONO",
         "UMON NORTH",
         "UMON SOUTH",
-    ],
-        name: "BIASE",
-      },
-      {
-        wards: [
+      ],
+      name: "BIASE",
+    },
+    {
+      wards: [
         "ABO",
         "ALANKWE",
         "BEEBO/BUMAJI",
@@ -105,26 +116,15 @@ export const CROSSRIVERS = {
         "KAKWAGOM/BAWOP",
         "OGEP/OSOKOM",
         "OKU/BORUM/NJUA",
-    ],
-        name: "BOKI",
-      },
-      {
-        wards: [
-        "I",
-        "II",
-        "III",
-        "IV",
-        "IX",
-        "V",
-        "VI",
-        "VII",
-        "VIII",
-        "X",
-    ],
-        name: "CALABAR MUNICIPALITY",
-      },
-      {
-        wards: [
+      ],
+      name: "BOKI",
+    },
+    {
+      wards: ["I", "II", "III", "IV", "IX", "V", "VI", "VII", "VIII", "X"],
+      name: "CALABAR MUNICIPALITY",
+    },
+    {
+      wards: [
         "EIGHT (8)",
         "ELEVEN (11)",
         "FIVE (5)",
@@ -137,11 +137,11 @@ export const CROSSRIVERS = {
         "THREE (3)",
         "TWELVE (12)",
         "TWO (2)",
-    ],
-        name: "CALABAR SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "CALABAR SOUTH",
+    },
+    {
+      wards: [
         "ABIA",
         "ABIJANG",
         "AGBOKIM",
@@ -152,11 +152,11 @@ export const CROSSRIVERS = {
         "ITAKA",
         "MKPOT/AYUK ABA",
         "NSOFANG",
-    ],
-        name: "ETUNG",
-      },
-      {
-        wards: [
+      ],
+      name: "ETUNG",
+    },
+    {
+      wards: [
         "ABANYUM",
         "AKPARABONG",
         "IKOM URBAN I",
@@ -168,11 +168,11 @@ export const CROSSRIVERS = {
         "OFUTOP II",
         "OLULUMO",
         "YALA/NKUM",
-    ],
-        name: "IKOM",
-      },
-      {
-        wards: [
+      ],
+      name: "IKOM",
+    },
+    {
+      wards: [
         "BASANG",
         "BEBI",
         "BECHEVE",
@@ -183,11 +183,11 @@ export const CROSSRIVERS = {
         "BISU",
         "BUSI",
         "UTANGA",
-    ],
-        name: "OBANLIKU",
-      },
-      {
-        wards: [
+      ],
+      name: "OBANLIKU",
+    },
+    {
+      wards: [
         "ABABENE",
         "APIAPUM",
         "IYAMOYONG",
@@ -199,11 +199,11 @@ export const CROSSRIVERS = {
         "OSOPONG I",
         "OSOPONG II",
         "OVONUM",
-    ],
-        name: "OBUBRA",
-      },
-      {
-        wards: [
+      ],
+      name: "OBUBRA",
+    },
+    {
+      wards: [
         "ALEGE/UBANG",
         "ANGIABA / BEGIAKA",
         "BEGIADING",
@@ -214,11 +214,11 @@ export const CROSSRIVERS = {
         "UTUGWANG CENTRAL",
         "UTUGWANG NORTH",
         "UTUGWANG SOUTH",
-    ],
-        name: "OBUDU",
-      },
-      {
-        wards: [
+      ],
+      name: "OBUDU",
+    },
+    {
+      wards: [
         "ADIABO/EFUT",
         "AKAMKPA",
         "CREEK TOWN I",
@@ -232,11 +232,11 @@ export const CROSSRIVERS = {
         "ODOT",
         "ODUKPANI CENTRAL",
         "ONIMAN-KIONG",
-    ],
-        name: "ODUKPANI",
-      },
-      {
-        wards: [
+      ],
+      name: "ODUKPANI",
+    },
+    {
+      wards: [
         "EKAJUK I",
         "EKAJUK II",
         "MBUBE EAST I",
@@ -247,11 +247,11 @@ export const CROSSRIVERS = {
         "NKUM IREDE",
         "OGOJA URBAN I",
         "OGOJA URBAN II",
-    ],
-        name: "OGOJA",
-      },
-      {
-        wards: [
+      ],
+      name: "OGOJA",
+    },
+    {
+      wards: [
         "ABANAKPAI",
         "AFREKPE/EKPENTI",
         "AJERE",
@@ -265,11 +265,11 @@ export const CROSSRIVERS = {
         "MKPANI/AGOI",
         "NKPOLO/UKPAWEN",
         "NTAN",
-    ],
-        name: "YAKURR",
-      },
-      {
-        wards: [
+      ],
+      name: "YAKURR",
+    },
+    {
+      wards: [
         "ECHUMOFANA",
         "GABU",
         "IJIRAGA",
@@ -281,9 +281,10 @@ export const CROSSRIVERS = {
         "WANIKADE",
         "YACHE",
         "YAHE",
-    ],
-        name: "YALA",
-      },
-    ],
-  };
-  
+      ],
+      name: "YALA",
+    },
+  ],
+};
+
+export const CROSSRIVERS = { states, SR };

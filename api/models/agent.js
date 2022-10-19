@@ -19,7 +19,7 @@ const AgentSchema = new Schema({
     required: true,
   },
   //! Second Set
-  type: {
+  agentType: {
     type: String,
     required: true,
   },
@@ -36,11 +36,7 @@ const AgentSchema = new Schema({
     required: true,
   },
   //! Others
-  statecode: {
-    type: String,
-    required: true,
-  },
-  img: {
+  imgUrl: {
     type: String,
     required: true,
   },

@@ -1,3 +1,12 @@
+const SR = {
+  name: "bayelsa",
+  email: "bayelsa@gmail.com",
+  password: "bayelsa1",
+  phone: "08108850572",
+  statecode: "BAYELSA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
 
 export const BAYELSA = {
     state: "BAYELSA",
@@ -14,11 +23,11 @@ export const BAYELSA = {
         "OKPOAMA",
         "OS-INIBIRI",
         "SANGANA",
-        ],
-        name: "BRASS",
-      },
-      {
-        wards: [
+      ],
+      name: "BRASS",
+    },
+    {
+      wards: [
         "EDUWINI I",
         "EDUWINI II",
         "OPOROMOR I",
@@ -31,11 +40,11 @@ export const BAYELSA = {
         "OYIAKIRI III",
         "OYIAKIRI IV",
         "TARAKIRI",
-        ],
-        name: "EKEROMOR",
-      },
-      {
-        wards: [
+      ],
+      name: "EKEROMOR",
+    },
+    {
+      wards: [
         "IGBEDI",
         "KAIAMA",
         "KAIAMA/OLOBIRI",
@@ -47,12 +56,11 @@ export const BAYELSA = {
         "OPOKUMASOUTH",
         "SAMPOU/KALAMA",
         "SEIBOKOROGHA (SABAGREIA) 1",
-    ],
-        name: "KOLOKUMA/OPOKUMA",
-
-      },
-      {
-        wards: [
+      ],
+      name: "KOLOKUMA/OPOKUMA",
+    },
+    {
+      wards: [
         "BASSAMBIRI 1",
         "BASSAMBIRI 11",
         "BASSAMBIRI 111",
@@ -66,11 +74,11 @@ export const BAYELSA = {
         "OKOROMA 1",
         "OKOROMA 11",
         "OLUASIRI",
-    ],
-        name: "NEMBE",
-      },
-      {
-        wards: [
+      ],
+      name: "NEMBE",
+    },
+    {
+      wards: [
         "ANYAMA",
         "EMEYAL",
         "IMIRINGI",
@@ -84,11 +92,11 @@ export const BAYELSA = {
         "OTUABULA",
         "OTUASEGA",
         "OTUOKPOTI",
-    ],
-        name: "OGBIA",
-      },
-      {
-        wards: [
+      ],
+      name: "OGBIA",
+    },
+    {
+      wards: [
         "ADAGBABIRI",
         "ADONI",
         "AGBERE",
@@ -103,11 +111,11 @@ export const BAYELSA = {
         "SAGBAMA",
         "TORU-EBENI",
         "TROFANI",
-    ],
-        name: "SAGBAMA",
-      },
-      {
-        wards: [
+      ],
+      name: "SAGBAMA",
+    },
+    {
+      wards: [
         "AMASSOMA I",
         "AMASSOMA II",
         "AMASSOMA III",
@@ -125,11 +133,11 @@ export const BAYELSA = {
         "OTUAN",
         "UKUBIE",
         "WEST BOMA",
-    ],
-        name: "SOUTHERN IJAW",
-      },
-      {
-        wards: [
+      ],
+      name: "SOUTHERN IJAW",
+    },
+    {
+      wards: [
         "ATTISSA I",
         "ATTISSA II",
         "ATTISSA III",
@@ -145,9 +153,10 @@ export const BAYELSA = {
         "GBARAIN III",
         "OKORDIA",
         "ZARAMA",
-    ],
-        name: "YENAGOA",
-      },
-    ],
-  };
-  
+      ],
+      name: "YENAGOA",
+    },
+  ],
+};
+
+export const BAYELSA = { states, SR };

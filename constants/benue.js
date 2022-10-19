@@ -1,3 +1,12 @@
+const SR = {
+  name: "benue",
+  email: "benue@gmail.com",
+  password: "benue1",
+  phone: "08108850572",
+  statecode: "BENUE",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
 
 export const BENUE = {
     state: "BENUE",
@@ -14,11 +23,11 @@ export const BENUE = {
         "ROYONGO",
         "UKWONYO",
         "ULAYI",
-    ],
-        name: "ADO",
-      },
-      {
-        wards: [
+      ],
+      name: "ADO",
+    },
+    {
+      wards: [
         "EGBA",
         "ENUNGBA",
         "OBAGAJI",
@@ -29,11 +38,11 @@ export const BENUE = {
         "OKOKOLO",
         "OSHIGBUDU",
         "USHA",
-    ],
-        name: "AGATU",
-      },
-      {
-        wards: [
+      ],
+      name: "AGATU",
+    },
+    {
+      wards: [
         "AKPETE/OJANTELLE",
         "AUKE",
         "EDIKWU I",
@@ -45,11 +54,11 @@ export const BENUE = {
         "OFOKE",
         "OIJI",
         "UGBOKPO",
-    ],
-        name: "APA",
-      },
-      {
-        wards: [
+      ],
+      name: "APA",
+    },
+    {
+      wards: [
         "BINEV",
         "ETULO",
         "MBAADE",
@@ -63,11 +72,11 @@ export const BENUE = {
         "MBAYA",
         "MBAYAKA",
         "SHOROV",
-    ],
-        name: "BURUKU",
-      },
-      {
-        wards: [
+      ],
+      name: "BURUKU",
+    },
+    {
+      wards: [
         "GBK/CENTRAL MARKET",
         "GBOKO EAST",
         "GBOKO NORTH WEST",
@@ -85,11 +94,11 @@ export const BENUE = {
         "UKPEKPE",
         "YANDEV NORTH",
         "YANDEV SOUTH",
-    ],
-        name: "GBOKO",
-      },
-      {
-        wards: [
+      ],
+      name: "GBOKO",
+    },
+    {
+      wards: [
         "ABINSI",
         "KAAMBE",
         "MBABAI",
@@ -100,11 +109,11 @@ export const BENUE = {
         "NZOROV",
         "SAGHEV",
         "UVIR",
-    ],
-        name: "GUMA",
-      },
-      {
-        wards: [
+      ],
+      name: "GUMA",
+    },
+    {
+      wards: [
         "AKPACH'AYI",
         "ALIADE TOWN",
         "GBEMACHA",
@@ -119,11 +128,11 @@ export const BENUE = {
         "MBAYOM",
         "SHOUGH",
         "UGEE",
-    ],
-        name: "GWER EAST",
-      },
-      {
-        wards: [
+      ],
+      name: "GWER EAST",
+    },
+    {
+      wards: [
         "AVIHIJIME",
         "GAAMBE - USHIN",
         "GBAANGE/TONGOV",
@@ -139,11 +148,11 @@ export const BENUE = {
         "SENGEV",
         "SENGEV/YENGEV",
         "TIJIME",
-    ],
-        name: "GWER WEST",
-      },
-      {
-        wards: [
+      ],
+      name: "GWER WEST",
+    },
+    {
+      wards: [
         "IKURAV TIEV I",
         "IKURAV TIEV II",
         "IWAR(TONGOV I)",
@@ -156,11 +165,11 @@ export const BENUE = {
         "TIIR(TONGOV II)",
         "UTANGE",
         "YOOYO",
-    ],
-        name: "KATSINA-ALA",
-      },
-      {
-        wards: [
+      ],
+      name: "KATSINA-ALA",
+    },
+    {
+      wards: [
         "IKYURAV/MBATWER",
         "MBAGUSA/MBATSER",
         "MBAIKYASE",
@@ -172,11 +181,11 @@ export const BENUE = {
         "MBAWAR",
         "MBAYEGH/MBAIKYER",
         "TSE-AGBERAGBA",
-    ],
-        name: "KONSHISHA",
-      },
-      {
-        wards: [
+      ],
+      name: "KONSHISHA",
+    },
+    {
+      wards: [
         "ADIKPO METROPOLIS",
         "KUMAKWAGH",
         "LIEV I",
@@ -192,11 +201,11 @@ export const BENUE = {
         "TONDOV II",
         "USAR",
         "YAAV",
-    ],
-        name: "KWANDE",
-      },
-      {
-        wards: [
+      ],
+      name: "KWANDE",
+    },
+    {
+      wards: [
         "MBADYUL",
         "MBAGBER",
         "MBATER",
@@ -207,11 +216,11 @@ export const BENUE = {
         "TURAN",
         "UKEMBERGYA/ISWAREV",
         "YONOV",
-    ],
-        name: "LOGO",
-      },
-      {
-        wards: [
+      ],
+      name: "LOGO",
+    },
+    {
+      wards: [
         "AGAN",
         "ANKPA/WADATA",
         "BAR",
@@ -223,11 +232,11 @@ export const BENUE = {
         "NORTH BANK I",
         "NORTH BANK II",
         "WAILOMAYO",
-    ],
-        name: "MAKURDI",
-      },
-      {
-        wards: [
+      ],
+      name: "MAKURDI",
+    },
+    {
+      wards: [
         "ADIKO",
         "ADUM WEST",
         "IKWOKWU",
@@ -240,11 +249,11 @@ export const BENUE = {
         "OKPOKWU",
         "OKWUTUNGBE",
         "ORIHI",
-    ],
-        name: "OBI",
-      },
-      {
-        wards: [
+      ],
+      name: "OBI",
+    },
+    {
+      wards: [
         "AI-OODO I",
         "AI-OODO II",
         "AI-OONO I",
@@ -258,11 +267,11 @@ export const BENUE = {
         "OROKAM I",
         "OROKAM II",
         "OROKAM III",
-    ],
-        name: "OGBADIBO",
-      },
-      {
-        wards: [
+      ],
+      name: "OGBADIBO",
+    },
+    {
+      wards: [
         "AGADAGBA",
         "AWUME EHAJE",
         "AWUME ICHO",
@@ -273,11 +282,11 @@ export const BENUE = {
         "OGLEWU ICHO",
         "ONYAGEDE ICHO (OGOLI)",
         "ONYAGEDE-EHAJE (ALLE)",
-    ],
-        name: "OHIMINI",
-      },
-      {
-        wards: [
+      ],
+      name: "OHIMINI",
+    },
+    {
+      wards: [
         "ADOKPA",
         "AINU",
         "IBILLA",
@@ -289,11 +298,11 @@ export const BENUE = {
         "OKWUDU",
         "OWO",
         "UKPA/AINU ETTE",
-    ],
-        name: "OJU",
-      },
-      {
-        wards: [
+      ],
+      name: "OJU",
+    },
+    {
+      wards: [
         "AMEJO",
         "EKE",
         "ICHAMA II",
@@ -306,11 +315,11 @@ export const BENUE = {
         "OKPOGA SOUTH",
         "OKPOGA WEST",
         "UGBOKOLO",
-    ],
-        name: "OKPOKWU",
-      },
-      {
-        wards: [
+      ],
+      name: "OKPOKWU",
+    },
+    {
+      wards: [
         "ADOKA-HAJE",
         "ADOKA-ICHO",
         "ALLAN",
@@ -324,11 +333,11 @@ export const BENUE = {
         "UGBOJU-EHAJE",
         "UGBOJU-ICHO",
         "UGBOJU-OTAHE",
-    ],
-        name: "OTUKPO",
-      },
-      {
-        wards: [
+      ],
+      name: "OTUKPO",
+    },
+    {
+      wards: [
         "MBAAJIR AKAA",
         "MBAAYO",
         "MBACHAVER IKYONDO",
@@ -339,11 +348,11 @@ export const BENUE = {
         "MBANYAGBER",
         "SHITILE",
         "TONGOV",
-    ],
-        name: "TARKA",
-      },
-      {
-        wards: [
+      ],
+      name: "TARKA",
+    },
+    {
+      wards: [
         "ATERAYANGE",
         "AZENDESHI",
         "BORIKYO",
@@ -357,11 +366,11 @@ export const BENUE = {
         "TSAAV",
         "UGBAAM",
         "UYAM",
-    ],
-        name: "UKUM",
-      },
-      {
-        wards: [
+      ],
+      name: "UKUM",
+    },
+    {
+      wards: [
         "ATIKYESE",
         "IKYOV",
         "LESSEL",
@@ -373,11 +382,11 @@ export const BENUE = {
         "MBAKUHA",
         "MBAYEGH",
         "UTANGE",
-    ],
-        name: "USHONGO",
-      },
-      {
-        wards: [
+      ],
+      name: "USHONGO",
+    },
+    {
+      wards: [
         "MBADEDE",
         "MBAGBAM",
         "MBAGBERA",
@@ -390,9 +399,10 @@ export const BENUE = {
         "NINGEV",
         "TSAMBE",
         "VANDEIKYA TOWNSHIP",
-    ],
-        name: "VANDEIKYA",
-      },
-    ],
-  };
- 
+      ],
+      name: "VANDEIKYA",
+    },
+  ],
+};
+
+export const BENUE = { states, SR };

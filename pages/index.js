@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
-import Axios from "axios";
-import { usersList } from "../constants/users";
+import { usersList } from "../constants/users/users";
 import { useRouter } from "next/router";
 import { fetchUser } from "../api/auth";
 // import { fetchUser } from "../api/auth";
 
 export default function Home() {
   const router = useRouter();
+
   const [user, setUser] = useState({
     email: "",
     name: "",
   });
+
   const [isUserLoggedIn, setUserLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -83,7 +84,7 @@ export default function Home() {
     <div className="wrapper">
       {isUserLoggedIn ? (
         <div className="textArea">
-          <h3>Welcome {user.name}</h3>
+          {/* <h3>Welcome {user.name}</h3> */}
           <p>
             This is a Poll Agent Data Capture Application designed specifically
             for the All Progressive Congress (APC) for the purpose of election
