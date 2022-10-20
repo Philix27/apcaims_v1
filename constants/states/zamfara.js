@@ -1,4 +1,15 @@
-export const ZAMFARA = {
+const SR = {
+  name: "ZAMFARA",
+  email: "zamfara@gmail.com",
+  password: "zamfara1",
+  phone: "08108850572",
+  statecode: "ZAMFARA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "ZAMFARA",
   state: "ZAMFARA",
   lga: [
     {
@@ -221,4 +232,4 @@ export const ZAMFARA = {
   ],
 };
 
-export const KEBBI = { states, SR };
+export const ZAMFARA = { states, SR };

@@ -1,4 +1,15 @@
-export const PLATEAU = {
+const SR = {
+  name: "PLATEAU",
+  email: "plateau@gmail.com",
+  password: "plateau1",
+  phone: "08108850572",
+  statecode: "PLATEAU",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "PLATEAU",
   state: "PLATEAU",
   lga: [
     {
@@ -296,4 +307,4 @@ export const PLATEAU = {
   ],
 };
 
-export const KEBBI = { states, SR };
+export const PLATEAU = { states, SR };

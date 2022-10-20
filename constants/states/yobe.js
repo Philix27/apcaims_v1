@@ -1,4 +1,15 @@
-export const YOBE = {
+const SR = {
+  name: "YOBE",
+  email: "yobe@gmail.com",
+  password: "yobe1",
+  phone: "08108850572",
+  statecode: "YOBE",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "YOBE",
   state: "YOBE",
   lga: [
     {
@@ -262,4 +273,4 @@ export const YOBE = {
   ],
 };
 
-export const KEBBI = { states, SR };
+export const YOBE = { states, SR };

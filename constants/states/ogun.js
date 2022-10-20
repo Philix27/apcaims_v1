@@ -1,4 +1,15 @@
-export const OGUN = {
+const SR = {
+  name: "OGUN",
+  email: "ogun@gmail.com",
+  password: "ogun1",
+  phone: "08108850572",
+  statecode: "OGUN",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "OGUN",
   state: "OGUN",
   lga: [
     {
@@ -340,4 +351,4 @@ export const OGUN = {
   ],
 };
 
-export const KEBBI = { states, SR };
+export const OGUN = { states, SR };

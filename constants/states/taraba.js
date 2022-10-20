@@ -1,4 +1,15 @@
-export const TARABA = {
+const SR = {
+  name: "TARABA",
+  email: "taraba@gmail.com",
+  password: "taraba1",
+  phone: "08108850572",
+  statecode: "TARABA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "TARABA",
   state: "TARABA",
   lga: [
     {
@@ -249,4 +260,4 @@ export const TARABA = {
   ],
 };
 
-export const KEBBI = { states, SR };
+export const TARABA = { states, SR };

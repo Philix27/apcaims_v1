@@ -1,8 +1,19 @@
-export const RIVERS = {
-    state: "RIVERS",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "RIVERS",
+  email: "rivers@gmail.com",
+  password: "rivers1",
+  phone: "08108850572",
+  statecode: "RIVERS",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "RIVERS",
+  state: "RIVERS",
+  lga: [
+    {
+      wards: [
         "ABUA IV",
         "ABUA I",
         "ABUA II",
@@ -17,10 +28,10 @@ export const RIVERS = {
         "OKPEDEN",
         "OTAPHA",
       ],
-        name: "ABUA-ODUAL",
-      },
-      {
-        wards: [
+      name: "ABUA-ODUAL",
+    },
+    {
+      wards: [
         "AHOADA IV",
         "AHOADA I",
         "AHOADA II",
@@ -35,10 +46,10 @@ export const RIVERS = {
         "UPPATA I",
         "UPPATA II",
       ],
-        name: "AHOADA EAST",
-      },
-      {
-        wards: [
+      name: "AHOADA EAST",
+    },
+    {
+      wards: [
         "EDIRO I",
         "EDIRO II",
         "IGBUDUYA I",
@@ -52,10 +63,10 @@ export const RIVERS = {
         "UBIE III",
         "UBIE IV",
       ],
-        name: "AHOADA WEST",
-      },
-      {
-        wards: [
+      name: "AHOADA WEST",
+    },
+    {
+      wards: [
         "ALISE GROUP",
         "BRIGGS I",
         "BRIGGS II",
@@ -74,10 +85,10 @@ export const RIVERS = {
         "NORTH/SOUTH GROUP",
         "OBONOMA",
       ],
-        name: "AKUKU TORU",
-      },
-      {
-        wards: [
+      name: "AKUKU TORU",
+    },
+    {
+      wards: [
         "AGWUT-OBOLO",
         "ASARAMA",
         "ATABA I",
@@ -90,10 +101,10 @@ export const RIVERS = {
         "UNYEADA II",
         "UNYEN GALA",
       ],
-        name: "ANDONI",
-      },
-      {
-        wards: [
+      name: "ANDONI",
+    },
+    {
+      wards: [
         "BUGUMA EAST I",
         "BUGUMA EAST II",
         "BUGUMA NORTH EAST",
@@ -108,10 +119,10 @@ export const RIVERS = {
         "ISIA GROUP II",
         "WEST CENTAL GROUP",
       ],
-        name: "ASARI-TORU",
-      },
-      {
-        wards: [
+      name: "ASARI-TORU",
+    },
+    {
+      wards: [
         "WARD I ORO-IGWE",
         "WARD II COURT/ ADA ALLISON",
         "WARD III DAN JUMBO/ BERESIRI",
@@ -125,10 +136,10 @@ export const RIVERS = {
         "WARD XI PETERSIDE",
         "WARD XII KALAIBIAMA",
       ],
-        name: "BONNY",
-      },
-      {
-        wards: [
+      name: "BONNY",
+    },
+    {
+      wards: [
         "BAKANA VI",
         "BAKANA I",
         "BAKANA II",
@@ -147,10 +158,10 @@ export const RIVERS = {
         "TOMBLE III",
         "TOMBLE IV",
       ],
-        name: "DEGEMA",
-      },
-      {
-        wards: [
+      name: "DEGEMA",
+    },
+    {
+      wards: [
         "AGBONCHIA",
         "AKPAJO",
         "ALESA",
@@ -162,10 +173,10 @@ export const RIVERS = {
         "OGALE",
         "ONNE",
       ],
-        name: "ELEME",
-      },
-      {
-        wards: [
+      name: "ELEME",
+    },
+    {
+      wards: [
         "EGBEDA",
         "ELELE ALIMINI",
         "EMOHUA II",
@@ -181,10 +192,10 @@ export const RIVERS = {
         "RUNDELE",
         "UBIMINI",
       ],
-        name: "EMOHUA",
-      },
-      {
-        wards: [
+      name: "EMOHUA",
+    },
+    {
+      wards: [
         "AFARA",
         "AKPOKU/UMUOYE",
         "AKWA/ODOGWA",
@@ -205,10 +216,10 @@ export const RIVERS = {
         "OZUZU",
         "ULAKWO",
       ],
-        name: "ETCHE",
-      },
-      {
-        wards: [
+      name: "ETCHE",
+    },
+    {
+      wards: [
         "B-DERE",
         "BERA",
         "BIARA I",
@@ -227,10 +238,10 @@ export const RIVERS = {
         "YEGHE I",
         "YEGHE II",
       ],
-        name: "GOKANA",
-      },
-      {
-        wards: [
+      name: "GOKANA",
+    },
+    {
+      wards: [
         "ALUU",
         "APANI",
         "ELELE I",
@@ -245,10 +256,10 @@ export const RIVERS = {
         "UBIMA",
         "UMUANWA",
       ],
-        name: "IKWERRE",
-      },
-      {
-        wards: [
+      name: "IKWERRE",
+    },
+    {
+      wards: [
         "BAEN/KPEAN/DUBURO",
         "BANE",
         "BARGHA",
@@ -269,10 +280,10 @@ export const RIVERS = {
         "WIIYAA KARA",
         "ZAAKPORI",
       ],
-        name: "KHANA",
-      },
-      {
-        wards: [
+      name: "KHANA",
+    },
+    {
+      wards: [
         "CHOBA",
         "ELELENWO (3B)",
         "ORO-IGWE",
@@ -291,10 +302,10 @@ export const RIVERS = {
         "RUMUOMASI",
         "WORJI",
       ],
-        name: "OBIO/AKPOR",
-      },
-      {
-        wards: [
+      name: "OBIO/AKPOR",
+    },
+    {
+      wards: [
         "EGBEMA I",
         "EGBEMA II",
         "EGI I",
@@ -313,10 +324,10 @@ export const RIVERS = {
         "USOMINI I (NORTH)",
         "USOMINI II (SOUTH)",
       ],
-        name: "OGBA/EGBEMA/NDONI",
-      },
-      {
-        wards: [
+      name: "OGBA/EGBEMA/NDONI",
+    },
+    {
+      wards: [
         "BOLO IV",
         "BOLO I",
         "BOLO II",
@@ -330,10 +341,10 @@ export const RIVERS = {
         "OGU VI",
         "WAKAMA",
       ],
-        name: "OGU/BOLO",
-      },
-      {
-        wards: [
+      name: "OGU/BOLO",
+    },
+    {
+      wards: [
         "KALIO",
         "OGAN",
         "OGOLOMA I",
@@ -347,10 +358,10 @@ export const RIVERS = {
         "OKRIKA VI",
         "OKRIKA VII",
       ],
-        name: "OKRIKA",
-      },
-      {
-        wards: [
+      name: "OKRIKA",
+    },
+    {
+      wards: [
         "ARIRANIIRI/OWU-AHIA COMMUNITY",
         "EBERI-DIKEOMUUO COMMUNITY",
         "OBIBI/AJULOKE COMMUNITY",
@@ -362,10 +373,10 @@ export const RIVERS = {
         "UMUOGBA I COMMUNITY",
         "UMUOGBA II COMMUNITY",
       ],
-        name: "OMUMA",
-      },
-      {
-        wards: [
+      name: "OMUMA",
+    },
+    {
+      wards: [
         "DAPPAYE AMA-KIRI I",
         "DAPPAYE AMA-KIRI II",
         "DIEPIRI",
@@ -378,10 +389,10 @@ export const RIVERS = {
         "QUEENS TOWN KALAMA",
         "UKONU",
       ],
-        name: "OPOBO/NEKORO",
-      },
-      {
-        wards: [
+      name: "OPOBO/NEKORO",
+    },
+    {
+      wards: [
         "ASA",
         "AZUOGU",
         "KOMKOM",
@@ -393,10 +404,10 @@ export const RIVERS = {
         "OYIGBO CENTRAL",
         "UMUAGBAI",
       ],
-        name: "OYIGBO",
-      },
-      {
-        wards: [
+      name: "OYIGBO",
+    },
+    {
+      wards: [
         "ABULOMA/AMADI-AMA",
         "DIOBU",
         "ELEKAHIA",
@@ -418,10 +429,10 @@ export const RIVERS = {
         "RUMUWOJI (THREE)",
         "RUMUWOJI (TWO)",
       ],
-        name: "PORT HARCOURT",
-      },
-      {
-        wards: [
+      name: "PORT HARCOURT",
+    },
+    {
+      wards: [
         "WARD I (BOTEM/GBENEO)",
         "WARD II (KPITE)",
         "WARD III (KOROKORO)",
@@ -433,9 +444,9 @@ export const RIVERS = {
         "WARD VIII (BARRYIRA/BARA-ALE/SIME)",
         "WARD X (BAN-OGOI)",
       ],
-        name: "TAI",
-      },
-    ],
-  };
-  
-  export const KEBBI = { states, SR };
+      name: "TAI",
+    },
+  ],
+};
+
+export const RIVERS = { states, SR };

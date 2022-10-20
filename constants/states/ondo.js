@@ -1,4 +1,15 @@
-export const ONDO = {
+const SR = {
+  name: "ONDO",
+  email: "ondo@gmail.com",
+  password: "ondo1",
+  phone: "08108850572",
+  statecode: "ONDO",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "ONDO",
   state: "ONDO",
   lga: [
     {
@@ -297,4 +308,4 @@ export const ONDO = {
   ],
 };
 
-export const KEBBI = { states, SR };
+export const ONDO = { states, SR };

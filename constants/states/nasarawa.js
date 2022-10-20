@@ -1,4 +1,15 @@
-export const NASSARAWA = {
+const SR = {
+  name: "NASSARAWA",
+  email: "nassarawa@gmail.com",
+  password: "nassarawa1",
+  phone: "08108850572",
+  statecode: "NASSARAWA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "NASSARAWA",
   state: "NASSARAWA",
   lga: [
     {
@@ -216,4 +227,4 @@ export const NASSARAWA = {
   ],
 };
 
-export const KEBBI = { states, SR };
+export const NASARAWA = { states, SR };

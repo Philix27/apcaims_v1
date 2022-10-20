@@ -1,8 +1,19 @@
-export const OSUN = {
-    state: "OSUN",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "OSUN",
+  email: "osun@gmail.com",
+  password: "osun1",
+  phone: "08108850572",
+  statecode: "OSUN",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "OSUN",
+  state: "OSUN",
+  lga: [
+    {
+      wards: [
         "AJEBANDELE",
         "AYEGUNLE",
         "ETI-ONI",
@@ -14,10 +25,10 @@ export const OSUN = {
         "IPOLE",
         "IWARA",
       ],
-        name: "ATAKUMOSA EAST",
-      },
-      {
-        wards: [
+      name: "ATAKUMOSA EAST",
+    },
+    {
+      wards: [
         "IBODI",
         "IFELODUN",
         "IFEWARA I",
@@ -30,10 +41,10 @@ export const OSUN = {
         "OSU I",
         "OSU II",
       ],
-        name: "ATAKUMOSA WEST",
-      },
-      {
-        wards: [
+      name: "ATAKUMOSA WEST",
+    },
+    {
+      wards: [
         "ANLUGBUA",
         "ARAROMI-OWU",
         "BALOGUN",
@@ -46,10 +57,10 @@ export const OSUN = {
         "OTUN BALOGUN",
         "OTUN-OLUFI",
       ],
-        name: "AYEDAADE",
-      },
-      {
-        wards: [
+      name: "AYEDAADE",
+    },
+    {
+      wards: [
         "ILEOGBO I",
         "ILEOGBO II",
         "ILEOGBO III",
@@ -61,10 +72,10 @@ export const OSUN = {
         "OLUPONNA 1I",
         "OLUPONNA 1II",
       ],
-        name: "AYEDIRE",
-      },
-      {
-        wards: [
+      name: "AYEDIRE",
+    },
+    {
+      wards: [
         "ERIPA",
         "GBELERU OBAALA I",
         "GBELERU OBAALA II",
@@ -76,10 +87,10 @@ export const OSUN = {
         "OKE-OMI OTAN",
         "OKE-OTAN",
       ],
-        name: "BOLUWADURO",
-      },
-      {
-        wards: [
+      name: "BOLUWADURO",
+    },
+    {
+      wards: [
         "ADA I",
         "ADA II",
         "AGBA",
@@ -92,10 +103,10 @@ export const OSUN = {
         "OLOTI IRAGBIJI",
         "ORORUWO",
       ],
-        name: "BORIPE",
-      },
-      {
-        wards: [
+      name: "BORIPE",
+    },
+    {
+      wards: [
         "ABOGUNDE/SAGBA",
         "ALUSEKERE",
         "APASO",
@@ -108,10 +119,10 @@ export const OSUN = {
         "SABO/AGBONGBE I",
         "SABO/AGBONGBE II",
       ],
-        name: "EDE NORTH",
-      },
-      {
-        wards: [
+      name: "EDE NORTH",
+    },
+    {
+      wards: [
         "ALAJUE I",
         "ALAJUE II",
         "ASUNMO",
@@ -123,10 +134,10 @@ export const OSUN = {
         "OLOKI/AKODA",
         "SEKONA",
       ],
-        name: "EDE SOUTH",
-      },
-      {
-        wards: [
+      name: "EDE SOUTH",
+    },
+    {
+      wards: [
         "ARA I",
         "ARA II",
         "AWO/ABUDO",
@@ -138,10 +149,10 @@ export const OSUN = {
         "OJO/ARO",
         "OKIN NI/OLORUNSOGO/OFATEDO",
       ],
-        name: "EGBEDORE",
-      },
-      {
-        wards: [
+      name: "EGBEDORE",
+    },
+    {
+      wards: [
         "ELEJIGBO 'A'",
         "ELEJIGBO 'B'/OSOLO",
         "ELEJIGBO 'C'/MAPO",
@@ -154,10 +165,10 @@ export const OSUN = {
         "INISA II/AFAAKE/AYEGUNLE",
         "OLA/AYE/AGURODO",
       ],
-        name: "EJIGBO",
-      },
-      {
-        wards: [
+      name: "EJIGBO",
+    },
+    {
+      wards: [
         "AKARABATA",
         "ILARE 1",
         "ILARE 1I",
@@ -170,10 +181,10 @@ export const OSUN = {
         "IREMO/AJEBANDELE",
         "MORE OJAJA",
       ],
-        name: "IFE CENTRAL",
-      },
-      {
-        wards: [
+      name: "IFE CENTRAL",
+    },
+    {
+      wards: [
         "ILODE I",
         "ILODE II",
         "MODAKEKE II",
@@ -185,10 +196,10 @@ export const OSUN = {
         "OKEREWE III",
         "YEKEMI",
       ],
-        name: "IFE EAST",
-      },
-      {
-        wards: [
+      name: "IFE EAST",
+    },
+    {
+      wards: [
         "ASIPA/AKINLALU",
         "EDUNABON I",
         "EDUNABON II",
@@ -200,10 +211,10 @@ export const OSUN = {
         "OYERE I",
         "YAKOYO",
       ],
-        name: "IFE NORTH",
-      },
-      {
-        wards: [
+      name: "IFE NORTH",
+    },
+    {
+      wards: [
         "AARE",
         "ABIRI OGUDU",
         "AYE",
@@ -216,10 +227,10 @@ export const OSUN = {
         "OLODE",
         "OSI",
       ],
-        name: "IFE SOUTH",
-      },
-      {
-        wards: [
+      name: "IFE SOUTH",
+    },
+    {
+      wards: [
         "AKESIN",
         "ASAONI",
         "AWORO/OKE-ILA RURAL",
@@ -231,10 +242,10 @@ export const OSUN = {
         "OYI",
         "TEMIDIRE",
       ],
-        name: "IFEDAYO",
-      },
-      {
-        wards: [
+      name: "IFEDAYO",
+    },
+    {
+      wards: [
         "AMOLA IKIRUN",
         "EESA IKIRUN",
         "EKOENDE/EKO AJALA",
@@ -248,10 +259,10 @@ export const OSUN = {
         "OWODE IKIRUN",
         "STATION ROAD, IKIRUN",
       ],
-        name: "IFELODUN",
-      },
-      {
-        wards: [
+      name: "IFELODUN",
+    },
+    {
+      wards: [
         "AJABA/EDEMOSI/ABA ORANGUN",
         "EJIGBO I",
         "EJIGBO II",
@@ -264,10 +275,10 @@ export const OSUN = {
         "OKE EDE",
         "OKE OLA",
       ],
-        name: "ILA",
-      },
-      {
-        wards: [
+      name: "ILA",
+    },
+    {
+      wards: [
         "BILADU",
         "BOLORUNDURO",
         "IFOSAN/OKE-ESO",
@@ -280,10 +291,10 @@ export const OSUN = {
         "OKESA",
         "UPPER & LOWER IJOKA",
       ],
-        name: "ILESA EAST",
-      },
-      {
-        wards: [
+      name: "ILESA EAST",
+    },
+    {
+      wards: [
         "AYESO",
         "EREJA",
         "IKOTI/ARAROMI",
@@ -295,10 +306,10 @@ export const OSUN = {
         "OMOFE/IDASA",
         "UPPER AND LOWER IGBOGI",
       ],
-        name: "ILESA WEST",
-      },
-      {
-        wards: [
+      name: "ILESA WEST",
+    },
+    {
+      wards: [
         "BARA 'A'",
         "BARA 'B'",
         "ELERIN 'A'",
@@ -311,10 +322,10 @@ export const OSUN = {
         "OLOBU 'D'",
         "OLUBU 'B'",
       ],
-        name: "IREPODUN",
-      },
-      {
-        wards: [
+      name: "IREPODUN",
+    },
+    {
+      wards: [
         "IKIRE 'A'",
         "IKIRE 'B'",
         "IKIRE 'C'",
@@ -327,10 +338,10 @@ export const OSUN = {
         "IKIRE 'J'",
         "IKIRE 'K'",
       ],
-        name: "IREWOLE",
-      },
-      {
-        wards: [
+      name: "IREWOLE",
+    },
+    {
+      wards: [
         "ALAPOMU I (ODO-OSUN)",
         "ALAPOMU II",
         "ASALU (MOGIMOGI)",
@@ -343,10 +354,10 @@ export const OSUN = {
         "ORANRAN WARD",
         "OSA IKOYI (OLOKE)",
       ],
-        name: "ISOKAN",
-      },
-      {
-        wards: [
+      name: "ISOKAN",
+    },
+    {
+      wards: [
         "GIDIGBO I",
         "GIDIGBO II",
         "GIDIGBO III",
@@ -363,10 +374,10 @@ export const OSUN = {
         "OKE-OBA I",
         "OKE-OBA II",
       ],
-        name: "IWO",
-      },
-      {
-        wards: [
+      name: "IWO",
+    },
+    {
+      wards: [
         "EESUN/IDO-OKO",
         "ESA - ODO",
         "ESA-OKE",
@@ -378,10 +389,10 @@ export const OSUN = {
         "IPETU-ILE/ADAOWODE",
         "OTAN-ILE",
       ],
-        name: "OBOKUN",
-      },
-      {
-        wards: [
+      name: "OBOKUN",
+    },
+    {
+      wards: [
         "ASI/ASABA",
         "BAALE",
         "EKOSIN/IYEKU",
@@ -398,10 +409,10 @@ export const OSUN = {
         "ORE/AGBEYE",
         "OSOLO/OPARIN/OLA",
       ],
-        name: "ODO-OTIN",
-      },
-      {
-        wards: [
+      name: "ODO-OTIN",
+    },
+    {
+      wards: [
         "AJAGBA/IWO OKE",
         "ASA AJAGUNLASE",
         "ASAMU/ILEMOWU",
@@ -413,10 +424,10 @@ export const OSUN = {
         "OGBAAGBA II",
         "TELEMU",
       ],
-        name: "OLA-OLUWA",
-      },
-      {
-        wards: [
+      name: "OLA-OLUWA",
+    },
+    {
+      wards: [
         "AGOWANDE",
         "AKOGUN",
         "ATELEWO",
@@ -429,10 +440,10 @@ export const OSUN = {
         "OWODE II",
         "OWOOPE",
       ],
-        name: "OLORUNDA",
-      },
-      {
-        wards: [
+      name: "OLORUNDA",
+    },
+    {
+      wards: [
         "APOTI DAGBAJA",
         "ERIN-IJESA",
         "ERIN-OKE",
@@ -446,10 +457,10 @@ export const OSUN = {
         "IRA",
         "IWOYE",
       ],
-        name: "ORIADE",
-      },
-      {
-        wards: [
+      name: "ORIADE",
+    },
+    {
+      wards: [
         "OLUFON OROLU 'J'",
         "OLUFON OROLU 'A'",
         "OLUFON OROLU 'B'",
@@ -461,10 +472,10 @@ export const OSUN = {
         "OLUFON OROLU 'G'",
         "OLUFON OROLU 'H'",
       ],
-        name: "OROLU",
-      },
-      {
-        wards: [
+      name: "OROLU",
+    },
+    {
+      wards: [
         "ALAGBA",
         "ARE-AGO",
         "ATAOJA 'A'",
@@ -481,9 +492,9 @@ export const OSUN = {
         "OTUN HAGUN B",
         "OTUN JAGUN 'A'",
       ],
-        name: "OSOGBO",
-      },
-    ],
-  };
-  
-  export const KEBBI = { states, SR };
+      name: "OSOGBO",
+    },
+  ],
+};
+
+export const OSUN = { states, SR };
