@@ -1,7 +1,7 @@
-import Head from "next/head";
-import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
+import Link from "next/link";
 
 export default function Dashboard() {
   const router = useRouter();
@@ -12,6 +12,7 @@ export default function Dashboard() {
       console.log(fetchUser());
     }
   }, []);
+
   function fetchUser() {
     return JSON.parse(localStorage.getItem("user"));
   }

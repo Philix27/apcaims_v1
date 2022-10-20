@@ -6,11 +6,9 @@ import Axios from "axios";
 import { useRouter } from "next/router";
 import { lgas } from "../../constants/lga";
 
-export default function LGAs() {
+export default function LGAs({ userState }) {
   const [statesToDisplay, setStatesToDisplay] = useState(lgas);
   const router = useRouter();
-
-  // console.log(lgas);
   const onSearch = (e) => {
     const searchTerm = e.target.value;
     const tempList = [];

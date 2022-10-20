@@ -4,25 +4,26 @@ import { FcApproval, FcDisapprove } from "react-icons/fc";
 import { useState } from "react";
 import Axios from "axios";
 import { useRouter } from "next/router";
-import { agents } from "../../constants/agents";
 import { AlertDeleted } from "../../comps/agents/alert";
+import { Modal } from "../global/Modal";
+import ModalContent from "./modalContent";
 
 export default function AgentsComp({ agentsList }) {
-  const [statesToDisplay, setStatesToDisplay] = useState(agents);
   const [isSuccessful, setIsSuccessful] = useState(false);
+  const [agts, setAgents] = useState(agentsList.data);
+  const [showModal, setShowModal] = useState(false);
   const router = useRouter();
 
   const onSearch = (e) => {
-    const [isSuccessful, setIsSuccessful] = useState(false);
     const searchTerm = e.target.value;
     const tempList = [];
-    tempList = agentsList.data.filter((agent) =>
-      agent.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-
-    setStatesToDisplay(tempList);
+    // console.log(agentsList.data);
+    tempList = agts.filter((agent) => {
+      agent.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+    console.log(tempList);
+    setAgents(tempList);
   };
-  console.log(agentsList);
 
   const onDelete = (agent) => {
     Axios.delete(`https://rxedu-api.vercel.app/api/v1/agent/${agent._id}`)
@@ -45,6 +46,14 @@ export default function AgentsComp({ agentsList }) {
   return (
     <div className="section">
       {/* <div className="successDiv"> {isSuccessful && <AlertDeleted />}</div> */}
+      {showModal && (
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          title="Hula Agen"
+          children={<ModalContent />}
+        />
+      )}
       <div className="tableSection">
         <div className="input">
           <input
@@ -62,15 +71,14 @@ export default function AgentsComp({ agentsList }) {
               <th>Email</th>
               <th>State</th>
               <th>LGA</th>
-              <th>Phone</th>
-              <th>Status</th>
-              <th>Edit Status</th>
+              <th>Agent Type</th>
+              <th>Edit </th>
               <th>Delete</th>
             </tr>
           </thead>
           <tbody>
-            {agentsList.data.map((agent, index) => (
-              <tr key={index}>
+            {agts.map((agent, index) => (
+              <tr key={index} onClick={setShowModal(true)}>
                 <td>{index + 1}.</td>
                 <td>
                   <img src={agent.image} alt={agent.name}></img>
@@ -79,14 +87,7 @@ export default function AgentsComp({ agentsList }) {
                 <td>{agent.email}</td>
                 <td>{agent.state}</td>
                 <td>{agent.lga}</td>
-                <td>{agent.phone}</td>
-                <td>
-                  {agent.isApproved ? (
-                    <FcApproval className="icon" />
-                  ) : (
-                    <FcDisapprove className="icon" />
-                  )}
-                </td>
+                <td>{agent.agentType}</td>
                 <td>
                   <AiFillEdit className="green icon" />
                 </td>

@@ -41,6 +41,14 @@ export default function AddAgentsPage({ title }) {
     status: "NEW",
   });
 
+  const HOU = "HOUSE OF REP.";
+  const ASSM = "STATE HOUSE OF ASSEMBLY";
+  const SEN = "SENATORIAL";
+
+  // const [house, setHouse] = useState("HOUSE OF REP.");
+  // const [ASSM, setASSM] = useState("STATE HOUSE OF ASSEMBLY");
+  // const [SEN, setSEN] = useState("SENATORIAL");
+
   function postAgent(agent) {
     Axios.post("https://rxedu-api.vercel.app/api/v1/agent", agent)
       .then((response) => {
@@ -92,7 +100,7 @@ export default function AddAgentsPage({ title }) {
       // console.log(senatorial_district);
       // console.log(selectedState);
 
-      if (value == "SENATORIAL") {
+      if (value == SEN) {
         if (agent.state == "ABIA") {
           const selectedState = data.senDist.filter(
             (_val) => _val.state == agent.state
@@ -112,12 +120,12 @@ export default function AddAgentsPage({ title }) {
       } else {
         setShowSenatorialDistrict(false);
       }
-      if (value == "HOUSE OF REP.") {
+      if (value == HOU) {
         setFedConst(true);
       } else {
         setFedConst(false);
       }
-      if (value == "STATE HOUSE OF ASSEMBLY") {
+      if (value == ASSM) {
         setStateConst(true);
       } else {
         setStateConst(false);
