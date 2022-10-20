@@ -5,12 +5,15 @@ import { useState } from "react";
 import Axios from "axios";
 import { useRouter } from "next/router";
 import { agents } from "../../constants/agents";
+import { AlertDeleted } from "../../comps/agents/alert";
 
 export default function AgentsComp({ agentsList }) {
   const [statesToDisplay, setStatesToDisplay] = useState(agents);
+  const [isSuccessful, setIsSuccessful] = useState(false);
   const router = useRouter();
 
   const onSearch = (e) => {
+    const [isSuccessful, setIsSuccessful] = useState(false);
     const searchTerm = e.target.value;
     const tempList = [];
     tempList = agentsList.data.filter((agent) =>
@@ -25,9 +28,9 @@ export default function AgentsComp({ agentsList }) {
     Axios.delete(`https://rxedu-api.vercel.app/api/v1/agent/${agent._id}`)
       .then((response) => {
         setIsSuccessful(true);
-
-        console.log("Successfully Deleted ");
         alert("Deleted Successfully");
+
+        // console.log("Successfully Deleted ");
         router.reload(window.location.pathname);
         setTimeout(() => {
           setIsSuccessful(false);
@@ -41,6 +44,7 @@ export default function AgentsComp({ agentsList }) {
 
   return (
     <div className="section">
+      {/* <div className="successDiv"> {isSuccessful && <AlertDeleted />}</div> */}
       <div className="tableSection">
         <div className="input">
           <input

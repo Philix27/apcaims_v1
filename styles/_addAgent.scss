@@ -37,10 +37,14 @@
   }
   .alert {
     padding: 20px;
+  }
+  .success {
     background-color: #0dc9d6;
     color: white;
   }
-
+  .delete {
+    background-color: #d62f0d;
+  }
   .closebtn {
     margin-left: 15px;
     color: white;

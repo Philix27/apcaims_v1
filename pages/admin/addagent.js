@@ -11,7 +11,7 @@ import Form1 from "../../comps/agents/step1";
 import Form2 from "../../comps/agents/step2";
 import Form3 from "../../comps/agents/step3";
 import Form4 from "../../comps/agents/step4";
-import AlertSuccessful from "../../comps/agents/alert";
+import { AlertSuccessful } from "../../comps/agents/alert";
 
 export default function AddAgentsPage({ title }) {
   const [isSuccessful, setIsSuccessful] = useState(false);
@@ -194,8 +194,8 @@ export default function AddAgentsPage({ title }) {
 
   return (
     <div className="addAgent">
+      <div className="successDiv">{isSuccessful && <AlertSuccessful />}</div>
       <div className="section formsPage">
-        <div className="successDiv">{isSuccessful && <AlertSuccessful />}</div>
         <Form1
           agent={agent}
           stepIndex={stepIndex}
