@@ -21,10 +21,9 @@ export default function AddAgentsPage({ title }) {
   const [imgUrl, setImgUrl] = useState(null);
   const [stepIndex, setStepIndex] = useState(0);
   const [showSenatorialDistrict, setShowSenatorialDistrict] = useState(false);
-  const [senatorial_district, setSenatorial_district] = useState([]);
-  const [showFedConst, setFedConst] = useState(false);
+  const [showFedConst, setFedCosnt] = useState(false);
   const [showStateConst, setStateConst] = useState(false);
-
+  const [senatorial_district, setSenatorial_district] = useState([]);
   const [agent, setAgent] = useState({
     name: "",
     email: "",
@@ -121,9 +120,9 @@ export default function AddAgentsPage({ title }) {
         setShowSenatorialDistrict(false);
       }
       if (value == HOU) {
-        setFedConst(true);
+        setFedCosnt(true);
       } else {
-        setFedConst(false);
+        setFedCosnt(false);
       }
       if (value == ASSM) {
         setStateConst(true);
@@ -232,6 +231,8 @@ export default function AddAgentsPage({ title }) {
           handlePrev={handlePrev}
           handleNext={handleNext}
           senatorial_district={senatorial_district}
+          showFedConst={showFedConst}
+          showStateConst={showStateConst}
         />
         <Form4
           agent={agent}

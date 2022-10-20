@@ -10,6 +10,8 @@ export default function Form3({
   handleNext,
   handleChange,
   senatorial_district,
+  showStateConst,
+  showFedConst,
 }) {
   const styleHide = "hide";
   const styleShow = "show";
@@ -41,7 +43,7 @@ export default function Form3({
             })}
           </select>
         </div>
-        {showSenatorialDistrict && (
+        {/* {showSenatorialDistrict && (
           <div className="input_box">
             <label htmlFor="form-election-type">Senatorial District</label>
             <select
@@ -60,6 +62,54 @@ export default function Form3({
                 );
               })}
             </select>
+          </div>
+        )} */}
+        {showSenatorialDistrict && (
+          <div className="input_box">
+            <label htmlFor="form-senatorial" className="label">
+              Senatorial District
+            </label>
+            <input
+              type="text"
+              id="form-senatorial"
+              placeholder="Enter Senatorial District"
+              name="senatorial_district"
+              required
+              minLength={3}
+              onChange={handleChange}
+            />
+          </div>
+        )}
+        {showFedConst && (
+          <div className="input_box">
+            <label htmlFor="form-fed_const" className="label">
+              Fedral Constituency
+            </label>
+            <input
+              type="text"
+              id="form-fed_const"
+              placeholder="Enter Fedral Constituency"
+              name="fed_const"
+              required
+              minLength={3}
+              onChange={handleChange}
+            />
+          </div>
+        )}
+        {showStateConst && (
+          <div className="input_box">
+            <label htmlFor="form-state_const" className="label">
+              State Constituency
+            </label>
+            <input
+              type="text"
+              id="form-state_const"
+              placeholder="Enter State Constituency"
+              name="state_const"
+              required
+              minLength={3}
+              onChange={handleChange}
+            />
           </div>
         )}
         <div className="btnContainer">
