@@ -1,8 +1,19 @@
-export const KANO = {
-    state: "KANO",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "KANO",
+  email: "kano@gmail.com",
+  password: "kano1",
+  phone: "08108850572",
+  statecode: "KANO",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "KANO",
+  state: "KANO",
+  lga: [
+    {
+      wards: [
         "AJINGI",
         "BALARE",
         "CHULA",
@@ -13,11 +24,11 @@ export const KANO = {
         "KUNKURAWA",
         "TORANKE",
         "UNGAWAR BAI",
-    ],
-        name: "AJINGI",
-      },
-      {
-        wards: [
+      ],
+      name: "AJINGI",
+    },
+    {
+      wards: [
         "ALBASU CENTRAL",
         "BATAIYA",
         "CHAMARANA",
@@ -28,11 +39,11 @@ export const KANO = {
         "HUNGU",
         "SAYA-SAYA",
         "TSANGAYA",
-    ],
-        name: "ALBASU",
-      },
-      {
-        wards: [
+      ],
+      name: "ALBASU",
+    },
+    {
+      wards: [
         "BAGWAI",
         "DANGADA",
         "GADANYA",
@@ -43,11 +54,11 @@ export const KANO = {
         "ROMO",
         "SARE-SARE",
         "WURO BAGGA",
-    ],
-        name: "BAGWAI",
-      },
-      {
-        wards: [
+      ],
+      name: "BAGWAI",
+    },
+    {
+      wards: [
         "ANADARIYA",
         "BAGUDA",
         "BEBEJI",
@@ -62,11 +73,11 @@ export const KANO = {
         "RANTAN",
         "TARIWA",
         "WAK",
-    ],
-        name: "BEBEJI",
-      },
-      {
-        wards: [
+      ],
+      name: "BEBEJI",
+    },
+    {
+      wards: [
         "BADUME",
         "BICHI",
         "DANZABUWA",
@@ -78,11 +89,11 @@ export const KANO = {
         "SAYE",
         "WAIRE",
         "YALLAMI",
-    ],
-        name: "BICHI",
-      },
-      {
-        wards: [
+      ],
+      name: "BICHI",
+    },
+    {
+      wards: [
         "BARKUM",
         "BONO",
         "BUNKURE",
@@ -93,11 +104,11 @@ export const KANO = {
         "KULLUWA",
         "KUMURYA",
         "SANDA",
-    ],
-        name: "BUNKURE",
-      },
-      {
-        wards: [
+      ],
+      name: "BUNKURE",
+    },
+    {
+      wards: [
         "ADAKAWA",
         "BAKIN RUWA",
         "DALA",
@@ -110,11 +121,11 @@ export const KANO = {
         "KOFAR RUWA",
         "MADIGAWA",
         "YALWA",
-    ],
-        name: "DALA",
-      },
-      {
-        wards: [
+      ],
+      name: "DALA",
+    },
+    {
+      wards: [
         "AJUMAWA",
         "DANBATTA EAST",
         "DANBATTA WEST",
@@ -125,11 +136,11 @@ export const KANO = {
         "KORE",
         "SAIDAWA",
         "SANSAN",
-    ],
-        name: "DANBATTA",
-      },
-      {
-        wards: [
+      ],
+      name: "DANBATTA",
+    },
+    {
+      wards: [
         "DABAR KWARI",
         "DANBAGIWA",
         "DAWAKI",
@@ -145,11 +156,11 @@ export const KANO = {
         "YANKATSARI",
         "YARGAYA",
         "ZOGARAWA",
-    ],
-        name: "DAWAKI KUDU",
-      },
-      {
-        wards: [
+      ],
+      name: "DAWAKI KUDU",
+    },
+    {
+      wards: [
         "DAN GUGUWA",
         "DAWAKI EAST",
         "DAWAKI WEST",
@@ -161,11 +172,11 @@ export const KANO = {
         "MARKE",
         "TATTARAWA",
         "TUMFAFI",
-    ],
-        name: "DAWAKI TOFA",
-      },
-      {
-        wards: [
+      ],
+      name: "DAWAKI TOFA",
+    },
+    {
+      wards: [
         "DARIYA",
         "DOGON KAWO",
         "DUGUWA",
@@ -176,11 +187,11 @@ export const KANO = {
         "TAGWAYE",
         "UNGUWAR NATSOHUWA",
         "ZAINABI",
-    ],
-        name: "DOGUWA",
-      },
-      {
-        wards: [
+      ],
+      name: "DOGUWA",
+    },
+    {
+      wards: [
         "FAGGE A",
         "FAGGE B",
         "FAGGE C",
@@ -191,11 +202,11 @@ export const KANO = {
         "SABONGARI EAST",
         "SABONGARI WEST",
         "YAMMATA",
-    ],
-        name: "FAGGE",
-      },
-      {
-        wards: [
+      ],
+      name: "FAGGE",
+    },
+    {
+      wards: [
         "GABASAWA",
         "GARUN DANGA",
         "JODA",
@@ -207,11 +218,11 @@ export const KANO = {
         "YUMBU",
         "ZAKIRAI",
         "ZUGACHI",
-    ],
-        name: "GABASAWA",
-      },
-      {
-        wards: [
+      ],
+      name: "GABASAWA",
+    },
+    {
+      wards: [
         "DAL",
         "GARIN ALI",
         "GARKO",
@@ -222,11 +233,11 @@ export const KANO = {
         "RABA",
         "SARINA",
         "ZAKARAWA",
-    ],
-        name: "GARKO",
-      },
-      {
-        wards: [
+      ],
+      name: "GARKO",
+    },
+    {
+      wards: [
         "CHIROMAWA",
         "DORAWAR-SALLAU",
         "FANKURUN",
@@ -237,11 +248,11 @@ export const KANO = {
         "MAKWARO",
         "YAD AKWARI",
         "YALWAN  YADAKWARI",
-    ],
-        name: "GURUN MALAM",
-      },
-      {
-        wards: [
+      ],
+      name: "GURUN MALAM",
+    },
+    {
+      wards: [
         "BALAN",
         "GAMARYA",
         "GAMOJI",
@@ -252,11 +263,11 @@ export const KANO = {
         "MAIMAKAWA",
         "SHAGOGO",
         "WUDILAWA",
-    ],
-        name: "GAYA",
-      },
-      {
-        wards: [
+      ],
+      name: "GAYA",
+    },
+    {
+      wards: [
         "BABAWA",
         "GAWO",
         "GEZAWA",
@@ -268,11 +279,11 @@ export const KANO = {
         "TUMBAU",
         "WANGARA",
         "ZANGO",
-    ],
-        name: "GEZAWA",
-      },
-      {
-        wards: [
+      ],
+      name: "GEZAWA",
+    },
+    {
+      wards: [
         "DANDAGO",
         "DISO",
         "DORAYI",
@@ -283,11 +294,11 @@ export const KANO = {
         "KABUGA",
         "MANDAWARI",
         "SANI MAI MAGGE",
-    ],
-        name: "GWALE",
-      },
-      {
-        wards: [
+      ],
+      name: "GWALE",
+    },
+    {
+      wards: [
         "GETSO",
         "GWARZO",
         "JAMA' A",
@@ -298,11 +309,11 @@ export const KANO = {
         "MAINIKA",
         "SABON BIRNI",
         "UNGUWAR TUDU",
-    ],
-        name: "GWARZO",
-      },
-      {
-        wards: [
+      ],
+      name: "GWARZO",
+    },
+    {
+      wards: [
         "DUGABAU",
         "DURUN",
         "GAMMO",
@@ -313,11 +324,11 @@ export const KANO = {
         "KABO",
         "KANWA",
         "MASANAWA",
-    ],
-        name: "KABO",
-      },
-      {
-        wards: [
+      ],
+      name: "KABO",
+    },
+    {
+      wards: [
         "CHEDI",
         "DAN'AGUNDI",
         "GANDUN ALBASA",
@@ -331,11 +342,11 @@ export const KANO = {
         "YAKASAI",
         "ZAITAWA",
         "ZANGO",
-    ],
-        name: "KANO MUNICIPAL",
-      },
-      {
-        wards: [
+      ],
+      name: "KANO MUNICIPAL",
+    },
+    {
+      wards: [
         "DAURA",
         "KAFIN DAFGA",
         "KARAYE",
@@ -346,11 +357,11 @@ export const KANO = {
         "UNGUWAR HAJJI",
         "YAMMEDI",
         "YOLA",
-    ],
-        name: "KARAYE",
-      },
-      {
-        wards: [
+      ],
+      name: "KARAYE",
+    },
+    {
+      wards: [
         "DURBA",
         "FAMMAR",
         "FASSI",
@@ -361,11 +372,11 @@ export const KANO = {
         "NARIYA",
         "TARAI",
         "UNGUWAR GAI",
-    ],
-        name: "KIBIYA",
-      },
-      {
-        wards: [
+      ],
+      name: "KIBIYA",
+    },
+    {
+      wards: [
         "BA'AWA",
         "BADAFI",
         "BARGONI",
@@ -381,11 +392,11 @@ export const KANO = {
         "YAKO",
         "YALWA",
         "ZUWO",
-    ],
-        name: "KIRU",
-      },
-      {
-        wards: [
+      ],
+      name: "KIRU",
+    },
+    {
+      wards: [
         "CHALLAWA",
         "CHIRANCHI",
         "DANBARE",
@@ -397,11 +408,11 @@ export const KANO = {
         "NA'IBAWA",
         "PANSHEKARA",
         "UNGUWAR RIMI",
-    ],
-        name: "KUMBOTSO",
-      },
-      {
-        wards: [
+      ],
+      name: "KUMBOTSO",
+    },
+    {
+      wards: [
         "BUMAI",
         "GARIN SHEME",
         "GWARMAI",
@@ -412,11 +423,11 @@ export const KANO = {
         "SHAMAKAWA",
         "SHUWAKI",
         "YANDADI",
-    ],
-        name: "KUNCHI",
-      },
-      {
-        wards: [
+      ],
+      name: "KUNCHI",
+    },
+    {
+      wards: [
         "DALILI",
         "DAN HASSAN",
         "DUKAWA",
@@ -427,11 +438,11 @@ export const KANO = {
         "KURUNSUMAU",
         "RIGAR DUKA",
         "TANAWA",
-    ],
-        name: "KURA",
-      },
-      {
-        wards: [
+      ],
+      name: "KURA",
+    },
+    {
+      wards: [
         "BURJI",
         "CINKOSO",
         "GALINJA",
@@ -443,11 +454,11 @@ export const KANO = {
         "KWANKWASO",
         "MADOBI",
         "RIKADAWA",
-    ],
-        name: "MADOBI",
-      },
-      {
-        wards: [
+      ],
+      name: "MADOBI",
+    },
+    {
+      wards: [
         "BABBAR RIGA",
         "DURMA",
         "JIBGA",
@@ -459,11 +470,11 @@ export const KANO = {
         "SATAME",
         "TANGAJI",
         "WAILARE",
-    ],
-        name: "MAKODA",
-      },
-      {
-        wards: [
+      ],
+      name: "MAKODA",
+    },
+    {
+      wards: [
         "AZORE",
         "GANDURWAWA",
         "KANTAMA",
@@ -475,11 +486,11 @@ export const KANO = {
         "TSAKIYA",
         "TSAKUWA",
         "WASAI",
-    ],
-        name: "MINJIBIR",
-      },
-      {
-        wards: [
+      ],
+      name: "MINJIBIR",
+    },
+    {
+      wards: [
         "DAKATA",
         "GAMA",
         "GAWUNA",
@@ -491,11 +502,11 @@ export const KANO = {
         "KAWAJI",
         "TUDUN MURTALA",
         "TUDUN WADA",
-    ],
-        name: "NASARAWA",
-      },
-      {
-        wards: [
+      ],
+      name: "NASARAWA",
+    },
+    {
+      wards: [
         "DAWAKI",
         "LAUSU",
         "MADACHI",
@@ -506,11 +517,11 @@ export const KANO = {
         "YALWA",
         "ZINYAU",
         "ZURGU",
-    ],
-        name: "RANO",
-      },
-      {
-        wards: [
+      ],
+      name: "RANO",
+    },
+    {
+      wards: [
         "BUTU-BUTU",
         "DAWAKI GULU",
         "DOKA DAWA",
@@ -523,11 +534,11 @@ export const KANO = {
         "TAMAWA",
         "YALWAN DANZIYAL",
         "ZANGO DAN ABDU",
-    ],
-        name: "RIMIN GADO",
-      },
-      {
-        wards: [
+      ],
+      name: "RIMIN GADO",
+    },
+    {
+      wards: [
         "BELI",
         "FALGORE",
         "FULATAN",
@@ -538,11 +549,11 @@ export const KANO = {
         "RUWAN BAGO",
         "ZAREWA",
         "ZOZA",
-    ],
-        name: "ROGO",
-      },
-      {
-        wards: [
+      ],
+      name: "ROGO",
+    },
+    {
+      wards: [
         "ALAJAWA",
         "DUTSEN-BAKOSHI",
         "FARURUWA",
@@ -553,11 +564,11 @@ export const KANO = {
         "SHAKOGI",
         "SHANONO",
         "TSAURE",
-    ],
-        name: "SHANONO",
-      },
-      {
-        wards: [
+      ],
+      name: "SHANONO",
+    },
+    {
+      wards: [
         "GALA",
         "GANI",
         "GARFA",
@@ -569,11 +580,11 @@ export const KANO = {
         "RUMO",
         "SITTI",
         "SUMAILA",
-    ],
-        name: "SUMAILA",
-      },
-      {
-        wards: [
+      ],
+      name: "SUMAILA",
+    },
+    {
+      wards: [
         "BAGWARO",
         "DURBUNDE",
         "FAJEWA",
@@ -584,11 +595,11 @@ export const KANO = {
         "KUKA",
         "TAKAI",
         "ZUGA",
-    ],
-        name: "TAKAI",
-      },
-      {
-        wards: [
+      ],
+      name: "TAKAI",
+    },
+    {
+      wards: [
         "BABBAN GIJI",
         "DARMANAWA",
         "DAURAWA",
@@ -599,11 +610,11 @@ export const KANO = {
         "TARAUNI",
         "UNGUWA  UKU",
         "UNGUWAR GANO",
-    ],
-        name: "TARAUNI",
-      },
-      {
-        wards: [
+      ],
+      name: "TARAUNI",
+    },
+    {
+      wards: [
         "DINDERE",
         "DOKA",
         "GAJIDA",
@@ -619,11 +630,11 @@ export const KANO = {
         "YALWA KARAMA",
         "YANOKO",
         "YARIMAWA",
-    ],
-        name: "TOFA",
-      },
-      {
-        wards: [
+      ],
+      name: "TOFA",
+    },
+    {
+      wards: [
         "DADDARAWA",
         "DUNBULUN",
         "GOZAKI",
@@ -634,11 +645,11 @@ export const KANO = {
         "YANGANAU",
         "YANKAMAYE",
         "ZAROGI",
-    ],
-        name: "TSANYAWA",
-      },
-      {
-        wards: [
+      ],
+      name: "TSANYAWA",
+    },
+    {
+      wards: [
         "BABURI",
         "BURUMBURUM",
         "DALAWA",
@@ -649,11 +660,11 @@ export const KANO = {
         "SABON GARI",
         "SHUWAKI",
         "TSOHOGARI",
-    ],
-        name: "TUDUN WADA",
-      },
-      {
-        wards: [
+      ],
+      name: "TUDUN WADA",
+    },
+    {
+      wards: [
         "BACHIRAWA",
         "GAYAWA",
         "KADAWA",
@@ -665,11 +676,11 @@ export const KANO = {
         "UNGOGO",
         "YADAKUNYA",
         "ZANGO",
-    ],
-        name: "UNGOGO",
-      },
-      {
-        wards: [
+      ],
+      name: "UNGOGO",
+    },
+    {
+      wards: [
         "AMARAWA",
         "DANLASAN",
         "GARIN DAU",
@@ -685,11 +696,11 @@ export const KANO = {
         "WARAWA",
         "YAN DALLA",
         "YANGIZO",
-    ],
-        name: "WARAWA",
-      },
-      {
-        wards: [
+      ],
+      name: "WARAWA",
+    },
+    {
+      wards: [
         "ACHIKA",
         "DAGUMAWA",
         "DANKAZA",
@@ -700,9 +711,10 @@ export const KANO = {
         "SABON GARI",
         "UTAI",
         "WUDIL",
-    ],
-        name: "WUDIL",
-      },
-    ],
-  };
-  
+      ],
+      name: "WUDIL",
+    },
+  ],
+};
+
+export const KANO = { states, SR };

@@ -1,8 +1,8 @@
 export const OGUN = {
-    state: "OGUN",
-    lga: [
-      {
-        wards: [
+  state: "OGUN",
+  lga: [
+    {
+      wards: [
         "AGO OKO",
         "ELEGA",
         "GBAGURA",
@@ -20,10 +20,10 @@ export const OGUN = {
         "SABO",
         "TOTORO/SOKORI",
       ],
-        name: "ABEOKUTA NORTH",
-      },
-      {
-        wards: [
+      name: "ABEOKUTA NORTH",
+    },
+    {
+      wards: [
         "AGO-EGUN/IJESA",
         "AKE I",
         "AKE III",
@@ -40,10 +40,10 @@ export const OGUN = {
         "SODEKE/SALE-IJEUN I",
         "SODEKE/SALE-IJEUN II",
       ],
-        name: "ABEOKUTA SOUTH",
-      },
-      {
-        wards: [
+      name: "ABEOKUTA SOUTH",
+    },
+    {
+      wards: [
         "ADO ODO I",
         "ADO ODO II",
         "AGBARA I",
@@ -61,10 +61,10 @@ export const OGUN = {
         "OTA III",
         "SANGO",
       ],
-        name: "ADO ODO-OTA",
-      },
-      {
-        wards: [
+      name: "ADO ODO-OTA",
+    },
+    {
+      wards: [
         "AYE TORO I",
         "AYE TORO II",
         "EBUTE IGBOORO",
@@ -77,10 +77,10 @@ export const OGUN = {
         "OHUNBE",
         "SUNWA",
       ],
-        name: "EGBADO NORTH",
-      },
-      {
-        wards: [
+      name: "EGBADO NORTH",
+    },
+    {
+      wards: [
         "AJILETE",
         "IDOGO",
         "ILARO I",
@@ -92,10 +92,10 @@ export const OGUN = {
         "OWODE I",
         "OWODE II",
       ],
-        name: "EGBADO SOUTH",
-      },
-      {
-        wards: [
+      name: "EGBADO SOUTH",
+    },
+    {
+      wards: [
         "ABALABI",
         "ARIGBAJO",
         "ASA/YOBO",
@@ -107,10 +107,10 @@ export const OGUN = {
         "PAPALANTO",
         "WASIMI",
       ],
-        name: "EWEKORO",
-      },
-      {
-        wards: [
+      name: "EWEKORO",
+    },
+    {
+      wards: [
         "AGBADO",
         "AJUWON/AKUTE",
         "COKER",
@@ -123,10 +123,10 @@ export const OGUN = {
         "OSOSUN",
         "SUNREN",
       ],
-        name: "IFO",
-      },
-      {
-        wards: [
+      name: "IFO",
+    },
+    {
+      wards: [
         "AJEBANDELE",
         "IJEBU IFE I",
         "IJEBU IFE II",
@@ -139,10 +139,10 @@ export const OGUN = {
         "OGBERE",
         "OWU",
       ],
-        name: "IJEBU EAST",
-      },
-      {
-        wards: [
+      name: "IJEBU EAST",
+    },
+    {
+      wards: [
         "AGO IWOYE I",
         "AGO IWOYE II",
         "AKO-ONIGBAGBO/GELETE",
@@ -155,10 +155,10 @@ export const OGUN = {
         "ORU/AWA/ILAPORU",
         "OSUN",
       ],
-        name: "IJEBU NORTH",
-      },
-      {
-        wards: [
+      name: "IJEBU NORTH",
+    },
+    {
+      wards: [
         "ATAN/IMUKU",
         "ERUNWON",
         "IGEDE/ITAMARUN",
@@ -170,10 +170,10 @@ export const OGUN = {
         "OJU ONA",
         "OKE-ERI/OGBOGBO",
       ],
-        name: "IJEBU NORTH EAST",
-      },
-      {
-        wards: [
+      name: "IJEBU NORTH EAST",
+    },
+    {
+      wards: [
         "IJADE / IMEPE I",
         "IJADE / IMEPE II",
         "IJASI/ IDEPO",
@@ -186,10 +186,10 @@ export const OGUN = {
         "POROGUN I",
         "POROGUN II",
       ],
-        name: "IJEBU ODE",
-      },
-      {
-        wards: [
+      name: "IJEBU ODE",
+    },
+    {
+      wards: [
         "IKENNE I",
         "IKENNE II",
         "ILISAN I",
@@ -201,10 +201,10 @@ export const OGUN = {
         "OGERE I",
         "OGERE II",
       ],
-        name: "IKENNE",
-      },
-      {
-        wards: [
+      name: "IKENNE",
+    },
+    {
+      wards: [
         "AFON",
         "IDI AYIN",
         "IDOFA",
@@ -216,10 +216,10 @@ export const OGUN = {
         "OLORUNDA/GBOMO",
         "OTAPELE",
       ],
-        name: "IMEKO/AFON",
-      },
-      {
-        wards: [
+      name: "IMEKO/AFON",
+    },
+    {
+      wards: [
         "AGADA",
         "AGOSASA",
         "AJEGUNLE",
@@ -233,10 +233,10 @@ export const OGUN = {
         "MAUNI II",
         "TUBE",
       ],
-        name: "IPOKIA",
-      },
-      {
-        wards: [
+      name: "IPOKIA",
+    },
+    {
+      wards: [
         "AJEBO",
         "AJURA",
         "ALAPAKO-ONI",
@@ -250,10 +250,10 @@ export const OGUN = {
         "ONIDUNDU",
         "OWODE",
       ],
-        name: "OBAFEMI/OWODE",
-      },
-      {
-        wards: [
+      name: "OBAFEMI/OWODE",
+    },
+    {
+      wards: [
         "ALABATA",
         "ALAGBAGBA",
         "BALOGUN ITESI",
@@ -265,10 +265,10 @@ export const OGUN = {
         "OPEJI",
         "OSIELE",
       ],
-        name: "ODEDA",
-      },
-      {
-        wards: [
+      name: "ODEDA",
+    },
+    {
+      wards: [
         "AIYEPE",
         "ALA/IGBILE",
         "IBEFUN",
@@ -285,10 +285,10 @@ export const OGUN = {
         "OMU",
         "OSOSA",
       ],
-        name: "ODOGBOLU",
-      },
-      {
-        wards: [
+      name: "ODOGBOLU",
+    },
+    {
+      wards: [
         "ABIGI",
         "AYEDE/LOMIRO",
         "AYILA/ITEBU",
@@ -300,10 +300,10 @@ export const OGUN = {
         "ODE-OMI",
         "ONI",
       ],
-        name: "OGUN WATER SIDE",
-      },
-      {
-        wards: [
+      name: "OGUN WATER SIDE",
+    },
+    {
+      wards: [
         "AKAKA",
         "AYEGBAMI",
         "IGAN/AJINA",
@@ -315,10 +315,10 @@ export const OGUN = {
         "ODOFIN/IMAGBO/PETEKUN/DAWARA",
         "ORILE-OKO",
       ],
-        name: "REMO NORTH",
-      },
-      {
-        wards: [
+      name: "REMO NORTH",
+    },
+    {
+      wards: [
         "AGBOWA",
         "AYEGBAMI/IJOKUN",
         "IBIDO/ITUWA/ALARA",
@@ -335,8 +335,9 @@ export const OGUN = {
         "SIMAWA / IWELEPE",
         "SURULERE",
       ],
-        name: "SAGAMU",
-      },
-    ],
-  };
-  
+      name: "SAGAMU",
+    },
+  ],
+};
+
+export const KEBBI = { states, SR };

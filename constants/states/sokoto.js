@@ -1,8 +1,8 @@
 export const SOKOTO = {
-    state: "SOKOTO",
-    lga: [
-      {
-        wards: [
+  state: "SOKOTO",
+  lga: [
+    {
+      wards: [
         "BINJI",
         "BUNKARI",
         "GAWAZZAI",
@@ -14,10 +14,10 @@ export const SOKOTO = {
         "SORO YAMMA",
         "T/KOSE",
       ],
-        name: "BINJI",
-      },
-      {
-        wards: [
+      name: "BINJI",
+    },
+    {
+      wards: [
         "BADAU/DARHELA",
         "BAGARAWA",
         "BANGI/DABAGA",
@@ -30,10 +30,10 @@ export const SOKOTO = {
         "TAKATUKU/MADORAWA",
         "TULLUWA/KULAFASA",
       ],
-        name: "BODINGA",
-      },
-      {
-        wards: [
+      name: "BODINGA",
+    },
+    {
+      wards: [
         "BODAI/JURGA",
         "DANGE",
         "FAJALDU",
@@ -46,10 +46,10 @@ export const SOKOTO = {
         "TUNTUBE/TSEHE",
         "WABABE/SALAU",
       ],
-        name: "DANGE/SHUNI",
-      },
-      {
-        wards: [
+      name: "DANGE/SHUNI",
+    },
+    {
+      wards: [
         "DUKAMAJE/ILAH",
         "GADA",
         "GILBADI",
@@ -62,10 +62,10 @@ export const SOKOTO = {
         "KYADAWA/HOLAI",
         "TSITSE",
       ],
-        name: "GADA",
-      },
-      {
-        wards: [
+      name: "GADA",
+    },
+    {
+      wards: [
         "BIRJINGO",
         "BOYEKAI",
         "GIYAWA",
@@ -78,10 +78,10 @@ export const SOKOTO = {
         "SHINAKA",
         "TAKAKUME",
       ],
-        name: "GORONYO",
-      },
-      {
-        wards: [
+      name: "GORONYO",
+    },
+    {
+      wards: [
         "AWULKITI",
         "BACHAKA",
         "BALLE",
@@ -93,10 +93,10 @@ export const SOKOTO = {
         "MARAKEN BORI",
         "TULUN DOYA",
       ],
-        name: "GUDU",
-      },
-      {
-        wards: [
+      name: "GUDU",
+    },
+    {
+      wards: [
         "ASARA AREWA",
         "ASARA KUDU",
         "ATAKWANYO",
@@ -109,10 +109,10 @@ export const SOKOTO = {
         "MAMMANDE",
         "SALAME",
       ],
-        name: "GWADABAWA",
-      },
-      {
-        wards: [
+      name: "GWADABAWA",
+    },
+    {
+      wards: [
         "ARABA",
         "DAMBA",
         "DARNA/ SABON GARI",
@@ -125,10 +125,10 @@ export const SOKOTO = {
         "R. GATI",
         "TOZAI",
       ],
-        name: "ILLELA",
-      },
-      {
-        wards: [
+      name: "ILLELA",
+    },
+    {
+      wards: [
         "BARGAJA",
         "GEBE 'A'",
         "GEBE 'B'",
@@ -140,10 +140,10 @@ export const SOKOTO = {
         "TURBA",
         "YANFAKO",
       ],
-        name: "ISA",
-      },
-      {
-        wards: [
+      name: "ISA",
+    },
+    {
+      wards: [
         "FAKKU",
         "GIRKAU",
         "KEBBE EAST",
@@ -155,10 +155,10 @@ export const SOKOTO = {
         "SANGI",
         "UNGUSHI",
       ],
-        name: "KEBBE",
-      },
-      {
-        wards: [
+      name: "KEBBE",
+    },
+    {
+      wards: [
         "BANKANU/ R, KADE",
         "BASANSAN",
         "DURBAWA",
@@ -171,10 +171,10 @@ export const SOKOTO = {
         "TSAKI/ WALAKE'E",
         "TUNGA/ MALLAMAWA",
       ],
-        name: "KWARE",
-      },
-      {
-        wards: [
+      name: "KWARE",
+    },
+    {
+      wards: [
         "GANDI 'A'",
         "GANDI 'B'",
         "GAWAKUKE",
@@ -187,10 +187,10 @@ export const SOKOTO = {
         "TURSA",
         "YAR TSAKUWA",
       ],
-        name: "RABAH",
-      },
-      {
-        wards: [
+      name: "RABAH",
+    },
+    {
+      wards: [
         "GANGARA",
         "GATAWA",
         "KALGO",
@@ -203,10 +203,10 @@ export const SOKOTO = {
         "TSAMAYE",
         "UNGUWAR LALLE",
       ],
-        name: "S/BIRNI",
-      },
-      {
-        wards: [
+      name: "S/BIRNI",
+    },
+    {
+      wards: [
         "DANDIN MAHE",
         "GANGAM",
         "HORO BIRNI",
@@ -218,10 +218,10 @@ export const SOKOTO = {
         "SANYINNAWAL",
         "SHAGARI",
       ],
-        name: "SHAGARI",
-      },
-      {
-        wards: [
+      name: "SHAGARI",
+    },
+    {
+      wards: [
         "GANDE EAST",
         "GANDE WEST",
         "KATAMI NORTH",
@@ -233,10 +233,10 @@ export const SOKOTO = {
         "MARAFA WEST",
         "SILAME",
       ],
-        name: "SILAME",
-      },
-      {
-        wards: [
+      name: "SILAME",
+    },
+    {
+      wards: [
         "MAGAJIN GARI 'A'",
         "MAGAJIN GARI B",
         "MAGAJIN RAFI 'A'",
@@ -249,10 +249,10 @@ export const SOKOTO = {
         "WAZIRI 'B'",
         "WAZIRI 'C'",
       ],
-        name: "SOKOTO NORTH",
-      },
-      {
-        wards: [
+      name: "SOKOTO NORTH",
+    },
+    {
+      wards: [
         "GAGI 'A'",
         "GAGI 'B'",
         "GAGI 'C'",
@@ -265,10 +265,10 @@ export const SOKOTO = {
         "T/WADA 'A'",
         "T/WADA 'B'",
       ],
-        name: "SOKOTO SOUTH",
-      },
-      {
-        wards: [
+      name: "SOKOTO SOUTH",
+    },
+    {
+      wards: [
         "BAGIDA/LUKKINGO",
         "BAKAYA/SABON BIRNI",
         "BARKEJI/NABAGUDA",
@@ -281,10 +281,10 @@ export const SOKOTO = {
         "SANYINNA",
         "TAMBUWAL/SHINFIRI",
       ],
-        name: "TAMBUWAL",
-      },
-      {
-        wards: [
+      name: "TAMBUWAL",
+    },
+    {
+      wards: [
         "GIDAN MADI",
         "KALANJENI",
         "KWACCE-HURU",
@@ -296,10 +296,10 @@ export const SOKOTO = {
         "SUTTI",
         "TANGAZA",
       ],
-        name: "TANGAZA",
-      },
-      {
-        wards: [
+      name: "TANGAZA",
+    },
+    {
+      wards: [
         "BARAYAR GIWA",
         "DUMA",
         "FURA GIRKE",
@@ -311,10 +311,10 @@ export const SOKOTO = {
         "TSAMIYA",
         "TURETA GARI",
       ],
-        name: "TURETA",
-      },
-      {
-        wards: [
+      name: "TURETA",
+    },
+    {
+      wards: [
         "ARKILLA",
         "BADO/KASARAWA",
         "DUNDAYE/GUMBURAWA",
@@ -327,10 +327,10 @@ export const SOKOTO = {
         "KAMMATA",
         "WAMAKKO",
       ],
-        name: "WAMAKKO",
-      },
-      {
-        wards: [
+      name: "WAMAKKO",
+    },
+    {
+      wards: [
         "ACHIDA",
         "ALKAMMU/GYELGYEL",
         "CHACHO/MARNONA",
@@ -343,10 +343,10 @@ export const SOKOTO = {
         "MAGARYA",
         "MARAFA",
       ],
-        name: "WURNO",
-      },
-      {
-        wards: [
+      name: "WURNO",
+    },
+    {
+      wards: [
         "BAKALE",
         "BINGAJE",
         "BINJI",
@@ -358,8 +358,9 @@ export const SOKOTO = {
         "YABO 'A'",
         "YABO 'B'",
       ],
-        name: "YABO",
-      }  
-    ],
-  };
-  
+      name: "YABO",
+    },
+  ],
+};
+
+export const KEBBI = { states, SR };

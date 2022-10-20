@@ -1,8 +1,8 @@
 export const ZAMFARA = {
-    state: "ZAMFARA",
-    lga: [
-      {
-        wards: [
+  state: "ZAMFARA",
+  lga: [
+    {
+      wards: [
         "BAGEGA",
         "BARAYAR-ZAKI",
         "DAN GALADIMA",
@@ -14,10 +14,10 @@ export const ZAMFARA = {
         "WUYA",
         "YAR'SABAYA",
       ],
-        name: "ANKA",
-      },
-      {
-        wards: [
+      name: "ANKA",
+    },
+    {
+      wards: [
         "BAKURA",
         "BIRNIN TUDU",
         "DAKKO",
@@ -29,10 +29,10 @@ export const ZAMFARA = {
         "YAR GEDA",
         "YAR KUFOJI",
       ],
-        name: "BAKURA",
-      },
-      {
-        wards: [
+      name: "BAKURA",
+    },
+    {
+      wards: [
         "BIRNIN MAGAJI",
         "DANFAMI SABON BIRINI",
         "GORA",
@@ -44,10 +44,10 @@ export const ZAMFARA = {
         "NASARAWA GODAL EAST",
         "NASARAWA GODAL WEST",
       ],
-        name: "BIRNIN MAGAJI",
-      },
-      {
-        wards: [
+      name: "BIRNIN MAGAJI",
+    },
+    {
+      wards: [
         "ADABKA",
         "BUKKUYUM",
         "GWASHI",
@@ -59,10 +59,10 @@ export const ZAMFARA = {
         "ZARUMMAI",
         "ZAUMA",
       ],
-        name: "BUKKUYUM",
-      },
-      {
-        wards: [
+      name: "BUKKUYUM",
+    },
+    {
+      wards: [
         "BINGI NORTH",
         "BINGI SOUTH",
         "BUNGUDU",
@@ -75,10 +75,10 @@ export const ZAMFARA = {
         "SANKALAWA",
         "TOFA",
       ],
-        name: "BUNGUDU",
-      },
-      {
-        wards: [
+      name: "BUNGUDU",
+    },
+    {
+      wards: [
         "BARDOKI",
         "BIRNIN MAGAJI",
         "BIRNIN TUDU",
@@ -91,10 +91,10 @@ export const ZAMFARA = {
         "SHIYAR RAFI",
         "UBANDAWAKI",
       ],
-        name: "GUMMI",
-      },
-      {
-        wards: [
+      name: "GUMMI",
+    },
+    {
+      wards: [
         "GALADIMA",
         "MADA",
         "MADAWAKI",
@@ -107,10 +107,10 @@ export const ZAMFARA = {
         "WANKE",
         "WONAKA",
       ],
-        name: "GUSAU",
-      },
-      {
-        wards: [
+      name: "GUSAU",
+    },
+    {
+      wards: [
         "BANGA",
         "DAN - ISA",
         "GABAKE",
@@ -123,10 +123,10 @@ export const ZAMFARA = {
         "SAKAJIKI",
         "YANKABA",
       ],
-        name: "KAURA NAMODA",
-      },
-      {
-        wards: [
+      name: "KAURA NAMODA",
+    },
+    {
+      wards: [
         "BIRNIN KAYA / DOSARA",
         "DAMAGA / DAMAGIWA",
         "FARU / MAGAMI",
@@ -138,10 +138,10 @@ export const ZAMFARA = {
         "MARADUN SOUTH",
         "TSIBIRI",
       ],
-        name: "MARADUN",
-      },
-      {
-        wards: [
+      name: "MARADUN",
+    },
+    {
+      wards: [
         "BINDIN",
         "BINGI",
         "DAN GULBI",
@@ -153,10 +153,10 @@ export const ZAMFARA = {
         "MAYANCHI",
         "RUWAN DORAWA",
       ],
-        name: "MARU",
-      },
-      {
-        wards: [
+      name: "MARU",
+    },
+    {
+      wards: [
         "BADARAWA",
         "CHIKI",
         "GALADI",
@@ -168,10 +168,10 @@ export const ZAMFARA = {
         "SHINKAFI NORTH",
         "SHINKAFI SOUTH",
       ],
-        name: "SHINKAFI",
-      },
-      {
-        wards: [
+      name: "SHINKAFI",
+    },
+    {
+      wards: [
         "GARBADU",
         "GWARAM",
         "JANGEBE",
@@ -184,10 +184,10 @@ export const ZAMFARA = {
         "SHIYAR KAYAYE/MATUSGI",
         "TAKE TSABA/MAKERA",
       ],
-        name: "TALATA MAFARA",
-      },
-      {
-        wards: [
+      name: "TALATA MAFARA",
+    },
+    {
+      wards: [
         "BILBIS",
         "CHEDIYA",
         "DANJIBGA/KUNCHIN - KALGO",
@@ -200,10 +200,10 @@ export const ZAMFARA = {
         "YANDOTON DAJI",
         "YANKUZO 'A'",
       ],
-        name: "TSAFE",
-      },
-      {
-        wards: [
+      name: "TSAFE",
+    },
+    {
+      wards: [
         "BOKO",
         "DAURAN / BIRNIN-TSABA",
         "DOLE",
@@ -216,8 +216,9 @@ export const ZAMFARA = {
         "YAN BUKI/ DUTSI",
         "ZURMI",
       ],
-        name: "ZURMI",
-      },
-    ],
-  };
-  
+      name: "ZURMI",
+    },
+  ],
+};
+
+export const KEBBI = { states, SR };

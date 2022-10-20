@@ -1,8 +1,19 @@
-export const LAGOS = {
-    state: "LAGOS",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "LAGOS",
+  email: "lagos@gmail.com",
+  password: "lagos1",
+  phone: "08108850572",
+  statecode: "LAGOS",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "LAGOS",
+  state: "LAGOS",
+  lga: [
+    {
+      wards: [
         "AGBOTIKUYO/DOPEMU",
         "DAROCHA",
         "ILORO/ONIPETESI",
@@ -14,11 +25,11 @@ export const LAGOS = {
         "ORILE AGEGE/OKO OBA",
         "OYEWOLE/PAPA ASHAFA",
         "TABON TABON/OKO OBA",
-    ],
-        name: "AGEGE",
-      },
-      {
-        wards: [
+      ],
+      name: "AGEGE",
+    },
+    {
+      wards: [
         "AGO HAUSA",
         "ALABA ORO",
         "AWODI-ORA",
@@ -31,10 +42,10 @@ export const LAGOS = {
         "TOLU",
         "WILMER",
       ],
-        name: "AJEROMI/IFELODUN",
-      },
-      {
-        wards: [
+      name: "AJEROMI/IFELODUN",
+    },
+    {
+      wards: [
         "ABULE-EGBA/ABORU/MEIRAN/ALAGBADO",
         "AYOBO/IJON VILLAGE (CAMP DAVID)",
         "EGBE/AGODO",
@@ -47,10 +58,10 @@ export const LAGOS = {
         "PLEASURE/OKE-ODO",
         "SHASHA/AKOWONJO",
       ],
-        name: "ALIMOSHO",
-      },
-      {
-        wards: [
+      name: "ALIMOSHO",
+    },
+    {
+      wards: [
         "AMUWO",
         "AMUWO-ODOFIN HOUSING ESTATE, MILE 2",
         "FESTAC 1",
@@ -63,10 +74,10 @@ export const LAGOS = {
         "KIRIKIRI",
         "SATELLITE",
       ],
-        name: "AMUWO-ODOFIN",
-      },
-      {
-        wards: [
+      name: "AMUWO-ODOFIN",
+    },
+    {
+      wards: [
         "AFOLABI ALASIA STR. AND ENVIRONS",
         "APAPA I (MARINE RD. & ENVIRONS)",
         "APAPA II (LIVERPOOL RD. AND ENVIRONS)",
@@ -78,10 +89,10 @@ export const LAGOS = {
         "OLODAN ST. OLOJOWOU ST/ALH.DOGO OLATOKUNBO ST. IGANMU",
         "SARI AND ENVIRONS",
       ],
-        name: "APAPA",
-      },
-      {
-        wards: [
+      name: "APAPA",
+    },
+    {
+      wards: [
         "AJARA",
         "AJIDO",
         "APA",
@@ -94,10 +105,10 @@ export const LAGOS = {
         "KETA-EAST",
         "POSUKOH",
       ],
-        name: "BADAGRY",
-      },
-      {
-        wards: [
+      name: "BADAGRY",
+    },
+    {
+      wards: [
         "ABOMITI",
         "AGBOWA",
         "AGBOWA IKOSI",
@@ -118,10 +129,10 @@ export const LAGOS = {
         "POKA",
         "POPO-OBA",
       ],
-        name: "EPE",
-      },
-      {
-        wards: [
+      name: "EPE",
+    },
+    {
+      wards: [
         "ADO/LANGBASA/BADORE",
         "AJAH/SANGOTEDO",
         "IKOYI I",
@@ -133,10 +144,10 @@ export const LAGOS = {
         "VICTORIA ISLAND I",
         "VICTORIA ISLAND II",
       ],
-        name: "ETI-OSA",
-      },
-      {
-        wards: [
+      name: "ETI-OSA",
+    },
+    {
+      wards: [
         "02, (ORIMEDU II)",
         "03, (ORIMEDU III)",
         "IBEJU I",
@@ -149,10 +160,10 @@ export const LAGOS = {
         "S1, (LEKKI I)",
         "S2, (SIRIWON/IGBEKODO I)",
       ],
-        name: "IBEJU/LEKKI",
-      },
-      {
-        wards: [
+      name: "IBEJU/LEKKI",
+    },
+    {
+      wards: [
         "AJEGUNLE/AKINDE/ANIMASHAUN",
         "ALAKUKO/KOLLINGTON",
         "FAGBA/AKUTE ROAD",
@@ -165,10 +176,10 @@ export const LAGOS = {
         "OLD IFAKO/KARAOLE",
         "PAMADA/ABULE-EGBA",
       ],
-        name: "IFAKO-IJAYE",
-      },
-      {
-        wards: [
+      name: "IFAKO-IJAYE",
+    },
+    {
+      wards: [
         "ADEKUNLE VILL./ADENIYI JONES/OGBA",
         "AIRPORT/ONIPETESI/INILEKERE",
         "ALAUSA/OREGUN/OLUSOSUN",
@@ -180,10 +191,10 @@ export const LAGOS = {
         "ONIGBONGBON",
         "WASIMI/OPEBI/ALLEN",
       ],
-        name: "IKEJA",
-      },
-      {
-        wards: [
+      name: "IKEJA",
+    },
+    {
+      wards: [
         "AGA/IJIMU",
         "AGBALA",
         "AGURA/IPONMI",
@@ -204,10 +215,10 @@ export const LAGOS = {
         "ODOGUNYAN",
         "OLORUNDA/IGBAGA",
       ],
-        name: "IKORODU",
-      },
-      {
-        wards: [
+      name: "IKORODU",
+    },
+    {
+      wards: [
         "AGBOYI I",
         "AGBOYI II",
         "ANTHONY/AJAO ESTATE/MENDE/MARYLAND",
@@ -219,10 +230,10 @@ export const LAGOS = {
         "OWODE ONIRIN/AJEGUNLE/ODO-OGUN",
         "OWORONSHOKI",
       ],
-        name: "KOSOFE",
-      },
-      {
-        wards: [
+      name: "KOSOFE",
+    },
+    {
+      wards: [
         "AGARAWU/OBADINA",
         "ANIKANTAMO",
         "EIYEKOLE",
@@ -243,10 +254,10 @@ export const LAGOS = {
         "POPO-AGUDA",
         "SANDGROUSE",
       ],
-        name: "LAGOS ISLAND",
-      },
-      {
-        wards: [
+      name: "LAGOS ISLAND",
+    },
+    {
+      wards: [
         "ALAGOMEJI",
         "EPETEDO",
         "GLOVER/EBUTE METTA",
@@ -259,10 +270,10 @@ export const LAGOS = {
         "OYINGBO MARKET/EBUTE METTA",
         "YABA/IGBOBI",
       ],
-        name: "LAGOS MAINLAND",
-      },
-      {
-        wards: [
+      name: "LAGOS MAINLAND",
+    },
+    {
+      wards: [
         "ALAKARA",
         "BABALOSA",
         "BABALOSA/IDI-ARABA",
@@ -278,10 +289,10 @@ export const LAGOS = {
         "OLATEJU",
         "PAPA-AJAO",
       ],
-        name: "MUSHIN",
-      },
-      {
-        wards: [
+      name: "MUSHIN",
+    },
+    {
+      wards: [
         "AJANGBADI",
         "ETEGBIN",
         "IBA",
@@ -294,10 +305,10 @@ export const LAGOS = {
         "SABO",
         "TAFI",
       ],
-        name: "OSHO",
-      },
-      {
-        wards: [
+      name: "OSHO",
+    },
+    {
+      wards: [
         "AJAO ESTATE",
         "ILASAMAJA",
         "ISHAGATEDO",
@@ -310,10 +321,10 @@ export const LAGOS = {
         "SOGUNLE",
         "SOGUNLE/ALASIA",
       ],
-        name: "OSHODI/ISOLO",
-      },
-      {
-        wards: [
+      name: "OSHODI/ISOLO",
+    },
+    {
+      wards: [
         "ABULE-OKUTA/ILAJE/BARIGA",
         "ALADE",
         "BAJULAIYE",
@@ -327,10 +338,10 @@ export const LAGOS = {
         "ONIPANU",
         "PALMGROVE/IJEBUTEDO",
       ],
-        name: "SOMOLU",
-      },
-      {
-        wards: [
+      name: "SOMOLU",
+    },
+    {
+      wards: [
         "ADENIRAN/OGUNSANYA",
         "AGUDA",
         "AKINHANMI/COLE",
@@ -344,8 +355,9 @@ export const LAGOS = {
         "SHITTA/OGUNLANA DRIVE",
         "YABA/OJUELEGBA",
       ],
-        name: "SURULERE",
-      },
-    ],
-  };
-  
+      name: "SURULERE",
+    },
+  ],
+};
+
+export const LAGOS = { states, SR };

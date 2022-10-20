@@ -438,3 +438,4 @@ export const RIVERS = {
     ],
   };
   
+  export const KEBBI = { states, SR };

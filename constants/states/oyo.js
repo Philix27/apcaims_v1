@@ -1,8 +1,8 @@
 export const OYO = {
-    state: "OYO",
-    lga: [
-      {
-        wards: [
+  state: "OYO",
+  lga: [
+    {
+      wards: [
         "AKINMORIN/JOBELE",
         "AWE I",
         "AWE II",
@@ -14,10 +14,10 @@ export const OYO = {
         "IMINI",
         "IWARE",
       ],
-        name: "AFIJIO",
-      },
-      {
-        wards: [
+      name: "AFIJIO",
+    },
+    {
+      wards: [
         "AJIBADE/ALABATA/ELEKURU",
         "AKINYELE/ISABIYI/IREPODUN",
         "ARULOGUN/ENIOSA/ARORO",
@@ -31,10 +31,10 @@ export const OYO = {
         "OLODE/AMOSUN/ONIDUNDU",
         "OLORISA-OKO/OKEGBEMI/MELE",
       ],
-        name: "AKINYELE",
-      },
-      {
-        wards: [
+      name: "AKINYELE",
+    },
+    {
+      wards: [
         "AGUNPOPO I",
         "AGUNPOPO II",
         "AGUNPOPO III",
@@ -46,10 +46,10 @@ export const OYO = {
         "OKE-AFIN 1",
         "OKE-AFIN II",
       ],
-        name: "ATIBA",
-      },
-      {
-        wards: [
+      name: "ATIBA",
+    },
+    {
+      wards: [
         "AGO ARE I",
         "AGO ARE II",
         "ALAGA",
@@ -61,10 +61,10 @@ export const OYO = {
         "TEDE I",
         "TEDE II",
       ],
-        name: "ATISBO",
-      },
-      {
-        wards: [
+      name: "ATISBO",
+    },
+    {
+      wards: [
         "AYEDE/ALUGBO/KOLOKO",
         "EGBEDA",
         "ERUNMU",
@@ -77,10 +77,10 @@ export const OYO = {
         "OSEGERE/AWAYE",
         "OWOBAALE/KASUMU",
       ],
-        name: "EGBEDA",
-      },
-      {
-        wards: [
+      name: "EGBEDA",
+    },
+    {
+      wards: [
         "WARD I N2",
         "WARD II, N3",
         "WARD III, N4",
@@ -94,10 +94,10 @@ export const OYO = {
         "WARD XI, NW8",
         "WARD XII, NW8",
       ],
-        name: "IBADAN NORTH",
-      },
-      {
-        wards: [
+      name: "IBADAN NORTH",
+    },
+    {
+      wards: [
         "III E3",
         "WARD 2 NI (PART II)",
         "WARD I. EI",
@@ -111,10 +111,10 @@ export const OYO = {
         "WARD XI E9 I",
         "WARD XII E9 II",
       ],
-        name: "IBADAN NORTH EAST",
-      },
-      {
-        wards: [
+      name: "IBADAN NORTH EAST",
+    },
+    {
+      wards: [
         "WARD 10 NW7",
         "WARD 11 NW7",
         "WARD 2 NI (PART II)",
@@ -139,10 +139,10 @@ export const OYO = {
         "WARD 11 SW9(1)",
         "WARD 12 SW9 II",
       ],
-        name: "IBADAN SOUTH WEST",
-      },
-      {
-        wards: [
+      name: "IBADAN SOUTH WEST",
+    },
+    {
+      wards: [
         "C1",
         "S S5",
         "S 1",
@@ -156,10 +156,10 @@ export const OYO = {
         "S. 2B",
         "S. 6B",
       ],
-        name: "IBADAN SOUTH-EAST",
-      },
-      {
-        wards: [
+      name: "IBADAN SOUTH-EAST",
+    },
+    {
+      wards: [
         "IBEREKODO I /(PATAOJU)",
         "IBEREKODO/AGBOORO/ITA BAALE",
         "IDERE I (MOLETE)",
@@ -171,10 +171,10 @@ export const OYO = {
         "OKE-ODO",
         "OKESERIN I & II",
       ],
-        name: "IBARAPA CENTRAL",
-      },
-      {
-        wards: [
+      name: "IBARAPA CENTRAL",
+    },
+    {
+      wards: [
         "ABORERIN",
         "ANKO",
         "ISABA",
@@ -186,10 +186,10 @@ export const OYO = {
         "OKE-IMALE",
         "SANGO",
       ],
-        name: "IBARAPA EAST",
-      },
-      {
-        wards: [
+      name: "IBARAPA EAST",
+    },
+    {
+      wards: [
         "AYETE I",
         "AYETE II",
         "IGANGAN I",
@@ -201,10 +201,10 @@ export const OYO = {
         "TAPA I",
         "TAPA II",
       ],
-        name: "IBARAPA NORTH",
-      },
-      {
-        wards: [
+      name: "IBARAPA NORTH",
+    },
+    {
+      wards: [
         "ABA EMO/ILAJU/ALAKO",
         "AKINWARE/AKINDELE",
         "AKUFO/IDIGBA/ARAROMI",
@@ -216,10 +216,10 @@ export const OYO = {
         "OGUNDELE/ALAHO/SIBA/IDI-AHUN",
         "OMI ADIO/OMI ONIGBAGBO BAKATARI",
       ],
-        name: "IDO",
-      },
-      {
-        wards: [
+      name: "IDO",
+    },
+    {
+      wards: [
         "AGORO",
         "AJAGUNNA",
         "ATIPA",
@@ -231,10 +231,10 @@ export const OYO = {
         "IKOLABA",
         "LAHA/AJANA",
       ],
-        name: "IREPO",
-      },
-      {
-        wards: [
+      name: "IREPO",
+    },
+    {
+      wards: [
         "ADO-AWAYE",
         "AKINWUMI/OSOOGUN",
         "EKUNLE I",
@@ -247,10 +247,10 @@ export const OYO = {
         "KOSO II",
         "LADOGAN/OKE EYIN",
       ],
-        name: "ISEYIN",
-      },
-      {
-        wards: [
+      name: "ISEYIN",
+    },
+    {
+      wards: [
         "BABAODE",
         "IGBOJAIYE",
         "IPAPO",
@@ -262,10 +262,10 @@ export const OYO = {
         "OTU II",
         "OWODE/IPAPO",
       ],
-        name: "ITESIWAJU",
-      },
-      {
-        wards: [
+      name: "ITESIWAJU",
+    },
+    {
+      wards: [
         "AGBAAKIN I",
         "AGBAAKIN II",
         "IWERE-ILE I",
@@ -277,10 +277,10 @@ export const OYO = {
         "SABI GANA III",
         "SABI GANA IV",
       ],
-        name: "IWAJOWA",
-      },
-      {
-        wards: [
+      name: "IWAJOWA",
+    },
+    {
+      wards: [
         "AYETORO-OKE I",
         "ELERO",
         "GBELEKALE I & II",
@@ -293,10 +293,10 @@ export const OYO = {
         "KAJOLA",
         "OLELE",
       ],
-        name: "KAJOLA",
-      },
-      {
-        wards: [
+      name: "KAJOLA",
+    },
+    {
+      wards: [
         "AJARA/OPEODU",
         "APATERE/KUFFI/OGUNBODE/OGO",
         "ARULOGUN EHIN/KELEBE",
@@ -312,10 +312,10 @@ export const OYO = {
         "OYEDEJI/OLODE/KUTAYI",
         "SAGBE/PABIEKUN",
       ],
-        name: "LAGELU",
-      },
-      {
-        wards: [
+      name: "LAGELU",
+    },
+    {
+      wards: [
         "AAJE/OGUNBADO/OKE AGBEDE",
         "ABOGUNDE",
         "AGUODO/ MASIFA",
@@ -327,10 +327,10 @@ export const OYO = {
         "OSUPA",
         "SABO/TARA",
       ],
-        name: "OGBOMOSO NORTH",
-      },
-      {
-        wards: [
+      name: "OGBOMOSO NORTH",
+    },
+    {
+      wards: [
         "AKATA",
         "ALAPATA",
         "AROWOMOLE",
@@ -342,10 +342,10 @@ export const OYO = {
         "LAGBEDU",
         "OKE-OLA/FARM SETTLEMENT",
       ],
-        name: "OGBOMOSO SOUTH",
-      },
-      {
-        wards: [
+      name: "OGBOMOSO SOUTH",
+    },
+    {
+      wards: [
         "AJAAWA I",
         "AJAAWA II",
         "AYEDE",
@@ -357,10 +357,10 @@ export const OYO = {
         "OPETE",
         "OTAMOKUN",
       ],
-        name: "OGO-OLUWA",
-      },
-      {
-        wards: [
+      name: "OGO-OLUWA",
+    },
+    {
+      wards: [
         "ABOKE (ABOYUN OGUN)",
         "ELERUGBA/ELEHINKE/SAGBO (APERU)",
         "IKOLABA/OBADIMO",
@@ -372,10 +372,10 @@ export const OYO = {
         "SERIKI II (AGBELE)",
         "WARO/APATA-ALAJE",
       ],
-        name: "OLORUNSOGO",
-      },
-      {
-        wards: [
+      name: "OLORUNSOGO",
+    },
+    {
+      wards: [
         "AYEGUN",
         "IDI-IROKO/IKEREKU",
         "IDI-OSAN/EGBEDA-ATUBA",
@@ -387,10 +387,10 @@ export const OYO = {
         "ONIPE",
         "ORISUNBARE/OJO-EKUN",
       ],
-        name: "OLUYOLE",
-      },
-      {
-        wards: [
+      name: "OLUYOLE",
+    },
+    {
+      wards: [
         "AKANRAN/OLORUNDA",
         "ARAROMI/APERIN",
         "BADEKU",
@@ -403,10 +403,10 @@ export const OYO = {
         "OLORUNSOGO",
         "OREMEJI/AGUGU",
       ],
-        name: "ONA-ARA",
-      },
-      {
-        wards: [
+      name: "ONA-ARA",
+    },
+    {
+      wards: [
         "AARE",
         "ALEPATA",
         "BONNI",
@@ -418,10 +418,10 @@ export const OYO = {
         "ONIBODE III",
         "ONIGBOHO/ALOMO/OKERE",
       ],
-        name: "OORELOPE",
-      },
-      {
-        wards: [
+      name: "OORELOPE",
+    },
+    {
+      wards: [
         "ORI IRE I",
         "ORI IRE II",
         "ORI IRE III",
@@ -433,10 +433,10 @@ export const OYO = {
         "ORI IRE VIII",
         "ORI IRE X",
       ],
-        name: "ORI IRE",
-      },
-      {
-        wards: [
+      name: "ORI IRE",
+    },
+    {
+      wards: [
         "AGBOYE/MOLETE",
         "AJAGBA",
         "ALAODI/MODEKE",
@@ -448,10 +448,10 @@ export const OYO = {
         "OLUAJO",
         "OWODE/ARAROMI",
       ],
-        name: "OYO EAST",
-      },
-      {
-        wards: [
+      name: "OYO EAST",
+    },
+    {
+      wards: [
         "AJOKIDERO/AKEWUGBERU",
         "AKEETAN",
         "FASOLA/SOKU",
@@ -463,10 +463,10 @@ export const OYO = {
         "OWODE",
         "PAKOYI/IDODE",
       ],
-        name: "OYO WEST",
-      },
-      {
-        wards: [
+      name: "OYO WEST",
+    },
+    {
+      wards: [
         "AGBONLE",
         "AGO AMODU I",
         "AGO AMODU II",
@@ -479,10 +479,10 @@ export const OYO = {
         "SEPETERI III",
         "SEPETERI IV",
       ],
-        name: "SAKI EAST",
-      },
-      {
-        wards: [
+      name: "SAKI EAST",
+    },
+    {
+      wards: [
         "AGANMU/KOOKO",
         "AJEGUNLE",
         "BAGII",
@@ -495,10 +495,10 @@ export const OYO = {
         "SANGOTE/BOODA/BAABO/ILUS",
         "SEPETERI/BAPON",
       ],
-        name: "SAKI WEST",
-      },
-      {
-        wards: [
+      name: "SAKI WEST",
+    },
+    {
+      wards: [
         "BAYA-OJE",
         "IGBON/GAMBARI",
         "IRESAADU I (IRESAAPA)",
@@ -510,8 +510,9 @@ export const OYO = {
         "OKO II (ILAJUE)",
         "OKO III (MAYIN)",
       ],
-        name: "SURULERE",
-      }, 
-    ],
-  };
-  
+      name: "SURULERE",
+    },
+  ],
+};
+
+export const KEBBI = { states, SR };

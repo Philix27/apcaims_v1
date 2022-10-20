@@ -1,8 +1,19 @@
-export const KOGI = {
-    state: "KOGI",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "KOGI",
+  email: "kogi@gmail.com",
+  password: "kogi1",
+  phone: "08108850572",
+  statecode: "KOGI",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "KOGI",
+  state: "KOGI",
+  lga: [
+    {
+      wards: [
         "ADAVI-EBA",
         "EGE/IRUVOCHINOMI",
         "IDANUHUA",
@@ -14,11 +25,11 @@ export const KOGI = {
         "NAGAZI FARM CENTRE",
         "OGAMINANA",
         "OKUNCHI/OZURI/ONIEKA",
-    ],
-        name: "ADAVI",
-      },
-      {
-        wards: [
+      ],
+      name: "ADAVI",
+    },
+    {
+      wards: [
         "ABODI/PATESI",
         "ACHAGANA",
         "ADOGO",
@@ -33,11 +44,11 @@ export const KOGI = {
         "OGIGIRI",
         "OLD AJAOKUTA",
         "OMGBO",
-    ],
-        name: "AJAOKUTA",
-      },
-      {
-        wards: [
+      ],
+      name: "AJAOKUTA",
+    },
+    {
+      wards: [
         "ANKPA I",
         "ANKPA II",
         "ANKPA SUBURB I",
@@ -51,11 +62,11 @@ export const KOGI = {
         "OJOKU III",
         "OJOKU II",
         "OJOKU IV",
-    ],
-        name: "ANKPA",
-      },
-      {
-        wards: [
+      ],
+      name: "ANKPA",
+    },
+    {
+      wards: [
         "AKUBA I",
         "AKUBA II",
         "AYEDE/AKAKANA",
@@ -66,11 +77,11 @@ export const KOGI = {
         "MOZUM",
         "OZONGULO/KPANCHE",
         "OZUGBE",
-    ],
-        name: "BASSA",
-      },
-      {
-        wards: [
+      ],
+      name: "BASSA",
+    },
+    {
+      wards: [
         "ABOCHO",
         "ADUMU EGUME",
         "ANYIGBA",
@@ -83,11 +94,11 @@ export const KOGI = {
         "OGBABEDE",
         "OJIKPADALA",
         "OKURA OLAFIA",
-    ],
-        name: "DEKINA",
-      },
-      {
-        wards: [
+      ],
+      name: "DEKINA",
+    },
+    {
+      wards: [
         "AKPANYO",
         "ANALO",
         "AYAH",
@@ -98,11 +109,11 @@ export const KOGI = {
         "ONYEDEGA",
         "UJEH",
         "UNALE",
-    ],
-        name: "IBAJI",
-      },
-      {
-        wards: [
+      ],
+      name: "IBAJI",
+    },
+    {
+      wards: [
         "EDE",
         "EGA",
         "ICHALA",
@@ -113,11 +124,11 @@ export const KOGI = {
         "SABON GARI",
         "UGWODA",
         "UKWAJA",
-    ],
-        name: "IDAH",
-      },
-      {
-        wards: [
+      ],
+      name: "IDAH",
+    },
+    {
+      wards: [
         "AJAKA I",
         "AJAKA II",
         "AKPANYA",
@@ -128,11 +139,11 @@ export const KOGI = {
         "OFORACHI II",
         "OJI-AJI",
         "UBELE",
-    ],
-        name: "IGALAMELA/ODOLU",
-      },
-      {
-        wards: [
+      ],
+      name: "IGALAMELA/ODOLU",
+    },
+    {
+      wards: [
         "AIYEGUNLE",
         "AIYERE/ARIMAH",
         "AIYETORO I",
@@ -148,11 +159,11 @@ export const KOGI = {
         "ODOKORO",
         "OGALE/ADUGE",
         "OGIDI",
-    ],
-        name: "IJUMU",
-      },
-      {
-        wards: [
+      ],
+      name: "IJUMU",
+    },
+    {
+      wards: [
         "AIYETEJU",
         "AIYETORO-KIRI",
         "AIYEWA",
@@ -168,11 +179,11 @@ export const KOGI = {
         "OKEKOKO",
         "OLLE/OKE-OFIN",
         "OTU",
-    ],
-        name: "KABBA/BUNU",
-      },
-      {
-        wards: [
+      ],
+      name: "KABBA/BUNU",
+    },
+    {
+      wards: [
         "AKPASU",
         "CHIKARA NORTH",
         "CHIKARA SOUTH",
@@ -184,11 +195,11 @@ export const KOGI = {
         "ODAKI-KOTON KARFE",
         "TAWARI",
         "UKWO-KOTON KARFE",
-    ],
-        name: "KOGI . K. K.",
-      },
-      {
-        wards: [
+      ],
+      name: "KOGI . K. K.",
+    },
+    {
+      wards: [
         "EGGAN",
         "KAKANDA",
         "KUPA NORTH EAST",
@@ -199,11 +210,11 @@ export const KOGI = {
         "LOKOJA - D",
         "LOKOJA - E",
         "OWORO",
-    ],
-        name: "LOKOJA",
-      },
-      {
-        wards: [
+      ],
+      name: "LOKOJA",
+    },
+    {
+      wards: [
         "AGBAFOGUN",
         "AIYEDAYO/AIYEDARO",
         "AIYEDE/OKAGI",
@@ -214,11 +225,11 @@ export const KOGI = {
         "OKEAGI/ILAI",
         "OROKERE",
         "TAKETE IDDE/OTAFUN",
-    ],
-        name: "MOPA MORO",
-      },
-      {
-        wards: [
+      ],
+      name: "MOPA MORO",
+    },
+    {
+      wards: [
         "ALOJI",
         "ALOMA",
         "EJULE ALLAH",
@@ -230,11 +241,11 @@ export const KOGI = {
         "OGBONICHA",
         "UGWOLAWO - 2",
         "UGWOLAWO - I",
-    ],
-        name: "OFU",
-      },
-      {
-        wards: [
+      ],
+      name: "OFU",
+    },
+    {
+      wards: [
         "AIYEROMI",
         "ENI",
         "ILETEJU",
@@ -245,11 +256,11 @@ export const KOGI = {
         "OSHOBANE",
         "OTURU OPOWUROYE",
         "UGUGU",
-    ],
-        name: "OGORI MANGO",
-      },
-      {
-        wards: [
+      ],
+      name: "OGORI MANGO",
+    },
+    {
+      wards: [
         "EIKA / OHIZENYI",
         "OBAIBA I",
         "OBAIBA II",
@@ -261,11 +272,11 @@ export const KOGI = {
         "OHUETA",
         "OKAITO / USUNGWEN",
         "OKUEHU",
-    ],
-        name: "OKEHI",
-      },
-      {
-        wards: [
+      ],
+      name: "OKEHI",
+    },
+    {
+      wards: [
         "ABUGA/OZUJA",
         "BARIKI",
         "IDOJI",
@@ -277,11 +288,11 @@ export const KOGI = {
         "ORIETESU",
         "OTUTU",
         "UPOGORO/ODENKU",
-    ],
-        name: "OKENE",
-      },
-      {
-        wards: [
+      ],
+      name: "OKENE",
+    },
+    {
+      wards: [
         "IMANE I",
         "IMANE II",
         "OGUGU I",
@@ -292,11 +303,11 @@ export const KOGI = {
         "OLAMABORO III",
         "OLAMABORO IV",
         "OLAMABORO V",
-    ],
-        name: "OLAMABORO",
-      },
-      {
-        wards: [
+      ],
+      name: "OLAMABORO",
+    },
+    {
+      wards: [
         "ABEJUKOLO I",
         "ABEJUKOLO II",
         "AKPACHA",
@@ -308,11 +319,11 @@ export const KOGI = {
         "OKPATALA",
         "OLLA",
         "OPODA/OFEJIJI",
-    ],
-        name: "OMALA",
-      },
-      {
-        wards: [
+      ],
+      name: "OMALA",
+    },
+    {
+      wards: [
         "ALU/IGBAGUN/ORANRE",
         "EJUKU",
         "IFE OLUKOTUN I",
@@ -323,11 +334,11 @@ export const KOGI = {
         "MAKUTU I",
         "MAKUTU II",
         "PONYAN",
-    ],
-        name: "YAGBA EAST",
-      },
-      {
-        wards: [
+      ],
+      name: "YAGBA EAST",
+    },
+    {
+      wards: [
         "EJIBA",
         "ISAULU ESA/OKOLOKE/OKUNRAN",
         "IYAMERIN/IGBARUKU",
@@ -342,9 +353,10 @@ export const KOGI = {
         "OKE EGBE II",
         "OKE EGBE III",
         "OKE EGBE IV",
-    ],
-        name: "YAGBA WEST",
-      },
-    ],
-  };
-  
+      ],
+      name: "YAGBA WEST",
+    },
+  ],
+};
+
+export const KOGI = { states, SR };

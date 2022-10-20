@@ -17,6 +17,12 @@ import { GOMBE } from "./gombe";
 import { IMO } from "./imo";
 import { JIGAWA } from "./jigawa";
 import { KADUNA } from "./kaduna";
+import { KANO } from "./kano";
+import { KATSINA } from "./katsina";
+import { KEBBI } from "./kebbi";
+import { KOGI } from "./kogi";
+import { KWARA } from "./kwara";
+import { LAGOS } from "./lagos";
 
 const states = [
   ABIA.states,
@@ -38,6 +44,12 @@ const states = [
   IMO.states,
   JIGAWA.states,
   KADUNA.states,
+  KANO.states,
+  KATSINA.states,
+  KEBBI.states,
+  KOGI.states,
+  KWARA.states,
+  LAGOS.states,
 ];
 const sr = [
   ABIA.SR,
@@ -60,5 +72,7 @@ const sr = [
   JIGAWA.SR,
   KADUNA.SR,
 ];
+const fedConst = [ABIA.fedral_constituency];
+const senDist = [ABIA.senatorial_district];
 
-export const data = { states, sr };
+export const data = { states, sr, fedConst, senDist };

@@ -1,8 +1,8 @@
 export const NIGER = {
-    state: "NIGER",
-    lga: [
-      {
-        wards: [
+  state: "NIGER",
+  lga: [
+    {
+      wards: [
         "BARO",
         "BOKU",
         "DAUACI",
@@ -15,10 +15,10 @@ export const NIGER = {
         "MAGAJI",
         "TAGAGI",
       ],
-        name: "AGAIE",
-      },
-      {
-        wards: [
+      name: "AGAIE",
+    },
+    {
+      wards: [
         "ADEHE",
         "AGWATA",
         "BUSURU",
@@ -30,10 +30,10 @@ export const NIGER = {
         "ROFIA",
         "SUTEKU",
       ],
-        name: "AGWARA",
-      },
-      {
-        wards: [
+      name: "AGWARA",
+    },
+    {
+      wards: [
         "BARIKI",
         "CENIYAN",
         "DOKODZA",
@@ -49,10 +49,10 @@ export const NIGER = {
         "UMARU/MAJIGI I",
         "WADATA",
       ],
-        name: "BIDA",
-      },
-      {
-        wards: [
+      name: "BIDA",
+    },
+    {
+      wards: [
         "BABANNA",
         "DUGGA",
         "KABE/PISSA",
@@ -64,10 +64,10 @@ export const NIGER = {
         "SHAGUNU",
         "WAWA",
       ],
-        name: "BORGU",
-      },
-      {
-        wards: [
+      name: "BORGU",
+    },
+    {
+      wards: [
         "BEJI",
         "BOSSO CENTRAL I",
         "BOSSO CENTRAL II",
@@ -79,10 +79,10 @@ export const NIGER = {
         "MAITUMBI",
         "SHATA",
       ],
-        name: "BOSSO",
-      },
-      {
-        wards: [
+      name: "BOSSO",
+    },
+    {
+      wards: [
         "LIMAWA 'A'",
         "LIMAWA 'B'",
         "MAKERA",
@@ -95,10 +95,10 @@ export const NIGER = {
         "TUDUN WADA NORTH",
         "TUDUN WADA SOUTH",
       ],
-        name: "CHANCHAGA",
-      },
-      {
-        wards: [
+      name: "CHANCHAGA",
+    },
+    {
+      wards: [
         "ENAGI",
         "ETSU TASHA",
         "FAZHI",
@@ -110,10 +110,10 @@ export const NIGER = {
         "ROKOTA",
         "SAKPE",
       ],
-        name: "EDATTI",
-      },
-      {
-        wards: [
+      name: "EDATTI",
+    },
+    {
+      wards: [
         "BATAGI",
         "BATAKO",
         "EDOKOTA",
@@ -125,10 +125,10 @@ export const NIGER = {
         "NUWANKOTA",
         "SAMMAJIKO",
       ],
-        name: "GBAKO",
-      },
-      {
-        wards: [
+      name: "GBAKO",
+    },
+    {
+      wards: [
         "BONU",
         "DIKO",
         "GAWU",
@@ -140,10 +140,10 @@ export const NIGER = {
         "SHAKO",
         "TUFA",
       ],
-        name: "GURARA",
-      },
-      {
-        wards: [
+      name: "GURARA",
+    },
+    {
+      wards: [
         "BADEGGI",
         "BAKEKO",
         "BISANTI",
@@ -155,10 +155,10 @@ export const NIGER = {
         "KATCHA",
         "SIDI SABA",
       ],
-        name: "KATCHA",
-      },
-      {
-        wards: [
+      name: "KATCHA",
+    },
+    {
+      wards: [
         "AREWA",
         "CENTRAL",
         "GABAS",
@@ -173,10 +173,10 @@ export const NIGER = {
         "USALLE",
         "YAMMA",
       ],
-        name: "KONTAGORA",
-      },
-      {
-        wards: [
+      name: "KONTAGORA",
+    },
+    {
+      wards: [
         "AREWA/YAMMA",
         "BIRNIN MAZA/TASHIBO",
         "EBBO/GBACINKU",
@@ -188,10 +188,10 @@ export const NIGER = {
         "MUYE/EGBA",
         "TAKUTI/SHAKU",
       ],
-        name: "LAPAI",
-      },
-      {
-        wards: [
+      name: "LAPAI",
+    },
+    {
+      wards: [
         "BATATI",
         "BUSU/KUCHI",
         "DABBAN",
@@ -205,10 +205,10 @@ export const NIGER = {
         "LAGUN",
         "MAMBE",
       ],
-        name: "LAVUN",
-      },
-      {
-        wards: [
+      name: "LAVUN",
+    },
+    {
+      wards: [
         "AUNA CENTRAL",
         "AUNA EAST",
         "AUNA EAST CENTRAL",
@@ -221,10 +221,10 @@ export const NIGER = {
         "NASKO",
         "NASSARAWA",
       ],
-        name: "MAGAMA",
-      },
-      {
-        wards: [
+      name: "MAGAMA",
+    },
+    {
+      wards: [
         "BANGI",
         "BERI",
         "BOBI",
@@ -237,10 +237,10 @@ export const NIGER = {
         "KUMBASHI",
         "MABURYA",
       ],
-        name: "MARIGA",
-      },
-      {
-        wards: [
+      name: "MARIGA",
+    },
+    {
+      wards: [
         "BABBAN RAMI",
         "DAPANGI/MAKERA",
         "IBBI",
@@ -252,10 +252,10 @@ export const NIGER = {
         "MAZAKUKA/LIKORO",
         "SAHO-RAMI",
       ],
-        name: "MASHEGU",
-      },
-      {
-        wards: [
+      name: "MASHEGU",
+    },
+    {
+      wards: [
         "BOKANI",
         "GBAJIBO/MUWO",
         "GBARA",
@@ -268,10 +268,10 @@ export const NIGER = {
         "MUREGI",
         "RABBA/NDAYAKO",
       ],
-        name: "MOKWA",
-      },
-      {
-        wards: [
+      name: "MOKWA",
+    },
+    {
+      wards: [
         "BENI",
         "DANDAUDU",
         "DANGUNU",
@@ -284,10 +284,10 @@ export const NIGER = {
         "KUCHI",
         "SARKIN PAWA",
       ],
-        name: "MUNYA",
-      },
-      {
-        wards: [
+      name: "MUNYA",
+    },
+    {
+      wards: [
         "ADUNU",
         "CHIMBI",
         "GWAM",
@@ -300,10 +300,10 @@ export const NIGER = {
         "PAIKO CENTRAL",
         "TUTUNGO JEDNA",
       ],
-        name: "PAIKORO",
-      },
-      {
-        wards: [
+      name: "PAIKORO",
+    },
+    {
+      wards: [
         "KAGARA GARI",
         "KAKURI",
         "KONGOMA CENTRAL",
@@ -316,10 +316,10 @@ export const NIGER = {
         "TEGINA WEST",
         "YAKILA",
       ],
-        name: "RAFI",
-      },
-      {
-        wards: [
+      name: "RAFI",
+    },
+    {
+      wards: [
         "DANRANGI",
         "DUGGE",
         "DUKKU",
@@ -332,10 +332,10 @@ export const NIGER = {
         "USHE",
         "WARARI",
       ],
-        name: "RIJAU",
-      },
-      {
-        wards: [
+      name: "RIJAU",
+    },
+    {
+      wards: [
         "ALLAWA",
         "BANGAJIYA",
         "BASSA/KUKOKI",
@@ -352,10 +352,10 @@ export const NIGER = {
         "SHE",
         "UBANDOMA",
       ],
-        name: "SHIRORO",
-      },
-      {
-        wards: [
+      name: "SHIRORO",
+    },
+    {
+      wards: [
         "BAGAMA 'B'",
         "BAGMAMA 'A'",
         "HASHIMI 'A'",
@@ -367,10 +367,10 @@ export const NIGER = {
         "MAJE NORTH",
         "WAMBAI",
       ],
-        name: "SULEJA",
-      },
-      {
-        wards: [
+      name: "SULEJA",
+    },
+    {
+      wards: [
         "DOGON KURMI",
         "GARAM",
         "IJA GWARI",
@@ -382,10 +382,10 @@ export const NIGER = {
         "ZUMA EAST",
         "ZUMA WEST",
       ],
-        name: "TAFA",
-      },
-      {
-        wards: [
+      name: "TAFA",
+    },
+    {
+      wards: [
         "AKARE",
         "BARWA",
         "GWARJIKO",
@@ -398,8 +398,9 @@ export const NIGER = {
         "TUKUNJI/YAMIGI",
         "ZUNGERU",
       ],
-        name: "WUSHISHI",
-      },
-    ],
-  };
-  
+      name: "WUSHISHI",
+    },
+  ],
+};
+
+export const KEBBI = { states, SR };

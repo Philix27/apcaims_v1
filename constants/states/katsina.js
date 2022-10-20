@@ -1,8 +1,19 @@
-export const KATSINA = {
-    state: "KATSINA",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "KATSINA",
+  email: "katsina@gmail.com",
+  password: "katsina1",
+  phone: "08108850572",
+  statecode: "KATSINA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "KATSINA",
+  state: "KATSINA",
+  lga: [
+    {
+      wards: [
         "BAKORI A",
         "BAKORI B",
         "BARDE/KWANTAKWARAN",
@@ -14,11 +25,11 @@ export const KATSINA = {
         "KANDARAWA",
         "KURAMI/YANKWANI",
         "TSIGA",
-    ],
-        name: "BAKORI",
-      },
-      {
-        wards: [
+      ],
+      name: "BAKORI",
+    },
+    {
+      wards: [
         "AJIWA",
         "BAKIYAWA",
         "BARAWA",
@@ -29,11 +40,11 @@ export const KATSINA = {
         "KAYAUKI",
         "TSANNI",
         "YARGAMJI",
-    ],
-        name: "BATAGARAWA",
-      },
-      {
-        wards: [
+      ],
+      name: "BATAGARAWA",
+    },
+    {
+      wards: [
         "ABADAU/KAGARA",
         "BATSARI",
         "DAN. ALH/YANGAIYA",
@@ -45,11 +56,11 @@ export const KATSINA = {
         "RUMA",
         "WAGINI",
         "YAUYAU/MALLAMAWA",
-    ],
-        name: "BATSARI",
-      },
-      {
-        wards: [
+      ],
+      name: "BATSARI",
+    },
+    {
+      wards: [
         "AGALA",
         "BABBAN MUTUM",
         "BAURE",
@@ -62,11 +73,11 @@ export const KATSINA = {
         "UNGUWAR RAI",
         "YANDUNA",
         "YANMAULU",
-    ],
-        name: "BAURE",
-      },
-      {
-        wards: [
+      ],
+      name: "BAURE",
+    },
+    {
+      wards: [
         "BAURE",
         "BINDAWA",
         "DORO",
@@ -78,11 +89,11 @@ export const KATSINA = {
         "SHIBDAWA",
         "TAMA/DAYE",
         "YANGORA",
-    ],
-        name: "BINDAWA",
-      },
-      {
-        wards: [
+      ],
+      name: "BINDAWA",
+    },
+    {
+      wards: [
         "BANYE",
         "CHARANCHI",
         "DOKA",
@@ -93,11 +104,11 @@ export const KATSINA = {
         "RADDA",
         "SAFANA",
         "TSAKATSA",
-    ],
-        name: "CHARANCHI",
-      },
-      {
-        wards: [
+      ],
+      name: "CHARANCHI",
+    },
+    {
+      wards: [
         "DAN ALI",
         "DAN ALKIMA",
         "DAN MUSA A",
@@ -108,11 +119,12 @@ export const KATSINA = {
         "MAI DABINO B",
         "MARA",
         "YAN-TUMAKI A",
-        "YAN-TUMAKI B",],
-        name: "DANMUSA",
-      },
-      {
-        wards: [
+        "YAN-TUMAKI B",
+      ],
+      name: "DANMUSA",
+    },
+    {
+      wards: [
         "DANDUME A",
         "DANDUME B",
         "DANTANKARI",
@@ -124,11 +136,11 @@ export const KATSINA = {
         "NASARAWA",
         "TUMBURKAI A",
         "TUMBURKAI B",
-    ],
-        name: "DANDUME",
-      },
-      {
-        wards: [
+      ],
+      name: "DANDUME",
+    },
+    {
+      wards: [
         "DABAI",
         "DANJA A",
         "DANJA B",
@@ -139,11 +151,11 @@ export const KATSINA = {
         "TSANGAMAWA",
         "YAKAJI A",
         "YAKAJI B",
-    ],
-        name: "DANJA",
-      },
-      {
-        wards: [
+      ],
+      name: "DANJA",
+    },
+    {
+      wards: [
         "KUSUGU",
         "MADOBI A",
         "MADOBI B",
@@ -155,11 +167,11 @@ export const KATSINA = {
         "TUDUN WADA",
         "UBANDAWAKI A",
         "UNBADAWAKI B",
-    ],
-        name: "DAURA",
-      },
-      {
-        wards: [
+      ],
+      name: "DAURA",
+    },
+    {
+      wards: [
         "DAN AUNAI",
         "DUTSI A",
         "DUTSI B",
@@ -170,11 +182,11 @@ export const KATSINA = {
         "SIRIKA B",
         "YAMEL A",
         "YAMEL B",
-    ],
-        name: "DUTSI",
-      },
-      {
-        wards: [
+      ],
+      name: "DUTSI",
+    },
+    {
+      wards: [
         "BAGAGADI",
         "DABAWA",
         "DUTSIN-MA A",
@@ -186,11 +198,11 @@ export const KATSINA = {
         "KUTAWA",
         "MAKERA",
         "SHEMA",
-    ],
-        name: "DUTSIN-MA",
-      },
-      {
-        wards: [
+      ],
+      name: "DUTSIN-MA",
+    },
+    {
+      wards: [
         "DAUDAWA",
         "FASKARI",
         "MAIGORA",
@@ -201,11 +213,11 @@ export const KATSINA = {
         "TAFOKI",
         "YANKARA",
         "YARMALAMAI",
-    ],
-        name: "FASKARI",
-      },
-      {
-        wards: [
+      ],
+      name: "FASKARI",
+    },
+    {
+      wards: [
         "DANDUTSE",
         "DUKKE",
         "GOYA",
@@ -217,11 +229,11 @@ export const KATSINA = {
         "UNG IBRAHIM",
         "UNGUWAR MUSA",
         "UNGUWAR RABIU",
-    ],
-        name: "FUNTUA",
-      },
-      {
-        wards: [
+      ],
+      name: "FUNTUA",
+    },
+    {
+      wards: [
         "AGAYAWA",
         "BARERUWA/RURUMA",
         "BIDORE/YAYA",
@@ -233,11 +245,11 @@ export const KATSINA = {
         "KURFEJI/YANKAURA",
         "MANOMAWA/KAFI",
         "YANDOMA",
-    ],
-        name: "INGAWA",
-      },
-      {
-        wards: [
+      ],
+      name: "INGAWA",
+    },
+    {
+      wards: [
         "BUGAJE",
         "FARFARU",
         "FARU",
@@ -249,11 +261,11 @@ export const KATSINA = {
         "MAZANYA/MAGAMA",
         "RIKO",
         "YANGAIYA",
-    ],
-        name: "JIBIA",
-      },
-      {
-        wards: [
+      ],
+      name: "JIBIA",
+    },
+    {
+      wards: [
         "DANTUTTURE",
         "DUTSIN KURA/KANYA",
         "GAMZAGO",
@@ -264,11 +276,11 @@ export const KATSINA = {
         "SABUWAR KASA",
         "YARI BORI",
         "YARTALATA/RIGOJI",
-    ],
-        name: "KAFUR",
-      },
-      {
-        wards: [
+      ],
+      name: "KAFUR",
+    },
+    {
+      wards: [
         "ABDALLAWA",
         "BAAWA",
         "DANKABA",
@@ -279,11 +291,11 @@ export const KATSINA = {
         "MATSAI",
         "YANDAKI",
         "YANHOHO",
-    ],
-        name: "KAITA",
-      },
-      {
-        wards: [
+      ],
+      name: "KAITA",
+    },
+    {
+      wards: [
         "BURDUGAU",
         "DAN MURABU",
         "DAN'MAIDAKI",
@@ -295,11 +307,11 @@ export const KATSINA = {
         "PAUWA A&B",
         "WAWAR KAZA",
         "ZANGO/ZABARO",
-    ],
-        name: "KANKARA",
-      },
-      {
-        wards: [
+      ],
+      name: "KANKARA",
+    },
+    {
+      wards: [
         "GACHI",
         "GALADIMA 'A'",
         "GALADIMA 'B'",
@@ -310,11 +322,11 @@ export const KATSINA = {
         "RIMAYE",
         "SUKUNTUNI",
         "TAFASHIYA/NASARAWA",
-    ],
-        name: "KANKIA",
-      },
-      {
-        wards: [
+      ],
+      name: "KANKIA",
+    },
+    {
+      wards: [
         "KANGIWA",
         "SHINKAFI 'A",
         "SHINKAFI 'B'",
@@ -327,11 +339,11 @@ export const KATSINA = {
         "WAKILIN KUDU II",
         "WAKILIN YAMMA 1",
         "WAKILIN YAMMA 1I",
-    ],
-        name: "KATSINA",
-      },
-      {
-        wards: [
+      ],
+      name: "KATSINA",
+    },
+    {
+      wards: [
         "BARKIYYA",
         "BIRCHI",
         "KURFI 'A'",
@@ -342,11 +354,11 @@ export const KATSINA = {
         "TSAURI 'B'",
         "WURMA 'A'",
         "WURMA 'B'",
-    ],
-        name: "KURFI",
-      },
-      {
-        wards: [
+      ],
+      name: "KURFI",
+    },
+    {
+      wards: [
         "BAURANYA 'A'",
         "BAURANYA 'B'",
         "BOKO",
@@ -357,11 +369,11 @@ export const KATSINA = {
         "MAWASHI",
         "YASHE 'A",
         "YASHE 'B'",
-    ],
-        name: "KUSADA",
-      },
-      {
-        wards: [
+      ],
+      name: "KUSADA",
+    },
+    {
+      wards: [
         "BUMBUM 'A'",
         "BUMBUM 'B'",
         "DANYASHE",
@@ -372,11 +384,11 @@ export const KATSINA = {
         "MAI'ADUA 'B'",
         "MAI'ADUA 'C'",
         "NATSALLE",
-    ],
-        name: "MAI'ADUA",
-      },
-      {
-        wards: [
+      ],
+      name: "MAI'ADUA",
+    },
+    {
+      wards: [
         "BORIN DAWA",
         "DANSARAI",
         "DAYI",
@@ -389,11 +401,11 @@ export const KATSINA = {
         "RAWAN SANYI",
         "YABA",
         "YARMAMA",
-    ],
-        name: "MALUFASHI",
-      },
-      {
-        wards: [
+      ],
+      name: "MALUFASHI",
+    },
+    {
+      wards: [
         "BAGIWA",
         "BUJAWA/GEWAYAU",
         "DUWAN/MAKAU",
@@ -405,11 +417,11 @@ export const KATSINA = {
         "MANI",
         "MUDURU",
         "TSAGEM/TAKUSHEYI",
-    ],
-        name: "MANI",
-      },
-      {
-        wards: [
+      ],
+      name: "MANI",
+    },
+    {
+      wards: [
         "BAMBLE",
         "DOGURU 'A'",
         "DOGURU 'B'",
@@ -421,11 +433,11 @@ export const KATSINA = {
         "SONKAYA",
         "TAMILO 'A'",
         "TAMILO 'B'",
-    ],
-        name: "MASHI",
-      },
-      {
-        wards: [
+      ],
+      name: "MASHI",
+    },
+    {
+      wards: [
         "DISSI",
         "GWARJO",
         "KARADUWA",
@@ -436,11 +448,11 @@ export const KATSINA = {
         "MAZOJI 'B'",
         "RINJIN IDI",
         "SAYAYA",
-    ],
-        name: "MATAZU",
-      },
-      {
-        wards: [
+      ],
+      name: "MATAZU",
+    },
+    {
+      wards: [
         "DANGANI",
         "DANJANKU/KARACHI",
         "GARU",
@@ -452,11 +464,11 @@ export const KATSINA = {
         "MUSAWA",
         "TUGE",
         "YARADAU/TABANNI",
-    ],
-        name: "MUSAWA",
-      },
-      {
-        wards: [
+      ],
+      name: "MUSAWA",
+    },
+    {
+      wards: [
         "ABUKUR",
         "FARDAMI",
         "KADANDANI",
@@ -467,11 +479,11 @@ export const KATSINA = {
         "RIMI",
         "SABON GARIN/ALARAIN",
         "TSAGERO",
-    ],
-        name: "RIMI",
-      },
-      {
-        wards: [
+      ],
+      name: "RIMI",
+    },
+    {
+      wards: [
         "DAMARI",
         "DUGUN MU'AZU",
         "GAMJI",
@@ -482,11 +494,11 @@ export const KATSINA = {
         "SABUWA 'A'",
         "SABUWA 'B'",
         "SAYAU",
-    ],
-        name: "SABUWA",
-      },
-      {
-        wards: [
+      ],
+      name: "SABUWA",
+    },
+    {
+      wards: [
         "BABBAN DUHU 'A'",
         "BABBAN DUHU 'B'",
         "BAURE 'A'",
@@ -497,11 +509,11 @@ export const KATSINA = {
         "TSASKIYA",
         "ZAKKA 'A'",
         "ZAKKA 'B'",
-    ],
-        name: "SAFANA",
-      },
-      {
-        wards: [
+      ],
+      name: "SAFANA",
+    },
+    {
+      wards: [
         "DANEJI 'A'",
         "DANEJI 'B'",
         "FAGO 'A'",
@@ -513,11 +525,11 @@ export const KATSINA = {
         "RADE 'A'",
         "RADE 'B'",
         "SANDAMU",
-    ],
-        name: "SANDAMU",
-      },
-      {
-        wards: [
+      ],
+      name: "SANDAMU",
+    },
+    {
+      wards: [
         "DARGAGE",
         "GARNI",
         "GWAMBA",
@@ -528,9 +540,10 @@ export const KATSINA = {
         "SARA",
         "YARDAJE",
         "ZANGO",
-    ],
-        name: "ZANGO",
-      },
-    ],
-  };
-  
+      ],
+      name: "ZANGO",
+    },
+  ],
+};
+
+export const KATSINA = { states, SR };

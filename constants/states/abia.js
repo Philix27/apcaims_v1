@@ -1,5 +1,5 @@
 const SR = {
-  name: "Abia",
+  name: "ABIA",
   email: "abia@gmail.com",
   password: "abia1",
   phone: "08108850572",
@@ -279,4 +279,105 @@ const states = {
   ],
 };
 
-export const ABIA = { states, SR };
+const senatorial_district = {
+  statecode: "ABIA",
+  state: "ABIA",
+  sd: [
+    {
+      name: "ABIA NORTH",
+      code: "SD/001/AB",
+      collation_center: "COUNCIL HALL UMUAHIA NORTH LGA HQS",
+      composition: ["UMUNNEOCHI", "ISUKWUATO", "OHAFIA", "AROCHUKWU", "BENDE"],
+    },
+    {
+      name: "ABIA CENTRAL",
+      code: "SD/002/AB",
+      collation_center: "Council Hall Ohafia LGA HQS",
+      composition: [
+        " UMUAHIA",
+        " NORTH",
+        " UMUAHIA SOUTH",
+        " IKWUANO",
+        " ISIALA NGWA NORTH",
+        " ISIALA NGWA SOUTH",
+      ],
+    },
+    {
+      name: "ABIA SOUTH",
+      code: "SD/003/AB",
+      collation_center: "ABA TOWN HALL ABA SOUTH LGA",
+      composition: [
+        "ABA NORTH",
+        "ABA SOUTH",
+        "UGWUNAGBO",
+        "OBINGWA",
+        "UKWA EAST",
+        "UKWA WEST",
+        "OSISIOMA",
+      ],
+    },
+  ],
+};
+
+const fedral_constituency = {
+  statecode: "ABIA",
+  fc: [
+    {
+      name: "Aba North/Aba South",
+      code: "FC/001/AB",
+      collation_center:
+        "The entire Geographical Areas of Aba North and Aba South L.G.As",
+      composition: "ABA TOWN HALL ABA SOUTH LGA",
+    },
+    {
+      name: "Aba North/Aba South",
+      code: "FC/002/AB",
+      composition:
+        "The entire Geographical Areas of Arochukwu and Ohafia L.A.As",
+      collation_center: "COUNCIL HALL OHAFIA LGA HQ",
+    },
+    {
+      name: "Bende",
+      code: "FC/003/AB",
+      composition: "The Bende Geographical Areas of Bende L.G.As",
+      collation_center: "COUNCIL HALL BENDE LGA HQ",
+    },
+    {
+      name: "Isiala Ngwa North /Isiala Ngwa South",
+      code: "FC/004/AB",
+      composition:
+        "The entire Geographical Areas of Isiala Ngwa North and South L.G.As",
+
+      collation_center: "COUNCIL HALL ISIALA NGWA LGA HQ",
+    },
+    {
+      name: "Isuikwuato/Umu-Nneochi",
+      code: "FC/005/AB",
+      composition:
+        "The entire Geographical Areas of Isiukwuato and Umunneochi L.G.As",
+      collation_center: "COUNCIL HALL ISUIKWUATO LGA HQ",
+    },
+    {
+      name: "Obingwa/Ugwunagbo/Osisioma",
+      code: "FC/006/AB",
+      composition:
+        "The entire Geographical Areas of Obingwa, Ugwunagbo and Osisioma L.G.As",
+      collation_center: "OBINGWA LGA HQ",
+    },
+    {
+      name: "Umuahia North/ Umuahia South/Ikwuano",
+      code: "FC/007/AB",
+      composition:
+        "The entire Geographical Areas of Umuahia North, Umuahia South and Ikwuano L.G.As",
+      collation_center: "UMUAHIA NORTH LGA HQ",
+    },
+    {
+      name: "Ukwa East/Ukwa West",
+      code: "FC/008/AB",
+      composition: "The entire Geographical Areas of Ukwa East and East L.G.As",
+      collation_center: "UKWA WEST LGA HQ",
+    },
+  ],
+};
+
+export const ABIA = { states, SR, senatorial_district, fedral_constituency };

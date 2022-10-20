@@ -1,8 +1,19 @@
-export const KWARA = {
-    state: "KWARA",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "KWARA",
+  email: "kwara@gmail.com",
+  password: "kwara1",
+  phone: "08108850572",
+  statecode: "KWARA",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "KWARA",
+  state: "KWARA",
+  lga: [
+    {
+      wards: [
         "ADIGBONGBO/AWE/ORIMARO",
         "AFON",
         "AGO/OJA/OSHIN/SAPATI/LADUBA",
@@ -20,11 +31,11 @@ export const KWARA = {
         "OWODE/GBOGUN",
         "YOWERE 11/OKEWERU",
         "YOWERE/SOSOKI",
-    ],
-        name: "ASA",
-      },
-      {
-        wards: [
+      ],
+      name: "ASA",
+    },
+    {
+      wards: [
         "BORIYA/SHIYA",
         "GURE/GWASORO",
         "GWANARA",
@@ -36,11 +47,11 @@ export const KWARA = {
         "OKUTA",
         "SHINAWU/TUNBUYAN",
         "YASHIKIRA",
-    ],
-        name: "BARUTEN",
-      },
-      {
-        wards: [
+      ],
+      name: "BARUTEN",
+    },
+    {
+      wards: [
         "LAFIAGI 1",
         "LAFIAGI 11",
         "LAFIAGI 111",
@@ -51,11 +62,11 @@ export const KWARA = {
         "TSONGA 1",
         "TSONGA 11",
         "TSONGA 111",
-    ],
-        name: "EDU",
-      },
-      {
-        wards: [
+      ],
+      name: "EDU",
+    },
+    {
+      wards: [
         "ERUKU",
         "ISAPA",
         "KORO",
@@ -66,11 +77,11 @@ export const KWARA = {
         "OPIN",
         "OSI 1",
         "OSI 11",
-    ],
-        name: "EKITI",
-      },
-      {
-        wards: [
+      ],
+      name: "EKITI",
+    },
+    {
+      wards: [
         "AGUNJIN",
         "IDOFIAN 1",
         "IDOFIAN 11",
@@ -89,11 +100,11 @@ export const KWARA = {
         "SHARE 111",
         "SHARE 1V",
         "SHARE V",
-    ],
-        name: "IFELODUN",
-      },
-      {
-        wards: [
+      ],
+      name: "IFELODUN",
+    },
+    {
+      wards: [
         "AGBEYANGI/GBADAMU/OSIN",
         "APADO",
         "BOLOGUN GAMBARI 11",
@@ -106,11 +117,11 @@ export const KWARA = {
         "MAYA/ILE-APA",
         "OKE OYI/OKE OSE/ALALUBOSA",
         "ZANGO",
-    ],
-        name: "ILLORIN EAST",
-      },
-      {
-        wards: [
+      ],
+      name: "ILLORIN EAST",
+    },
+    {
+      wards: [
         "AKANBI -1",
         "AKANBI -11",
         "AKANBI -111",
@@ -122,11 +133,11 @@ export const KWARA = {
         "OKAKA 1",
         "OKAKA 11",
         "OKE-OGUN",
-    ],
-        name: "ILORIN-SOUTH",
-      },
-      {
-        wards: [
+      ],
+      name: "ILORIN-SOUTH",
+    },
+    {
+      wards: [
         "ADEWOLE",
         "AJIKOBI",
         "BABOKO",
@@ -139,11 +150,11 @@ export const KWARA = {
         "OLOJE",
         "UBANDAWAKI",
         "WARRAH/EGBE JILA/OSHIN",
-    ],
-        name: "ILORIN-WEST",
-      },
-      {
-        wards: [
+      ],
+      name: "ILORIN-WEST",
+    },
+    {
+      wards: [
         "AJASE IPO 1",
         "AJASE IPO 11",
         "ARANDUN",
@@ -155,11 +166,11 @@ export const KWARA = {
         "OMU-ARAN 111 (IFAJA)",
         "ORO 1",
         "ORO 11",
-    ],
-        name: "IREPODUN",
-      },
-      {
-        wards: [
+      ],
+      name: "IREPODUN",
+    },
+    {
+      wards: [
         "ALLA",
         "EDIDI",
         "IJARA ISIN",
@@ -171,11 +182,11 @@ export const KWARA = {
         "OLLA",
         "OWU ISIN",
         "SABAJA/PAMO",
-    ],
-        name: "ISIN",
-      },
-      {
-        wards: [
+      ],
+      name: "ISIN",
+    },
+    {
+      wards: [
         "ADENA",
         "BANI",
         "GWANABE 1",
@@ -186,11 +197,11 @@ export const KWARA = {
         "KAIAMA 111",
         "KEMANJI",
         "WAJIBE",
-    ],
-        name: "KAIAMA",
-      },
-      {
-        wards: [
+      ],
+      name: "KAIAMA",
+    },
+    {
+      wards: [
         "ABATI/ALARA",
         "AJANAKU",
         "AROBADI",
@@ -208,11 +219,11 @@ export const KWARA = {
         "PAKUNMO",
         "SHAO",
         "WOMI/AYAKI",
-    ],
-        name: "MORO",
-      },
-      {
-        wards: [
+      ],
+      name: "MORO",
+    },
+    {
+      wards: [
         "BALOGUN",
         "ESSA - A",
         "ESSA - B",
@@ -225,11 +236,11 @@ export const KWARA = {
         "SHAWO CENTRAL",
         "SHAWO SOUTH EAST",
         "SHAWO SOUTH WEST",
-    ],
-        name: "OFFA",
-      },
-      {
-        wards: [
+      ],
+      name: "OFFA",
+    },
+    {
+      wards: [
         "AIYEDUN",
         "EKAN",
         "IDOFIN /ODO-ASHE",
@@ -240,11 +251,11 @@ export const KWARA = {
         "IMOJI/ILALE/ERINMOPE",
         "ODO-OWA 1",
         "ODO-OWA 11",
-    ],
-        name: "OKE-ERO",
-      },
-      {
-        wards: [
+      ],
+      name: "OKE-ERO",
+    },
+    {
+      wards: [
         "ERIN-ILE NORTH",
         "ERIN-ILE SOUTH",
         "IGBONA",
@@ -256,11 +267,11 @@ export const KWARA = {
         "IPEE",
         "IRRA",
         "OJOKU",
-    ],
-        name: "OYUN",
-      },
-      {
-        wards: [
+      ],
+      name: "OYUN",
+    },
+    {
+      wards: [
         "KPADA 1",
         "KPADA 11",
         "KPADA 111",
@@ -271,9 +282,10 @@ export const KWARA = {
         "PATIGI 11",
         "PATIGI 111",
         "PATIGI 1V",
-    ],
-        name: "PATIGI",
-      },
-    ],
-  };
-  
+      ],
+      name: "PATIGI",
+    },
+  ],
+};
+
+export const KWARA = { states, SR };

@@ -1,8 +1,8 @@
 export const NASSARAWA = {
-    state: "NASSARAWA",
-    lga: [
-      {
-        wards: [
+  state: "NASSARAWA",
+  lga: [
+    {
+      wards: [
         "AGYAGA",
         "AKWANGA EAST",
         "AKWANGA WEST",
@@ -15,10 +15,10 @@ export const NASSARAWA = {
         "NINGO / BOHAR",
         "NUNKU",
       ],
-        name: "AKWANGA",
-      },
-      {
-        wards: [
+      name: "AKWANGA",
+    },
+    {
+      wards: [
         "AKIRI",
         "AZARA",
         "GALADIMA",
@@ -30,10 +30,10 @@ export const NASSARAWA = {
         "TUNGA",
         "WUSE",
       ],
-        name: "AWE",
-      },
-      {
-        wards: [
+      name: "AWE",
+    },
+    {
+      wards: [
         "AGBASHI",
         "AKPANAJA",
         "ALAGYE",
@@ -45,10 +45,10 @@ export const NASSARAWA = {
         "SARKIN DAWAKI",
         "UNGWAN MADAKI",
       ],
-        name: "DOMA",
-      },
-      {
-        wards: [
+      name: "DOMA",
+    },
+    {
+      wards: [
         "AGADA/BAGAJI",
         "ASO / KODAPE",
         "GITATA",
@@ -61,10 +61,10 @@ export const NASSARAWA = {
         "TATTARA/KONDORO",
         "UKE",
       ],
-        name: "KARU",
-      },
-      {
-        wards: [
+      name: "KARU",
+    },
+    {
+      wards: [
         "AGAZA",
         "ALOSHI",
         "AMIRI",
@@ -76,10 +76,10 @@ export const NASSARAWA = {
         "OBENE",
         "OKI",
       ],
-        name: "KEANA",
-      },
-      {
-        wards: [
+      name: "KEANA",
+    },
+    {
+      wards: [
         "ANG.RIMI",
         "ANGWAN IYA I",
         "ANGWAN IYA II",
@@ -91,10 +91,10 @@ export const NASSARAWA = {
         "TUDUN KOFA T.V",
         "YARA",
       ],
-        name: "KEFFI",
-      },
-      {
-        wards: [
+      name: "KEFFI",
+    },
+    {
+      wards: [
         "AGWADA",
         "AMBA",
         "BASSA",
@@ -107,10 +107,10 @@ export const NASSARAWA = {
         "NINKORO",
         "YELWA",
       ],
-        name: "KOKONA",
-      },
-      {
-        wards: [
+      name: "KOKONA",
+    },
+    {
+      wards: [
         "ADOGI",
         "AGYARAGUN TOFA",
         "ARIKYA",
@@ -125,10 +125,10 @@ export const NASSARAWA = {
         "WAKWA",
         "ZANWA",
       ],
-        name: "LAFIA",
-      },
-      {
-        wards: [
+      name: "LAFIA",
+    },
+    {
+      wards: [
         "AKUM",
         "ARA I",
         "ARA II",
@@ -145,10 +145,10 @@ export const NASSARAWA = {
         "UDENIN",
         "UDENIN GIDA",
       ],
-        name: "NASSARAWA",
-      },
-      {
-        wards: [
+      name: "NASSARAWA",
+    },
+    {
+      wards: [
         "AGUNJI",
         "ALOCE/GINDA",
         "ALOGANI",
@@ -164,10 +164,10 @@ export const NASSARAWA = {
         "UMME",
         "WAKAMA",
       ],
-        name: "NASARAWA EGGON",
-      },
-      {
-        wards: [
+      name: "NASARAWA EGGON",
+    },
+    {
+      wards: [
         "ADUDU",
         "AGWATASHI",
         "DEDDERE/RIRI",
@@ -179,10 +179,10 @@ export const NASSARAWA = {
         "OBI",
         "TUDUN ADABU",
       ],
-        name: "OBI",
-      },
-      {
-        wards: [
+      name: "OBI",
+    },
+    {
+      wards: [
         "BUGAKARMO",
         "DAUSU",
         "GADAGWA",
@@ -196,10 +196,10 @@ export const NASSARAWA = {
         "UGYA",
         "UMAISHA",
       ],
-        name: "TOTO",
-      },
-      {
-        wards: [
+      name: "TOTO",
+    },
+    {
+      wards: [
         "ARUM",
         "GITTA",
         "JIMIYA",
@@ -211,8 +211,9 @@ export const NASSARAWA = {
         "WAMBA WEST",
         "WAYO",
       ],
-        name: "WAMBA",
-      },
-    ],
-  };
-  
+      name: "WAMBA",
+    },
+  ],
+};
+
+export const KEBBI = { states, SR };

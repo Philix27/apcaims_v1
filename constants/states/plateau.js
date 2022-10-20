@@ -1,8 +1,8 @@
 export const PLATEAU = {
-    state: "PLATEAU",
-    lga: [
-      {
-        wards: [
+  state: "PLATEAU",
+  lga: [
+    {
+      wards: [
         "BARAKIN LADI",
         "GASSA/SHO",
         "GINDIN AKWATI",
@@ -15,10 +15,10 @@ export const PLATEAU = {
         "TAFAN",
         "ZABOT",
       ],
-        name: "BARIKIN LADI",
-      },
-      {
-        wards: [
+      name: "BARIKIN LADI",
+    },
+    {
+      wards: [
         "BUHIT",
         "BUJI",
         "GABIA",
@@ -36,10 +36,10 @@ export const PLATEAU = {
         "ZABOLO",
         "ZOBWO",
       ],
-        name: "BASSA",
-      },
-      {
-        wards: [
+      name: "BASSA",
+    },
+    {
+      wards: [
         "BOKKOS",
         "BUTURA",
         "DAFFO",
@@ -55,10 +55,10 @@ export const PLATEAU = {
         "TANGUR",
         "TOFF",
       ],
-        name: "BOKKOS",
-      },
-      {
-        wards: [
+      name: "BOKKOS",
+    },
+    {
+      wards: [
         "FEDERE",
         "FOBUR 'B'",
         "FOBUR 'A'",
@@ -70,10 +70,10 @@ export const PLATEAU = {
         "SHERE WEST",
         "ZANDI",
       ],
-        name: "JOS EAST",
-      },
-      {
-        wards: [
+      name: "JOS EAST",
+    },
+    {
+      wards: [
         "ABBA NA SHEHU",
         "ALI KAZAURE",
         "GANGARE",
@@ -89,10 +89,10 @@ export const PLATEAU = {
         "TUDUN WADA - KABONG",
         "VANDERPUYE",
       ],
-        name: "JOS NORTH",
-      },
-      {
-        wards: [
+      name: "JOS NORTH",
+    },
+    {
+      wards: [
         "BUKURU",
         "DU",
         "GIRING",
@@ -106,10 +106,10 @@ export const PLATEAU = {
         "ZAWAN 'A'",
         "ZAWAN 'B'",
       ],
-        name: "JOS SOUTH",
-      },
-      {
-        wards: [
+      name: "JOS SOUTH",
+    },
+    {
+      wards: [
         "BIRBYANG",
         "DENGI",
         "DUGUB",
@@ -125,10 +125,10 @@ export const PLATEAU = {
         "MUNBUTBO",
         "NAMARAN",
       ],
-        name: "KANAM",
-      },
-      {
-        wards: [
+      name: "KANAM",
+    },
+    {
+      wards: [
         "AMPANG-EAST",
         "AMPER CHIKA 'A'",
         "AMPER CHIKA 'B'",
@@ -140,10 +140,10 @@ export const PLATEAU = {
         "LANGSHI",
         "NEMEL",
       ],
-        name: "KANKE",
-      },
-      {
-        wards: [
+      name: "KANKE",
+    },
+    {
+      wards: [
         "FUNYALANG",
         "JAT",
         "KELLER",
@@ -159,10 +159,10 @@ export const PLATEAU = {
         "REAK",
         "WAROH",
       ],
-        name: "LANGTANG NORTH",
-      },
-      {
-        wards: [
+      name: "LANGTANG NORTH",
+    },
+    {
+      wards: [
         "DADIN KOWA",
         "FAJUL",
         "GAMAKAI",
@@ -174,10 +174,10 @@ export const PLATEAU = {
         "TIMBOL",
         "TURAKI",
       ],
-        name: "LANGTANG SOUTH",
-      },
-      {
-        wards: [
+      name: "LANGTANG SOUTH",
+    },
+    {
+      wards: [
         "AMPANG WEST",
         "CHANSO",
         "GINDIRI 1",
@@ -195,10 +195,10 @@ export const PLATEAU = {
         "PAN YAM",
         "PUSHIT",
       ],
-        name: "MANGU",
-      },
-      {
-        wards: [
+      name: "MANGU",
+    },
+    {
+      wards: [
         "BALTEP",
         "GARKAWA CENTRAL",
         "GARKAWA NORTH",
@@ -210,10 +210,10 @@ export const PLATEAU = {
         "PIAPUNG 'B'",
         "TUNKUS",
       ],
-        name: "MIKANG",
-      },
-      {
-        wards: [
+      name: "MIKANG",
+    },
+    {
+      wards: [
         "CHIP",
         "DOK-PAI",
         "FIER",
@@ -227,10 +227,10 @@ export const PLATEAU = {
         "TAL",
         "WOKKOS",
       ],
-        name: "PANKSHIN",
-      },
-      {
-        wards: [
+      name: "PANKSHIN",
+    },
+    {
+      wards: [
         "BWALL",
         "DOEMAK-GOECHIM",
         "DOEMAK-KOPLONG",
@@ -243,10 +243,10 @@ export const PLATEAU = {
         "KWANG",
         "NAMU",
       ],
-        name: "QUA'AN PAN",
-      },
-      {
-        wards: [
+      name: "QUA'AN PAN",
+    },
+    {
+      wards: [
         "ATTAKAR",
         "BUM",
         "DANTO",
@@ -258,10 +258,10 @@ export const PLATEAU = {
         "SOPP",
         "TA-HOSS",
       ],
-        name: "RIYOM",
-      },
-      {
-        wards: [
+      name: "RIYOM",
+    },
+    {
+      wards: [
         "DERTENG",
         "KALONG",
         "KURUNGBAU (A)",
@@ -274,10 +274,10 @@ export const PLATEAU = {
         "SHIMANKAR",
         "YELWA",
       ],
-        name: "SHENDAM",
-      },
-      {
-        wards: [
+      name: "SHENDAM",
+    },
+    {
+      wards: [
         "BASHAR",
         "DANBIRAM",
         "GUDUS",
@@ -291,8 +291,9 @@ export const PLATEAU = {
         "WASE TOFA",
         "YOLA WAKAT",
       ],
-        name: "WASE",
-      },  
-    ],
-  };
-  
+      name: "WASE",
+    },
+  ],
+};
+
+export const KEBBI = { states, SR };

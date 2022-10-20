@@ -1,8 +1,19 @@
-export const KEBBI = {
-    state: "KEBBI",
-    lga: [
-      {
-        wards: [
+const SR = {
+  name: "KEBBI",
+  email: "kebbi@gmail.com",
+  password: "kebbi1",
+  phone: "08108850572",
+  statecode: "KEBBI",
+  img: "images/profile2.jpg",
+  userType: "STATEREP",
+};
+
+const states = {
+  statecode: "KEBBI",
+  state: "KEBBI",
+  lga: [
+    {
+      wards: [
         "ALIERO DANGALADIMA I",
         "ALIERO DANGALADIMA II",
         "ALIERO S/FADA I",
@@ -13,11 +24,11 @@ export const KEBBI = {
         "KASHIN ZAMA",
         "RAFIN BAUNA",
         "SABIYAL",
-    ],
-        name: "ALIERO",
-      },
-      {
-        wards: [
+      ],
+      name: "ALIERO",
+    },
+    {
+      wards: [
         "BIU",
         "CHIBIKE",
         "DAURA/SAKKWABE/JARKUKA",
@@ -29,11 +40,11 @@ export const KEBBI = {
         "LAIMA/JANTULLU",
         "SARKA/DANTSOHO",
         "YELDU",
-    ],
-        name: "AREWA",
-      },
-      {
-        wards: [
+      ],
+      name: "AREWA",
+    },
+    {
+      wards: [
         "ALWASA/GOTOMO",
         "DIKKO",
         "FELANDE",
@@ -45,11 +56,11 @@ export const KEBBI = {
         "LAILABA",
         "SAUWA/KAURAR SANI",
         "TUNGAR ZAZZAGAWA/RUMBUKI/SARKAWA",
-    ],
-        name: "ARGUNGU",
-      },
-      {
-        wards: [
+      ],
+      name: "ARGUNGU",
+    },
+    {
+      wards: [
         "AUGIE NORTH",
         "AUGIE SOUTH",
         "BAGAYE/MERA",
@@ -60,11 +71,11 @@ export const KEBBI = {
         "DUNDAYE/KWAIDO/ZAGI/ILLELA",
         "TIGGI/AWADE",
         "YOLA",
-    ],
-        name: "AUGIE",
-      },
-      {
-        wards: [
+      ],
+      name: "AUGIE",
+    },
+    {
+      wards: [
         "BAGUDO/TUGA",
         "BAHINDI/BOKI-DOMA",
         "BANI/TSAMIYA/KALI",
@@ -76,11 +87,11 @@ export const KEBBI = {
         "MATSINKA/GEZA",
         "SHARABI/KWANGUWAI",
         "ZAGGA/KWASARA",
-    ],
-        name: "BAGUDO",
-      },
-      {
-        wards: [
+      ],
+      name: "BAGUDO",
+    },
+    {
+      wards: [
         "AMBURSA",
         "BIRNIN KEBBI DANGALADIMA",
         "BIRNIN KEBBI MAFARA",
@@ -96,11 +107,11 @@ export const KEBBI = {
         "NASSARAWA II",
         "UJARIYO",
         "ZAURO",
-    ],
-        name: "BIRNIN KEBBI",
-      },
-      {
-        wards: [
+      ],
+      name: "BIRNIN KEBBI",
+    },
+    {
+      wards: [
         "BUNZA DANGALADIMA",
         "BUNZA MARAFA",
         "GWADE",
@@ -111,11 +122,11 @@ export const KEBBI = {
         "TILLI/HILEMA",
         "TUNGA",
         "ZOGRIMA",
-    ],
-        name: "BUNZA",
-      },
-      {
-        wards: [
+      ],
+      name: "BUNZA",
+    },
+    {
+      wards: [
         "BANI ZUMBU",
         "BUMA",
         "DOLEKAINA",
@@ -127,11 +138,11 @@ export const KEBBI = {
         "MAIGWAZA",
         "MAIHAUSAWA",
         "SHIKO",
-    ],
-        name: "DANDI",
-      },
-      {
-        wards: [
+      ],
+      name: "DANDI",
+    },
+    {
+      wards: [
         "BAJIDA",
         "BANGU/GARINISA",
         "BIRNIN TUDU",
@@ -142,11 +153,11 @@ export const KEBBI = {
         "MAHUTA",
         "MARAFA",
         "PENIN AMANA/PENIN GABA",
-    ],
-        name: "FAKAI",
-      },
-      {
-        wards: [
+      ],
+      name: "FAKAI",
+    },
+    {
+      wards: [
         "CHEBERU/BADA",
         "DALIJAN",
         "DODORU",
@@ -157,11 +168,11 @@ export const KEBBI = {
         "MALISA",
         "MARUDA",
         "MASAMA KWASGARA",
-    ],
-        name: "GWANDU",
-      },
-      {
-        wards: [
+      ],
+      name: "GWANDU",
+    },
+    {
+      wards: [
         "ALELU/GEHURU",
         "DANGAMAJI",
         "DUNBEGU/BAUSARA",
@@ -173,11 +184,11 @@ export const KEBBI = {
         "JEGA MAGAJI 'B'",
         "KATANGA/FAGADA",
         "KIMBA",
-    ],
-        name: "JEGA",
-      },
-      {
-        wards: [
+      ],
+      name: "JEGA",
+    },
+    {
+      wards: [
         "BADARIYA/MAGARZA",
         "DANGOMA/GAYI",
         "DIGGI",
@@ -188,11 +199,11 @@ export const KEBBI = {
         "NAYILWA",
         "WUROGAURI",
         "ZUGURU",
-    ],
-        name: "KALGO",
-      },
-      {
-        wards: [
+      ],
+      name: "KALGO",
+    },
+    {
+      wards: [
         "BESSE",
         "DADA/ALELU",
         "DUTSIN MARI/DULMERU",
@@ -205,11 +216,11 @@ export const KEBBI = {
         "MAIKWARI/ KARAMAR/ DAMBA/ BAKOSHI",
         "TAKWARE",
         "ZARIYA KALAKALA/AMIRU",
-    ],
-        name: "KOKO BESSE",
-      },
-      {
-        wards: [
+      ],
+      name: "KOKO BESSE",
+    },
+    {
+      wards: [
         "ANDARAI/ KURUNKWU/ ZONGUN LIBA",
         "GIWA TAZO/ZARA",
         "GUMBIN KURE",
@@ -221,11 +232,11 @@ export const KEBBI = {
         "MUNGADI/BOTORO",
         "SAMBAWA/MAYALO",
         "SARANDOSA/GUBBA",
-    ],
-        name: "MAIYAMA",
-      },
-      {
-        wards: [
+      ],
+      name: "MAIYAMA",
+    },
+    {
+      wards: [
         "BIRNIN YAURI",
         "GAFARA MACHUPA",
         "GARIN BAKA/MAKARIN",
@@ -236,11 +247,11 @@ export const KEBBI = {
         "NGASKI",
         "UTONO/HOGE",
         "WARA",
-    ],
-        name: "NGASKI",
-      },
-      {
-        wards: [
+      ],
+      name: "NGASKI",
+    },
+    {
+      wards: [
         "ADAI",
         "DANKOLO",
         "DOKA/BERE",
@@ -251,11 +262,11 @@ export const KEBBI = {
         "MAZA/MAZA",
         "SAKABA",
         "TUDUN KUKA",
-    ],
-        name: "SAKABA",
-      },
-      {
-        wards: [
+      ],
+      name: "SAKABA",
+    },
+    {
+      wards: [
         "ATUWO",
         "BINUWA/GEBE/BUNKUJI",
         "DUGU TSOHO/DUGU RAHA",
@@ -266,11 +277,11 @@ export const KEBBI = {
         "SOKAGE/GOLONGO/HUNDEJI",
         "TAKWARE",
         "YARBESSE",
-    ],
-        name: "SHANGA",
-      },
-      {
-        wards: [
+      ],
+      name: "SHANGA",
+    },
+    {
+      wards: [
         "ALJANNARE",
         "BAKUWAI",
         "BANDAN",
@@ -282,11 +293,11 @@ export const KEBBI = {
         "GIRO",
         "KWAIFA",
         "SURU",
-    ],
-        name: "SURU",
-      },
-      {
-        wards: [
+      ],
+      name: "SURU",
+    },
+    {
+      wards: [
         "AYU",
         "BENA",
         "DAN UMARU/MAIRAIRAI",
@@ -298,11 +309,11 @@ export const KEBBI = {
         "WAJE",
         "WASAGU",
         "YALMO/SHINDI",
-    ],
-        name: "WASAGU/DANKO",
-      },
-      {
-        wards: [
+      ],
+      name: "WASAGU/DANKO",
+    },
+    {
+      wards: [
         "CHULU/KOMA",
         "GUNGUN SARKI",
         "JIJIMA",
@@ -313,11 +324,11 @@ export const KEBBI = {
         "YELWA SOUTH",
         "YELWA WEST",
         "ZAMARE",
-    ],
-        name: "YAURI",
-      },
-      {
-        wards: [
+      ],
+      name: "YAURI",
+    },
+    {
+      wards: [
         "BEDI",
         "CIROMAN DABAI",
         "ISGOGO /DAGO",
@@ -328,9 +339,10 @@ export const KEBBI = {
         "SENCHI",
         "TADURGA",
         "ZODI",
-    ],
-        name: "ZURU",
-      },
-    ],
-  };
-  
+      ],
+      name: "ZURU",
+    },
+  ],
+};
+
+export const KEBBI = { states, SR };

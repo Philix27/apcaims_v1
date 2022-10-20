@@ -1,8 +1,8 @@
 export const YOBE = {
-    state: "YOBE",
-    lga: [
-      {
-        wards: [
+  state: "YOBE",
+  lga: [
+    {
+      wards: [
         "DAGONA",
         "GWIO-KURA",
         "KATUZU",
@@ -14,10 +14,10 @@ export const YOBE = {
         "USUR/DAWAYO",
         "ZANGON MUSA/ZANGO UMARU",
       ],
-        name: "BADE",
-      },
-      {
-        wards: [
+      name: "BADE",
+    },
+    {
+      wards: [
         "BAYAMARI",
         "DAMNAWA/JULURI",
         "DANANI",
@@ -29,10 +29,10 @@ export const YOBE = {
         "KURNAWA",
         "MASABA",
       ],
-        name: "BURSARI",
-      },
-      {
-        wards: [
+      name: "BURSARI",
+    },
+    {
+      wards: [
         "BINDIGARI/FAWARI",
         "DAMAKASU",
         "DAMATURU CENTRAL",
@@ -45,10 +45,10 @@ export const YOBE = {
         "NJIWAJI/GWANGE",
         "SASAWA/KABARU",
       ],
-        name: "DAMATURU",
-      },
-      {
-        wards: [
+      name: "DAMATURU",
+    },
+    {
+      wards: [
         "DAYA/CHANA",
         "FIKA/ANZE",
         "GADAKA/SHEMBIRE",
@@ -60,10 +60,10 @@ export const YOBE = {
         "TURMI / MALURI",
         "ZANGAYA/MAZAWAUN",
       ],
-        name: "FIKA",
-      },
-      {
-        wards: [
+      name: "FIKA",
+    },
+    {
+      wards: [
         "ABAKIRE / NGENLSHENGELE / SHAMKA",
         "ALAGARNO",
         "BORNO KIJI/NGARHO/BEBBENDE",
@@ -78,10 +78,10 @@ export const YOBE = {
         "KOLLERE/KAFAJE",
         "MASHIO",
       ],
-        name: "FUNE",
-      },
-      {
-        wards: [
+      name: "FUNE",
+    },
+    {
+      wards: [
         "ASHEIKRI",
         "BALLE/GALLABA/MELERI",
         "DAMAKARWA/KUSUR",
@@ -94,10 +94,10 @@ export const YOBE = {
         "SHAME KURA / DILAWA",
         "ZURGU NGILEWA / BORKO",
       ],
-        name: "GEIDAM",
-      },
-      {
-        wards: [
+      name: "GEIDAM",
+    },
+    {
+      wards: [
         "BUNIGARI/LAWANTI",
         "BUNIYADI NORTH / SOUTH",
         "DADINGEL",
@@ -109,10 +109,10 @@ export const YOBE = {
         "NGURBUWA",
         "WAGIR",
       ],
-        name: "GUJBA",
-      },
-      {
-        wards: [
+      name: "GUJBA",
+    },
+    {
+      wards: [
         "BARA",
         "BORNO KIJI/TETTEBA",
         "BULARAFA",
@@ -126,10 +126,10 @@ export const YOBE = {
         "NJIBULWA",
         "RUHU",
       ],
-        name: "GULANI",
-      },
-      {
-        wards: [
+      name: "GULANI",
+    },
+    {
+      wards: [
         "BUDUWA / SAMINAKA",
         "DUMBARI",
         "GIDGID / BAYAM",
@@ -141,10 +141,10 @@ export const YOBE = {
         "MUGURAM",
         "ZABUDUM / DACHIA",
       ],
-        name: "JAKUSKO",
-      },
-      {
-        wards: [
+      name: "JAKUSKO",
+    },
+    {
+      wards: [
         "BUKARTI",
         "FAJIGANARI",
         "GARIN GAWO",
@@ -156,10 +156,10 @@ export const YOBE = {
         "WARO",
         "YAJIRI",
       ],
-        name: "KARASAWA",
-      },
-      {
-        wards: [
+      name: "KARASAWA",
+    },
+    {
+      wards: [
         "BOGO",
         "DAMAI",
         "DOLE",
@@ -171,10 +171,10 @@ export const YOBE = {
         "MASKANDARE",
         "TAGANAMA",
       ],
-        name: "MACHINA",
-      },
-      {
-        wards: [
+      name: "MACHINA",
+    },
+    {
+      wards: [
         "CHILARIYE",
         "DADISO / CHUKURIWA",
         "DAWASA/G.BABA",
@@ -187,10 +187,10 @@ export const YOBE = {
         "TIKAU",
         "WATINANI",
       ],
-        name: "NANGERE",
-      },
-      {
-        wards: [
+      name: "NANGERE",
+    },
+    {
+      wards: [
         "BULABULIN",
         "BULANGUWA",
         "DABULE",
@@ -202,10 +202,10 @@ export const YOBE = {
         "MIRBA-KABIR/MIRBA SAGIR",
         "NGLAIWA",
       ],
-        name: "NGURU",
-      },
-      {
-        wards: [
+      name: "NGURU",
+    },
+    {
+      wards: [
         "BARE-BARE/BAUYA/LALAI DUMBULWA",
         "BOLEWA 'A'",
         "BOLEWA 'B'",
@@ -217,10 +217,10 @@ export const YOBE = {
         "NGOJIN/ALARABA",
         "YERIMARAM/GARIN DAYE/BADEJO/NAHUTA",
       ],
-        name: "POTISKUM",
-      },
-      {
-        wards: [
+      name: "POTISKUM",
+    },
+    {
+      wards: [
         "BABANGIDA",
         "BARKAMI / BULTURI",
         "BIRIRI/CHUROKUSKO",
@@ -232,10 +232,10 @@ export const YOBE = {
         "MANDADAWA",
         "SHEKAU",
       ],
-        name: "TARMUWA",
-      },
-      {
-        wards: [
+      name: "TARMUWA",
+    },
+    {
+      wards: [
         "BULTUWA/MAR/YARO",
         "DARATOSHIA",
         "DEGALTURA/NGAMZAI",
@@ -257,8 +257,9 @@ export const YOBE = {
         "MAYORI",
         "YUSUFARI",
       ],
-        name: "YUSUFARI",
-      },
-    ],
-  };
-  
+      name: "YUSUFARI",
+    },
+  ],
+};
+
+export const KEBBI = { states, SR };

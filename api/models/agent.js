@@ -18,11 +18,6 @@ const AgentSchema = new Schema({
     type: String,
     required: true,
   },
-  //! Second Set
-  agentType: {
-    type: String,
-    required: true,
-  },
   state: {
     type: String,
     required: true,
@@ -35,8 +30,25 @@ const AgentSchema = new Schema({
     type: String,
     required: true,
   },
-  //! Others
-  imgUrl: {
+  //! Second Set
+  electionType: {
+    type: String,
+    required: true,
+  },
+  //! Step 3
+  agentType: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+  bankName: {
+    type: String,
+    required: true,
+  },
+  accountNumber: {
     type: String,
     required: true,
   },

@@ -486,3 +486,4 @@ export const OSUN = {
     ],
   };
   
+  export const KEBBI = { states, SR };

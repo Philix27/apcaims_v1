@@ -1,8 +1,8 @@
 export const ONDO = {
-    state: "ONDO",
-    lga: [
-      {
-        wards: [
+  state: "ONDO",
+  lga: [
+    {
+      wards: [
         "EDO",
         "EKAN",
         "IKADO I",
@@ -17,10 +17,10 @@ export const ONDO = {
         "OORUN II",
         "OYINMO",
       ],
-        name: "AKOKO NORTH EAST",
-      },
-      {
-        wards: [
+      name: "AKOKO NORTH EAST",
+    },
+    {
+      wards: [
         "AJOWA/IGASI/ERITI/GEDEGEDE",
         "ARIGIDI II",
         "ARIGIDI/IYE I",
@@ -32,10 +32,10 @@ export const ONDO = {
         "OKEAGBE",
         "OYIN/OGE",
       ],
-        name: "AKOKO NORTH WEST",
-      },
-      {
-        wards: [
+      name: "AKOKO NORTH WEST",
+    },
+    {
+      wards: [
         "EPINMI I",
         "EPINMI II",
         "IFIRA",
@@ -48,10 +48,10 @@ export const ONDO = {
         "ISUA IV",
         "SOSAN",
       ],
-        name: "AKOKO SOUTH EAST",
-      },
-      {
-        wards: [
+      name: "AKOKO SOUTH EAST",
+    },
+    {
+      wards: [
         "AKUNGBA I",
         "AKUNGBA II",
         "IKUN",
@@ -68,10 +68,10 @@ export const ONDO = {
         "SUPARE I",
         "SUPARE II",
       ],
-        name: "AKOKO SOUTH WEST",
-      },
-      {
-        wards: [
+      name: "AKOKO SOUTH WEST",
+    },
+    {
+      wards: [
         "AGAMO/OKE-OORE/AKOMOWA",
         "AYEDE/OGBESE",
         "AYETORO",
@@ -85,10 +85,10 @@ export const ONDO = {
         "OKE IJU",
         "OKE-AFA/OWODE",
       ],
-        name: "AKURE NORTH",
-      },
-      {
-        wards: [
+      name: "AKURE NORTH",
+    },
+    {
+      wards: [
         "APONMU",
         "GBOGI/ISIKAN I",
         "GBOGI/ISIKAN II",
@@ -101,10 +101,10 @@ export const ONDO = {
         "OSHODI/ISOLO",
         "OWODE/IMUAGUN",
       ],
-        name: "AKURE SOUTH",
-      },
-      {
-        wards: [
+      name: "AKURE SOUTH",
+    },
+    {
+      wards: [
         "APOI I",
         "APOI II",
         "APOI III",
@@ -116,10 +116,10 @@ export const ONDO = {
         "UKPARAMA I",
         "UKPARAMA II",
       ],
-        name: "ESE-ODO",
-      },
-      {
-        wards: [
+      name: "ESE-ODO",
+    },
+    {
+      wards: [
         "ALA-ELEFOSAN",
         "ALADE/ATOSIN",
         "IDALE-LEMIKAN",
@@ -131,10 +131,10 @@ export const ONDO = {
         "OFOSU/ONISERE",
         "OWENA/APONMULONA",
       ],
-        name: "IDANRE",
-      },
-      {
-        wards: [
+      name: "IDANRE",
+    },
+    {
+      wards: [
         "ERO/IBUJI/MARIWO",
         "IGBAKA-OKE I",
         "IGBAKA-OKE II",
@@ -146,10 +146,10 @@ export const ONDO = {
         "ISARUN/ ERIGI",
         "OBO/IKOTA/OLO-GBO",
       ],
-        name: "IFEDORE",
-      },
-      {
-        wards: [
+      name: "IFEDORE",
+    },
+    {
+      wards: [
         "AHERI",
         "ETIKAN",
         "MAHIN 1",
@@ -163,10 +163,10 @@ export const ONDO = {
         "UGBO V",
         "UGBO V1",
       ],
-        name: "ILAJE",
-      },
-      {
-        wards: [
+      name: "ILAJE",
+    },
+    {
+      wards: [
         "ILEOLUJI 1",
         "ILEOLUJI 11",
         "ILEOLUJI 1V",
@@ -178,10 +178,10 @@ export const ONDO = {
         "OKE-IGBO 111",
         "OKE-IGBO 1V",
       ],
-        name: "ILEOLUJI/OKEIGBO",
-      },
-      {
-        wards: [
+      name: "ILEOLUJI/OKEIGBO",
+    },
+    {
+      wards: [
         "AJAGBA 1",
         "AJAGBA 11",
         "AKOTOGBO 1",
@@ -193,10 +193,10 @@ export const ONDO = {
         "IRELE V",
         "IYANSAN/OMI",
       ],
-        name: "IRELE",
-      },
-      {
-        wards: [
+      name: "IRELE",
+    },
+    {
+      wards: [
         "AGBABU",
         "AGO-ALAYE",
         "AJUE",
@@ -209,10 +209,10 @@ export const ONDO = {
         "ORE 1",
         "ORE 11",
       ],
-        name: "ODIGBO",
-      },
-      {
-        wards: [
+      name: "ODIGBO",
+    },
+    {
+      wards: [
         "AYE 11",
         "AYEKA/IGBODIGO",
         "ERINJE",
@@ -227,10 +227,10 @@ export const ONDO = {
         "OKITIPUPA 1",
         "OKITIPUPA 11",
       ],
-        name: "OKITIPUPA",
-      },
-      {
-        wards: [
+      name: "OKITIPUPA",
+    },
+    {
+      wards: [
         "ASANTAN OJA",
         "ATERU/OTASAN/IGBA",
         "BOLORUNDURO 1",
@@ -242,10 +242,10 @@ export const ONDO = {
         "OWENA BRIDGE",
         "TEPO",
       ],
-        name: "ONDO EAST",
-      },
-      {
-        wards: [
+      name: "ONDO EAST",
+    },
+    {
+      wards: [
         "ENUOWA/OBALALU",
         "GBAGHENGHA/GBONGBO/AJAGBA ALAFIA",
         "IFORE/ODOSIDA/LORO",
@@ -259,10 +259,10 @@ export const ONDO = {
         "OKELISA OKEDOKO/OGBODU",
         "ORISUNMIBARE/ARAROMI",
       ],
-        name: "ONDO WEST",
-      },
-      {
-        wards: [
+      name: "ONDO WEST",
+    },
+    {
+      wards: [
         "AFO",
         "IDOANI 1",
         "IDOANI 11",
@@ -276,10 +276,10 @@ export const ONDO = {
         "OKELUSE",
         "UTE",
       ],
-        name: "OSE",
-      },
-      {
-        wards: [
+      name: "OSE",
+    },
+    {
+      wards: [
         "EHINOGBE",
         "IGBOROKO 1",
         "IGBOROKO 11",
@@ -292,8 +292,9 @@ export const ONDO = {
         "IYARE",
         "USO/EMURE ILE",
       ],
-        name: "OWO",
-      },
-    ],
-  };
-  
+      name: "OWO",
+    },
+  ],
+};
+
+export const KEBBI = { states, SR };

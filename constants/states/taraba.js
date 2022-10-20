@@ -1,8 +1,8 @@
 export const TARABA = {
-    state: "TARABA",
-    lga: [
-      {
-        wards: [
+  state: "TARABA",
+  lga: [
+    {
+      wards: [
         "ALIM GORA",
         "ARDO KOLA",
         "IWARE",
@@ -14,10 +14,10 @@ export const TARABA = {
         "TAU",
         "ZONGON KOMBI",
       ],
-        name: "ARDO - KOLA",
-      },
-      {
-        wards: [
+      name: "ARDO - KOLA",
+    },
+    {
+      wards: [
         "BADAKOSHI",
         "BALI  A",
         "BALI B",
@@ -30,10 +30,10 @@ export const TARABA = {
         "SUNTAI",
         "TAKALAFIYA",
       ],
-        name: "BALI",
-      },
-      {
-        wards: [
+      name: "BALI",
+    },
+    {
+      wards: [
         "AKATE",
         "ASIBITI",
         "BIKADARKO",
@@ -45,10 +45,10 @@ export const TARABA = {
         "NYITA",
         "SUNTAI",
       ],
-        name: "DONGA",
-      },
-      {
-        wards: [
+      name: "DONGA",
+    },
+    {
+      wards: [
         "GALUMJINA",
         "GANGUMI",
         "GARBABI",
@@ -60,10 +60,10 @@ export const TARABA = {
         "SERTI 'A'",
         "SERTI 'B'",
       ],
-        name: "GASHAKA",
-      },
-      {
-        wards: [
+      name: "GASHAKA",
+    },
+    {
+      wards: [
         "GASSOL",
         "GUNDUMA",
         "MUTUM BIYU I",
@@ -77,10 +77,10 @@ export const TARABA = {
         "WURYO",
         "YARIMA",
       ],
-        name: "GASSOL",
-      },
-      {
-        wards: [
+      name: "GASSOL",
+    },
+    {
+      wards: [
         "DAMPAR I",
         "DAMPAR II",
         "DAMPAR III",
@@ -92,10 +92,10 @@ export const TARABA = {
         "SARKIN KUDU II",
         "SARKIN KUDU III",
       ],
-        name: "IBI",
-      },
-      {
-        wards: [
+      name: "IBI",
+    },
+    {
+      wards: [
         "ABBARE YELWA",
         "BARADE",
         "KACHALLA SEMBE",
@@ -107,10 +107,10 @@ export const TARABA = {
         "TURAKI 'A'",
         "TURAKI 'B'",
       ],
-        name: "JALINGO",
-      },
-      {
-        wards: [
+      name: "JALINGO",
+    },
+    {
+      wards: [
         "AMAR",
         "ANDAMIN",
         "BACHAMA",
@@ -123,10 +123,10 @@ export const TARABA = {
         "KARIM 'B'",
         "KWANCHI",
       ],
-        name: "KARIM-LAMIDO",
-      },
-      {
-        wards: [
+      name: "KARIM-LAMIDO",
+    },
+    {
+      wards: [
         "ABONG",
         "AKWENTO/BOKO",
         "ASHUKU/ENEME",
@@ -138,10 +138,10 @@ export const TARABA = {
         "NJUWANDE",
         "NYIDO/TOSSO",
       ],
-        name: "KURMI",
-      },
-      {
-        wards: [
+      name: "KURMI",
+    },
+    {
+      wards: [
         "ABBARE I",
         "ABBERE II",
         "DONADDA",
@@ -151,11 +151,12 @@ export const TARABA = {
         "KUNINI",
         "LAU I",
         "LAU II",
-        "MAYO LOPE",],
-        name: "LAU",
-      },
-      {
-        wards: [
+        "MAYO LOPE",
+      ],
+      name: "LAU",
+    },
+    {
+      wards: [
         "GEMBU 'A'",
         "GEMBU 'B'",
         "KABRI",
@@ -166,11 +167,12 @@ export const TARABA = {
         "NDUM-YAJI",
         "NGUROJE",
         "TITONG",
-        "WARWAR",],
-        name: "SARDAUNA",
-      },
-      {
-        wards: [
+        "WARWAR",
+      ],
+      name: "SARDAUNA",
+    },
+    {
+      wards: [
         "BETE",
         "BIKASHIBILA",
         "CHANCHANJI",
@@ -183,10 +185,10 @@ export const TARABA = {
         "TIKARI",
         "YUKUBEN",
       ],
-        name: "TAKUM",
-      },
-      {
-        wards: [
+      name: "TAKUM",
+    },
+    {
+      wards: [
         "FIKYU",
         "KPAMBO",
         "KPAMBO PURI",
@@ -196,10 +198,10 @@ export const TARABA = {
         "LUMBU",
         "RUFU",
       ],
-        name: "USSA",
-      },
-      {
-        wards: [
+      name: "USSA",
+    },
+    {
+      wards: [
         "AKWANA",
         "AVYI",
         "BANTAJE",
@@ -211,10 +213,10 @@ export const TARABA = {
         "RAFIN KADA",
         "TSOKUNDI",
       ],
-        name: "WUKARI",
-      },
-      {
-        wards: [
+      name: "WUKARI",
+    },
+    {
+      wards: [
         "BIKASSA I",
         "BIKASSA II",
         "NYAJA I",
@@ -227,10 +229,10 @@ export const TARABA = {
         "SUMBU I",
         "SUMBU II",
       ],
-        name: "YORRO",
-      },
-      {
-        wards: [
+      name: "YORRO",
+    },
+    {
+      wards: [
         "BITAKO",
         "BUBONG",
         "DINDING",
@@ -242,8 +244,9 @@ export const TARABA = {
         "ZING AII",
         "ZING B",
       ],
-        name: "ZING",
-      },
-    ],
-  };
-  
+      name: "ZING",
+    },
+  ],
+};
+
+export const KEBBI = { states, SR };
