@@ -5,9 +5,11 @@ export default function Form3({
   agent,
   stepIndex,
   agentParams,
-  handleChange,
+  showSenatorialDistrict,
   handlePrev,
-  handleSubmit,
+  handleNext,
+  handleChange,
+  senatorial_district,
 }) {
   const styleHide = "hide";
   const styleShow = "show";
@@ -18,94 +20,67 @@ export default function Form3({
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1.7, delay: 1, type: "tween" }}
     >
-      <form action="#" className="form">
-        <h2>Step 3</h2>
+      <form onSubmit={handleNext} className="form">
+        <h2>Step 3{/* <span>Type of Election</span> */}</h2>
         <div className="input_box">
-          <label htmlFor="form-category">Agent Type</label>
+          <label htmlFor="form-election-type">Election Type</label>
           <select
-            name="agentType"
-            id="form-category"
-            value={agent.agentType}
-            defaultValue={agentParams.agentTypes[0]}
+            name="electionType"
+            value={agent.electionType}
+            id="form-election-type"
+            required
             onChange={handleChange}
           >
-            {agentParams.agentTypes.map((_val, index) => {
+            <option>Select an election type</option>
+            {agentParams.electionTypes.map((_val, index) => {
               return (
-                <option value={_val} key={index}>
-                  {`${_val} AGENTS`}
+                <option value={_val.title} key={index}>
+                  {_val.title}
                 </option>
               );
             })}
           </select>
         </div>
-
-        <div className="input_box">
-          <label htmlFor="form-bank" className="label">
-            BANK
-          </label>
-          <select
-            name="bankName"
-            id="form-bank"
-            value={agent.bankName}
-            defaultValue={agentParams.bankNames[0]}
-            onChange={handleChange}
-          >
-            {agentParams.bankNames.map((_val, index) => {
-              return (
-                <option value={_val} key={index}>
-                  {_val}
-                </option>
-              );
-            })}
-          </select>
-        </div>
-
-        <div className="input_box">
-          <label htmlFor="form-account-number" className="label">
-            Account Number
-          </label>
-          <input
-            type="text"
-            rows="1"
-            id="form-account-number"
-            value={agent.accountNumber}
-            placeholder="e.g 2091234567"
-            name="accountNumber"
-            // value={ques.category}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="input_box">
-          <label htmlFor="form-image">Profile Image</label>
-          <input
-            type="file"
-            id="form-image"
-            name="image"
-            value={agent.image}
-            onChange={handleChange}
-            accept="image/*"
-          />
+        {showSenatorialDistrict && (
+          <div className="input_box">
+            <label htmlFor="form-election-type">Senatorial District</label>
+            <select
+              name="senatorialDistrict"
+              id="form-election-type"
+              onChange={handleChange}
+              // value={agent.senatorialDistrict}
+              value="ABIA"
+            >
+              <option disabled={true}>Select an election type</option>
+              {senatorial_district.sd.map((_val, index) => {
+                return (
+                  <option value={_val.name} key={index}>
+                    {_val.name}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        )}
+        <div className="btnContainer">
+          <div className=" buttons">
+            <input
+              type="submit"
+              value="Go Back"
+              onClick={handlePrev}
+              className="btn"
+            />
+          </div>
+          <div className="buttons">
+            <input
+              type="submit"
+              value="Next"
+              // onClick={handleNext}
+              className="btn"
+            />
+          </div>
         </div>
       </form>
-      <div className="btnContainer">
-        <div className=" buttons">
-          <input
-            type="submit"
-            value="Go Back"
-            onClick={handlePrev}
-            className="btn"
-          />
-        </div>
-        <div className="buttons">
-          <input
-            type="submit"
-            value="Submit"
-            onClick={handleSubmit}
-            className="btn"
-          />
-        </div>
-      </div>
     </motion.div>
   );
 }

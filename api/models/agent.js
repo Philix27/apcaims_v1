@@ -54,7 +54,6 @@ const AgentSchema = new Schema({
   },
   status: {
     type: String,
-    required: true,
   },
 });
 

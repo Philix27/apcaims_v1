@@ -10,6 +10,8 @@ import { v4 } from "uuid";
 import Form1 from "../../comps/agents/step1";
 import Form2 from "../../comps/agents/step2";
 import Form3 from "../../comps/agents/step3";
+import Form4 from "../../comps/agents/step4";
+import AlertSuccessful from "../../comps/agents/alert";
 
 export default function AddAgentsPage({ title }) {
   const [isSuccessful, setIsSuccessful] = useState(false);
@@ -33,20 +35,14 @@ export default function AddAgentsPage({ title }) {
     ward: "",
     electionType: "",
     agentType: "",
-    statecode: "",
     bankName: "",
     accountNumber: "",
     image: "",
     status: "NEW",
   });
 
-  const handleElectionType = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-  };
-
   function postAgent(agent) {
-    Axios.post("/api/agents", article)
+    Axios.post("https://rxedu-api.vercel.app/api/v1/agent", agent)
       .then((response) => {
         setIsSuccessful(true);
 
@@ -78,12 +74,12 @@ export default function AddAgentsPage({ title }) {
     } else if (name == "image") {
       const _file = e.target.files[0];
       if (_file) {
-        if (_file.size < 100000) {
+        if (_file.size < 5000000) {
           setProfileImage(_file);
           console.log("Hurray! we have a file");
         } else {
           console.log(_file);
-          console.log("Image is above 50kb");
+          alert("Image is above 5MB");
         }
       } else {
         console.log("no file yet");
@@ -94,23 +90,34 @@ export default function AddAgentsPage({ title }) {
       // );
       // console.log("senatorial_district");
       // console.log(senatorial_district);
+      // console.log(selectedState);
 
-      if (value == "SEN") {
-        const selectedState = data.senDist.filter(
-          (_val) => _val.state == agent.state
-        );
-        setSenatorial_district(selectedState[0]);
-        console.log(senatorial_district);
-        setShowSenatorialDistrict(true);
+      if (value == "SENATORIAL") {
+        if (agent.state == "ABIA") {
+          const selectedState = data.senDist.filter(
+            (_val) => _val.state == agent.state
+          );
+          setSenatorial_district(selectedState[0]);
+          console.log(senatorial_district);
+          setShowSenatorialDistrict(true);
+        } else {
+          agent.state = "ABIA";
+          const selectedState = data.senDist.filter(
+            (_val) => _val.state == agent.state
+          );
+          setSenatorial_district(selectedState[0]);
+          console.log(senatorial_district);
+          setShowSenatorialDistrict(true);
+        }
       } else {
         setShowSenatorialDistrict(false);
       }
-      if (value == "HOU") {
+      if (value == "HOUSE OF REP.") {
         setFedConst(true);
       } else {
         setFedConst(false);
       }
-      if (value == "ASS") {
+      if (value == "STATE HOUSE OF ASSEMBLY") {
         setStateConst(true);
       } else {
         setStateConst(false);
@@ -121,26 +128,34 @@ export default function AddAgentsPage({ title }) {
   };
 
   const handlePrev = (e) => {
+    e.preventDefault();
     if (stepIndex > 0) {
       setStepIndex(stepIndex - 1);
     }
   };
-  const handleNext = () => {
+  const handleNext = (e) => {
+    e.preventDefault();
     if (stepIndex < 3) {
       setStepIndex(stepIndex + 1);
     }
   };
 
   async function uploadImageToFb() {
-    if (profileImage == null) return;
-    const imageRef = ref(storage, `apcaims/${profileImage.name + v4()}`);
-    uploadBytes(imageRef, profileImage).then((res) => {
-      getDownloadURL(res.ref).then((url) => {
-        setImgUrl(url);
-        console.log(url);
+    console.log("Inside Upload");
+    if (profileImage == null) {
+      alert("Select an image");
+      return;
+    } else {
+      console.log("Started Upload");
+      const imageRef = ref(storage, `apcaims/${profileImage.name + v4()}`);
+      uploadBytes(imageRef, profileImage).then((res) => {
+        getDownloadURL(res.ref).then((url) => {
+          console.log(`Valid Url: ${url}`);
+          agent.image = url;
+          postAgent(agent);
+        });
       });
-      // alert("Image Uploaded at ");
-    });
+    }
   }
 
   const handleSubmit = async (e) => {
@@ -156,10 +171,12 @@ export default function AddAgentsPage({ title }) {
       agent.agentType
     ) {
       e.preventDefault();
-      //  await uploadImageToFb()
-      await uploadImageToFb();
-      setAgent({ ...agent, imgUrl: imgUrl });
-      postAgent(agent);
+      console.log("Before Upload");
+      uploadImageToFb();
+      // agent.image = imgUrl;
+      // console.log(imgUrl);
+      // setAgent({ ...agent });
+      // postAgent(agent);
     } else {
       console.log("Something is missing");
     }
@@ -178,9 +195,7 @@ export default function AddAgentsPage({ title }) {
   return (
     <div className="addAgent">
       <div className="section formsPage">
-        <div className="successDiv">
-          {isSuccessful && <p>Sent Successfully </p>}
-        </div>
+        <div className="successDiv">{isSuccessful && <AlertSuccessful />}</div>
         <Form1
           agent={agent}
           stepIndex={stepIndex}
@@ -193,6 +208,16 @@ export default function AddAgentsPage({ title }) {
         <Form2
           agent={agent}
           stepIndex={stepIndex}
+          handleChange={handleChange}
+          data={data}
+          localGov={localGov}
+          wards={wards}
+          handlePrev={handlePrev}
+          handleNext={handleNext}
+        />
+        <Form3
+          agent={agent}
+          stepIndex={stepIndex}
           agentParams={agentParams}
           showSenatorialDistrict={showSenatorialDistrict}
           handleChange={handleChange}
@@ -200,7 +225,7 @@ export default function AddAgentsPage({ title }) {
           handleNext={handleNext}
           senatorial_district={senatorial_district}
         />
-        <Form3
+        <Form4
           agent={agent}
           stepIndex={stepIndex}
           handleSubmit={handleSubmit}

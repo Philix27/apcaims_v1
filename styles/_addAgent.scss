@@ -22,7 +22,7 @@
         display: flex;
         max-width: 50%;
         justify-content: center;
-        margin: 20px auto;
+        margin: 5px auto;
         padding: 0px 30px;
       }
     }
@@ -35,6 +35,24 @@
     display: none;
     // visibility: hidden;
   }
-  .step1 {
+  .alert {
+    padding: 20px;
+    background-color: #0dc9d6;
+    color: white;
+  }
+
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
   }
 }

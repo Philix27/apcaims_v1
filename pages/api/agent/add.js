@@ -8,7 +8,7 @@ import Agents from "../../../api/models/agent";
  * @param {import('next').NextApiResponse} res
  */
 
-export default async function agentRep(req, res) {
+export default async function add(req, res) {
   try {
     console.log("Connecting to mongo");
     await connectMongo();

@@ -4,82 +4,105 @@ import { motion } from "framer-motion";
 export default function Form2({
   agent,
   stepIndex,
-  agentParams,
-  showSenatorialDistrict,
-  handlePrev,
-  handleNext,
   handleChange,
-  senatorial_district,
+  data,
+  localGov,
+  wards,
+  handleNext,
+  handlePrev,
 }) {
   const styleHide = "hide";
   const styleShow = "show";
+
   return (
     <motion.div
-      className={`sect step2 ${stepIndex === 1 ? styleShow : styleHide}`}
+      className={`sect step1 ${stepIndex === 1 ? styleShow : styleHide}`}
       initial={{ x: "-100vw", opacity: 0.1 }}
       animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 1.7, delay: 1, type: "tween" }}
+      transition={{ duration: 1.3, delay: 0.5, type: "tween" }}
     >
-      <form action="#" className="form">
-        <h2>Step 2{/* <span>Type of Election</span> */}</h2>
+      <form onSubmit={handleNext} className="form">
+        <h2>
+          Step 2 <span>Location Details</span>
+        </h2>
         <div className="input_box">
-          <label htmlFor="form-election-type">Election Type</label>
+          <label htmlFor="form-state">State</label>
           <select
-            name="electionType"
-            value={agent.electionType}
-            id="form-election-type"
-            defaultValue="Select an election type"
+            name="state"
             onChange={handleChange}
+            value={agent.state}
+            required
+            id="form-state"
           >
-            <option disabled="true">Select an election type</option>
-            {agentParams.electionTypes.map((_val, index) => {
+            <option disabled>Select an state</option>
+
+            {data.states.map((_val, index) => {
               return (
-                <option value={_val.code} key={index}>
-                  {_val.title}
+                <option value={_val.state} key={index}>
+                  {_val.state}
                 </option>
               );
             })}
           </select>
         </div>
-        {showSenatorialDistrict && (
-          <div className="input_box">
-            <label htmlFor="form-election-type">Senatorial District</label>
-            <select
-              name="senatorialDistrict"
-              id="form-election-type"
-              defaultValue="Select an election type"
-              onChange={handleChange}
-            >
-              <option disabled="true">Select an election type</option>
-              {senatorial_district.sd.map((_val, index) => {
-                return (
-                  <option value={_val.name} key={index}>
-                    {_val.name}
-                  </option>
-                );
-              })}
-            </select>
+        <div className="input_box">
+          <label htmlFor="form-lga">LGA</label>
+          <select
+            name="lga"
+            onChange={handleChange}
+            value={agent.lga}
+            required
+            id="form-lga"
+          >
+            <option disabled={true}>Select a LGA</option>
+
+            {localGov.map((_val, index) => {
+              return (
+                <option value={_val.name} key={index}>
+                  {_val.name}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+        <div className="input_box">
+          <label htmlFor="form-ward">Wards</label>
+          <select
+            name="ward"
+            value={agent.ward}
+            onChange={handleChange}
+            required
+            id="form-ward"
+          >
+            <option disabled={true}>Select an state</option>
+            {wards.map((_val, index) => {
+              return (
+                <option value={_val} key={index}>
+                  {_val}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+        <div className="btnContainer">
+          <div className=" buttons">
+            <input
+              type="submit"
+              value="Go Back"
+              onClick={handlePrev}
+              className="btn"
+            />
           </div>
-        )}
+          <div className="buttons">
+            <input
+              type="submit"
+              value="Next"
+              //   onClick={handleNext}
+              className="btn"
+            />
+          </div>
+        </div>
       </form>
-      <div className="btnContainer">
-        <div className=" buttons">
-          <input
-            type="submit"
-            value="Go Back"
-            onClick={handlePrev}
-            className="btn"
-          />
-        </div>
-        <div className="buttons">
-          <input
-            type="submit"
-            value="Next"
-            onClick={handleNext}
-            className="btn"
-          />
-        </div>
-      </div>
     </motion.div>
   );
 }

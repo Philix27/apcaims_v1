@@ -156,7 +156,6 @@ export default function AddUser({ title }) {
               <label htmlFor="form-state">State</label>
               <select
                 name="state"
-                // defaultValue="Abia"
                 onChange={handleChange}
                 value={user.state}
                 id="form-state"
