@@ -23,6 +23,18 @@ import { KEBBI } from "./kebbi";
 import { KOGI } from "./kogi";
 import { KWARA } from "./kwara";
 import { LAGOS } from "./lagos";
+import { NASARAWA } from "./nasarawa";
+import { NIGER } from "./niger";
+import { OGUN } from "./ogun";
+import { ONDO } from "./ondo";
+import { OSUN } from "./osun";
+import { OYO } from "./oyo";
+import { PLATEAU } from "./plateau";
+import { RIVERS } from "./rivers";
+import { SOKOTO } from "./sokoto";
+import { TARABA } from "./taraba";
+import { YOBE } from "./yobe";
+import { ZAMFARA } from "./zamfara";
 
 const states = [
   ABIA.states,
@@ -50,6 +62,18 @@ const states = [
   KOGI.states,
   KWARA.states,
   LAGOS.states,
+  NASARAWA.states,
+  NIGER.states,
+  OGUN.states,
+  ONDO.states,
+  OSUN.states,
+  OYO.states,
+  PLATEAU.states,
+  RIVERS.states,
+  SOKOTO.states,
+  TARABA.states,
+  YOBE.states,
+  ZAMFARA.states,
 ];
 const sr = [
   ABIA.SR,
@@ -71,6 +95,23 @@ const sr = [
   IMO.SR,
   JIGAWA.SR,
   KADUNA.SR,
+  KANO.SR,
+  KATSINA.SR,
+  KEBBI.SR,
+  KOGI.SR,
+  KWARA.SR,
+  LAGOS.SR,
+  NASARAWA.SR,
+  NIGER.SR,
+  OGUN.SR,
+  ONDO.SR,
+  OSUN.SR,
+  OYO.SR,
+  PLATEAU.SR,
+  RIVERS.SR,
+  SOKOTO.SR,
+  TARABA.SR,
+  YOBE.SR,
 ];
 const fedConst = [ABIA.fedral_constituency];
 const senDist = [ABIA.senatorial_district];

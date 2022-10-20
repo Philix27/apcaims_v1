@@ -374,4 +374,4 @@ const states = {
   ],
 };
 
-export const KEBBI = { states, SR };
+export const SOKOTO = { states, SR };
