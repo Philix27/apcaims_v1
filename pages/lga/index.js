@@ -33,27 +33,27 @@ export default function States() {
   );
 }
 
-export async function getStaticProps(context) {
-  const { params } = context;
+// export async function getStaticProps(context) {
+//   const { params } = context;
 
-  // const stateFiltered = data.states.filter((v) => {
-  // if (stateFiltered)
-  //   const _stateFiltered = v.statecode
-  //     .toLowerCase()
-  //     .includes(params.lga.toLowerCase());
-  //   return _stateFiltered;
-  // });
-  console.log(params);
+//   // const stateFiltered = data.states.filter((v) => {
+//   // if (stateFiltered)
+//   //   const _stateFiltered = v.statecode
+//   //     .toLowerCase()
+//   //     .includes(params.lga.toLowerCase());
+//   //   return _stateFiltered;
+//   // });
+//   console.log(params);
 
-  // const uniqueState = states.filter((v) =>
-  //   v.statecode.toLowerCase().includes(params.lga.toLowerCase())
-  // );
+//   // const uniqueState = states.filter((v) =>
+//   //   v.statecode.toLowerCase().includes(params.lga.toLowerCase())
+//   // );
 
-  // console.log(uniqueState);
-  return {
-    props: {
-      code: params,
-      // selectedState: JSON.parse(uniqueState[0]),
-    },
-  };
-}
+//   // console.log(uniqueState);
+//   return {
+//     props: {
+//       code: params,
+//       // selectedState: JSON.parse(uniqueState[0]),
+//     },
+//   };
+// }
