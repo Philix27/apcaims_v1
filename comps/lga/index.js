@@ -24,8 +24,8 @@ export default function LGAs({ userState }) {
     val.state.toLowerCase().includes(userState.toLowerCase())
   );
 
-  console.log("userState");
-  console.log(selectedState);
+  // console.log("userState");
+  // console.log(selectedState);
 
   return (
     <div className="section">
