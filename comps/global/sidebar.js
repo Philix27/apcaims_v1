@@ -46,7 +46,7 @@ export default function Sidebar() {
                 DASHBOARD
               </li>
             </a> */}
-            <a className="link" href="/states">
+            {/* <a className="link" href="/states">
               <li
                 className={
                   _path == "/states" ? "activeItem" : "sidebar_start_list_item"
@@ -57,7 +57,7 @@ export default function Sidebar() {
                 </span>
                 STATES
               </li>
-            </a>
+            </a> */}
             <a className="link" href="/lga">
               <li
                 className={

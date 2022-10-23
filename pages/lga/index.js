@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { data } from "../../constants/states/";
 
 export default function States() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({ state: "ABIA" });
 
   useEffect(() => {
     if (!fetchUser()) {
@@ -13,7 +13,7 @@ export default function States() {
       console.log(fetchUser());
       setUser(fetchUser());
     } else {
-      setUser(null);
+      // setUser(null);
     }
   }, []);
 
@@ -27,7 +27,8 @@ export default function States() {
         <Head>
           <title>APCAIMS | LGA</title>
         </Head>
-        {/* <LGAs userState={user.state} /> */}
+        <LGAs userState={user.state} />
+        {/* <LGAs userState="ABIA" /> */}
       </div>
     </div>
   );

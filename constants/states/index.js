@@ -75,6 +75,7 @@ const states = [
   YOBE.states,
   ZAMFARA.states,
 ];
+
 const sr = [
   ABIA.SR,
   ADAMAWA.SR,
@@ -113,7 +114,47 @@ const sr = [
   TARABA.SR,
   YOBE.SR,
 ];
+
+const lgas = [
+  ...ABIA.states.lga,
+  ...ADAMAWA.states.lga,
+  ...AKWAIBOM.states.lga,
+  ...ANAMBRA.states.lga,
+  ...BAUCHI.states.lga,
+  ...BAYELSA.states.lga,
+  ...BENUE.states.lga,
+  ...BORNO.states.lga,
+  ...CROSSRIVERS.states.lga,
+  ...DELTA.states.lga,
+  ...EBONYI.states.lga,
+  ...EDO.states.lga,
+  ...EKITI.states.lga,
+  ...ENUGU.states.lga,
+  ...FCT.states.lga,
+  ...GOMBE.states.lga,
+  ...IMO.states.lga,
+  ...JIGAWA.states.lga,
+  ...KADUNA.states.lga,
+  ...KANO.states.lga,
+  ...KATSINA.states.lga,
+  ...KEBBI.states.lga,
+  ...KOGI.states.lga,
+  ...KWARA.states.lga,
+  ...LAGOS.states.lga,
+  ...NASARAWA.states.lga,
+  ...NIGER.states.lga,
+  ...OGUN.states.lga,
+  ...ONDO.states.lga,
+  ...OSUN.states.lga,
+  ...OYO.states.lga,
+  ...PLATEAU.states.lga,
+  ...RIVERS.states.lga,
+  ...SOKOTO.states.lga,
+  ...TARABA.states.lga,
+  ...YOBE.states.lga,
+];
 const fedConst = [ABIA.fedral_constituency];
 const senDist = [ABIA.senatorial_district];
 
-export const data = { states, sr, fedConst, senDist };
+// const lga = [...ABIA.states.lga, ...ADAMAWA.states.lga, AKWAIBOM.states.lga];
+export const data = { states, sr, fedConst, senDist, lgas };
