@@ -78,7 +78,8 @@ export default function AgentsComp({ agentsList }) {
           </thead>
           <tbody>
             {agts.map((agent, index) => (
-              <tr key={index} onClick={setShowModal(true)}>
+              <tr key={index}>
+                {/* <tr key={index} onClick={setShowModal(true)}> */}
                 <td>{index + 1}.</td>
                 <td>
                   <img src={agent.image} alt={agent.name}></img>
