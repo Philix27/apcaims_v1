@@ -22,24 +22,7 @@ export default function Dashboard() {
       <Head>
         <title>APCAIMS | ADMIN</title>
       </Head>
-      <div className="dashboard">
-        <div className="card">
-          <div className="topbar red"></div>
-          <div className="content">
-            <h3>AGENTS</h3>
-            <p>All agents</p>
-            <div className="btnDiv">
-              <Link href="/agents">
-                <a className="btn">View All</a>
-              </Link>
-              <Link href="/admin/addagent">
-                <a className="btn"> Add</a>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* <h2>Agents Category</h2> */}
+
       <div className="dashboard">
         <div className="card">
           <div className="topbar orange"></div>
@@ -76,6 +59,17 @@ export default function Dashboard() {
             <p>67 Agents</p>
           </div>
         </div>
+        <Link href="/admin/addagent">
+          <a className="card">
+            <div>
+              <div className="topbar teal"></div>
+              <div className="content">
+                <h3>ADD AGENTS</h3>
+                <p>Add Agents to your state</p>
+              </div>
+            </div>
+          </a>
+        </Link>
       </div>
     </div>
   );

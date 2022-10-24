@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import LGAs from "../comps/lga";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { data } from "../constants/states";
 
 export default function States() {
+  const router = useRouter();
   const [user, setUser] = useState({
     name: "",
     email: "",

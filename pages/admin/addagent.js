@@ -14,6 +14,33 @@ import Form4 from "../../comps/agents/step4";
 import { AlertSuccessful } from "../../comps/agents/alert";
 
 export default function AddAgentsPage({ title }) {
+  const router = useRouter();
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+    phone: "",
+    statecode: "",
+    img: "",
+    userType: "",
+  });
+
+  useEffect(() => {
+    if (!fetchUser()) {
+      router.push("/");
+    } else {
+      console.log("fetchUser()");
+      console.log(fetchUser());
+      setUser(fetchUser());
+      // setUser(null);
+    }
+  }, []);
+
+  function fetchUser() {
+    return JSON.parse(localStorage.getItem("user"));
+  }
+
+  const [agentTypeList, setAgentTypeList] = useState([]);
   const [isSuccessful, setIsSuccessful] = useState(false);
   const [localGov, setLocalGov] = useState([]);
   const [wards, setWards] = useState([]);
@@ -29,7 +56,7 @@ export default function AddAgentsPage({ title }) {
     email: "",
     phone: "",
     address: "",
-    state: "",
+    state: user.statecode,
     lga: "",
     ward: "",
     electionType: "",
@@ -41,12 +68,10 @@ export default function AddAgentsPage({ title }) {
   });
 
   const HOU = "HOUSE OF REP.";
-  const ASSM = "STATE HOUSE OF ASSEMBLY";
+  const STAT = "STATE HOUSE OF ASSEMBLY";
   const SEN = "SENATORIAL";
-
-  // const [house, setHouse] = useState("HOUSE OF REP.");
-  // const [ASSM, setASSM] = useState("STATE HOUSE OF ASSEMBLY");
-  // const [SEN, setSEN] = useState("SENATORIAL");
+  const GUBA = "GUBANATORIAL";
+  const PRES = "PRESIDENTIAL";
 
   function postAgent(agent) {
     Axios.post("https://rxedu-api.vercel.app/api/v1/agent", agent)
@@ -74,6 +99,9 @@ export default function AddAgentsPage({ title }) {
       setWards([]);
       setLocalGov([]);
       const selectedState = data.states.filter((_val) => _val.state == value);
+      // const selectedState = data.states.filter(
+      //   (_val) => _val.state == user.statecode
+      // );
       setLocalGov(selectedState[0].lga);
     } else if (name == "lga") {
       const selectedLocalGov = localGov.filter((_val) => _val.name == value);
@@ -99,35 +127,16 @@ export default function AddAgentsPage({ title }) {
       // console.log(senatorial_district);
       // console.log(selectedState);
 
-      if (value == SEN) {
-        if (agent.state == "ABIA") {
-          const selectedState = data.senDist.filter(
-            (_val) => _val.state == agent.state
-          );
-          setSenatorial_district(selectedState[0]);
-          console.log(senatorial_district);
-          setShowSenatorialDistrict(true);
-        } else {
-          agent.state = "ABIA";
-          const selectedState = data.senDist.filter(
-            (_val) => _val.state == agent.state
-          );
-          setSenatorial_district(selectedState[0]);
-          console.log(senatorial_district);
-          setShowSenatorialDistrict(true);
-        }
-      } else {
-        setShowSenatorialDistrict(false);
-      }
-      if (value == HOU) {
-        setFedCosnt(true);
-      } else {
-        setFedCosnt(false);
-      }
-      if (value == ASSM) {
-        setStateConst(true);
-      } else {
-        setStateConst(false);
+      if (value == PRES) {
+        setAgentTypeList(["STATE", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+      } else if (value == HOU) {
+        setAgentTypeList(["LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+      } else if (value == STAT) {
+        setAgentTypeList(["WARD", "POLLING UNIT"]);
+      } else if (value == GUBA) {
+        setAgentTypeList(["LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+      } else if (value == SEN) {
+        setAgentTypeList(["LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
       }
     }
     setAgent({ ...agent, [name]: value });
@@ -189,16 +198,6 @@ export default function AddAgentsPage({ title }) {
     }
   };
 
-  useEffect(() => {
-    if (!fetchUser()) {
-      router.push("/");
-    }
-  }, []);
-
-  function fetchUser() {
-    return JSON.parse(localStorage.getItem("user"));
-  }
-
   return (
     <div className="addAgent">
       <div className="successDiv">{isSuccessful && <AlertSuccessful />}</div>
@@ -218,6 +217,7 @@ export default function AddAgentsPage({ title }) {
           handleChange={handleChange}
           data={data}
           localGov={localGov}
+          userState={user.statecode}
           wards={wards}
           handlePrev={handlePrev}
           handleNext={handleNext}
@@ -233,6 +233,7 @@ export default function AddAgentsPage({ title }) {
           senatorial_district={senatorial_district}
           showFedConst={showFedConst}
           showStateConst={showStateConst}
+          agentTypeList={agentTypeList}
         />
         <Form4
           agent={agent}

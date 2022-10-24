@@ -1,18 +1,12 @@
 const electionTypes = [
   { title: "PRESIDENTIAL", code: "PRE" },
-  { title: "GUBERNATORIAL", code: "GUB" },
+  { title: "GUBANATORIAL", code: "GUB" },
   { title: "SENATORIAL", code: "SEN" },
   { title: "HOUSE OF REP.", code: "HOU" },
   { title: "STATE HOUSE OF ASSEMBLY", code: "ASS" },
 ];
 
-const agentTypes = [
-  "PRESIDENTIAL",
-  "STATE CONSTITUENCY",
-  "LOCAL GOVERNMENT",
-  "WARD",
-  "POLLING UNIT",
-];
+const agentTypes = ["STATE", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"];
 
 const bankNames = [
   "GTB",
