@@ -11,7 +11,10 @@ import Form1 from "../../comps/agents/step1";
 import Form2 from "../../comps/agents/step2";
 import Form3 from "../../comps/agents/step3";
 import Form4 from "../../comps/agents/step4";
+import Form5 from "../../comps/agents/step5";
 import { AlertSuccessful } from "../../comps/agents/alert";
+import { Circles } from "react-loader-spinner";
+import { Modal } from "../../comps/global/submitModal";
 
 export default function AddAgentsPage({ title }) {
   const router = useRouter();
@@ -40,6 +43,7 @@ export default function AddAgentsPage({ title }) {
     return JSON.parse(localStorage.getItem("user"));
   }
 
+  const [showModal, setShowModal] = useState(true);
   const [agentTypeList, setAgentTypeList] = useState([]);
   const [isSuccessful, setIsSuccessful] = useState(false);
   const [localGov, setLocalGov] = useState([]);
@@ -78,17 +82,18 @@ export default function AddAgentsPage({ title }) {
     Axios.post("https://rxedu-api.vercel.app/api/v1/agent", agent)
       .then((response) => {
         // setIsSuccessful(true);
-
-        console.log("Successfully Sent to: ");
-        alert("Successfully Added");
+        // console.log("Successfully Sent to: ");
+        // alert("Successfully Added");
 
         setTimeout(() => {
           setIsSuccessful(false);
+          router.push("/agents");
         }, 5000);
       })
       .catch((e) => {
         console.log(e);
         console.log("Opps an error ocured");
+        router.reload(window.location.pathname);
       });
   }
 
@@ -197,11 +202,8 @@ export default function AddAgentsPage({ title }) {
     ) {
       e.preventDefault();
       console.log("Before Upload");
+      setStepIndex(4);
       uploadImageToFb();
-      // agent.image = imgUrl;
-      // console.log(imgUrl);
-      // setAgent({ ...agent });
-      // postAgent(agent);
     } else {
       console.log("Something is missing");
     }
@@ -209,7 +211,6 @@ export default function AddAgentsPage({ title }) {
 
   return (
     <div className="addAgent">
-      <div className="successDiv">{isSuccessful && <AlertSuccessful />}</div>
       <div className="section formsPage">
         <Form1
           agent={agent}
@@ -245,6 +246,14 @@ export default function AddAgentsPage({ title }) {
           agentTypeList={agentTypeList}
         />
         <Form4
+          agent={agent}
+          stepIndex={stepIndex}
+          handleSubmit={handleSubmit}
+          agentParams={agentParams}
+          handleChange={handleChange}
+          handlePrev={handlePrev}
+        />
+        <Form5
           agent={agent}
           stepIndex={stepIndex}
           handleSubmit={handleSubmit}

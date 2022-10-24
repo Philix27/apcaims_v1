@@ -62,6 +62,10 @@ export default function AgentsComp({ agentsList }) {
         />
       )}
       <div className="tableSection">
+        <br />
+        <br />
+        <br />
+        <br />
         <div className="input">
           <input
             type="search"

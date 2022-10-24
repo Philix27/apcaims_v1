@@ -4,6 +4,11 @@
   padding: 10px auto;
   margin: 10px auto;
 
+  .loader {
+    // width: 100px;
+    width: 100%;
+    padding: 20px;
+  }
   .successDiv {
     color: rgb(0, 200, 0);
     padding: 15px 0;
