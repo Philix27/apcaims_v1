@@ -18,10 +18,10 @@ export default function AgentsComp({ agentsList }) {
     const searchTerm = e.target.value;
     const tempList = [];
     // console.log(agentsList.data);
-    tempList = agts.filter((agent) => {
-      agent.name.toLowerCase().includes(searchTerm.toLowerCase());
-    });
-    console.log(tempList);
+    tempList = agentsList.data.filter((agent) =>
+      agent.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    console.log(agts);
     setAgents(tempList);
   };
 
@@ -71,8 +71,8 @@ export default function AgentsComp({ agentsList }) {
               <th>Email</th>
               <th>State</th>
               <th>LGA</th>
-              <th>Agent Type</th>
-              <th>Edit </th>
+              <th>Election </th>
+              <th>Agent</th>
               <th>Delete</th>
             </tr>
           </thead>
@@ -88,10 +88,9 @@ export default function AgentsComp({ agentsList }) {
                 <td>{agent.email}</td>
                 <td>{agent.state}</td>
                 <td>{agent.lga}</td>
+                <td>{agent.electionType}</td>
                 <td>{agent.agentType}</td>
-                <td>
-                  <AiFillEdit className="green icon" />
-                </td>
+
                 <td>
                   <a onClick={() => onDelete(agent)}>
                     <AiFillDelete className="red icon" />
