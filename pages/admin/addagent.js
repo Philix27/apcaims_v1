@@ -47,6 +47,7 @@ export default function AddAgentsPage({ title }) {
   const [profileImage, setProfileImage] = useState(null);
   const [imgUrl, setImgUrl] = useState(null);
   const [stepIndex, setStepIndex] = useState(0);
+  //! Show TextForm
   const [showSenatorialDistrict, setShowSenatorialDistrict] = useState(false);
   const [showFedConst, setFedCosnt] = useState(false);
   const [showStateConst, setStateConst] = useState(false);
@@ -129,13 +130,28 @@ export default function AddAgentsPage({ title }) {
 
       if (value == PRES) {
         setAgentTypeList(["STATE", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+        setFedCosnt(false);
+        setStateConst(false);
+        setShowSenatorialDistrict(false);
       } else if (value == HOU) {
+        setFedCosnt(true);
+        setStateConst(false);
+        setShowSenatorialDistrict(false);
         setAgentTypeList(["LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
       } else if (value == STAT) {
+        setFedCosnt(false);
+        setStateConst(true);
+        setShowSenatorialDistrict(false);
         setAgentTypeList(["WARD", "POLLING UNIT"]);
       } else if (value == GUBA) {
+        setFedCosnt(false);
+        setStateConst(false);
+        setShowSenatorialDistrict(false);
         setAgentTypeList(["LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
       } else if (value == SEN) {
+        setFedCosnt(false);
+        setStateConst(false);
+        setShowSenatorialDistrict(true);
         setAgentTypeList(["LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
       }
     }

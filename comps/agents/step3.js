@@ -24,7 +24,9 @@ export default function Form3({
       transition={{ duration: 1.7, delay: 1, type: "tween" }}
     >
       <form onSubmit={handleNext} className="form">
-        <h2>Step 3{/* <span>Type of Election</span> */}</h2>
+        <h2>
+          Step 3<span>Election & Agent Type</span>
+        </h2>
         <div className="input_box">
           <label htmlFor="form-election-type">Election Type</label>
           <select
@@ -84,7 +86,7 @@ export default function Form3({
             </select>
           </div>
         )} */}
-        {/* {showSenatorialDistrict && (
+        {showSenatorialDistrict && (
           <div className="input_box">
             <label htmlFor="form-senatorial" className="label">
               Senatorial District
@@ -131,7 +133,8 @@ export default function Form3({
               onChange={handleChange}
             />
           </div>
-        )} */}
+        )}
+
         <div className="input_box">
           <label htmlFor="form-category">Agent Type</label>
           <select
@@ -149,7 +152,6 @@ export default function Form3({
             })}
           </select>
         </div>
-
         <div className="btnContainer">
           <div className=" buttons">
             <input
