@@ -6,12 +6,13 @@ import Axios from "axios";
 import { useRouter } from "next/router";
 import { AlertDeleted } from "../../comps/agents/alert";
 import { Modal } from "../global/Modal";
-import ModalContent from "./modalContent";
+import AgentModalContent from "./modalContent";
 
 export default function AgentsComp({ agentsList }) {
   const [isSuccessful, setIsSuccessful] = useState(false);
   const [agts, setAgents] = useState(agentsList.data);
   const [showModal, setShowModal] = useState(false);
+  const [clickedAgent, setClickedAgent] = useState({});
   const router = useRouter();
 
   const onSearch = (e) => {
@@ -43,15 +44,21 @@ export default function AgentsComp({ agentsList }) {
       });
   };
 
+  function _showModal(agent) {
+    console.log("agent");
+    console.log(agent);
+    setClickedAgent(agent);
+    setShowModal(true);
+  }
   return (
-    <div className="section">
+    <div className=" agentsList">
       {/* <div className="successDiv"> {isSuccessful && <AlertDeleted />}</div> */}
       {showModal && (
         <Modal
           showModal={showModal}
           setShowModal={setShowModal}
           title="Hula Agen"
-          children={<ModalContent />}
+          children={<AgentModalContent agent={clickedAgent} />}
         />
       )}
       <div className="tableSection">
@@ -81,7 +88,7 @@ export default function AgentsComp({ agentsList }) {
               <tr key={index}>
                 {/* <tr key={index} onClick={setShowModal(true)}> */}
                 <td>{index + 1}.</td>
-                <td>
+                <td onClick={() => _showModal(agent)}>
                   <img src={agent.image} alt={agent.name}></img>
                 </td>
                 <td>{agent.name}</td>
