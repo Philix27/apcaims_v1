@@ -61,11 +61,10 @@ export default function Dashboard() {
         </div>
         <Link href="/admin/addagent">
           <a className="card">
-            <div>
-              <div className="topbar teal"></div>
+            <div className="addAgent">
               <div className="content">
                 <h3>ADD AGENTS</h3>
-                <p>Add Agents to your state</p>
+                <p>Add an agent to your state</p>
               </div>
             </div>
           </a>

@@ -25,9 +25,13 @@
     display: flex;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-
     display: block;
-
+    .addAgent {
+      height: 100%;
+      background-color: rgb(6, 161, 161);
+      color: #fff;
+      border-radius: 10px;
+    }
     .topbar {
       height: 15px;
       border-top-right-radius: 10px;

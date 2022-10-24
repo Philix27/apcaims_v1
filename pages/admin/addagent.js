@@ -121,13 +121,6 @@ export default function AddAgentsPage({ title }) {
         console.log("no file yet");
       }
     } else if (name == "electionType") {
-      // const selectedState = data.senDist.filter(
-      //   (_val) => _val.state == agent.state
-      // );
-      // console.log("senatorial_district");
-      // console.log(senatorial_district);
-      // console.log(selectedState);
-
       if (value == PRES) {
         setAgentTypeList(["STATE", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
         setFedCosnt(false);
