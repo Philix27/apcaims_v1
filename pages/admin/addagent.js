@@ -11,15 +11,47 @@ import Form1 from "../../comps/agents/step1";
 import Form2 from "../../comps/agents/step2";
 import Form3 from "../../comps/agents/step3";
 import Form4 from "../../comps/agents/step4";
+import Form5 from "../../comps/agents/step5";
 import { AlertSuccessful } from "../../comps/agents/alert";
+import { Circles } from "react-loader-spinner";
+import { Modal } from "../../comps/global/submitModal";
 
 export default function AddAgentsPage({ title }) {
+  const router = useRouter();
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+    phone: "",
+    statecode: "",
+    img: "",
+    userType: "",
+  });
+
+  useEffect(() => {
+    if (!fetchUser()) {
+      router.push("/");
+    } else {
+      console.log("fetchUser()");
+      console.log(fetchUser());
+      setUser(fetchUser());
+      // setUser(null);
+    }
+  }, []);
+
+  function fetchUser() {
+    return JSON.parse(localStorage.getItem("user"));
+  }
+
+  const [showModal, setShowModal] = useState(true);
+  const [agentTypeList, setAgentTypeList] = useState([]);
   const [isSuccessful, setIsSuccessful] = useState(false);
   const [localGov, setLocalGov] = useState([]);
   const [wards, setWards] = useState([]);
   const [profileImage, setProfileImage] = useState(null);
   const [imgUrl, setImgUrl] = useState(null);
   const [stepIndex, setStepIndex] = useState(0);
+  //! Show TextForm
   const [showSenatorialDistrict, setShowSenatorialDistrict] = useState(false);
   const [showFedConst, setFedCosnt] = useState(false);
   const [showStateConst, setStateConst] = useState(false);
@@ -29,7 +61,7 @@ export default function AddAgentsPage({ title }) {
     email: "",
     phone: "",
     address: "",
-    state: "",
+    state: user.statecode,
     lga: "",
     ward: "",
     electionType: "",
@@ -40,29 +72,28 @@ export default function AddAgentsPage({ title }) {
     status: "NEW",
   });
 
-  const HOU = "HOUSE OF REP.";
-  const ASSM = "STATE HOUSE OF ASSEMBLY";
+  const HOU = "HOUSE OF REPS.";
+  const STAT = "STATE HOUSE OF ASSEMBLY";
   const SEN = "SENATORIAL";
-
-  // const [house, setHouse] = useState("HOUSE OF REP.");
-  // const [ASSM, setASSM] = useState("STATE HOUSE OF ASSEMBLY");
-  // const [SEN, setSEN] = useState("SENATORIAL");
+  const GUBA = "GUBERNATORIAL";
+  const PRES = "PRESIDENTIAL";
 
   function postAgent(agent) {
     Axios.post("https://rxedu-api.vercel.app/api/v1/agent", agent)
       .then((response) => {
-        setIsSuccessful(true);
-
-        console.log("Successfully Sent to: ");
-        alert("Successfully Added");
+        // setIsSuccessful(true);
+        // console.log("Successfully Sent to: ");
+        // alert("Successfully Added");
 
         setTimeout(() => {
           setIsSuccessful(false);
+          router.push("/agents");
         }, 5000);
       })
       .catch((e) => {
         console.log(e);
         console.log("Opps an error ocured");
+        router.reload(window.location.pathname);
       });
   }
 
@@ -74,6 +105,9 @@ export default function AddAgentsPage({ title }) {
       setWards([]);
       setLocalGov([]);
       const selectedState = data.states.filter((_val) => _val.state == value);
+      // const selectedState = data.states.filter(
+      //   (_val) => _val.state == user.statecode
+      // );
       setLocalGov(selectedState[0].lga);
     } else if (name == "lga") {
       const selectedLocalGov = localGov.filter((_val) => _val.name == value);
@@ -92,42 +126,31 @@ export default function AddAgentsPage({ title }) {
         console.log("no file yet");
       }
     } else if (name == "electionType") {
-      // const selectedState = data.senDist.filter(
-      //   (_val) => _val.state == agent.state
-      // );
-      // console.log("senatorial_district");
-      // console.log(senatorial_district);
-      // console.log(selectedState);
-
-      if (value == SEN) {
-        if (agent.state == "ABIA") {
-          const selectedState = data.senDist.filter(
-            (_val) => _val.state == agent.state
-          );
-          setSenatorial_district(selectedState[0]);
-          console.log(senatorial_district);
-          setShowSenatorialDistrict(true);
-        } else {
-          agent.state = "ABIA";
-          const selectedState = data.senDist.filter(
-            (_val) => _val.state == agent.state
-          );
-          setSenatorial_district(selectedState[0]);
-          console.log(senatorial_district);
-          setShowSenatorialDistrict(true);
-        }
-      } else {
-        setShowSenatorialDistrict(false);
-      }
-      if (value == HOU) {
-        setFedCosnt(true);
-      } else {
+      if (value == PRES) {
+        setAgentTypeList(["PRESIDENTIAL", "STATE", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
         setFedCosnt(false);
-      }
-      if (value == ASSM) {
-        setStateConst(true);
-      } else {
         setStateConst(false);
+        setShowSenatorialDistrict(false);
+      } else if (value == HOU) {
+        setFedCosnt(true);
+        setStateConst(false);
+        setShowSenatorialDistrict(false);
+        setAgentTypeList(["HOUSE OF REPS", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+      } else if (value == STAT) {
+        setFedCosnt(false);
+        setStateConst(true);
+        setShowSenatorialDistrict(false);
+        setAgentTypeList(["HOUSE OF ASSEMBLY", "WARD", "POLLING UNIT"]);
+      } else if (value == GUBA) {
+        setFedCosnt(false);
+        setStateConst(false);
+        setShowSenatorialDistrict(false);
+        setAgentTypeList(["STATE", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+      } else if (value == SEN) {
+        setFedCosnt(false);
+        setStateConst(false);
+        setShowSenatorialDistrict(true);
+        setAgentTypeList(["SENATORIAL", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
       }
     }
     setAgent({ ...agent, [name]: value });
@@ -179,29 +202,15 @@ export default function AddAgentsPage({ title }) {
     ) {
       e.preventDefault();
       console.log("Before Upload");
+      setStepIndex(4);
       uploadImageToFb();
-      // agent.image = imgUrl;
-      // console.log(imgUrl);
-      // setAgent({ ...agent });
-      // postAgent(agent);
     } else {
       console.log("Something is missing");
     }
   };
 
-  useEffect(() => {
-    if (!fetchUser()) {
-      router.push("/");
-    }
-  }, []);
-
-  function fetchUser() {
-    return JSON.parse(localStorage.getItem("user"));
-  }
-
   return (
     <div className="addAgent">
-      <div className="successDiv">{isSuccessful && <AlertSuccessful />}</div>
       <div className="section formsPage">
         <Form1
           agent={agent}
@@ -218,6 +227,7 @@ export default function AddAgentsPage({ title }) {
           handleChange={handleChange}
           data={data}
           localGov={localGov}
+          userState={user.statecode}
           wards={wards}
           handlePrev={handlePrev}
           handleNext={handleNext}
@@ -233,8 +243,17 @@ export default function AddAgentsPage({ title }) {
           senatorial_district={senatorial_district}
           showFedConst={showFedConst}
           showStateConst={showStateConst}
+          agentTypeList={agentTypeList}
         />
         <Form4
+          agent={agent}
+          stepIndex={stepIndex}
+          handleSubmit={handleSubmit}
+          agentParams={agentParams}
+          handleChange={handleChange}
+          handlePrev={handlePrev}
+        />
+        <Form5
           agent={agent}
           stepIndex={stepIndex}
           handleSubmit={handleSubmit}

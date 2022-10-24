@@ -1,0 +1,32 @@
+.agentsList {
+  padding: 0 40px;
+  .agentModal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // height: 100vh;
+
+    // min-height: 55vh;
+    // width: 100%;
+    background-color: aliceblue;
+    color: rgb(84, 81, 81);
+    // margin: 0 20px;
+    position: fixed;
+    // left: 50;
+    // top: 20;
+    // position: absolute;
+    // align-items: left;
+    // align-self: center;
+    padding: 15px;
+    margin-top: 20vh;
+    margin-left: 30vw;
+    border-radius: 20px;
+    div {
+      text-align: left;
+
+      p {
+        padding: 12px 10px;
+      }
+    }
+  }
+}

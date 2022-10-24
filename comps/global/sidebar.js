@@ -46,7 +46,7 @@ export default function Sidebar() {
                 DASHBOARD
               </li>
             </a> */}
-            <a className="link" href="/states">
+            {/* <a className="link" href="/states">
               <li
                 className={
                   _path == "/states" ? "activeItem" : "sidebar_start_list_item"
@@ -57,7 +57,7 @@ export default function Sidebar() {
                 </span>
                 STATES
               </li>
-            </a>
+            </a> */}
             <a className="link" href="/lga">
               <li
                 className={
@@ -94,7 +94,7 @@ export default function Sidebar() {
                 Polling Units
               </li>
             </a> */}
-            {/* <a className="link" href="/agents">
+            <a className="link" href="/agents">
               <li
                 className={
                   _path == "/agents" ? "activeItem" : "sidebar_start_list_item"
@@ -105,7 +105,7 @@ export default function Sidebar() {
                 </span>
                 AGENTS
               </li>
-            </a> */}
+            </a>
             <a className="link" href="/admin">
               <li
                 className={

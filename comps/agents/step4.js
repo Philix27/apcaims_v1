@@ -21,24 +21,6 @@ export default function Form4({
       <form onSubmit={handleSubmit} className="form">
         <h2>Step 4</h2>
         <div className="input_box">
-          <label htmlFor="form-category">Agent Type</label>
-          <select
-            name="agentType"
-            id="form-category"
-            value={agent.agentType}
-            onChange={handleChange}
-          >
-            {agentParams.agentTypes.map((_val, index) => {
-              return (
-                <option value={_val} key={index}>
-                  {`${_val} AGENTS`}
-                </option>
-              );
-            })}
-          </select>
-        </div>
-
-        <div className="input_box">
           <label htmlFor="form-bank" className="label">
             BANK
           </label>

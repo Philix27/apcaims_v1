@@ -4,7 +4,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   padding-top: 80px;
-  padding-right: 40px;
+  padding-right: 50px;
   padding-bottom: 40px;
   @include tabletSS {
     grid-template-columns: repeat(2, 1fr);
@@ -19,14 +19,19 @@
     padding-top: 0px;
   }
   .card {
-    min-height: 100px;
+    // min-height: 100px;
+    height: 150px;
     background-color: #fff;
     display: flex;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-
     display: block;
-
+    .addAgent {
+      height: 100%;
+      background-color: rgb(6, 161, 161);
+      color: #fff;
+      border-radius: 10px;
+    }
     .topbar {
       height: 15px;
       border-top-right-radius: 10px;

@@ -5,6 +5,7 @@ import { useState } from "react";
 import Axios from "axios";
 import { useRouter } from "next/router";
 import { lgas } from "../../constants/lga";
+import { data } from "../../constants/states/index";
 
 export default function LGAs({ userState }) {
   const [statesToDisplay, setStatesToDisplay] = useState(lgas);
@@ -18,6 +19,13 @@ export default function LGAs({ userState }) {
 
     setStatesToDisplay(tempList);
   };
+
+  const selectedState = data.states.filter((val) =>
+    val.state.toLowerCase().includes(userState.toLowerCase())
+  );
+
+  // console.log("userState");
+  // console.log(selectedState);
 
   return (
     <div className="section">
@@ -35,15 +43,15 @@ export default function LGAs({ userState }) {
             <tr>
               <th>No</th>
               <th>LGA</th>
-              <th>State Code</th>
+              <th>No. Agents</th>
             </tr>
           </thead>
           <tbody>
-            {statesToDisplay.map((state, index) => (
+            {selectedState[0].lga.map((lga, index) => (
               <tr key={index}>
                 <td>{index + 1}.</td>
-                <td>{state.name}</td>
-                <td>{state.statecode}</td>
+                <td>{lga.name}</td>
+                <td>23</td>
               </tr>
             ))}
           </tbody>

@@ -12,6 +12,7 @@ export default function Form3({
   senatorial_district,
   showStateConst,
   showFedConst,
+  agentTypeList,
 }) {
   const styleHide = "hide";
   const styleShow = "show";
@@ -23,7 +24,9 @@ export default function Form3({
       transition={{ duration: 1.7, delay: 1, type: "tween" }}
     >
       <form onSubmit={handleNext} className="form">
-        <h2>Step 3{/* <span>Type of Election</span> */}</h2>
+        <h2>
+          Step 3<span>Election & Agent Type</span>
+        </h2>
         <div className="input_box">
           <label htmlFor="form-election-type">Election Type</label>
           <select
@@ -43,6 +46,25 @@ export default function Form3({
             })}
           </select>
         </div>
+        {/* <div className="input_box">
+          <label htmlFor="form-election-type">AGENT Type</label>
+          <select
+            name="agentType"
+            value={agent.agentType}
+            id="form-election-type"
+            required
+            onChange={handleChange}
+          >
+            <option>Select an election type</option>
+            {agentTypeList.map((_val, index) => {
+              return (
+                <option value={_val.title} key={index}>
+                  {_val.title}
+                </option>
+              );
+            })}
+          </select>
+        </div> */}
         {/* {showSenatorialDistrict && (
           <div className="input_box">
             <label htmlFor="form-election-type">Senatorial District</label>
@@ -112,6 +134,24 @@ export default function Form3({
             />
           </div>
         )}
+
+        <div className="input_box">
+          <label htmlFor="form-category">Agent Type</label>
+          <select
+            name="agentType"
+            id="form-category"
+            value={agent.agentType}
+            onChange={handleChange}
+          >
+            {agentTypeList.map((_val, index) => {
+              return (
+                <option value={_val} key={index}>
+                  {`${_val} AGENTS`}
+                </option>
+              );
+            })}
+          </select>
+        </div>
         <div className="btnContainer">
           <div className=" buttons">
             <input
