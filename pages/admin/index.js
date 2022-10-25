@@ -63,7 +63,7 @@ export default function Dashboard() {
           <a className="card">
             <div className="addAgent">
               <div className="content">
-                <h3>ADD AGENTS</h3>
+                <h3>ADD AGENT</h3>
                 <p>Add an agent to your state</p>
               </div>
             </div>

@@ -85,6 +85,20 @@ export default function Form2({
             })}
           </select>
         </div>
+        <div className="input_box">
+          <label htmlFor="form-polling-unit" className="label">
+            Polling Unit
+          </label>
+          <input
+            type="text"
+            id="form-polling-unit"
+            placeholder="Enter Polling Unit"
+            name="polling_unit"
+            required
+            minLength={3}
+            onChange={handleChange}
+          />
+        </div>
         <div className="btnContainer">
           <div className=" buttons">
             <input

@@ -105,7 +105,7 @@ export default function Form3({
         {showFedConst && (
           <div className="input_box">
             <label htmlFor="form-fed_const" className="label">
-              Fedral Constituency
+              Federal Constituency
             </label>
             <input
               type="text"
@@ -146,7 +146,7 @@ export default function Form3({
             {agentTypeList.map((_val, index) => {
               return (
                 <option value={_val} key={index}>
-                  {`${_val} AGENTS`}
+                  {`${_val} AGENT`}
                 </option>
               );
             })}
