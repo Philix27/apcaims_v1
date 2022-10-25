@@ -1,8 +1,8 @@
 const electionTypes = [
   { title: "PRESIDENTIAL", code: "PRE" },
-  { title: "GUBANATORIAL", code: "GUB" },
+  { title: "GUBERNATORIAL", code: "GUB" },
   { title: "SENATORIAL", code: "SEN" },
-  { title: "HOUSE OF REP.", code: "HOU" },
+  { title: "HOUSE OF REPS.", code: "HOU" },
   { title: "STATE HOUSE OF ASSEMBLY", code: "ASS" },
 ];
 
