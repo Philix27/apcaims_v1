@@ -34,7 +34,7 @@ export default function Dashboard() {
         <div className="card">
           <div className="topbar green"></div>
           <div className="content">
-            <h3>GUBERNATORIAL</h3>
+            <h3>GUBANATORIAL</h3>
             <p>76 Agents</p>
           </div>
         </div>
