@@ -72,10 +72,10 @@ export default function AddAgentsPage({ title }) {
     status: "NEW",
   });
 
-  const HOU = "HOUSE OF REP.";
+  const HOU = "HOUSE OF REPS.";
   const STAT = "STATE HOUSE OF ASSEMBLY";
   const SEN = "SENATORIAL";
-  const GUBA = "GUBANATORIAL";
+  const GUBA = "GUBERNATORIAL";
   const PRES = "PRESIDENTIAL";
 
   function postAgent(agent) {
@@ -127,7 +127,7 @@ export default function AddAgentsPage({ title }) {
       }
     } else if (name == "electionType") {
       if (value == PRES) {
-        setAgentTypeList(["STATE", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+        setAgentTypeList(["PRESIDENTIAL", "STATE", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
         setFedCosnt(false);
         setStateConst(false);
         setShowSenatorialDistrict(false);
@@ -135,22 +135,22 @@ export default function AddAgentsPage({ title }) {
         setFedCosnt(true);
         setStateConst(false);
         setShowSenatorialDistrict(false);
-        setAgentTypeList(["LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+        setAgentTypeList(["HOUSE OF REPS", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
       } else if (value == STAT) {
         setFedCosnt(false);
         setStateConst(true);
         setShowSenatorialDistrict(false);
-        setAgentTypeList(["WARD", "POLLING UNIT"]);
+        setAgentTypeList(["HOUSE OF ASSEMBLY", "WARD", "POLLING UNIT"]);
       } else if (value == GUBA) {
         setFedCosnt(false);
         setStateConst(false);
         setShowSenatorialDistrict(false);
-        setAgentTypeList(["LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+        setAgentTypeList(["STATE", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
       } else if (value == SEN) {
         setFedCosnt(false);
         setStateConst(false);
         setShowSenatorialDistrict(true);
-        setAgentTypeList(["LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+        setAgentTypeList(["SENATORIAL", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
       }
     }
     setAgent({ ...agent, [name]: value });
