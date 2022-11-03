@@ -43,19 +43,17 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  background-image: linear-gradient(
-      rgba(9, 106, 163, 0.391),
-      rgba(2, 4, 14, 0.358)
-    ),
+  background-image: linear-gradient(rgba(9, 106, 163, 0.1), rgba(2, 4, 14, 0.1)),
     url(../public/images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   .textArea {
-    background-color: rgba(0, 0, 0, 0.598);
+    background-color: rgba(0, 0, 0, 0.3);
     margin: 0 auto;
     padding: 40px 40px;
+    // margin-right: 50px;
     color: #fff;
     max-width: 35vw;
     p {

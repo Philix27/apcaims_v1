@@ -53,7 +53,7 @@ export default function Home() {
     const name = e.target.name;
     const value = e.target.value;
     setUser({ ...user, [name]: value });
-    // console.log(user);
+    // console.log(user);5t
   };
 
   const handleSubmit = (e) => {
@@ -99,7 +99,7 @@ export default function Home() {
                 Password
               </label>
               <input
-                type="text"
+                type="password"
                 id="form-password"
                 placeholder="Password"
                 name="password"
