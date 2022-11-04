@@ -68,16 +68,16 @@ export default function Home() {
   return (
     <div className="wrapper">
       {isUserLoggedIn ? (
-        <div className="textArea">
-          {/* <h3>Welcome {user.name}</h3> */}
-          <p>
-            This is a Poll Agent Data Capture Application designed specifically
-            for the All Progressive Congress (APC) for the purpose of election
-            monitoring, reporting and forensics.
-          </p>
-          <p>Only an authorized person can have acces to the full data.</p>
-        </div>
+        <div> </div>
       ) : (
+        // <div className="textArea">
+        //   <p>
+        //     This is a Poll Agent Data Capture Application designed specifically
+        //     for the All Progressive Congress (APC) for the purpose of election
+        //     monitoring, reporting and forensics.
+        //   </p>
+        //   <p>Only an authorized person can have acces to the full data.</p>
+        // </div>
         <div className="section formsPage">
           <form action="#" className="form">
             {/* <form action="/api/auth/login" className="form" method="GET"> */}
