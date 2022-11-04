@@ -16,7 +16,8 @@
     margin: 25px 0;
     font-size: 0.9em;
     // min-width: 400px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 20px 20px 5px 5px;
+    // border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
@@ -26,6 +27,7 @@
     color: #fff;
     padding: 10px;
     text-align: left;
+    font-weight: 300;
   }
 
   table tr {
@@ -35,7 +37,7 @@
   table tr:hover {
     background-color: $primaryColor;
     color: #fff;
-    font-weight: 600;
+    font-weight: 300;
   }
 
   tr:nth-of-type(even) {
