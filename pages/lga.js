@@ -37,8 +37,6 @@ export default function States() {
           <title>APCAIMS | LGA</title>
         </Head>
         <LGAs userState={user.statecode} />
-        {/* <LGAs userState={fetchUser()} /> */}
-        {/* <LGAs userState="ABIA" /> */}
       </div>
     </div>
   );

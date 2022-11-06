@@ -8,6 +8,7 @@ export default function Form4({
   handleChange,
   handlePrev,
   handleSubmit,
+  handleNext,
 }) {
   const styleHide = "hide";
   const styleShow = "show";
@@ -18,7 +19,7 @@ export default function Form4({
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1.7, delay: 1, type: "tween" }}
     >
-      <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleNext} className="form">
         <h2>Step 4</h2>
         <div className="input_box">
           <label htmlFor="form-bank" className="label">
@@ -81,8 +82,8 @@ export default function Form4({
         <div className="buttons">
           <input
             type="submit"
-            value="Submit"
-            onClick={handleSubmit}
+            value="Next"
+            onClick={handleNext}
             className="btn"
           />
         </div>

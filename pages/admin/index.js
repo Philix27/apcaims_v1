@@ -59,7 +59,7 @@ export default function Dashboard() {
             <p>67 Agents</p>
           </div>
         </div>
-        <Link href="/admin/addagent">
+        <Link href="/addagent">
           <a className="card">
             <div className="bgAgent">
               <div className="content">

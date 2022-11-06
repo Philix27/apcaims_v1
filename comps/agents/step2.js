@@ -5,6 +5,7 @@ export default function Form2({
   agent,
   stepIndex,
   handleChange,
+  userPresent,
   data,
   localGov,
   userState,
@@ -26,26 +27,29 @@ export default function Form2({
         <h2>
           Step 2 <span>Location Details</span>
         </h2>
-        <div className="input_box">
-          <label htmlFor="form-state">State</label>
-          <select
-            name="state"
-            onChange={handleChange}
-            value={agent.state}
-            required
-            id="form-state"
-          >
-            <option disabled>Select an state</option>
+        {!userPresent && (
+          <div className="input_box">
+            <label htmlFor="form-state">State</label>
+            <select
+              name="state"
+              onChange={handleChange}
+              value={agent.state}
+              required
+              id="form-state"
+            >
+              <option disabled>Select an state</option>
 
-            {data.states.map((_val, index) => {
-              return (
-                <option value={_val.state} key={index}>
-                  {_val.state}
-                </option>
-              );
-            })}
-          </select>
-        </div>
+              {data.states.map((_val, index) => {
+                return (
+                  <option value={_val.state} key={index}>
+                    {_val.state}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        )}
+
         <div className="input_box">
           <label htmlFor="form-lga">LGA</label>
           <select
@@ -66,6 +70,7 @@ export default function Form2({
             })}
           </select>
         </div>
+
         <div className="input_box">
           <label htmlFor="form-ward">Wards</label>
           <select

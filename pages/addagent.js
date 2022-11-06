@@ -1,23 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Axios from "axios";
-import { data } from "../../constants/states/";
-import { agentParams } from "../../constants/agentparams";
-import { motion } from "framer-motion";
-import { storage } from "../../utils/firebase";
+import { data } from "../constants/states/";
+import { agentParams } from "../constants/agentparams";
+import { storage } from "../utils/firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
-import Form1 from "../../comps/agents/step1";
-import Form2 from "../../comps/agents/step2";
-import Form3 from "../../comps/agents/step3";
-import Form4 from "../../comps/agents/step4";
-import Form5 from "../../comps/agents/step5";
-import { AlertSuccessful } from "../../comps/agents/alert";
-import { Circles } from "react-loader-spinner";
-import { Modal } from "../../comps/global/submitModal";
+import Form1 from "../comps/agents/step1";
+import Form2 from "../comps/agents/step2";
+import Form3 from "../comps/agents/step3";
+import Form4 from "../comps/agents/step4";
+import Form5 from "../comps/agents/step5";
+import Form6 from "../comps/agents/step6";
 
 export default function AddAgentsPage({ title }) {
   const router = useRouter();
+  const [userPresent, setUserPresentUser] = useState(false);
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -27,21 +25,6 @@ export default function AddAgentsPage({ title }) {
     img: "",
     userType: "",
   });
-
-  useEffect(() => {
-    if (!fetchUser()) {
-      router.push("/");
-    } else {
-      console.log("fetchUser()");
-      console.log(fetchUser());
-      setUser(fetchUser());
-      // setUser(null);
-    }
-  }, []);
-
-  function fetchUser() {
-    return JSON.parse(localStorage.getItem("user"));
-  }
 
   const [showModal, setShowModal] = useState(true);
   const [agentTypeList, setAgentTypeList] = useState([]);
@@ -78,6 +61,20 @@ export default function AddAgentsPage({ title }) {
   const GUBA = "GUBERNATORIAL";
   const PRES = "PRESIDENTIAL";
 
+  useEffect(() => {
+    if (!fetchUser()) {
+      // router.push("/");
+    } else {
+      console.log("fetchUser()");
+      console.log(fetchUser());
+      setUser(fetchUser());
+      setUserPresentUser(true);
+    }
+  }, []);
+
+  function fetchUser() {
+    return JSON.parse(localStorage.getItem("user"));
+  }
   function postAgent(agent) {
     Axios.post("https://rxedu-api.vercel.app/api/v1/agent", agent)
       .then((response) => {
@@ -100,7 +97,15 @@ export default function AddAgentsPage({ title }) {
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-
+    if (userPresent) {
+      const selectedState = data.states.filter(
+        (_val) => _val.state == user.name
+      );
+      console.log("selectedState");
+      console.log(selectedState);
+      setLocalGov(selectedState[0].lga);
+      agent.state = user.name;
+    }
     if (name == "state") {
       setWards([]);
       setLocalGov([]);
@@ -181,7 +186,7 @@ export default function AddAgentsPage({ title }) {
   };
   const handleNext = (e) => {
     e.preventDefault();
-    if (stepIndex < 3) {
+    if (stepIndex <= 4) {
       setStepIndex(stepIndex + 1);
     }
   };
@@ -227,59 +232,66 @@ export default function AddAgentsPage({ title }) {
 
   return (
     <div className="addAgent">
-      <div className="sectio">
-        <div className="formsage">
-          <Form1
-            agent={agent}
-            stepIndex={stepIndex}
-            handleChange={handleChange}
-            data={data}
-            localGov={localGov}
-            handleNext={handleNext}
-            wards={wards}
-          />
-          <Form2
-            agent={agent}
-            stepIndex={stepIndex}
-            handleChange={handleChange}
-            data={data}
-            localGov={localGov}
-            userState={user.statecode}
-            wards={wards}
-            handlePrev={handlePrev}
-            handleNext={handleNext}
-          />
-          <Form3
-            agent={agent}
-            stepIndex={stepIndex}
-            agentParams={agentParams}
-            showSenatorialDistrict={showSenatorialDistrict}
-            handleChange={handleChange}
-            handlePrev={handlePrev}
-            handleNext={handleNext}
-            senatorial_district={senatorial_district}
-            showFedConst={showFedConst}
-            showStateConst={showStateConst}
-            agentTypeList={agentTypeList}
-          />
-          <Form4
-            agent={agent}
-            stepIndex={stepIndex}
-            handleSubmit={handleSubmit}
-            agentParams={agentParams}
-            handleChange={handleChange}
-            handlePrev={handlePrev}
-          />
-          <Form5
-            agent={agent}
-            stepIndex={stepIndex}
-            handleSubmit={handleSubmit}
-            agentParams={agentParams}
-            handleChange={handleChange}
-            handlePrev={handlePrev}
-          />
-        </div>
-      </div>
+      <Form1
+        agent={agent}
+        stepIndex={stepIndex}
+        handleChange={handleChange}
+        data={data}
+        localGov={localGov}
+        handleNext={handleNext}
+        wards={wards}
+      />
+      <Form2
+        agent={agent}
+        stepIndex={stepIndex}
+        handleChange={handleChange}
+        data={data}
+        localGov={localGov}
+        userPresent={userPresent}
+        userState={user.statecode}
+        wards={wards}
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+      />
+      <Form3
+        agent={agent}
+        stepIndex={stepIndex}
+        agentParams={agentParams}
+        showSenatorialDistrict={showSenatorialDistrict}
+        handleChange={handleChange}
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+        senatorial_district={senatorial_district}
+        showFedConst={showFedConst}
+        showStateConst={showStateConst}
+        agentTypeList={agentTypeList}
+      />
+      <Form4
+        agent={agent}
+        stepIndex={stepIndex}
+        handleSubmit={handleSubmit}
+        agentParams={agentParams}
+        handleChange={handleChange}
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+      />
+      <Form5
+        agent={agent}
+        stepIndex={stepIndex}
+        handleSubmit={handleSubmit}
+        agentParams={agentParams}
+        handleChange={handleChange}
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+      />
+      <Form6
+        agent={agent}
+        stepIndex={stepIndex}
+        handleSubmit={handleSubmit}
+        agentParams={agentParams}
+        handleChange={handleChange}
+        handlePrev={handlePrev}
+      />
     </div>
   );
 }
