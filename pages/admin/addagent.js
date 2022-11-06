@@ -127,7 +127,13 @@ export default function AddAgentsPage({ title }) {
       }
     } else if (name == "electionType") {
       if (value == PRES) {
-        setAgentTypeList(["PRESIDENTIAL", "STATE", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+        setAgentTypeList([
+          "PRESIDENTIAL",
+          "STATE",
+          "LOCAL GOVERNMENT",
+          "WARD",
+          "POLLING UNIT",
+        ]);
         setFedCosnt(false);
         setStateConst(false);
         setShowSenatorialDistrict(false);
@@ -135,7 +141,12 @@ export default function AddAgentsPage({ title }) {
         setFedCosnt(true);
         setStateConst(false);
         setShowSenatorialDistrict(false);
-        setAgentTypeList(["HOUSE OF REPS", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+        setAgentTypeList([
+          "HOUSE OF REPS",
+          "LOCAL GOVERNMENT",
+          "WARD",
+          "POLLING UNIT",
+        ]);
       } else if (value == STAT) {
         setFedCosnt(false);
         setStateConst(true);
@@ -150,7 +161,12 @@ export default function AddAgentsPage({ title }) {
         setFedCosnt(false);
         setStateConst(false);
         setShowSenatorialDistrict(true);
-        setAgentTypeList(["SENATORIAL", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
+        setAgentTypeList([
+          "SENATORIAL",
+          "LOCAL GOVERNMENT",
+          "WARD",
+          "POLLING UNIT",
+        ]);
       }
     }
     setAgent({ ...agent, [name]: value });
@@ -211,56 +227,58 @@ export default function AddAgentsPage({ title }) {
 
   return (
     <div className="addAgent">
-      <div className="section formsPage">
-        <Form1
-          agent={agent}
-          stepIndex={stepIndex}
-          handleChange={handleChange}
-          data={data}
-          localGov={localGov}
-          handleNext={handleNext}
-          wards={wards}
-        />
-        <Form2
-          agent={agent}
-          stepIndex={stepIndex}
-          handleChange={handleChange}
-          data={data}
-          localGov={localGov}
-          userState={user.statecode}
-          wards={wards}
-          handlePrev={handlePrev}
-          handleNext={handleNext}
-        />
-        <Form3
-          agent={agent}
-          stepIndex={stepIndex}
-          agentParams={agentParams}
-          showSenatorialDistrict={showSenatorialDistrict}
-          handleChange={handleChange}
-          handlePrev={handlePrev}
-          handleNext={handleNext}
-          senatorial_district={senatorial_district}
-          showFedConst={showFedConst}
-          showStateConst={showStateConst}
-          agentTypeList={agentTypeList}
-        />
-        <Form4
-          agent={agent}
-          stepIndex={stepIndex}
-          handleSubmit={handleSubmit}
-          agentParams={agentParams}
-          handleChange={handleChange}
-          handlePrev={handlePrev}
-        />
-        <Form5
-          agent={agent}
-          stepIndex={stepIndex}
-          handleSubmit={handleSubmit}
-          agentParams={agentParams}
-          handleChange={handleChange}
-          handlePrev={handlePrev}
-        />
+      <div className="sectio">
+        <div className="formsage">
+          <Form1
+            agent={agent}
+            stepIndex={stepIndex}
+            handleChange={handleChange}
+            data={data}
+            localGov={localGov}
+            handleNext={handleNext}
+            wards={wards}
+          />
+          <Form2
+            agent={agent}
+            stepIndex={stepIndex}
+            handleChange={handleChange}
+            data={data}
+            localGov={localGov}
+            userState={user.statecode}
+            wards={wards}
+            handlePrev={handlePrev}
+            handleNext={handleNext}
+          />
+          <Form3
+            agent={agent}
+            stepIndex={stepIndex}
+            agentParams={agentParams}
+            showSenatorialDistrict={showSenatorialDistrict}
+            handleChange={handleChange}
+            handlePrev={handlePrev}
+            handleNext={handleNext}
+            senatorial_district={senatorial_district}
+            showFedConst={showFedConst}
+            showStateConst={showStateConst}
+            agentTypeList={agentTypeList}
+          />
+          <Form4
+            agent={agent}
+            stepIndex={stepIndex}
+            handleSubmit={handleSubmit}
+            agentParams={agentParams}
+            handleChange={handleChange}
+            handlePrev={handlePrev}
+          />
+          <Form5
+            agent={agent}
+            stepIndex={stepIndex}
+            handleSubmit={handleSubmit}
+            agentParams={agentParams}
+            handleChange={handleChange}
+            handlePrev={handlePrev}
+          />
+        </div>
       </div>
     </div>
   );

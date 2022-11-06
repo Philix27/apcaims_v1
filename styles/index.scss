@@ -86,6 +86,7 @@ body {
 
 .formsPage {
   padding-left: 20vw;
+
   @include mobileSS {
     padding-left: 0;
   }
