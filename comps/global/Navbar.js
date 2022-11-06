@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const router = useRouter();
   const _path = router.pathname;
+  const show = "show";
+  const [showNav, setShowNav] = useState(false);
+
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -28,62 +32,50 @@ export default function Navbar() {
   };
   return (
     <>
-      <div className="nav">
-        <input type="checkbox" id="check" className="check" />
-        <div className="bars">
-          <label htmlFor="check">
-            <FaBars />
-          </label>
-        </div>
+      <div className="navbar ">
+        <Link href="/">
+          <img className="logo" src="/images/logo.png" />
+        </Link>
 
-        <div className="nav_start">
-          <Link href="/">
-            <a>
-              <img
-                className="logo"
-                src="/images/logo.png"
-                width={50}
-                height={40}
-              />
-            </a>
-          </Link>
-          <div className="title">
-            <h3>APC DATA CAPTURE</h3>
-          </div>
-          <div className="nav_bg">
-            <ul className="nav_start_list">
-              <li className="nav_start_list_item">
-                <div className="bars_close">
-                  <label htmlFor="check">
-                    <FaTimes />
-                  </label>
-                </div>
-              </li>
-              {user ? (
-                <li className="nav_start_list_item">
-                  <Link href="/#">
-                    <a className="link">{user.email}</a>
-                  </Link>
-                </li>
-              ) : (
-                <li className="nav_start_list_item">
-                  <Link href="/">
-                    <a className="link">Not Signed In</a>
-                  </Link>
-                </li>
-              )}
-              {user && (
-                <li className="nav_start_list_item">
-                  <Link href="/#">
-                    <a className="link" onClick={logOut}>
-                      Logout
-                    </a>
-                  </Link>
-                </li>
-              )}
-            </ul>
-          </div>
-        </div>
+        <label className="brand">APC DATA CAPTURE</label>
+
+        <ul className={showNav ? "show" : ""}>
+          <li
+            className={_path == "/" ? "active" : ""}
+            onClick={() => setShowNav(!showNav)}
+          >
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+          </li>
+          <li
+            onClick={() => setShowNav(!showNav)}
+            className={_path == "/reg" ? "active" : ""}
+          >
+            <Link href="/lga">
+              <a>LGA</a>
+            </Link>
+          </li>
+          <li
+            onClick={() => setShowNav(!showNav)}
+            className={_path == "/agents" ? "active" : ""}
+          >
+            <Link href="/agents">
+              <a>AGENTS</a>
+            </Link>
+          </li>
+          <li
+            onClick={() => setShowNav(!showNav)}
+            className={_path == "/admin" ? "active" : ""}
+          >
+            <Link href="/admin">
+              <a>Admin</a>
+            </Link>
+          </li>
+        </ul>
+        <label className="icon">
+          <FaBars onClick={() => setShowNav(!showNav)} />
+        </label>
       </div>
     </>
   );
