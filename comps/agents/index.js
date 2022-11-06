@@ -1,6 +1,7 @@
 import React from "react";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import { FcApproval, FcDisapprove } from "react-icons/fc";
+import { MdDownload } from "react-icons/md";
 import { useState } from "react";
 import Axios from "axios";
 import { useRouter } from "next/router";
@@ -84,6 +85,8 @@ export default function AgentsComp({ agentsList }) {
               <th>LGA</th>
               <th>Election </th>
               <th>Agent</th>
+              <th>Download</th>
+              <th>Edit</th>
               <th>Delete</th>
             </tr>
           </thead>
@@ -102,6 +105,16 @@ export default function AgentsComp({ agentsList }) {
                 <td>{agent.electionType}</td>
                 <td>{agent.agentType}</td>
 
+                <td>
+                  <a onClick={() => onDelete(agent)}>
+                    <MdDownload className=" icon" />
+                  </a>
+                </td>
+                <td>
+                  <a onClick={() => onDelete(agent)}>
+                    <AiFillEdit className=" icon" />
+                  </a>
+                </td>
                 <td>
                   <a onClick={() => onDelete(agent)}>
                     <AiFillDelete className="red icon" />
