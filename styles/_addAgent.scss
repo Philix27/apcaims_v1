@@ -1,15 +1,18 @@
 .addAgent {
   display: flex;
   flex-direction: column;
-  padding: 32px 48px 0;
+  padding: 32px 48px 0 0;
   margin: 50px auto;
   max-width: 40vw;
   // align-items: center;
-
+  @include tabletSS {
+    max-width: 500px;
+  }
   @include mobileSS {
     padding: 30px 20px;
     margin: 50px auto;
     align-items: center;
+    // width: 80vw;
   }
   .sect {
     background-color: #fff;
@@ -17,8 +20,14 @@
     padding: 12px 15px;
     border-radius: 20px;
     margin-top: 30px;
-    // max-width: 70%;
+    max-width: 400px;
     // display: none;
+    @include tabletSS {
+      width: 400px;
+    }
+    @include mobileSS {
+      width: 80vw;
+    }
     h2 {
       font-size: 2rem;
       span {

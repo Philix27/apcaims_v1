@@ -72,6 +72,24 @@ export default function Navbar() {
               <a>Admin</a>
             </Link>
           </li>
+          {user ? (
+            <li>
+              <Link href="/#">{user.email}</Link>
+            </li>
+          ) : (
+            <li>
+              <Link href="/">Not Signed In</Link>
+            </li>
+          )}
+          {user && (
+            <li>
+              <Link href="/#">
+                <a className="link" onClick={logOut}>
+                  Logout
+                </a>
+              </Link>
+            </li>
+          )}
         </ul>
         <label className="icon">
           {showNav ? (
