@@ -22,7 +22,7 @@ export default function LGAs({ userState }) {
             <tr>
               <th>No</th>
               <th>LGA</th>
-              {/* <th>No. Agents</th> */}
+              <th>No. Agents</th>
             </tr>
           </thead>
           <tbody>
@@ -31,7 +31,7 @@ export default function LGAs({ userState }) {
               <tr key={index}>
                 <td>{index + 1}.</td>
                 <td>{lga.name}</td>
-                {/* <td>23</td> */}
+                <td>0</td>
               </tr>
             ))}
           </tbody>

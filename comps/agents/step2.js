@@ -18,7 +18,7 @@ export default function Form2({
 
   return (
     <motion.div
-      className={`sect step1 ${stepIndex === 1 ? styleShow : styleHide}`}
+      className={`sect step2 ${stepIndex === 1 ? styleShow : styleHide}`}
       initial={{ x: "-100vw", opacity: 0.1 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1.3, delay: 0.5, type: "tween" }}

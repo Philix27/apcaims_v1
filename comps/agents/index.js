@@ -83,8 +83,6 @@ export default function AgentsComp({ agentsList }) {
               <th>Email</th>
               <th>State</th>
               <th>LGA</th>
-              <th>Election </th>
-              <th>Agent</th>
               <th>Download</th>
               <th>Edit</th>
               <th>Delete</th>
@@ -98,20 +96,20 @@ export default function AgentsComp({ agentsList }) {
                 <td onClick={() => _showModal(agent)}>
                   <img src={agent.image} alt={agent.name}></img>
                 </td>
-                <td>{agent.name}</td>
-                <td>{agent.email}</td>
+                <td onClick={() => _showModal(agent)}>{agent.name}</td>
+                <td onClick={() => _showModal(agent)}>{agent.email}</td>
                 <td>{agent.state}</td>
                 <td>{agent.lga}</td>
-                <td>{agent.electionType}</td>
-                <td>{agent.agentType}</td>
+                {/* <td>{agent.electionType}</td> */}
+                {/* <td>{agent.agentType}</td> */}
 
                 <td>
-                  <a onClick={() => onDelete(agent)}>
+                  <a>
                     <MdDownload className=" icon" />
                   </a>
                 </td>
                 <td>
-                  <a onClick={() => onDelete(agent)}>
+                  <a>
                     <AiFillEdit className=" icon" />
                   </a>
                 </td>

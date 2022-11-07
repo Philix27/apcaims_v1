@@ -15,7 +15,7 @@ export default function Form6({
   const styleShow = "show";
   return (
     <motion.div
-      className={`sect step2 ${stepIndex === 5 ? styleShow : styleHide}`}
+      className={`sect step6 ${stepIndex === 5 ? styleShow : styleHide}`}
       // className={`sect step2 ${4 === 4 ? styleShow : styleHide}`}
       initial={{ x: "-100vw", opacity: 0.1 }}
       animate={{ x: 0, opacity: 1 }}

@@ -34,6 +34,7 @@ export default function AddAgentsPage({ title }) {
   const [profileImage, setProfileImage] = useState(null);
   const [imgUrl, setImgUrl] = useState(null);
   const [stepIndex, setStepIndex] = useState(0);
+  const [showErrorMsg, setShowErrorMsg] = useState(false);
   //! Show TextForm
   const [showSenatorialDistrict, setShowSenatorialDistrict] = useState(false);
   const [showFedConst, setFedCosnt] = useState(false);
@@ -180,6 +181,7 @@ export default function AddAgentsPage({ title }) {
 
   const handlePrev = (e) => {
     e.preventDefault();
+    setShowErrorMsg(false);
     if (stepIndex > 0) {
       setStepIndex(stepIndex - 1);
     }
@@ -210,6 +212,7 @@ export default function AddAgentsPage({ title }) {
   }
 
   const handleSubmit = async (e) => {
+    setShowErrorMsg(false);
     if (
       agent.name &&
       agent.email &&
@@ -219,13 +222,15 @@ export default function AddAgentsPage({ title }) {
       agent.lga &&
       agent.ward &&
       agent.status &&
-      agent.agentType
+      agent.agentType &&
+      agent.image
     ) {
       e.preventDefault();
       console.log("Before Upload");
-      setStepIndex(4);
+      setStepIndex(5);
       uploadImageToFb();
     } else {
+      setShowErrorMsg(true);
       console.log("Something is missing");
     }
   };
@@ -283,6 +288,7 @@ export default function AddAgentsPage({ title }) {
         handleChange={handleChange}
         handlePrev={handlePrev}
         handleNext={handleNext}
+        showErrorMsg={showErrorMsg}
       />
       <Form6
         agent={agent}

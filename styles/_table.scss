@@ -31,7 +31,7 @@
   }
 
   table tr {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid $secondaryColor;
   }
 
   table tr:hover {
@@ -41,7 +41,7 @@
   }
 
   tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+    background-color: $secondaryColor;
   }
 
   tr:last-of-type {

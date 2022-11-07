@@ -8,12 +8,13 @@ export default function Form5({
   handleChange,
   handlePrev,
   handleSubmit,
+  showErrorMsg,
 }) {
   const styleHide = "hide";
   const styleShow = "show";
   return (
     <motion.div
-      className={`sect step2 ${stepIndex === 4 ? styleShow : styleHide}`}
+      className={`sect step5 ${stepIndex === 4 ? styleShow : styleHide}`}
       initial={{ x: "-100vw", opacity: 0.1 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1.7, delay: 1, type: "tween" }}
@@ -22,40 +23,69 @@ export default function Form5({
         <h2>
           Step 5 <span> Preview</span>
         </h2>
-
-        <div className="content">
-          <h2>
-            Name: <span> {agent.name}</span>
-          </h2>
-          <hr />
-          <h2>
-            Email: <span> {agent.email}</span>
-          </h2>
-          <hr />
-          <h2>
-            Phone: <span> {agent.phone}</span>
-          </h2>
-          <hr />
-          <h2>
-            Address: <span> {agent.address}</span>
-          </h2>
-          <hr />
-          <h2>
-            State: <span> {agent.state}</span>
-          </h2>
-          <hr />
-          <h2>
-            LGA: <span> {agent.lga}</span>
-          </h2>
-          <hr />
-          <h2>
-            Ward: <span> {agent.ward}</span>
-          </h2>
-          <hr />
-          <h2>
-            Image: <span> {agent.image}</span>
-          </h2>
-        </div>
+        {showErrorMsg && <p className="errorMsg">Some fields are empty.</p>}
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>{agent.name}</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>{agent.email}</td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td>{agent.phone}</td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td>{agent.address}</td>
+            </tr>
+            <tr>
+              <td>State</td>
+              <td>{agent.state}</td>
+            </tr>
+            <tr>
+              <td>LGA</td>
+              <td>{agent.lga}</td>
+            </tr>
+            <tr>
+              <td>Ward</td>
+              <td>{agent.ward}</td>
+            </tr>
+            <tr>
+              <td>Agent Type</td>
+              <td>{agent.agentType}</td>
+            </tr>
+            <tr>
+              <td>Election Type</td>
+              <td>{agent.electionType}</td>
+            </tr>
+            <tr>
+              <td>Polling Unit</td>
+              <td>{agent.polling_unit}</td>
+            </tr>
+            <tr>
+              <td>Bank</td>
+              <td>{agent.bankName}</td>
+            </tr>
+            <tr>
+              <td>Account No.</td>
+              <td>{agent.accountNumber}</td>
+            </tr>
+            <tr>
+              <td>Profile Picture</td>
+              <td>{agent.image}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div className="btnContainer">
         <div className=" buttons">

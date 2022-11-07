@@ -11,11 +11,9 @@
     max-width: 500px;
   }
   @include mobileSS {
-    padding: 30px 20px;
-    margin: 50px auto;
-    align-items: center;
-    // width: 80vw;
+    padding: 120px 20px;
   }
+
   .sect {
     background-color: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -29,6 +27,7 @@
     }
     @include mobileSS {
       width: 80vw;
+      margin-top: 120px;
     }
     h2 {
       font-size: 2rem;
