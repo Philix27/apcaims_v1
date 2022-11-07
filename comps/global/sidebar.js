@@ -5,12 +5,10 @@ import { BiLogOut } from "react-icons/bi";
 import Link from "next/link";
 
 import {
-  MdOutlineSupportAgent,
-  MdLocationPin,
-  MdOutlineShareLocation,
   MdMyLocation,
   MdGroups,
   MdAdminPanelSettings,
+  MdOutlineEmail,
 } from "react-icons/md";
 
 export default function Sidebar() {
@@ -102,7 +100,7 @@ export default function Sidebar() {
               <a className="link" href="/">
                 <li className={"sidebar_start_list_item"}>
                   <span>
-                    <MdAdminPanelSettings />
+                    <MdOutlineEmail />
                   </span>
                   {user.email}
                 </li>
