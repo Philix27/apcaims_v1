@@ -68,10 +68,6 @@ export default function AgentsComp({ agentsList }) {
         />
       )}
       <div className="tableSection">
-        <br />
-        <br />
-        <br />
-        <br />
         <div className="input">
           <input
             type="search"
@@ -102,8 +98,7 @@ export default function AgentsComp({ agentsList }) {
                   <img src={agent.image} alt={agent.name}></img>
                 </td>
                 <td onClick={() => _showModal(agent)}>
-                  {agent.name} {agent.lastName}
-                  {agent.firstname}
+                  {agent.name} {agent.lastName} {agent.firstName}
                 </td>
                 <td onClick={() => _showModal(agent)}>{agent.email}</td>
                 <td>{agent.state}</td>

@@ -176,6 +176,8 @@ export default function AddAgentsPage({ title }) {
           "POLLING UNIT",
         ]);
       }
+    } else if (name == "email") {
+      value = value.toLowerCase();
     }
     setAgent({ ...agent, [name]: value });
     console.log(agent);
