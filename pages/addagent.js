@@ -41,7 +41,8 @@ export default function AddAgentsPage({ title }) {
   const [showStateConst, setStateConst] = useState(false);
   const [senatorial_district, setSenatorial_district] = useState([]);
   const [agent, setAgent] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     address: "",
@@ -215,7 +216,8 @@ export default function AddAgentsPage({ title }) {
   const handleSubmit = async (e) => {
     setShowErrorMsg(false);
     if (
-      agent.name &&
+      agent.firstName &&
+      agent.lastName &&
       agent.email &&
       agent.address &&
       agent.phone &&

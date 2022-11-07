@@ -28,13 +28,17 @@ export default function Form5({
           <thead>
             <tr>
               <th>Name</th>
-              <th>Value</th>
+              <th>Info</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Name</td>
-              <td>{agent.name}</td>
+              <td>First Name</td>
+              <td>{agent.firstName}</td>
+            </tr>
+            <tr>
+              <td>Last Name</td>
+              <td>{agent.lastName}</td>
             </tr>
             <tr>
               <td>Email</td>

@@ -5,7 +5,8 @@ export default function AgentModalContent({ agent }) {
     <div className="agentModal">
       <div>
         <p>
-          <strong> Name:</strong> {agent.name}
+          <strong> Name:</strong> {agent.name} {agent.firstName}
+          {agent.lastName}
         </p>
         <hr />
         <p>
