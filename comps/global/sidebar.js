@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { RiDashboardFill, RiHome5Fill } from "react-icons/ri";
 import { BiLogOut } from "react-icons/bi";
 import Link from "next/link";
-
 import {
   MdMyLocation,
   MdGroups,
@@ -15,6 +14,7 @@ export default function Sidebar() {
   const router = useRouter();
   const _path = router.pathname;
   const [user, setUser] = useState(null);
+
   useEffect(() => {
     if (fetchUser()) {
       setUser(fetchUser());

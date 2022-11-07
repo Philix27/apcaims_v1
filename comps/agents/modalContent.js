@@ -39,6 +39,10 @@ export default function AgentModalContent({ agent }) {
         <p>
           <strong> Election Type:</strong> {agent.electionType}
         </p>
+        <hr />
+        <p>
+          <strong> Polling Unit:</strong> {agent.pollingUnit}
+        </p>
       </div>
     </div>
   );

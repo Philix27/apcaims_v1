@@ -1,15 +1,12 @@
 .sidebar {
   height: 100vh;
   background-color: $primaryColor;
-  /* background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)); */
   display: flex;
   width: 20vw;
-  // height: 100%;
   align-content: space-between;
   position: fixed;
   top: 0;
-  /* right: 0; */
-  /* z-index: 2; */
+
   @include mobileSS {
     display: none;
   }
@@ -122,11 +119,7 @@
   }
 
   img {
-    // display: none;
     padding-top: 10px;
-    // width: fit-content;
-    // padding: 7.5px 20px 7.5px 10px;
-    // height: auto;
   }
 
   .sidebar_end {

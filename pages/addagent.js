@@ -53,6 +53,7 @@ export default function AddAgentsPage({ title }) {
     bankName: "",
     accountNumber: "",
     image: "",
+    pollingUnit: "",
     status: "NEW",
   });
 
@@ -86,7 +87,7 @@ export default function AddAgentsPage({ title }) {
         } else {
           router.push("/");
         }
-        setIsSuccessful(true);
+        // setIsSuccessful(true);
       })
       .catch((e) => {
         console.log(e);
@@ -223,7 +224,8 @@ export default function AddAgentsPage({ title }) {
       agent.ward &&
       agent.status &&
       agent.agentType &&
-      agent.image
+      agent.image &&
+      agent.pollingUnit
     ) {
       e.preventDefault();
       console.log("Before Upload");

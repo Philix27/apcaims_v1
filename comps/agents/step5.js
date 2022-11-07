@@ -70,7 +70,7 @@ export default function Form5({
             </tr>
             <tr>
               <td>Polling Unit</td>
-              <td>{agent.polling_unit}</td>
+              <td>{agent.pollingUnit}</td>
             </tr>
             <tr>
               <td>Bank</td>
@@ -80,10 +80,10 @@ export default function Form5({
               <td>Account No.</td>
               <td>{agent.accountNumber}</td>
             </tr>
-            <tr>
+            {/* <tr>
               <td>Profile Picture</td>
               <td>{agent.image}</td>
-            </tr>
+            </tr> */}
           </tbody>
         </table>
       </div>

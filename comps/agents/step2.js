@@ -98,7 +98,8 @@ export default function Form2({
             type="text"
             id="form-polling-unit"
             placeholder="Enter Polling Unit"
-            name="polling_unit"
+            name="pollingUnit"
+            value={agent.pollingUnit}
             required
             minLength={3}
             onChange={handleChange}
