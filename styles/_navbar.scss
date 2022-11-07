@@ -7,8 +7,14 @@
   position: fixed;
   top: 0;
   padding-left: 40px;
+  visibility: hidden;
+
+  @include tabletSS {
+    visibility: visible;
+  }
   @include mobileSS {
     padding-left: 20px;
+    visibility: visible;
   }
   .show {
     left: 0;
@@ -46,7 +52,7 @@
       visibility: visible;
       position: fixed;
       width: 100%;
-      height: 45vh;
+      // height: 45vh;
       background-color: $primaryColor;
       color: #fff;
       top: 50px;

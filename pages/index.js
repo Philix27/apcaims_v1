@@ -29,18 +29,22 @@ export default function Home() {
       }
     });
     console.log(userLoggedIn);
-    if (
-      userLoggedIn[0].email == _user.email &&
-      userLoggedIn[0].password == _user.password
-    ) {
-      setUserLoggedIn(true);
-      localStorage.setItem("user", JSON.stringify(userLoggedIn[0]));
+    if (userLoggedIn[0]) {
+      if (
+        userLoggedIn[0].email == _user.email &&
+        userLoggedIn[0].password == _user.password
+      ) {
+        setUserLoggedIn(true);
+        localStorage.setItem("user", JSON.stringify(userLoggedIn[0]));
 
-      // router.push("/admin");
-      router.reload(window.location.pathname);
-      console.log("Logged in successfully");
+        // router.push("/admin");
+        router.reload(window.location.pathname);
+        console.log("Logged in successfully");
+      } else {
+        alert("Wrong Password");
+      }
     } else {
-      alert("Wrong Password");
+      alert("Wrong email/password Password");
     }
     // console.log("Logged in successfully");
   }

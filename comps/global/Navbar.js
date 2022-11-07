@@ -56,27 +56,32 @@ export default function Navbar() {
               <a>LGA</a>
             </Link>
           </li>
-          <li
-            onClick={() => setShowNav(!showNav)}
-            className={_path == "/agents" ? "active" : ""}
-          >
-            <Link href="/agents">
-              <a>AGENTS</a>
-            </Link>
-          </li>
-          <li
-            onClick={() => setShowNav(!showNav)}
-            className={_path == "/admin" ? "active" : ""}
-          >
-            <Link href="/admin">
-              <a>Admin</a>
-            </Link>
-          </li>
-          {user ? (
-            <li>
-              <Link href="/#">{user.email}</Link>
+          {user && (
+            <li
+              onClick={() => setShowNav(!showNav)}
+              className={_path == "/agents" ? "active" : ""}
+            >
+              <Link href="/agents">
+                <a>AGENTS</a>
+              </Link>
             </li>
-          ) : (
+          )}
+          {user && (
+            <li
+              onClick={() => setShowNav(!showNav)}
+              className={_path == "/admin" ? "active" : ""}
+            >
+              <Link href="/admin">
+                <a>Admin</a>
+              </Link>
+            </li>
+          )}
+          {user && (
+            <li>
+              <Link href="/">{user.email}</Link>
+            </li>
+          )}
+          {!user && (
             <li>
               <Link href="/">Not Signed In</Link>
             </li>

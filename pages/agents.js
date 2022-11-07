@@ -5,6 +5,7 @@ import AgentsComp from "../comps/agents";
 import axios from "axios";
 
 export default function AgentsPage({ agentsList }) {
+  const router = useRouter();
   useEffect(() => {
     if (!fetchUser()) {
       router.push("/");

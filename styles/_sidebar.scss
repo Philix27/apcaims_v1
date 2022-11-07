@@ -16,6 +16,14 @@
   @include tabletSS {
     display: none;
   }
+  label {
+    color: #fff;
+    line-height: 40px;
+    position: absolute;
+    top: 10px;
+    padding-left: 20px;
+    font-weight: 700;
+  }
   .sidebar_start {
     align-items: center;
     display: block;
@@ -113,8 +121,12 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .img {
-    display: none;
+  img {
+    // display: none;
+    padding-top: 10px;
+    // width: fit-content;
+    // padding: 7.5px 20px 7.5px 10px;
+    // height: auto;
   }
 
   .sidebar_end {
