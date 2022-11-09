@@ -28,7 +28,7 @@ export default function Form2({
         <h2>
           Step 2 <span>Location Details</span>
         </h2>
-        {!user && (
+        {!userPresent && (
           <div className="input_box">
             <label htmlFor="form-state">State</label>
             <select

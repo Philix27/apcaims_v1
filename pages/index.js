@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { data } from "../constants/states/";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -20,7 +21,7 @@ export default function Home() {
       // setUser();
       setUserLoggedIn(false);
     }
-  }, {});
+  }, []);
 
   function login(_user) {
     const userLoggedIn = data.sr.filter((_v) => {
@@ -120,6 +121,11 @@ export default function Home() {
               />
             </div>
           </form>
+          <div className="buttons">
+            <Link className="btn" href="/addagent">
+              Become an agent
+            </Link>
+          </div>
         </div>
       )}
     </div>

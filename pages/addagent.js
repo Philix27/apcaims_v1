@@ -47,7 +47,7 @@ export default function AddAgentsPage({ title }) {
     email: "",
     phone: "",
     address: "",
-    state: user.statecode,
+    state: user ? user.statecode : "",
     lga: "",
     ward: "",
     electionType: "",
@@ -106,11 +106,11 @@ export default function AddAgentsPage({ title }) {
     var selectedState;
 
     // if (userPresent) {
-    if (user) {
-      selectedState = data.states.filter((_val) => _val.state == user.name);
+    if (userPresent) {
+      selectedState = data.states.filter((_val) => _val.state === user.name);
       console.log("selectedState");
       console.log(selectedState);
-      console.log("User");
+      console.log("user");
       console.log(user);
       setLocalGov(selectedState[0].lga);
       agent.state = user.name;
@@ -187,7 +187,7 @@ export default function AddAgentsPage({ title }) {
       value = value.toLowerCase();
     }
     setAgent({ ...agent, [name]: value });
-    console.log(agent);
+    // console.log(agent);
   };
 
   const handlePrev = (e) => {
@@ -266,8 +266,8 @@ export default function AddAgentsPage({ title }) {
         data={data}
         localGov={localGov}
         userPresent={userPresent}
+        // userState={user.statecode}
         user={user}
-        userState={user.statecode}
         wards={wards}
         handlePrev={handlePrev}
         handleNext={handleNext}
