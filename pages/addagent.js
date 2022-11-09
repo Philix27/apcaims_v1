@@ -108,9 +108,12 @@ export default function AddAgentsPage({ title }) {
 
       console.log("selectedState");
       console.log(selectedState);
-      // setLocalGov(selectedState[0].lga);
+      console.log("User");
+      console.log(user);
+      setLocalGov(selectedState[0].lga);
       agent.state = user.name;
     }
+
     if (name == "state") {
       setWards([]);
       setLocalGov([]);
