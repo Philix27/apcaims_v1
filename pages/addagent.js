@@ -101,10 +101,11 @@ export default function AddAgentsPage({ title }) {
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
+    var selectedState;
+
     if (userPresent) {
-      const selectedState = data.states.filter(
-        (_val) => _val.state == user.name
-      );
+      selectedState = data.states.filter((_val) => _val.state == user.name);
+
       console.log("selectedState");
       console.log(selectedState);
       setLocalGov(selectedState[0].lga);
@@ -113,10 +114,10 @@ export default function AddAgentsPage({ title }) {
     if (name == "state") {
       setWards([]);
       setLocalGov([]);
-      const selectedState = data.states.filter((_val) => _val.state == value);
-      // const selectedState = data.states.filter(
-      //   (_val) => _val.state == user.statecode
-      // );
+      if (!userPresent) {
+        selectedState = data.states.filter((_val) => _val.state == value);
+      }
+
       setLocalGov(selectedState[0].lga);
     } else if (name == "lga") {
       const selectedLocalGov = localGov.filter((_val) => _val.name == value);
