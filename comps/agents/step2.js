@@ -12,6 +12,7 @@ export default function Form2({
   wards,
   handleNext,
   handlePrev,
+  user,
 }) {
   const styleHide = "hide";
   const styleShow = "show";
@@ -27,7 +28,7 @@ export default function Form2({
         <h2>
           Step 2 <span>Location Details</span>
         </h2>
-        {!userPresent && (
+        {!user && (
           <div className="input_box">
             <label htmlFor="form-state">State</label>
             <select

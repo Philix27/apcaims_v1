@@ -69,15 +69,17 @@ export default function AddAgentsPage({ title }) {
     if (!fetchUser()) {
       // router.push("/");
     } else {
-      console.log("fetchUser()");
-      console.log(fetchUser());
+      // console.log("fetchUser");
+      // console.log(fetchUser());
       setUser(fetchUser());
       setUserPresentUser(true);
     }
   }, []);
 
   function fetchUser() {
-    return JSON.parse(localStorage.getItem("user"));
+    var userObj = JSON.parse(localStorage.getItem("user"));
+    setUser(userObj);
+    return userObj;
   }
   function postAgent(agent) {
     Axios.post("https://rxedu-api.vercel.app/api/v1/agent", agent)
@@ -103,9 +105,9 @@ export default function AddAgentsPage({ title }) {
     const value = e.target.value;
     var selectedState;
 
-    if (userPresent) {
+    // if (userPresent) {
+    if (user) {
       selectedState = data.states.filter((_val) => _val.state == user.name);
-
       console.log("selectedState");
       console.log(selectedState);
       console.log("User");
@@ -264,6 +266,7 @@ export default function AddAgentsPage({ title }) {
         data={data}
         localGov={localGov}
         userPresent={userPresent}
+        user={user}
         userState={user.statecode}
         wards={wards}
         handlePrev={handlePrev}
