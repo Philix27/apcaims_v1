@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Axios from "axios";
 import { data } from "../constants/states/";
 import { agentParams } from "../constants/agentparams";
+import { banks } from "../constants/banks";
 import { storage } from "../utils/firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
@@ -285,6 +286,7 @@ export default function AddAgentsPage({ title }) {
         handleChange={handleChange}
         handlePrev={handlePrev}
         handleNext={handleNext}
+        banks={banks}
       />
       <Form5
         agent={agent}

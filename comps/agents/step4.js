@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 export default function Form4({
   agent,
   stepIndex,
-  agentParams,
   handleChange,
   handlePrev,
-  handleSubmit,
   handleNext,
+  banks,
 }) {
   const styleHide = "hide";
   const styleShow = "show";
@@ -31,7 +30,8 @@ export default function Form4({
             value={agent.bankName}
             onChange={handleChange}
           >
-            {agentParams.bankNames.map((_val, index) => {
+            {/* {agentParams.bankNames.map((_val, index) => { */}
+            {banks.map((_val, index) => {
               return (
                 <option value={_val} key={index}>
                   {_val}
