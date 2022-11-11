@@ -23,7 +23,7 @@ export default function AgentsPage({ agentsList }) {
         <title>APCAIMS | Agents</title>
       </Head>
       <div className="comp">
-        {/* <AgentsComp agentsList={agentsList} /> */}
+        <AgentsComp agentsList={agentsList} />
         {/* <AgentsComp agentsList={agentsList} /> */}
       </div>
     </div>
