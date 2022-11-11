@@ -77,6 +77,15 @@ const states = [
 ];
 
 const sr = [
+  {
+    name: "developer",
+    email: "developer@mail.com",
+    password: "agile",
+    phone: "0910009202930292",
+    statecode: "Developer",
+    img: "string",
+    userType: "DEV",
+  },
   ABIA.SR,
   ADAMAWA.SR,
   AKWAIBOM.SR,

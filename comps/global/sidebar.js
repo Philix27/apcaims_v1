@@ -13,8 +13,16 @@ import {
 export default function Sidebar() {
   const router = useRouter();
   const _path = router.pathname;
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({
+    name: "",
+    userType: "",
+    email: "",
+    stateCode: "",
+    password: "",
+    phone: "",
+  });
 
+  // console.log(user.userType);
   useEffect(() => {
     if (fetchUser()) {
       setUser(fetchUser());
@@ -66,6 +74,22 @@ export default function Sidebar() {
                 LGAs
               </li>
             </a>
+            {user.userType == "DEV" ? (
+              <a className="link" href="/dev">
+                <li
+                  className={
+                    _path == "/dev" ? "activeItem" : "sidebar_start_list_item"
+                  }
+                >
+                  <span>
+                    <MdMyLocation />
+                  </span>
+                  DEV
+                </li>
+              </a>
+            ) : (
+              <div></div>
+            )}
             {user && (
               <a className="link" href="/agents">
                 <li
