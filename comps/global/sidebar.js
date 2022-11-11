@@ -74,7 +74,7 @@ export default function Sidebar() {
                 LGAs
               </li>
             </a>
-            {user.userType == "DEV" ? (
+            {/* {user.userType == "DEV" ? (
               <a className="link" href="/dev">
                 <li
                   className={
@@ -89,7 +89,7 @@ export default function Sidebar() {
               </a>
             ) : (
               <div></div>
-            )}
+            )} */}
             {user && (
               <a className="link" href="/agents">
                 <li
