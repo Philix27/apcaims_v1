@@ -1,11 +1,9 @@
 import React from "react";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
-import { FcApproval, FcDisapprove } from "react-icons/fc";
 import { MdDownload } from "react-icons/md";
 import { useState } from "react";
 import Axios from "axios";
 import { useRouter } from "next/router";
-import { AlertDeleted } from "../../comps/agents/alert";
 import { Modal } from "../global/Modal";
 import AgentModalContent from "./modalContent";
 
@@ -56,6 +54,7 @@ export default function AgentsComp({ agentsList }) {
     setClickedAgent(agent);
     setShowModal(true);
   }
+
   return (
     <div className=" agentsList">
       {/* <div className="successDiv"> {isSuccessful && <AlertDeleted />}</div> */}
