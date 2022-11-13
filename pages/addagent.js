@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/router";
 import Axios from "axios";
 import { data } from "../constants/states/";
@@ -27,12 +27,13 @@ export default function AddAgentsPage({ title }) {
     userType: "",
   });
 
+  const [previewImage, setPreviewimage] = useState("");
+  const [profileImage, setProfileImage] = useState(null);
   const [showModal, setShowModal] = useState(true);
   const [agentTypeList, setAgentTypeList] = useState([]);
   const [isSuccessful, setIsSuccessful] = useState(false);
   const [localGov, setLocalGov] = useState([]);
   const [wards, setWards] = useState([]);
-  const [profileImage, setProfileImage] = useState(null);
   const [imgUrl, setImgUrl] = useState(null);
   const [stepIndex, setStepIndex] = useState(0);
   const [showErrorMsg, setShowErrorMsg] = useState(false);
@@ -130,12 +131,15 @@ export default function AddAgentsPage({ title }) {
     } else if (name == "image") {
       const _file = e.target.files[0];
       if (_file) {
-        if (_file.size < 5000000) {
+        if (_file.size < 1000000) {
           setProfileImage(_file);
+          handleConversion(_file);
           console.log("Hurray! we have a file");
         } else {
+          // value = null;
+          setProfileImage(null);
           console.log(_file);
-          alert("Image is above 5MB");
+          alert("Image is above 1MB");
         }
       } else {
         console.log("no file yet");
@@ -243,9 +247,32 @@ export default function AddAgentsPage({ title }) {
       setStepIndex(5);
       uploadImageToFb();
     } else {
+      console.log(agent);
       setShowErrorMsg(true);
       console.log("Something is missing");
     }
+  };
+
+  const handleConversion = useCallback(async (_file) => {
+    const base64 = await convertToBase64(_file);
+    setPreviewimage(base64);
+    // console.log(base64);
+  });
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      if (!file) {
+        alert("Please select an image");
+      } else {
+        fileReader.readAsDataURL(file);
+        fileReader.onload = () => {
+          resolve(fileReader.result);
+        };
+      }
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
   };
 
   return (
@@ -304,6 +331,8 @@ export default function AddAgentsPage({ title }) {
         handlePrev={handlePrev}
         handleNext={handleNext}
         showErrorMsg={showErrorMsg}
+        profileImage={previewImage}
+        setPreviewimage={setPreviewimage}
       />
       <Form6
         agent={agent}

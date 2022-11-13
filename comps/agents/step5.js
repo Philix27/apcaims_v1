@@ -9,6 +9,7 @@ export default function Form5({
   handlePrev,
   handleSubmit,
   showErrorMsg,
+  profileImage,
 }) {
   const styleHide = "hide";
   const styleShow = "show";
@@ -23,7 +24,8 @@ export default function Form5({
         <h2>
           Step 5 <span> Preview</span>
         </h2>
-        {showErrorMsg && <p className="errorMsg">Some fields are empty.</p>}
+
+        {/* <img src={profileImage} alt="Selected image" /> */}
         <table>
           <thead>
             <tr>
@@ -32,6 +34,12 @@ export default function Form5({
             </tr>
           </thead>
           <tbody>
+            <tr className="profileImage">
+              <td>Photo</td>
+              <td>
+                <img src={profileImage} alt="Selected image" />
+              </td>
+            </tr>
             <tr>
               <td>First Name</td>
               <td>{agent.firstName}</td>
@@ -90,6 +98,7 @@ export default function Form5({
             </tr> */}
           </tbody>
         </table>
+        {showErrorMsg && <p className="errorMsg">Some fields are empty.</p>}
       </div>
       <div className="btnContainer">
         <div className=" buttons">
