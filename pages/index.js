@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { data } from "../constants/states/";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import BecomeAgentBtn from "../comps/BecomeAgentBtn";
 
 export default function Home() {
   const router = useRouter();
@@ -72,6 +73,7 @@ export default function Home() {
 
   return (
     <div className="wrapper">
+      <BecomeAgentBtn />
       {isUserLoggedIn ? (
         <div> </div>
       ) : (

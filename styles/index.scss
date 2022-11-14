@@ -111,3 +111,56 @@ body {
   font-size: medium;
   cursor: pointer;
 }
+
+.BecomeAgentBtn {
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  z-index: 2;
+
+  a {
+    // width: 50px;
+    background-color: $primaryColor;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    &:hover {
+      background-color: #022044;
+    }
+  }
+}
+
+.HelpBtn {
+  position: fixed;
+  top: 85vh;
+  right: 10px;
+  z-index: 2;
+  a {
+    // width: 50px;
+    background-color: $primaryColor;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    &:hover {
+      background-color: #022044;
+    }
+  }
+}
