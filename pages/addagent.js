@@ -58,6 +58,8 @@ export default function AddAgentsPage({ title }) {
     image: "",
     pollingUnit: "",
     status: "NEW",
+    isApproved: false,
+    registrationDate: new Date(),
   });
 
   const HOU = "HOUSE OF REPS.";
