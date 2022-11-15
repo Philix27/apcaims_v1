@@ -1,4 +1,4 @@
-# APCAims Agent Training Manual
+# Agents Training Guide
 
 ## Introduction
 

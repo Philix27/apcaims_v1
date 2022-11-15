@@ -147,21 +147,6 @@ export default function Home({ content }) {
   );
 }
 
-// export async function getStaticPaths() {
-//   const files = fs.readdirSync(path.join("_md"));
-
-//   const paths = files.map((filename) => ({
-//     params: {
-//       slug: filename.replace(".md", ""),
-//     },
-//   }));
-
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// }
-
 export async function getStaticProps() {
   const slug = "guide";
   const markdownWithMeta = fs.readFileSync(

@@ -16,8 +16,7 @@ export default function Layout(props) {
       </Head>
       <Navbar />
       <Sidebar />
-
-      {/* <HelpBtn /> */}
+      <HelpBtn />
       {props.children}
       {/* <Footer /> */}
     </>
