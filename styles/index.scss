@@ -26,6 +26,7 @@
 @import "agentsList";
 @import "preview";
 @import "devStatesRep";
+@import "guide";
 
 :root {
   --fontFamily: "Roboto", sans-serif;
@@ -44,12 +45,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  // height: 100vh;
   background-image: linear-gradient(rgba(9, 106, 163, 0.1), rgba(2, 4, 14, 0.1)),
     url(../public/images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  // padding-top: 500px;
 
   .textArea {
     background-color: rgba(0, 0, 0, 0.3);

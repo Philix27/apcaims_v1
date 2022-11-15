@@ -1,0 +1,11 @@
+.guide {
+  width: 50vw;
+  margin: 10px auto;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  @include mobileSS {
+    width: 90vw;
+  }
+}

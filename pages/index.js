@@ -3,9 +3,16 @@ import { data } from "../constants/states/";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import BecomeAgentBtn from "../comps/BecomeAgentBtn";
+import Guide from "../comps/guide";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import MarkdownIt from "markdown-it";
 
-export default function Home() {
+export default function Home({ content }) {
   const router = useRouter();
+  const md = new MarkdownIt();
+  const cc = md.render(content);
 
   const [user, setUser] = useState({
     email: "",
@@ -73,9 +80,15 @@ export default function Home() {
 
   return (
     <div className="wrapper">
-      <BecomeAgentBtn />
+      {/* <BecomeAgentBtn /> */}
       {isUserLoggedIn ? (
-        <div> </div>
+        // <Guide />
+        <div className="guide">
+          <div className="markdown-section">
+            <div dangerouslySetInnerHTML={{ __html: cc }}></div>
+            {/* <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div> */}
+          </div>
+        </div>
       ) : (
         // <div className="textArea">
         //   <p>
@@ -132,4 +145,35 @@ export default function Home() {
       )}
     </div>
   );
+}
+
+// export async function getStaticPaths() {
+//   const files = fs.readdirSync(path.join("_md"));
+
+//   const paths = files.map((filename) => ({
+//     params: {
+//       slug: filename.replace(".md", ""),
+//     },
+//   }));
+
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
+
+export async function getStaticProps() {
+  const slug = "guide";
+  const markdownWithMeta = fs.readFileSync(
+    path.join("_md", slug + ".md"),
+    "utf-8"
+  );
+
+  const { data: frontmatter, content } = matter(markdownWithMeta);
+
+  return {
+    props: {
+      content,
+    },
+  };
 }
