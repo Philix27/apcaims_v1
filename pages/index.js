@@ -3,7 +3,6 @@ import { data } from "../constants/states/";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import BecomeAgentBtn from "../comps/BecomeAgentBtn";
-import Guide from "../comps/guide";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
