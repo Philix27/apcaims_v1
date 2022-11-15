@@ -1,11 +1,23 @@
 .guide {
   width: 50vw;
-  margin: 10px auto;
+  margin: 20px auto;
+  margin-top: 40px;
+  margin-left: 30vw;
   background-color: #fff;
   padding: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+  scroll-behavior: smooth;
+  overflow: scroll;
+
+  @include tabletSS {
+    width: 90vw;
+    margin: 20px auto;
+    margin-top: 60px;
+  }
   @include mobileSS {
     width: 90vw;
+    margin: 20px auto;
+    margin-top: 60px;
   }
 }
