@@ -135,11 +135,6 @@ export default function Home({ content }) {
               />
             </div>
           </form>
-          <div className="buttons">
-            <Link className="btn" href="/addagent">
-              Become an agent
-            </Link>
-          </div>
         </div>
       )}
     </div>
