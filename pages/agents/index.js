@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import AgentsComp from "../comps/agents";
+import AgentsComp from "../../comps/agents";
 import axios from "axios";
 
 export default function AgentsPage({ agentsList }) {

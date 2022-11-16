@@ -1,21 +1,23 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/router";
 import Axios from "axios";
-import { data } from "../constants/states/";
-import { agentParams } from "../constants/agentparams";
-import { banks } from "../constants/banks";
-import { storage } from "../utils/firebase";
+import { data } from "../../constants/states";
+import { agentParams } from "../../constants/agentparams";
+import { banks } from "../../constants/banks";
+import { storage } from "../../utils/firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
-import Form1 from "../comps/agents/step1";
-import Form2 from "../comps/agents/step2";
-import Form3 from "../comps/agents/step3";
-import Form4 from "../comps/agents/step4";
-import Form5 from "../comps/agents/step5";
-import Form6 from "../comps/agents/step6";
+import Form1 from "../../comps/agents/step1";
+import Form2 from "../../comps/agents/step2";
+import Form3 from "../../comps/agents/step3";
+import Form4 from "../../comps/agents/step4";
+import Form5 from "../../comps/agents/step5";
+import Form6 from "../../comps/agents/step6";
+import { usePaystackPayment } from "react-paystack";
 
 export default function AddAgentsPage({ title }) {
   const router = useRouter();
+  //! Logged In User
   const [userPresent, setUserPresentUser] = useState(false);
   const [user, setUser] = useState({
     name: "",
@@ -26,7 +28,7 @@ export default function AddAgentsPage({ title }) {
     img: "",
     userType: "",
   });
-
+  //! State Variables
   const [previewImage, setPreviewimage] = useState("");
   const [profileImage, setProfileImage] = useState(null);
   const [showModal, setShowModal] = useState(true);
@@ -60,6 +62,7 @@ export default function AddAgentsPage({ title }) {
     status: "NEW",
     isApproved: false,
     registrationDate: new Date(),
+    transactionRef: "",
   });
 
   const HOU = "HOUSE OF REPS.";
@@ -246,8 +249,11 @@ export default function AddAgentsPage({ title }) {
     ) {
       e.preventDefault();
       console.log("Before Upload");
-      setStepIndex(5);
-      uploadImageToFb();
+
+      const reference = `${new Date().getTime()} - ${
+        agent.firstName + agent.lastName
+      }`;
+      await handlePayment(agent.email, agent.phone, reference);
     } else {
       console.log(agent);
       setShowErrorMsg(true);
@@ -260,6 +266,7 @@ export default function AddAgentsPage({ title }) {
     setPreviewimage(base64);
     // console.log(base64);
   });
+
   const convertToBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader();
@@ -275,6 +282,30 @@ export default function AddAgentsPage({ title }) {
         reject(error);
       };
     });
+  };
+  //! Paystack Payment Gateway
+
+  const handlePayment = (email, phone, reference) => {
+    const config = {
+      reference: reference,
+      email: email,
+      amount: 100000, // #1,000
+      publicKey: "pk_live_bcddf6973cdcbd5811ae519ab726adb9cce4091f",
+      phone: phone,
+    };
+    const onSuccess = (reference) => {
+      console.log("OnSucess");
+      setAgent({ isApproved: true, transactionRef: reference });
+      setStepIndex(5);
+      uploadImageToFb();
+    };
+
+    const onClose = () => {
+      console.log("closed");
+    };
+
+    const initializePayment = usePaystackPayment(config);
+    initializePayment(onSuccess, onClose);
   };
 
   return (

@@ -56,6 +56,16 @@ export default function Navbar() {
               <a>LGA</a>
             </Link>
           </li>
+          {!user && (
+            <li
+              onClick={() => setShowNav(!showNav)}
+              className={_path == "/agents/add" ? "active" : ""}
+            >
+              <Link href="/agents/add">
+                <a>Become an agent</a>
+              </Link>
+            </li>
+          )}
           {user && (
             <li
               onClick={() => setShowNav(!showNav)}

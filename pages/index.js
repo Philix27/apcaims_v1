@@ -12,7 +12,6 @@ export default function Home({ content }) {
   const router = useRouter();
   const md = new MarkdownIt();
   const cc = md.render(content);
-
   const [user, setUser] = useState({
     email: "",
     name: "",

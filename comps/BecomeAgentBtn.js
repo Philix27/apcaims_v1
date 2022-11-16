@@ -6,7 +6,7 @@ const BecomeAgentBtn = () => {
   const router = useRouter();
 
   return (
-    <div className="BecomeAgentBtn" onClick={() => router.push("/addagent")}>
+    <div className="BecomeAgentBtn" onClick={() => router.push("/agents/add")}>
       <a>Become an agent</a>
       {/* <a>
         <HiUserGroup />

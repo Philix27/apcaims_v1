@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { RiDashboardFill, RiHome5Fill } from "react-icons/ri";
+import { RiHome5Fill } from "react-icons/ri";
+import { FaRegRegistered } from "react-icons/fa";
 import { BiLogOut } from "react-icons/bi";
 import Link from "next/link";
 import {
@@ -21,8 +22,7 @@ export default function Sidebar() {
     password: "",
     phone: "",
   });
-
-  // console.log(user.userType);
+  // console.log("router.pathname");
   useEffect(() => {
     if (fetchUser()) {
       setUser(fetchUser());
@@ -74,22 +74,7 @@ export default function Sidebar() {
                 LGAs
               </li>
             </a>
-            {/* {user.userType == "DEV" ? (
-              <a className="link" href="/dev">
-                <li
-                  className={
-                    _path == "/dev" ? "activeItem" : "sidebar_start_list_item"
-                  }
-                >
-                  <span>
-                    <MdMyLocation />
-                  </span>
-                  DEV
-                </li>
-              </a>
-            ) : (
-              <div></div>
-            )} */}
+
             {user && (
               <a className="link" href="/agents">
                 <li
@@ -131,12 +116,18 @@ export default function Sidebar() {
               </a>
             )}
             {!user && (
-              <a className="link" href="/">
-                <li className={"sidebar_start_list_item"}>
+              <a className="link" href="/agents/add">
+                <li
+                  className={
+                    _path == "/agents/add"
+                      ? "activeItem"
+                      : "sidebar_start_list_item"
+                  }
+                >
                   <span>
-                    <MdAdminPanelSettings />
+                    <FaRegRegistered />
                   </span>
-                  Not Signed In
+                  Become a member
                 </li>
               </a>
             )}

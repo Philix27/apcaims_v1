@@ -109,10 +109,18 @@ export default function Form5({
             className="btn"
           />
         </div>
-        <div className="buttons">
+        {/* <div className="buttons">
           <input
             type="submit"
             value="Submit"
+            onClick={handleSubmit}
+            className="btn"
+          />
+        </div> */}
+        <div className="buttons">
+          <input
+            type="submit"
+            value="Proceed"
             onClick={handleSubmit}
             className="btn"
           />
