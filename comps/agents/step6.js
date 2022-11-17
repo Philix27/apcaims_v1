@@ -1,43 +1,89 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Circles } from "react-loader-spinner";
+import { usePaystackPayment } from "react-paystack";
 
 export default function Form6({
   agent,
   stepIndex,
-  agentParams,
-  handleChange,
   handlePrev,
-  handleSubmit,
-  onLoading,
+  setAgent,
+  // handlePayment,
+  uploadImageToFb,
+  setStepIndex,
 }) {
   const styleHide = "hide";
   const styleShow = "show";
+  // const reference = `${new Date()}`;
+  const dateToday = new Date(); // Mon Jun 08 2020 16:47:55 GMT+0800 (China Standard Time)
+  const reference = Date.parse(dateToday);
+
+  const config = {
+    reference: reference,
+    email: agent.email,
+    amount: 10000, // #1,000
+    publicKey: "pk_live_bcddf6973cdcbd5811ae519ab726adb9cce4091f",
+    phone: agent.phone,
+  };
+  const initializePayment = usePaystackPayment(config);
+
+  const handlePayment = () => {
+    const onSuccess = (reference) => {
+      console.log("OnSucess");
+      setAgent({ isApproved: true, transactionRef: reference });
+      setStepIndex(6);
+      uploadImageToFb();
+    };
+
+    const onClose = () => {
+      console.log("closed");
+    };
+
+    initializePayment(onSuccess, onClose);
+  };
+
   return (
     <motion.div
-      className={`sect step6 ${stepIndex === 5 ? styleShow : styleHide}`}
-      // className={`sect step2 ${4 === 4 ? styleShow : styleHide}`}
+      className={`sect step5 ${stepIndex === 5 ? styleShow : styleHide}`}
       initial={{ x: "-100vw", opacity: 0.1 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1.7, delay: 1, type: "tween" }}
     >
-      <form className="form ">
+      <div className="preview">
         <h2>
-          Saving...
-          {/* <span>Uploading image and saving data</span> */}
+          Step 6 <span> Payment</span>
         </h2>
-        <div className="loader">
-          <Circles
-            height="200"
-            width="200"
-            color="#1663b0"
-            ariaLabel="circles-loading"
-            // wrapperStyle={{}}
-            // wrapperClass=""
-            visible={true}
+
+        <p>
+          You are to make a payment of just a thousand naira (₦1,000) to
+          complete this registration.
+        </p>
+      </div>
+      <div className="btnContainer">
+        <div className=" buttons">
+          <input
+            type="button"
+            value="Go Back"
+            onClick={handlePrev}
+            className="btn"
           />
         </div>
-      </form>
+        {/* <div className="buttons">
+          <input
+            type="submit"
+            value="Submit"
+            onClick={handleSubmit}
+            className="btn"
+          />
+        </div> */}
+        <div className="buttons">
+          <input
+            type="submit"
+            value="Proceed"
+            onClick={handlePayment}
+            className="btn"
+          />
+        </div>
+      </div>
     </motion.div>
   );
 }

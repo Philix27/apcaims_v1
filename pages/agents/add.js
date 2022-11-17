@@ -13,6 +13,7 @@ import Form3 from "../../comps/agents/step3";
 import Form4 from "../../comps/agents/step4";
 import Form5 from "../../comps/agents/step5";
 import Form6 from "../../comps/agents/step6";
+import Form7 from "../../comps/agents/step7";
 import { usePaystackPayment } from "react-paystack";
 
 export default function AddAgentsPage({ title }) {
@@ -231,7 +232,7 @@ export default function AddAgentsPage({ title }) {
     }
   }
 
-  const handleSubmit = async (e) => {
+  const validateForm = async (e) => {
     setShowErrorMsg(false);
     if (
       agent.firstName &&
@@ -245,20 +246,24 @@ export default function AddAgentsPage({ title }) {
       agent.status &&
       agent.agentType &&
       agent.image &&
+      agent.accountNumber &&
       agent.pollingUnit
     ) {
       e.preventDefault();
       console.log("Before Upload");
-
-      const reference = `${new Date().getTime()} - ${
-        agent.firstName + agent.lastName
-      }`;
-      await handlePayment(agent.email, agent.phone, reference);
+      setStepIndex(stepIndex + 1);
     } else {
       console.log(agent);
       setShowErrorMsg(true);
       console.log("Something is missing");
     }
+  };
+
+  const handleSubmit = async (e) => {
+    const reference = `${new Date().getTime()} - ${
+      agent.firstName + agent.lastName
+    }`;
+    await handlePayment(agent.email, agent.phone, reference);
   };
 
   const handleConversion = useCallback(async (_file) => {
@@ -284,29 +289,6 @@ export default function AddAgentsPage({ title }) {
     });
   };
   //! Paystack Payment Gateway
-
-  const handlePayment = (email, phone, reference) => {
-    const config = {
-      reference: reference,
-      email: email,
-      amount: 100000, // #1,000
-      publicKey: "pk_live_bcddf6973cdcbd5811ae519ab726adb9cce4091f",
-      phone: phone,
-    };
-    const onSuccess = (reference) => {
-      console.log("OnSucess");
-      setAgent({ isApproved: true, transactionRef: reference });
-      setStepIndex(5);
-      uploadImageToFb();
-    };
-
-    const onClose = () => {
-      console.log("closed");
-    };
-
-    const initializePayment = usePaystackPayment(config);
-    initializePayment(onSuccess, onClose);
-  };
 
   return (
     <div className="addAgent">
@@ -355,6 +337,7 @@ export default function AddAgentsPage({ title }) {
         handleNext={handleNext}
         banks={banks}
       />
+
       <Form5
         agent={agent}
         stepIndex={stepIndex}
@@ -365,9 +348,26 @@ export default function AddAgentsPage({ title }) {
         handleNext={handleNext}
         showErrorMsg={showErrorMsg}
         profileImage={previewImage}
+        validateForm={validateForm}
         setPreviewimage={setPreviewimage}
       />
+
       <Form6
+        agent={agent}
+        stepIndex={stepIndex}
+        setAgent={setAgent}
+        agentParams={agentParams}
+        handleChange={handleChange}
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+        showErrorMsg={showErrorMsg}
+        profileImage={previewImage}
+        setPreviewimage={setPreviewimage}
+        uploadImageToFb={uploadImageToFb}
+        setStepIndex={setStepIndex}
+      />
+
+      <Form7
         agent={agent}
         stepIndex={stepIndex}
         handleSubmit={handleSubmit}

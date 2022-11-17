@@ -7,7 +7,8 @@ export default function Form5({
   agentParams,
   handleChange,
   handlePrev,
-  handleSubmit,
+  handleNext,
+  validateForm,
   showErrorMsg,
   profileImage,
 }) {
@@ -120,8 +121,8 @@ export default function Form5({
         <div className="buttons">
           <input
             type="submit"
-            value="Proceed"
-            onClick={handleSubmit}
+            value="Next"
+            onClick={validateForm}
             className="btn"
           />
         </div>
