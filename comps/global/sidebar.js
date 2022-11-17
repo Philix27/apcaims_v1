@@ -9,6 +9,7 @@ import {
   MdGroups,
   MdAdminPanelSettings,
   MdOutlineEmail,
+  MdOutlineHelp,
 } from "react-icons/md";
 
 export default function Sidebar() {
@@ -141,6 +142,18 @@ export default function Sidebar() {
                 </li>
               </a>
             )}
+            <a className="link" href="/guide">
+              <li
+                className={
+                  _path == "/guide" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                <span>
+                  <MdOutlineHelp />
+                </span>
+                Guide
+              </li>
+            </a>
           </ul>
         </div>
       </div>

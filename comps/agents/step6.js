@@ -20,7 +20,7 @@ export default function Form6({
   const config = {
     reference: reference,
     email: agent.email,
-    amount: 10000, // #1,000
+    amount: 100000, // #1,000
     publicKey: "pk_live_bcddf6973cdcbd5811ae519ab726adb9cce4091f",
     phone: agent.phone,
   };

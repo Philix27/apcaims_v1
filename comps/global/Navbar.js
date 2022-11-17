@@ -105,6 +105,14 @@ export default function Navbar() {
               </Link>
             </li>
           )}
+          <li
+            onClick={() => setShowNav(!showNav)}
+            className={_path == "/guide" ? "active" : ""}
+          >
+            <Link href="/guide">
+              <a>Guide</a>
+            </Link>
+          </li>
         </ul>
         <label className="icon">
           {showNav ? (
