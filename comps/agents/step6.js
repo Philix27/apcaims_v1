@@ -48,7 +48,7 @@ export default function Form6({
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1.7, delay: 1, type: "tween" }}
     >
-      <div className="preview">
+      <div className="payment">
         <h2>
           Step 6 <span> Payment</span>
         </h2>
@@ -57,6 +57,7 @@ export default function Form6({
           You are to make a payment of just a thousand naira (₦1,000) to
           complete this registration.
         </p>
+        <p>Click Proceed to continue.</p>
       </div>
       <div className="btnContainer">
         <div className=" buttons">
@@ -67,22 +68,22 @@ export default function Form6({
             className="btn"
           />
         </div>
-        {/* <div className="buttons">
+        <div className="buttons">
           <input
             type="submit"
             value="Submit"
-            onClick={handleSubmit}
+            onClick={uploadImageToFb}
             className="btn"
           />
-        </div> */}
-        <div className="buttons">
+        </div>
+        {/* <div className="buttons">
           <input
             type="submit"
             value="Proceed"
             onClick={handlePayment}
             className="btn"
           />
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
