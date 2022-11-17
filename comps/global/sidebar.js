@@ -128,7 +128,7 @@ export default function Sidebar() {
                   <span>
                     <FaRegRegistered />
                   </span>
-                  Become a member
+                  Become an agent
                 </li>
               </a>
             )}
