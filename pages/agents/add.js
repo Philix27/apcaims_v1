@@ -76,8 +76,8 @@ export default function AddAgentsPage({ title }) {
     if (!fetchUser()) {
       // router.push("/");
     } else {
-      // console.log("fetchUser");
-      // console.log(fetchUser());
+      console.log("fetchUser");
+      console.log(fetchUser());
       setUser(fetchUser());
       setUserPresentUser(true);
     }
@@ -114,7 +114,9 @@ export default function AddAgentsPage({ title }) {
 
     // if (userPresent) {
     if (userPresent) {
-      selectedState = data.states.filter((_val) => _val.state === user.name);
+      selectedState = data.states.filter(
+        (_val) => _val.state.toLowerCase() === user.name.toLowerCase()
+      );
       console.log("selectedState");
       console.log(selectedState);
       console.log("user");

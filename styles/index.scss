@@ -78,6 +78,25 @@ body {
   }
 }
 
+.thanksWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin-left: 20vw;
+  background-image: linear-gradient(rgba(9, 106, 163, 0.1), rgba(2, 4, 14, 0.1)),
+    url(../public/images/happy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // padding-top: 500px;
+
+  color: #fff;
+  @include mobileSS {
+    margin: 0;
+  }
+}
+
 .specificLGA {
   padding-left: 20vw;
   @include mobileSS {

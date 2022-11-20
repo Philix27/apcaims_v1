@@ -9,10 +9,10 @@ const SR = {
 };
 
 export const states = {
-    state: "BENUE",
-    lga: [
-      {
-        wards: [
+  state: "BENUE",
+  lga: [
+    {
+      wards: [
         "AKOGE/OGBILOLO",
         "APA",
         "EKILE",
