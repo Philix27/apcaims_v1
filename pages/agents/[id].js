@@ -27,7 +27,9 @@ export default function AgentForm() {
   return (
     <div className="agentFormWrapper">
       <Head>
-        <title>APCAIMS | Profile</title>
+        <title>
+          Agents | {userProfile.firstName} {userProfile.firstName}
+        </title>
       </Head>
       <div className="images">
         <img className="logo" src="/images/logo.png" />
@@ -44,7 +46,7 @@ export default function AgentForm() {
       </div>
       <div className="content">
         <h4>
-          Name:{" "}
+          Name:
           <span>
             {userProfile.firstName} {userProfile.lastName}
           </span>
