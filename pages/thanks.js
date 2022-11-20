@@ -21,8 +21,10 @@ export default function Home({ content }) {
 
   return (
     <div className="thanksWrapper">
-      <h1>Congratulations! </h1>
-      <h3>You are now an agent,</h3>
+      <div className="content">
+        <h1>Congratulations! </h1>
+        <h3>You are now an agent.</h3>
+      </div>
     </div>
   );
 }

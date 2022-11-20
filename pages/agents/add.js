@@ -94,9 +94,9 @@ export default function AddAgentsPage({ title }) {
         console.log("Successfully Sent to: ");
 
         if (userPresent) {
-          router.push("/agents");
+          router.push("/thanks");
         } else {
-          router.push("/");
+          router.push("/thanks");
         }
         // setIsSuccessful(true);
       })
