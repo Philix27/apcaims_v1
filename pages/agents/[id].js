@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import axios from "axios";
+import dateFormat, { masks } from "dateformat";
 
 export default function AgentForm() {
   const router = useRouter();
@@ -23,6 +24,12 @@ export default function AgentForm() {
   }, {});
   const handlePrint = () => {
     window.print();
+  };
+  var options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   };
   return (
     <div className="agentFormWrapper">
@@ -80,6 +87,18 @@ export default function AgentForm() {
         </h4>
         <h4>
           Election Type: <span>{userProfile.electionType}</span>
+        </h4>
+        <h4>
+          Date of registration:
+          <span>
+            {
+              dateFormat(userProfile.registrationDate, "dddd, mmmm dS, yyyy")
+              // Date.parse(userProfile.registrationDate).
+              //   .parse(
+              //   userProfile.registrationDate
+              // )
+            }
+          </span>
         </h4>
       </div>
       <div className="btn" onClick={() => handlePrint()}>

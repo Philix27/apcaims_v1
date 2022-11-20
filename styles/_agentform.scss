@@ -22,7 +22,10 @@
       height: 95px;
     }
   }
-
+  span {
+    padding-left: 10px;
+    font-weight: 400;
+  }
   .imagesProfile {
     display: flex;
     justify-content: center;
@@ -38,6 +41,7 @@
     padding: 20px;
     border-style: solid;
     border-radius: 10px;
+    border-width: 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
