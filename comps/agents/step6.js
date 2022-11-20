@@ -54,8 +54,8 @@ export default function Form6({
           Step 6 <span> Payment</span>
         </h2>
         <p>
-          You are to make a payment of just a thousand naira (₦500) to complete
-          this registration.
+          You are to make a payment of just five hundred naira (₦500) to
+          complete this registration.
         </p>
         <p>Click Proceed to continue.</p>
       </div>
