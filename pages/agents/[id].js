@@ -59,6 +59,9 @@ export default function AgentForm() {
           </span>
         </h4>
         <h4>
+          ID: <span>{Date.parse(userProfile.registrationDate)}</span>
+        </h4>
+        <h4>
           Address: <span>{userProfile.address}</span>
         </h4>
         <h4>
@@ -88,18 +91,12 @@ export default function AgentForm() {
         <h4>
           Election Type: <span>{userProfile.electionType}</span>
         </h4>
-        <h4>
+        {/* <h4>
           Date of registration:
           <span>
-            {
-              dateFormat(userProfile.registrationDate, "dddd, mmmm dS, yyyy")
-              // Date.parse(userProfile.registrationDate).
-              //   .parse(
-              //   userProfile.registrationDate
-              // )
-            }
+            {dateFormat(userProfile.registrationDate, "dddd, mmmm dS, yyyy")}
           </span>
-        </h4>
+        </h4> */}
       </div>
       <div className="btn" onClick={() => handlePrint()}>
         Print Agent Card
