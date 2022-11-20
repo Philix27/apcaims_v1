@@ -6,6 +6,7 @@ import Axios from "axios";
 import { useRouter } from "next/router";
 import { Modal } from "../global/Modal";
 import AgentModalContent from "./modalContent";
+import Link from "next/link";
 
 export default function AgentsComp({ agentsList }) {
   const [isSuccessful, setIsSuccessful] = useState(false);
@@ -103,9 +104,9 @@ export default function AgentsComp({ agentsList }) {
                 <td>{agent.state}</td>
                 <td>{agent.lga}</td>
                 <td>
-                  <a>
+                  <Link href={`/agents/${agent._id}`}>
                     <MdDownload className=" icon" />
-                  </a>
+                  </Link>
                 </td>
                 <td>
                   <a>

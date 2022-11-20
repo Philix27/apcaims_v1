@@ -28,6 +28,7 @@
 @import "devStatesRep";
 @import "guide";
 @import "payment";
+@import "agentform";
 
 :root {
   --fontFamily: "Roboto", sans-serif;
@@ -120,15 +121,6 @@ body {
     font-size: small;
   }
 }
-
-.red {
-  color: rgb(195, 8, 8);
-}
-
-.green {
-  color: rgb(6, 138, 23);
-}
-
 .icon {
   font-size: medium;
   cursor: pointer;

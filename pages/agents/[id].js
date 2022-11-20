@@ -2,98 +2,87 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import axios from "axios";
-import LoadingIndicator from "../../comps/global/LoadingIndicator";
 
-export default function MembersPage({ memberProfile }) {
+export default function AgentForm() {
   const router = useRouter();
   const { id } = router.query;
   const [userProfile, setUserProfile] = useState({});
-  console.log(memberProfile);
+  // console.log(memberProfile);
   useEffect(() => {
     axios
-      .get(`https://rxedu-api.vercel.app/api/v1/member/${id}`)
+      .get(`https://rxedu-api.vercel.app/api/v1/agent/${id}`)
       .then((response) => {
         setUserProfile(response.data.doc);
         console.log("Working");
-        // console.log(response.data.doc);
+        console.log(response.data.doc);
         // console.log(`Length: ${response}`);
       })
       .catch(() => {
         console.log("Opps an error ocured - Local");
       });
   }, {});
-
+  const handlePrint = () => {
+    window.print();
+  };
   return (
-    <div className="profilePage">
+    <div className="agentFormWrapper">
       <Head>
-        <title>APCMIMS | Profile</title>
+        <title>APCAIMS | Profile</title>
       </Head>
-      <br />
-      {memberProfile ? (
-        <div className="preview">
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Info</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Photo</td>
-                <td>
-                  <img src={userProfile.image} alt="Profile Photo" />
-                </td>
-              </tr>
-              <tr>
-                <td>First Name</td>
-                <td>
-                  {userProfile.firstName} {userProfile.name}
-                </td>
-              </tr>
-              <tr>
-                <td>Last Name</td>
-                <td>{userProfile.lastName}</td>
-              </tr>
-              <tr>
-                <td>Email</td>
-                <td>{userProfile.email}</td>
-              </tr>
-              <tr>
-                <td>Phone</td>
-                <td>{userProfile.phone}</td>
-              </tr>
-              <tr>
-                <td>Alt Phone</td>
-                <td>{userProfile.alternatePhone}</td>
-              </tr>
-              <tr>
-                <td>Date of Birth</td>
-                <td>{userProfile.dateOfBirth}</td>
-              </tr>
-              <tr>
-                <td>Address</td>
-                <td>{userProfile.address}</td>
-              </tr>
-              <tr>
-                <td>State</td>
-                <td>{userProfile.state}</td>
-              </tr>
-              <tr>
-                <td>LGA</td>
-                <td>{userProfile.lga}</td>
-              </tr>
-              <tr>
-                <td>Ward</td>
-                <td>{userProfile.ward}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      ) : (
-        <LoadingIndicator />
-      )}
-      <div className="btn">Print Membership Card</div>
+      <div className="images">
+        <img className="logo" src="/images/logo.png" />
+      </div>
+      <div className="heading">
+        <h3 className="red">AGENT REGISTRATION FORM</h3>
+        <h2>ALL PROGRESSIVES CONGRESS</h2>
+      </div>
+      <div className="imagesProfile">
+        <img src={userProfile.image} />
+      </div>
+      <div className="heading">
+        <h3 className="blue">PERSONAL INFORMATION</h3>
+      </div>
+      <div className="content">
+        <h4>
+          Name:{" "}
+          <span>
+            {userProfile.firstName} {userProfile.lastName}
+          </span>
+        </h4>
+        <h4>
+          Address: <span>{userProfile.address}</span>
+        </h4>
+        <h4>
+          Phone: <span>{userProfile.phone}</span>
+        </h4>
+        <h4>
+          Alternative Phone: <span>{userProfile.firstName}</span>
+        </h4>
+        <h4>
+          Email: <span>{userProfile.email}</span>
+        </h4>
+        <h4>
+          State: <span>{userProfile.state}</span>
+        </h4>
+        <h4>
+          LGA: <span>{userProfile.lga}</span>
+        </h4>
+        <h4>
+          Ward: <span>{userProfile.ward}</span>
+        </h4>
+        <h4>
+          Polling Unit: <span>{userProfile.pollingUnit}</span>
+        </h4>
+        <h4>
+          Agent Type: <span>{userProfile.agentType}</span>
+        </h4>
+        <h4>
+          Election Type: <span>{userProfile.electionType}</span>
+        </h4>
+      </div>
+      <div className="btn" onClick={() => handlePrint()}>
+        Print Agent Card
+      </div>
     </div>
   );
 }
@@ -101,7 +90,7 @@ export default function MembersPage({ memberProfile }) {
 export async function getServerSideProps(context) {
   const { query } = context;
   const art = await axios.get(
-    `https://rxedu-api.vercel.app/api/v1/member/${query.id}`
+    `https://rxedu-api.vercel.app/api/v1/agent/${query.id}`
   );
   return {
     props: {
