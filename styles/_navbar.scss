@@ -8,7 +8,9 @@
   top: 0;
   padding-left: 40px;
   visibility: hidden;
-
+  @media print {
+    display: none;
+  }
   @include tabletSS {
     visibility: visible;
   }
