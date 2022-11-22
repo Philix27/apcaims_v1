@@ -91,13 +91,13 @@ export default function AddAgentsPage({ title }) {
   function postAgent(agent) {
     Axios.post("https://rxedu-api.vercel.app/api/v1/agent", agent)
       .then((response) => {
-        console.log("Successfully Sent to: ");
-
-        if (userPresent) {
-          router.push("/thanks");
-        } else {
-          router.push("/thanks");
-        }
+        router.push("/thanks");
+        // console.log("Successfully Sent to: ");
+        // if (userPresent) {
+        //   router.push("/thanks");
+        // } else {
+        //   router.push("/thanks");
+        // }
         // setIsSuccessful(true);
       })
       .catch((e) => {
@@ -219,7 +219,7 @@ export default function AddAgentsPage({ title }) {
   async function uploadImageToFb() {
     console.log("Inside Upload");
     if (profileImage == null) {
-      alert("Select an image");
+      alert("Select a image");
       return;
     } else {
       console.log("Started Upload");
@@ -278,7 +278,7 @@ export default function AddAgentsPage({ title }) {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader();
       if (!file) {
-        alert("Please select an image");
+        alert("Please select a image");
       } else {
         fileReader.readAsDataURL(file);
         fileReader.onload = () => {

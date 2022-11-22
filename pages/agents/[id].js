@@ -8,7 +8,9 @@ export default function AgentForm() {
   const router = useRouter();
   const { id } = router.query;
   const [userProfile, setUserProfile] = useState({});
+
   // console.log(memberProfile);
+
   useEffect(() => {
     axios
       .get(`https://rxedu-api.vercel.app/api/v1/agent/${id}`)

@@ -6,10 +6,21 @@ import axios from "axios";
 
 export default function AgentsPage({ agentsList }) {
   const router = useRouter();
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+    phone: "",
+    statecode: "",
+    img: "",
+    userType: "",
+  });
   useEffect(() => {
     if (!fetchUser()) {
       router.push("/");
       // console.log(fetchUser());
+    } else {
+      setUser(fetchUser());
     }
   }, []);
 
@@ -23,15 +34,19 @@ export default function AgentsPage({ agentsList }) {
         <title>APCAIMS | Agents</title>
       </Head>
       <div className="comp">
-        <AgentsComp agentsList={agentsList} />
-        {/* <AgentsComp agentsList={agentsList} /> */}
+        {/* {<AgentsComp agentsList={filterAgentsBasedOnState()} />} */}
+        <AgentsComp agentsList={agentsList.data} />
       </div>
     </div>
   );
 }
 
-export async function getServerSideProps() {
-  const art = await axios.get("https://rxedu-api.vercel.app/api/v1/agent");
+export async function getServerSideProps(context) {
+  const { query } = context;
+  const art = await axios(
+    `https://rxedu-api.vercel.app/api/v1/agents_by_state?state=${query.state}`
+  );
+
   return {
     props: {
       agentsList: art.data,

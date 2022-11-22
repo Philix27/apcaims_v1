@@ -122,6 +122,7 @@ const sr = [
   SOKOTO.SR,
   TARABA.SR,
   YOBE.SR,
+  ZAMFARA.SR,
 ];
 
 const lgas = [
@@ -161,6 +162,7 @@ const lgas = [
   ...SOKOTO.states.lga,
   ...TARABA.states.lga,
   ...YOBE.states.lga,
+  ...ZAMFARA.states.lga,
 ];
 const fedConst = [ABIA.fedral_constituency];
 const senDist = [ABIA.senatorial_district];

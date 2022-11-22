@@ -10,16 +10,18 @@ import Link from "next/link";
 
 export default function AgentsComp({ agentsList }) {
   const [isSuccessful, setIsSuccessful] = useState(false);
-  const [agts, setAgents] = useState(agentsList.data);
+  const [agts, setAgents] = useState(agentsList);
   const [showModal, setShowModal] = useState(false);
   const [clickedAgent, setClickedAgent] = useState({});
   const router = useRouter();
+  // console.log("agentsList");
+  // console.log(agentsList);
 
   const onSearch = (e) => {
     const searchTerm = e.target.value;
     const tempList = [];
-    tempList = agentsList.data.filter((agent) => {
-      const names = `{agent.firstName} {agent.lastName}`;
+    tempList = agentsList.filter((agent) => {
+      const names = `${agent.firstName} ${agent.lastName} ${agent.name}`;
       if (agent.name) {
         return agent.name.toLowerCase().includes(searchTerm.toLowerCase());
       } else {
@@ -27,7 +29,7 @@ export default function AgentsComp({ agentsList }) {
       }
     });
 
-    console.log(agts);
+    // console.log(agts);
     setAgents(tempList);
   };
 
@@ -92,7 +94,6 @@ export default function AgentsComp({ agentsList }) {
           <tbody>
             {agts.map((agent, index) => (
               <tr key={index}>
-                {/* <tr key={index} onClick={setShowModal(true)}> */}
                 <td>{index + 1}.</td>
                 <td onClick={() => _showModal(agent)}>
                   <img src={agent.image} alt={agent.name}></img>

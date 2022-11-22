@@ -38,7 +38,7 @@ export default function Form2({
               required
               id="form-state"
             >
-              <option disabled>Select an state</option>
+              <option disabled>Select a state</option>
 
               {data.states.map((_val, index) => {
                 return (
@@ -81,7 +81,7 @@ export default function Form2({
             required
             id="form-ward"
           >
-            <option disabled={true}>Select an state</option>
+            <option disabled={true}>Select a state</option>
             {wards.map((_val, index) => {
               return (
                 <option value={_val} key={index}>

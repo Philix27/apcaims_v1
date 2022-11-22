@@ -36,7 +36,7 @@ export default function Form3({
             required
             onChange={handleChange}
           >
-            <option>Select an election type</option>
+            <option>Select a election type</option>
             {agentParams.electionTypes.map((_val, index) => {
               return (
                 <option value={_val.title} key={index}>
@@ -55,7 +55,7 @@ export default function Form3({
             required
             onChange={handleChange}
           >
-            <option>Select an election type</option>
+            <option>Select a election type</option>
             {agentTypeList.map((_val, index) => {
               return (
                 <option value={_val.title} key={index}>
@@ -75,7 +75,7 @@ export default function Form3({
               // value={agent.senatorialDistrict}
               value="ABIA"
             >
-              <option disabled={true}>Select an election type</option>
+              <option disabled={true}>Select a election type</option>
               {senatorial_district.sd.map((_val, index) => {
                 return (
                   <option value={_val.name} key={index}>
