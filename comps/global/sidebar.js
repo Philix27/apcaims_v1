@@ -75,7 +75,7 @@ export default function Sidebar() {
                 <span>
                   <FaRegRegistered />
                 </span>
-                Become an agent
+                BECOME/ADD AGENT
               </li>
             </a>
 
@@ -118,7 +118,7 @@ export default function Sidebar() {
                 </li>
               </a>
             )}
-            {user && (
+            {/* {user && (
               <a className="link" href="/admin">
                 <li
                   className={
@@ -131,7 +131,7 @@ export default function Sidebar() {
                   ADMIN
                 </li>
               </a>
-            )}
+            )} */}
 
             {user && (
               <a className="link" href="/" onClick={logOut}>

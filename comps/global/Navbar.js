@@ -56,27 +56,25 @@ export default function Navbar() {
               <a>LGA</a>
             </Link>
           </li>
-          {!user && (
-            <li
-              onClick={() => setShowNav(!showNav)}
-              className={_path == "/agents/add" ? "active" : ""}
-            >
-              <Link href="/agents/add">
-                <a>Become an agent</a>
-              </Link>
-            </li>
-          )}
+          <li
+            onClick={() => setShowNav(!showNav)}
+            className={_path == "/agents/add" ? "active" : ""}
+          >
+            <Link href="/agents/add">
+              <a>Become/Add an agent</a>
+            </Link>
+          </li>
           {user && (
             <li
               onClick={() => setShowNav(!showNav)}
               className={_path == "/agents" ? "active" : ""}
             >
               <Link href="/agents">
-                <a>AGENTS</a>
+                <a>{user.name} Agents</a>
               </Link>
             </li>
           )}
-          {user && (
+          {/* {user && (
             <li
               onClick={() => setShowNav(!showNav)}
               className={_path == "/admin" ? "active" : ""}
@@ -85,12 +83,8 @@ export default function Navbar() {
                 <a>Admin</a>
               </Link>
             </li>
-          )}
-          {user && (
-            <li>
-              <Link href="/">{user.email}</Link>
-            </li>
-          )}
+          )} */}
+
           {!user && (
             <li>
               <Link href="/">Not Signed In</Link>
@@ -110,7 +104,7 @@ export default function Navbar() {
             className={_path == "/guide" ? "active" : ""}
           >
             <Link href="/guide">
-              <a>Guide</a>
+              <a>Help</a>
             </Link>
           </li>
         </ul>

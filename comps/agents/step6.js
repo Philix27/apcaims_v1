@@ -44,6 +44,7 @@ export default function Form6({
 
     initializePayment(onSuccess, onClose);
   };
+
   const tester = () => {
     const _reference = Date.UTC.toString();
     agent.transactionRef = _reference;
@@ -54,6 +55,7 @@ export default function Form6({
     // uploadImageToFb();
     postAgent(agent);
   };
+
   return (
     <motion.div
       className={`sect step5 ${stepIndex === 5 ? styleShow : styleHide}`}
