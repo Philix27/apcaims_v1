@@ -9,6 +9,7 @@ export default function Form6({
   setAgent,
   // handlePayment,
   uploadImageToFb,
+  postAgent,
   setStepIndex,
 }) {
   const styleHide = "hide";
@@ -30,18 +31,29 @@ export default function Form6({
   const handlePayment = () => {
     const onSuccess = (reference) => {
       console.log("OnSucess");
-      setAgent({ isApproved: true, transactionRef: reference });
+      // setAgent({ ...agent, isApproved: true, transactionRef: reference });
+      agent.transactionRef = reference;
+      agent.isApproved = true;
       setStepIndex(6);
       uploadImageToFb();
     };
 
     const onClose = () => {
-      console.log("closed");
+      // console.log("closed");
     };
 
     initializePayment(onSuccess, onClose);
   };
+  const tester = () => {
+    const _reference = Date.UTC.toString();
+    agent.transactionRef = _reference;
+    agent.isApproved = true;
+    agent.image = "_reference";
 
+    setStepIndex(6);
+    // uploadImageToFb();
+    postAgent(agent);
+  };
   return (
     <motion.div
       className={`sect step5 ${stepIndex === 5 ? styleShow : styleHide}`}
@@ -72,7 +84,7 @@ export default function Form6({
           <input
             type="submit"
             value="Submit"
-            onClick={uploadImageToFb}
+            onClick={tester}
             className="btn"
           />
         </div> */}

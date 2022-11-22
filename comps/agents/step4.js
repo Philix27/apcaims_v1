@@ -21,6 +21,22 @@ export default function Form4({
       <form onSubmit={handleNext} className="form">
         <h2>Step 4</h2>
         <div className="input_box">
+          <label htmlFor="form-nin" className="label">
+            NIN
+          </label>
+          <input
+            id="form-nin"
+            required
+            placeholder="National Identity Number"
+            name="nin"
+            type="number"
+            maxLength={17}
+            value={agent.nin}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="input_box">
           <label htmlFor="form-bank" className="label">
             BANK
           </label>

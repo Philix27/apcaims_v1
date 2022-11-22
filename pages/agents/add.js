@@ -64,6 +64,7 @@ export default function AddAgentsPage({ title }) {
     isApproved: false,
     registrationDate: new Date(),
     transactionRef: "",
+    nin: "",
   });
 
   const HOU = "HOUSE OF REPS.";
@@ -76,8 +77,8 @@ export default function AddAgentsPage({ title }) {
     if (!fetchUser()) {
       // router.push("/");
     } else {
-      console.log("fetchUser");
-      console.log(fetchUser());
+      // console.log("fetchUser");
+      // console.log(fetchUser());
       setUser(fetchUser());
       setUserPresentUser(true);
     }
@@ -92,7 +93,7 @@ export default function AddAgentsPage({ title }) {
     Axios.post("https://rxedu-api.vercel.app/api/v1/agent", agent)
       .then((response) => {
         router.push("/thanks");
-        // console.log("Successfully Sent to: ");
+        console.log("Successfully Sent to: ");
         // if (userPresent) {
         //   router.push("/thanks");
         // } else {
@@ -102,6 +103,7 @@ export default function AddAgentsPage({ title }) {
       })
       .catch((e) => {
         console.log(e);
+        console.log(e.msg);
         console.log("Opps an error ocured");
         router.reload(window.location.pathname);
       });
@@ -199,7 +201,7 @@ export default function AddAgentsPage({ title }) {
       value = value.toLowerCase();
     }
     setAgent({ ...agent, [name]: value });
-    // console.log(agent);
+    console.log(agent);
   };
 
   const handlePrev = (e) => {
@@ -249,6 +251,7 @@ export default function AddAgentsPage({ title }) {
       agent.agentType &&
       agent.image &&
       agent.accountNumber &&
+      agent.nin &&
       agent.pollingUnit
     ) {
       e.preventDefault();
@@ -367,6 +370,7 @@ export default function AddAgentsPage({ title }) {
         setPreviewimage={setPreviewimage}
         uploadImageToFb={uploadImageToFb}
         setStepIndex={setStepIndex}
+        postAgent={postAgent}
       />
 
       <Form7

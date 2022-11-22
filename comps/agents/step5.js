@@ -93,6 +93,10 @@ export default function Form5({
               <td>Account No.</td>
               <td>{agent.accountNumber}</td>
             </tr>
+            <tr>
+              <td>NIN </td>
+              <td>{agent.nin} </td>
+            </tr>
             {/* <tr>
               <td>Profile Picture</td>
               <td>{agent.image}</td>

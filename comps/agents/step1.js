@@ -106,6 +106,7 @@ export default function Form1({
             onChange={handleChange}
           />
         </div>
+
         <div className="btnContainer">
           <div className="buttons">
             <input
@@ -120,44 +121,3 @@ export default function Form1({
     </motion.div>
   );
 }
-
-// import React from "react";
-// import { usePaystackPayment } from "react-paystack";
-
-// const config = {
-//   reference: new Date().getTime(),
-//   email: "philixbob@gmail.com",
-//   amount: 100000, // #1,000
-//   publicKey: "pk_live_bcddf6973cdcbd5811ae519ab726adb9cce4091f",
-// };
-
-// const onSuccess = (reference) => {
-//   console.log(reference);
-//   console.log("OnSucess");
-// };
-
-// const onClose = () => {
-//   console.log("closed");
-// };
-
-// export default function Form1({ handleNext }) {
-//   const initializePayment = usePaystackPayment(config);
-
-//   return (
-//     <form onSubmit={handleNext} className="form">
-//       <div className="btnContainer">
-//         <div className="buttons">
-//           <input
-//             type="submit"
-//             value="Pay"
-//             // onClick={handleNext}
-//             onClick={() => {
-//               initializePayment(onSuccess, onClose);
-//             }}
-//             className="btn"
-//           />
-//         </div>
-//       </div>
-//     </form>
-//   );
-// }

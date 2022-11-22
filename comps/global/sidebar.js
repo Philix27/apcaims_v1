@@ -64,6 +64,21 @@ export default function Sidebar() {
                 HOME
               </li>
             </a>
+            <a className="link" href="/agents/add">
+              <li
+                className={
+                  _path == "/agents/add"
+                    ? "activeItem"
+                    : "sidebar_start_list_item"
+                }
+              >
+                <span>
+                  <FaRegRegistered />
+                </span>
+                Become an agent
+              </li>
+            </a>
+
             <a className="link" href="/lga">
               <li
                 className={
@@ -118,22 +133,6 @@ export default function Sidebar() {
               </a>
             )}
 
-            {!user && (
-              <a className="link" href="/agents/add">
-                <li
-                  className={
-                    _path == "/agents/add"
-                      ? "activeItem"
-                      : "sidebar_start_list_item"
-                  }
-                >
-                  <span>
-                    <FaRegRegistered />
-                  </span>
-                  Become an agent
-                </li>
-              </a>
-            )}
             {user && (
               <a className="link" href="/" onClick={logOut}>
                 <li className={"sidebar_start_list_item"}>
@@ -153,7 +152,7 @@ export default function Sidebar() {
                 <span>
                   <MdOutlineHelp />
                 </span>
-                Guide
+                Help
               </li>
             </a>
           </ul>
