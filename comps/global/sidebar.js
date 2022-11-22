@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { RiHome5Fill } from "react-icons/ri";
 import { HiUserGroup } from "react-icons/hi";
 import { FaRegRegistered } from "react-icons/fa";
-import { BiLogOut } from "react-icons/bi";
+import { BiLogOut, BiLogIn } from "react-icons/bi";
 import Link from "next/link";
 import {
   MdMyLocation,
@@ -50,7 +50,7 @@ export default function Sidebar() {
         <div className="sidebar_start">
           {/* <img className="logo" src="/images/logo.png" /> */}
           <img className="logo" src="/images/logo.png" width={45} height={45} />
-          <label className="brand">APC DATA CAPTURE</label>
+          <label className="brand">APCAIMS</label>
           <ul className="sidebar_start_list">
             <a className="link" href="/">
               <li
@@ -133,13 +133,22 @@ export default function Sidebar() {
               </a>
             )} */}
 
-            {user && (
+            {user ? (
               <a className="link" href="/" onClick={logOut}>
                 <li className={"sidebar_start_list_item"}>
                   <span>
                     <BiLogOut />
                   </span>
                   Logout
+                </li>
+              </a>
+            ) : (
+              <a className="link" href="/login">
+                <li className={"sidebar_start_list_item"}>
+                  <span>
+                    <BiLogIn />
+                  </span>
+                  Login
                 </li>
               </a>
             )}

@@ -10,8 +10,8 @@ export default function Layout(props) {
   return (
     <>
       <Head>
-        <title>APC DATA CAPTURE </title>
-        <meta name="APC DATA CAPTURE" content="Created by Eligbue" />
+        <title>APCAIMS </title>
+        <meta name="APCAIMS" content="Created by Eligbue" />
         <link rel="icon" href="/images/logo.png" />
       </Head>
       <Navbar />

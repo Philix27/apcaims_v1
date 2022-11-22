@@ -83,12 +83,14 @@ export default function AgentsComp({ agentsList }) {
               <th>No</th>
               <th>Img</th>
               <th>Name</th>
-              <th>Email</th>
+              <th>Agent Type</th>
+              <th>Election Type</th>
+              {/* <th>Email</th>
               <th>State</th>
-              <th>LGA</th>
-              <th>Download</th>
+              <th>LGA</th> */}
+              {/* <th>Download</th>
               <th>Edit</th>
-              <th>Delete</th>
+              <th>Delete</th> */}
             </tr>
           </thead>
           <tbody>
@@ -103,24 +105,28 @@ export default function AgentsComp({ agentsList }) {
                   <td onClick={() => _showModal(agent)}>
                     {namer.toUpperCase()}
                   </td>
-                  <td onClick={() => _showModal(agent)}>{agent.email}</td>
+                  <td onClick={() => _showModal(agent)}>{agent.agentType}</td>
+                  <td onClick={() => _showModal(agent)}>
+                    {agent.electionType}
+                  </td>
+                  {/* <td onClick={() => _showModal(agent)}>{agent.email}</td>
                   <td>{agent.state}</td>
-                  <td>{agent.lga}</td>
-                  <td>
+                  <td>{agent.lga}</td> */}
+                  {/* <td>
                     <Link href={`/agents/${agent._id}`}>
                       <MdDownload className=" icon" />
                     </Link>
-                  </td>
-                  <td>
+                  </td> */}
+                  {/* <td>
                     <a>
                       <AiFillEdit className=" icon" />
                     </a>
-                  </td>
-                  <td>
+                  </td> */}
+                  {/* <td>
                     <a onClick={() => onDelete(agent)}>
                       <AiFillDelete className="red icon" />
                     </a>
-                  </td>
+                  </td> */}
                 </tr>
               );
             })}

@@ -37,7 +37,7 @@ export default function Navbar() {
           <img className="logo" src="/images/logo.png" />
         </Link> */}
 
-        <label className="brand">APC DATA CAPTURE</label>
+        <label className="brand">APCAIMS</label>
 
         <ul className={showNav ? "show" : ""}>
           <li
@@ -69,7 +69,7 @@ export default function Navbar() {
               onClick={() => setShowNav(!showNav)}
               className={_path == "/agents" ? "active" : ""}
             >
-              <Link href="/agents">
+              <Link href={`/state/${user.name}`}>
                 <a>{user.name} Agents</a>
               </Link>
             </li>
@@ -90,12 +90,21 @@ export default function Navbar() {
               <Link href="/">Not Signed In</Link>
             </li>
           )}
-          {user && (
-            <li>
+          {user ? (
+            <li onClick={() => setShowNav(!showNav)}>
               <Link href="/#">
                 <a className="link" onClick={logOut}>
                   Logout
                 </a>
+              </Link>
+            </li>
+          ) : (
+            <li
+              onClick={() => setShowNav(!showNav)}
+              className={_path == "/login" ? "active" : ""}
+            >
+              <Link href="/login">
+                <a className="link">Login</a>
               </Link>
             </li>
           )}

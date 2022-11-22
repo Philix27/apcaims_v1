@@ -48,7 +48,7 @@ export default function Navbar() {
             </a>
           </Link>
           <div className="title">
-            <h3>APC DATA CAPTURE</h3>
+            <h3>APCAIMS</h3>
           </div>
           <div className="nav_bg">
             <ul className="nav_start_list">
