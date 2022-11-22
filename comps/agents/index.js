@@ -92,35 +92,38 @@ export default function AgentsComp({ agentsList }) {
             </tr>
           </thead>
           <tbody>
-            {agts.map((agent, index) => (
-              <tr key={index}>
-                <td>{index + 1}.</td>
-                <td onClick={() => _showModal(agent)}>
-                  <img src={agent.image} alt={agent.name}></img>
-                </td>
-                <td onClick={() => _showModal(agent)}>
-                  {agent.name} {agent.lastName} {agent.firstName}
-                </td>
-                <td onClick={() => _showModal(agent)}>{agent.email}</td>
-                <td>{agent.state}</td>
-                <td>{agent.lga}</td>
-                <td>
-                  <Link href={`/agents/${agent._id}`}>
-                    <MdDownload className=" icon" />
-                  </Link>
-                </td>
-                <td>
-                  <a>
-                    <AiFillEdit className=" icon" />
-                  </a>
-                </td>
-                <td>
-                  <a onClick={() => onDelete(agent)}>
-                    <AiFillDelete className="red icon" />
-                  </a>
-                </td>
-              </tr>
-            ))}
+            {agts.map((agent, index) => {
+              const namer = `${agent.lastName} ${agent.firstName}`;
+              return (
+                <tr key={index}>
+                  <td>{index + 1}.</td>
+                  <td onClick={() => _showModal(agent)}>
+                    <img src={agent.image} alt={agent.name}></img>
+                  </td>
+                  <td onClick={() => _showModal(agent)}>
+                    {namer.toUpperCase()}
+                  </td>
+                  <td onClick={() => _showModal(agent)}>{agent.email}</td>
+                  <td>{agent.state}</td>
+                  <td>{agent.lga}</td>
+                  <td>
+                    <Link href={`/agents/${agent._id}`}>
+                      <MdDownload className=" icon" />
+                    </Link>
+                  </td>
+                  <td>
+                    <a>
+                      <AiFillEdit className=" icon" />
+                    </a>
+                  </td>
+                  <td>
+                    <a onClick={() => onDelete(agent)}>
+                      <AiFillDelete className="red icon" />
+                    </a>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
