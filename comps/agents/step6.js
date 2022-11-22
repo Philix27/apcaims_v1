@@ -31,9 +31,9 @@ export default function Form6({
   const handlePayment = () => {
     const onSuccess = (reference) => {
       console.log("OnSucess");
-      // setAgent({ ...agent, isApproved: true, transactionRef: reference });
-      agent.transactionRef = reference;
-      agent.isApproved = true;
+      setAgent({ ...agent, isApproved: true, transactionRef: reference });
+      // agent.transactionRef = reference;
+      // agent.isApproved = true;
       setStepIndex(6);
       uploadImageToFb();
     };
