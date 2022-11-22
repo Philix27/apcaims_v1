@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { RiHome5Fill } from "react-icons/ri";
+import { HiUserGroup } from "react-icons/hi";
 import { FaRegRegistered } from "react-icons/fa";
 import { BiLogOut } from "react-icons/bi";
 import Link from "next/link";
@@ -76,11 +77,11 @@ export default function Sidebar() {
               </li>
             </a>
 
-            {user && (
-              <a className="link" href="/agents">
+            {/* {user && (
+              <a className="link" href={`/state/${user.name}`}>
                 <li
                   className={
-                    _path == "/agents"
+                    _path == `/state/${user.name}`
                       ? "activeItem"
                       : "sidebar_start_list_item"
                   }
@@ -89,6 +90,16 @@ export default function Sidebar() {
                     <MdGroups />
                   </span>
                   AGENTS
+                </li>
+              </a>
+            )} */}
+            {user && (
+              <a className="link" href={`/state/${user.name}`}>
+                <li className={"sidebar_start_list_item"}>
+                  <span>
+                    <HiUserGroup />
+                  </span>
+                  {user.name} Agents
                 </li>
               </a>
             )}
@@ -106,16 +117,7 @@ export default function Sidebar() {
                 </li>
               </a>
             )}
-            {user && (
-              <a className="link" href="/">
-                <li className={"sidebar_start_list_item"}>
-                  <span>
-                    <MdOutlineEmail />
-                  </span>
-                  {user.email}
-                </li>
-              </a>
-            )}
+
             {!user && (
               <a className="link" href="/agents/add">
                 <li
