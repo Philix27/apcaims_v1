@@ -202,25 +202,31 @@ export default function AddAgentsPage({ title }) {
     } else if (name == "email") {
       value = value.toLowerCase();
     }
+
     if (name == "phone") {
-      value = handleLength(value, 11);
+      if (value.length > 11) value = value.slice(0, 11);
     }
     if (name == "nin") {
-      value = handleLength(value, 11);
+      if (value.length > 11) value = value.slice(0, 11);
     }
     if (name == "accountNumber") {
-      value = handleLength(value, 10);
+      if (value.length > 10) value = value.slice(0, 10);
     }
+    // if (name == "nin") value = handleLength(value, 11);
+    // if (name == "accountNumber") value = handleLength(value, 10);
 
     setAgent({ ...agent, [name]: value });
     console.log(agent);
   };
 
   function handleLength(value, maxLength) {
+    var val;
     if (value.length > maxLength) {
-      return value.slice(0, 11);
+      val = value.slice(0, 11);
     }
+    return val;
   }
+
   const handlePrev = (e) => {
     e.preventDefault();
     setShowErrorMsg(false);

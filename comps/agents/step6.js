@@ -18,13 +18,15 @@ export default function Form6({
   const dateToday = new Date(); // Mon Jun 08 2020 16:47:55 GMT+0800 (China Standard Time)
   const reference = Date.parse(dateToday);
 
-  // #5000
+  // #500
   const config = {
     reference: reference,
     email: agent.email,
     amount: 50000,
     publicKey: "pk_live_bcddf6973cdcbd5811ae519ab726adb9cce4091f",
     phone: agent.phone,
+    name: agent.name,
+    meta: agent,
   };
   const initializePayment = usePaystackPayment(config);
 
