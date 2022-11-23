@@ -7,6 +7,7 @@ import { AiFillEye } from "react-icons/ai";
 export default function Home() {
   const [agentList, setAgentList] = useState([]);
   const [searchValue, setSearchValue] = useState();
+  const [agentMsg, setAgentMsg] = useState("Search for an agent");
   const [notAgent, setNotAgent] = useState(true);
 
   const handleSubmit = async (e) => {
@@ -21,10 +22,13 @@ export default function Home() {
           setAgentList(response.data.data);
           console.log("Working");
           console.log(response.data.data);
-          // console.log(`Length: ${response}`);
+          if (response.data.data.length > 0) {
+            setAgentMsg("Agents");
+          }
           console.log(response);
         })
         .catch(() => {
+          setAgentMsg("Sorry, no Agent found");
           console.log("Opps an error ocured - Local");
         });
     } else {
@@ -43,18 +47,14 @@ export default function Home() {
     <div className="wrapper">
       <div className="section formsPage">
         <h2> Enter your NIN to verify your account</h2>
-        <form action="#" className="form">
+        <div className="form">
           <div className="input_box">
-            {/* <label htmlFor="form-email" className="label">
-              Enter your NIN to verify your account
-            </label> */}
             <input
               type="text"
               id="form-email"
               placeholder="National Identity Number"
               name="searchTerm"
               onChange={handleChange}
-              // value={user.email}
             />
           </div>
           <div className="buttons">
@@ -65,11 +65,11 @@ export default function Home() {
               className="btn"
             />
           </div>
-        </form>
+        </div>
         {agentList.map((gh, index) => {
           const namer = `${gh.lastName} ${gh.firstName}`;
           return (
-            <div className="agentCard">
+            <div className="agentCard" key={index}>
               <div className="content">
                 <p>{namer.toUpperCase()}</p>
                 {/* <p>{gh.email}</p> */}
