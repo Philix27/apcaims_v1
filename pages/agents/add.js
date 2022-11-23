@@ -95,8 +95,10 @@ export default function AddAgentsPage({ title }) {
   function postAgent(agent) {
     Axios.post("https://rxedu-api.vercel.app/api/v1/agent", agent)
       .then((response) => {
-        router.push("/thanks");
+        const objID = response.data.data._id;
+        router.push(`/thanks/${objID}`);
         console.log("Successfully Sent to: ");
+        console.log(response.data);
         // if (userPresent) {
         //   router.push("/thanks");
         // } else {

@@ -84,22 +84,22 @@ export default function Form6({
             className="btn"
           />
         </div>
-        {/* <div className="buttons">
+        <div className="buttons">
           <input
             type="submit"
             value="Submit"
             onClick={tester}
             className="btn"
           />
-        </div> */}
-        <div className="buttons">
+        </div>
+        {/* <div className="buttons">
           <input
             type="submit"
             value="Proceed"
             onClick={handlePayment}
             className="btn"
           />
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
