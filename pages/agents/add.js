@@ -15,6 +15,7 @@ import Form5 from "../../comps/agents/step5";
 import Form6 from "../../comps/agents/step6";
 import Form7 from "../../comps/agents/step7";
 import { usePaystackPayment } from "react-paystack";
+// import { sortByDate } from "../../utils";
 
 export default function AddAgentsPage({ title }) {
   const router = useRouter();
@@ -29,6 +30,7 @@ export default function AddAgentsPage({ title }) {
     img: "",
     userType: "",
   });
+  // handleLength
   //! State Variables
   const [previewImage, setPreviewimage] = useState("");
   const [profileImage, setProfileImage] = useState(null);
@@ -200,10 +202,25 @@ export default function AddAgentsPage({ title }) {
     } else if (name == "email") {
       value = value.toLowerCase();
     }
+    if (name == "phone") {
+      value = handleLength(value, 11);
+    }
+    if (name == "nin") {
+      value = handleLength(value, 11);
+    }
+    if (name == "accountNumber") {
+      value = handleLength(value, 10);
+    }
+
     setAgent({ ...agent, [name]: value });
     console.log(agent);
   };
 
+  function handleLength(value, maxLength) {
+    if (value.length > maxLength) {
+      return value.slice(0, 11);
+    }
+  }
   const handlePrev = (e) => {
     e.preventDefault();
     setShowErrorMsg(false);

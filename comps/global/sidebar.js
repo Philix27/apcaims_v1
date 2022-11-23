@@ -134,7 +134,7 @@ export default function Sidebar() {
             )} */}
 
             {user ? (
-              <a className="link" href="/" onClick={logOut}>
+              <a className="link" href="/login" onClick={logOut}>
                 <li className={"sidebar_start_list_item"}>
                   <span>
                     <BiLogOut />
@@ -144,7 +144,11 @@ export default function Sidebar() {
               </a>
             ) : (
               <a className="link" href="/login">
-                <li className={"sidebar_start_list_item"}>
+                <li
+                  className={
+                    _path == "/login" ? "activeItem" : "sidebar_start_list_item"
+                  }
+                >
                   <span>
                     <BiLogIn />
                   </span>

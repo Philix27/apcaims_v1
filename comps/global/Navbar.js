@@ -92,7 +92,7 @@ export default function Navbar() {
           )}
           {user ? (
             <li onClick={() => setShowNav(!showNav)}>
-              <Link href="/#">
+              <Link href="/login">
                 <a className="link" onClick={logOut}>
                   Logout
                 </a>
