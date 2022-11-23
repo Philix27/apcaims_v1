@@ -92,19 +92,20 @@ export default function AddAgentsPage({ title }) {
     setUser(userObj);
     return userObj;
   }
+
   function postAgent(agent) {
     Axios.post("https://rxedu-api.vercel.app/api/v1/agent", agent)
       .then((response) => {
         const objID = response.data.data._id;
         router.push(`/thanks/${objID}`);
-        console.log("Successfully Sent to: ");
-        console.log(response.data);
+        // console.log("Successfully Sent to: ");
+        // console.log(response.data);
         // if (userPresent) {
         //   router.push("/thanks");
         // } else {
         //   router.push("/thanks");
         // }
-        // setIsSuccessful(true);
+        setIsSuccessful(true);
       })
       .catch((e) => {
         console.log(e);
@@ -146,7 +147,7 @@ export default function AddAgentsPage({ title }) {
     } else if (name == "image") {
       const _file = e.target.files[0];
       if (_file) {
-        if (_file.size < 1000000) {
+        if (_file.size < 2000000) {
           // setTempImage()
           setProfileImage(_file);
           handleConversion(_file);
