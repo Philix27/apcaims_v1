@@ -38,7 +38,13 @@ export default function Form5({
             <tr className="profileImage">
               <td>Photo</td>
               <td>
-                <img src={profileImage} alt="Selected image" />
+                {profileImage ? (
+                  <img src={profileImage} alt="Selected image" />
+                ) : (
+                  <p className="errorMsg">
+                    Kindly select an image less than 1mb
+                  </p>
+                )}
               </td>
             </tr>
             <tr>

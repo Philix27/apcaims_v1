@@ -40,6 +40,7 @@ export default function AddAgentsPage({ title }) {
   const [localGov, setLocalGov] = useState([]);
   const [wards, setWards] = useState([]);
   const [imgUrl, setImgUrl] = useState(null);
+  const [hasTempImage, setTempImage] = useState(null);
   const [stepIndex, setStepIndex] = useState(0);
   const [showErrorMsg, setShowErrorMsg] = useState(false);
   //! Show TextForm
@@ -144,6 +145,7 @@ export default function AddAgentsPage({ title }) {
       const _file = e.target.files[0];
       if (_file) {
         if (_file.size < 1000000) {
+          // setTempImage()
           setProfileImage(_file);
           handleConversion(_file);
           console.log("Hurray! we have a file");
@@ -275,6 +277,7 @@ export default function AddAgentsPage({ title }) {
       agent.image &&
       agent.accountNumber &&
       agent.nin &&
+      profileImage &&
       agent.pollingUnit
     ) {
       e.preventDefault();
