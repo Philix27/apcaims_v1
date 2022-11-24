@@ -28,7 +28,7 @@ const states = {
         "ADO 'L' IGBEHIN",
         "ADO 'M' FARM SETTLEMENT",
       ],
-      name: "EDO EKITI",
+      name: "ADO EKITI",
     },
     {
       wards: [
@@ -155,7 +155,7 @@ const states = {
         "IPOTI WARD 'A'",
         "IPOTI WARD 'B'",
       ],
-      name: "EJERO",
+      name: "IJERO",
     },
     {
       wards: [
@@ -171,7 +171,7 @@ const states = {
         "OKERUKU",
         "UGELE / AROKU",
       ],
-      name: "EKERE",
+      name: "IKERE",
     },
     {
       wards: [
@@ -203,7 +203,7 @@ const states = {
         "IYE III",
         "OBADA",
       ],
-      name: "ELEJEMEJE",
+      name: "ILEJEMEJE",
     },
     {
       wards: [
