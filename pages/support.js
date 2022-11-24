@@ -20,7 +20,7 @@ export default function Contact() {
             className="form"
             action="mailto:aapcaims@gmail.com"
             method="post"
-            enctype="text/plain"
+            type="text/plain"
           >
             <h2>Email Us</h2>
 
