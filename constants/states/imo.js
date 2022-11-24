@@ -1,7 +1,7 @@
 const SR = {
   name: "IMO",
-  email: "imo@gmail.com",
-  password: "imo1",
+  email: "Imo@apcaims.com",
+  password: "zmc23",
   phone: "08108850572",
   statecode: "IMO",
   img: "images/profile2.jpg",
