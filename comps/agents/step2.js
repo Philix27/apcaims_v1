@@ -96,9 +96,9 @@ export default function Form2({
             Polling Unit
           </label>
           <input
-            type="text"
+            type="number"
             id="form-polling-unit"
-            placeholder="Enter Polling Unit"
+            placeholder="e.g 001"
             name="pollingUnit"
             value={agent.pollingUnit}
             required
