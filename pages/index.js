@@ -46,13 +46,13 @@ export default function Home() {
   return (
     <div className="wrapper">
       <div className="section formsPage">
-        <h2> Enter your NIN to verify your account</h2>
+        <h2> Verify Your Agent Status</h2>
         <div className="form">
           <div className="input_box">
             <input
               type="text"
               id="form-email"
-              placeholder="National Identity Number"
+              placeholder=" Enter your NIN to verify"
               name="searchTerm"
               onChange={handleChange}
             />
