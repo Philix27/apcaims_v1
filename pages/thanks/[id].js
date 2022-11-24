@@ -14,7 +14,7 @@ export default function Congratulations({ content }) {
       <div className="content">
         <h1>Congratulations! </h1>
         <h3>You are now an agent.</h3>
-        <Link href={`/agents/${id}`}>
+        <Link passHref href={`/agents/${id}`}>
           <div className="btn">Download Profile</div>
         </Link>
       </div>
