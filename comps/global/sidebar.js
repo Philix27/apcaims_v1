@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { RiHome5Fill } from "react-icons/ri";
 import { HiUserGroup } from "react-icons/hi";
-import { FaRegRegistered } from "react-icons/fa";
+import { FaRegRegistered, FaQuestion } from "react-icons/fa";
 import { BiLogOut, BiLogIn } from "react-icons/bi";
 import Link from "next/link";
 import {
@@ -11,6 +11,7 @@ import {
   MdAdminPanelSettings,
   MdOutlineEmail,
   MdOutlineHelp,
+  MdContactMail,
 } from "react-icons/md";
 
 export default function Sidebar() {
@@ -153,6 +154,47 @@ export default function Sidebar() {
                     <BiLogIn />
                   </span>
                   Login
+                </li>
+              </a>
+            )}
+
+            <a className="link" href="/support">
+              <li
+                className={
+                  _path == "/support" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                <span>
+                  <MdContactMail />
+                </span>
+                Contact Us
+              </li>
+            </a>
+            <a className="link" href="/faq">
+              <li
+                className={
+                  _path == "/faq" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                <span>
+                  <FaQuestion />
+                </span>
+                FAQ
+              </li>
+            </a>
+            {user && (
+              <a className="link" href="/faq_admin">
+                <li
+                  className={
+                    _path == "/faq_admin"
+                      ? "activeItem"
+                      : "sidebar_start_list_item"
+                  }
+                >
+                  <span>
+                    <FaQuestion />
+                  </span>
+                  FAQ Admin
                 </li>
               </a>
             )}

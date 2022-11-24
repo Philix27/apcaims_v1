@@ -110,6 +110,33 @@ export default function Navbar() {
           )}
           <li
             onClick={() => setShowNav(!showNav)}
+            className={_path == "/support" ? "active" : ""}
+          >
+            <Link href="/support">
+              <a>Contact Us</a>
+            </Link>
+          </li>
+          <li
+            onClick={() => setShowNav(!showNav)}
+            className={_path == "/faq" ? "active" : ""}
+          >
+            <Link href="/faq">
+              <a>FAQ</a>
+            </Link>
+          </li>
+          {user && (
+            <li
+              onClick={() => setShowNav(!showNav)}
+              className={_path == "/faq_admin" ? "active" : ""}
+            >
+              <Link href="/faq_admin">
+                <a>FAQ ADMIN</a>
+              </Link>
+            </li>
+          )}
+
+          <li
+            onClick={() => setShowNav(!showNav)}
             className={_path == "/guide" ? "active" : ""}
           >
             <Link href="/guide">
