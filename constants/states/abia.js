@@ -1,8 +1,8 @@
 const SR = {
   name: "ABIA",
-  email: "abia@gmail.com",
-  password: "abia1",
-  phone: "08108850572",
+  email: "Abia@apcaims.com",
+  password: "uyd94",
+  phone: "08101234567",
   statecode: "ABIA",
   img: "images/profile2.jpg",
   userType: "STATEREP",
