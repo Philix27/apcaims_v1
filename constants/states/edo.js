@@ -85,6 +85,21 @@ const states = {
     },
     {
       wards: [
+        "EMU",
+        "EWATTO",
+        "EWOHIMI I",
+        "EWOHIMI II",
+        "ILLUSHI I",
+        "ILLUSHI II",
+        "OHORDUA",
+        "UBIAJA I",
+        "UBIAJA II",
+        "UGBOHA",
+      ],
+      name: "ESAN SOUTH EAST",
+    },
+    {
+      wards: [
         "EGORO/IDOA/UKHUN",
         "EMAUDO/ EGUARE/ EKPOMA",
         "EMUHI/ UKPENU/ UJOELEN",
