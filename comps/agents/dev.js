@@ -1,4 +1,6 @@
 import React from "react";
+import { AiFillDelete, AiFillEdit } from "react-icons/ai";
+import { MdDownload } from "react-icons/md";
 import { useState } from "react";
 import Axios from "axios";
 import { useRouter } from "next/router";
@@ -13,6 +15,8 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
   const [showModal, setShowModal] = useState(false);
   const [clickedAgent, setClickedAgent] = useState({});
   const router = useRouter();
+  // console.log("agentsList");
+  // console.log(agentsList);
 
   var buttonCount = totalCount / length;
   buttonCount = Math.trunc(buttonCount);
@@ -29,6 +33,8 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
         return names.toLowerCase().includes(searchTerm.toLowerCase());
       }
     });
+
+    // console.log(agts);
     setAgents(tempList);
   };
 
@@ -65,6 +71,15 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
 
   return (
     <div className=" agentsList">
+      {/* <div className="successDiv"> {isSuccessful && <AlertDeleted />}</div> */}
+      {showModal && (
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          title="Hula Agen"
+          children={<AgentModalContent agent={clickedAgent} />}
+        />
+      )}
       <div className="tableSection">
         <div className="input">
           <input
@@ -81,6 +96,12 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
               <th>Name</th>
               <th>Agent Type</th>
               <th>Election Type</th>
+              {/* <th>Email</th>
+              <th>State</th>
+              <th>LGA</th> */}
+              {/* <th>Download</th>
+              <th>Edit</th>
+              <th>Delete</th> */}
             </tr>
           </thead>
           <tbody>
@@ -89,12 +110,34 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
               return (
                 <tr key={index}>
                   <td>{index + 1}.</td>
-                  <td>
+                  <td onClick={() => _showModal(agent)}>
                     <img src={agent.image} alt={agent.name}></img>
                   </td>
-                  <td>{namer.toUpperCase()}</td>
-                  <td>{agent.agentType}</td>
-                  <td>{agent.electionType}</td>
+                  <td onClick={() => _showModal(agent)}>
+                    {namer.toUpperCase()}
+                  </td>
+                  <td onClick={() => _showModal(agent)}>{agent.agentType}</td>
+                  <td onClick={() => _showModal(agent)}>
+                    {agent.electionType}
+                  </td>
+                  {/* <td onClick={() => _showModal(agent)}>{agent.email}</td>
+                  <td>{agent.state}</td>
+                  <td>{agent.lga}</td> */}
+                  {/* <td>
+                    <Link href={`/agents/${agent._id}`}>
+                      <MdDownload className=" icon" />
+                    </Link>
+                  </td> */}
+                  {/* <td>
+                    <a>
+                      <AiFillEdit className=" icon" />
+                    </a>
+                  </td> */}
+                  {/* <td>
+                    <a onClick={() => onDelete(agent)}>
+                      <AiFillDelete className="red icon" />
+                    </a>
+                  </td> */}
                 </tr>
               );
             })}

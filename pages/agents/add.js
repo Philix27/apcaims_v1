@@ -287,17 +287,10 @@ export default function AddAgentsPage({ title }) {
       console.log("Before Upload");
       setStepIndex(stepIndex + 1);
     } else {
-      console.log(agent);
-      setShowErrorMsg(true);
+      // console.log(agent);
+      // setShowErrorMsg(true);
       console.log("Something is missing");
     }
-  };
-
-  const handleSubmit = async (e) => {
-    const reference = `${new Date().getTime()} - ${
-      agent.firstName + agent.lastName
-    }`;
-    await handlePayment(agent.email, agent.phone, reference);
   };
 
   const handleConversion = useCallback(async (_file) => {
@@ -364,7 +357,7 @@ export default function AddAgentsPage({ title }) {
       <Form4
         agent={agent}
         stepIndex={stepIndex}
-        handleSubmit={handleSubmit}
+        // handleSubmit={handleSubmit}
         agentParams={agentParams}
         handleChange={handleChange}
         handlePrev={handlePrev}
@@ -375,7 +368,7 @@ export default function AddAgentsPage({ title }) {
       <Form5
         agent={agent}
         stepIndex={stepIndex}
-        handleSubmit={handleSubmit}
+        // handleSubmit={handleSubmit}
         agentParams={agentParams}
         handleChange={handleChange}
         handlePrev={handlePrev}
@@ -405,7 +398,7 @@ export default function AddAgentsPage({ title }) {
       <Form7
         agent={agent}
         stepIndex={stepIndex}
-        handleSubmit={handleSubmit}
+        // handleSubmit={handleSubmit}
         agentParams={agentParams}
         handleChange={handleChange}
         handlePrev={handlePrev}

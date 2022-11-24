@@ -25,8 +25,9 @@ export default function Form6({
     amount: 50000,
     publicKey: "pk_live_bcddf6973cdcbd5811ae519ab726adb9cce4091f",
     phone: agent.phone,
-    name: agent.name,
-    meta: agent,
+    firstname: agent.firstName,
+    lastname: agent.lastName,
+    metadata: agent,
   };
   const initializePayment = usePaystackPayment(config);
 
