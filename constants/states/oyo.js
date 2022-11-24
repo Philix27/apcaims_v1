@@ -126,17 +126,6 @@ const states = {
     },
     {
       wards: [
-        "WARD 10 NW7",
-        "WARD 11 NW7",
-        "WARD 2 NI (PART II)",
-        "WARD 3 NW1",
-        "WARD 4 NW2",
-        "WARD 5 NW3 (PART I)",
-        "WARD 6 NW3 (PART I)",
-        "WARD 7 NW4",
-        "WARD 8 NW5",
-        "WARD 9 NW6",
-        "WARD I NI (PART I)",
         "WARD 08 SW7",
         "WARD 1 C2",
         "WARD 2 SW1",
@@ -151,6 +140,22 @@ const states = {
         "WARD 12 SW9 II",
       ],
       name: "IBADAN SOUTH WEST",
+    },
+    {
+      wards: [
+         "WARD 10 NW7",
+         "WARD 11 NW7",
+         "WARD 2 NI (PART II)",
+        "WARD 3 NW1",
+        "WARD 4 NW2",
+        "WARD 5 NW3 (PART I)",
+        "WARD 6 NW3 (PART I)",
+        "WARD 7 NW4",
+        "WARD 8 NW5",
+        "WARD 9 NW6",
+        "WARD I NI (PART I)",
+      ],
+      name: "IBADAN NORTH-WEST",
     },
     {
       wards: [
