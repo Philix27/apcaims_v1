@@ -81,7 +81,7 @@ export default function Form2({
             required
             id="form-ward"
           >
-            <option disabled={true}>Select a state</option>
+            <option disabled={true}>Select a Ward</option>
             {wards.map((_val, index) => {
               return (
                 <option value={_val} key={index}>
