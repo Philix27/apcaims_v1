@@ -120,6 +120,21 @@ const states = {
       ],
       name: "ISIALA NGWA NORTH",
     },
+     {
+      wards: [
+        "AKUNEKPU EZIAMA NA OBUBA",
+        "AMAISE / AMAISE ANABA",
+        "EHINA GURU OSOKWA",
+        "MBUTU NGWA",
+        "MBUTU UKWU",
+        "NGWAOBI",
+        "OKPORO AHABA",
+        "OMOBA",
+        "OVUNGWU",
+        "OVUOKWU",
+      ],
+      name: "ISIALA NGWA SOUTH",
+    },
     {
       wards: [
         "ACHARA / MGBUGWU",
