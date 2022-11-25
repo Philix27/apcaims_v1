@@ -70,6 +70,7 @@ export default function AddAgentsPage({ title }) {
     nin: "",
     sponsorCode: "",
     sponsored: false,
+    isAgent: false,
   });
 
   const HOU = "HOUSE OF REPS.";
