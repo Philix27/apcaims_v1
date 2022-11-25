@@ -58,75 +58,18 @@ export default function Form6({
       ...agent,
       isApproved: true,
       transactionRef: _reference,
-      sponsorCode: "FREE_REG",
+      sponsorCode: SPONSOR_CODE,
       sponsored: true,
     });
+    agent.isApproved = true;
+    agent.transactionRef = _reference;
+    agent.sponsorCode = SPONSOR_CODE;
+    agent.sponsored = true;
+
     setStepIndex(6);
     uploadImageToFb();
-    postAgent(agent);
+    // postAgent(agent);
   };
-  // const tester = () => {
-  //   const _reference = Date.UTC.toString();
-  //   agent.transactionRef = _reference;
-  //   agent.isApproved = true;
-  //   agent.image = "_reference";
-
-  //   setStepIndex(6);
-  //   // uploadImageToFb();
-  //   postAgent(agent);
-  // };
-
-  // const handleSponsor = async (e) => {
-  //   // e.preventDefault();
-
-  //   //! Fetch sponsor by code
-  //   try {
-  //     var data = await axios.get(
-  //       `https://rxedu-api.vercel.app/api/v1/sponsor/${refCode}`
-  //     );
-  //     // console.log(data);
-  //     var doc = data.data;
-  //     // console.log(doc);
-  //     // console.log(doc.doc);
-  //     // console.log(doc.doc.unit);
-  //     var sponsor = doc.doc;
-
-  //     if (sponsor.unit > 0) {
-  //       console.log("sponsor.unit");
-  //       //! get unit left/count
-  //       console.log(sponsor.unit);
-  //       console.log(sponsor._id);
-  //       await axios.patch(
-  //         `https://rxedu-api.vercel.app/api/v1/sponsor/${sponsor._id}`,
-  //         { unit: sponsor.unit-- }
-  //       );
-  //       setShowSubmit(true);
-  //     }
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-
-  //   //! get unit left/count
-  //   // var doc = data.doc;
-  //   // //! if above 1 deduct one and update the sponsors count
-  //   // if (doc.unit > 0) {
-  //   //   await axios.patch(
-  //   //     `https://rxedu-api.vercel.app/api/v1/sponsor/${refCode}`,
-  //   //     {
-  //   //       unit: doc.unit--,
-  //   //     }
-  //   //   );
-  //   //   setShowSubmit(true);
-  //   // }
-
-  //   //! the post the agents details
-  // };
-
-  // const submitFile = () => {
-  //   setAgent({ ...agent, isApproved: true, transactionRef: refCode });
-  //   setStepIndex(6);
-  //   uploadImageToFb();
-  // };
 
   const handleChangeRef = (e) => {
     const name = e.target.name;
