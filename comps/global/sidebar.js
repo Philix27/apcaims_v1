@@ -80,7 +80,7 @@ export default function Sidebar() {
               </li>
             </a>
 
-            <a className="link" href="/sponsor">
+            {/* <a className="link" href="/sponsor">
               <li
                 className={
                   _path == "/sponsor" ? "activeItem" : "sidebar_start_list_item"
@@ -91,7 +91,7 @@ export default function Sidebar() {
                 </span>
                 Sponsor
               </li>
-            </a>
+            </a> */}
 
             {/* <a className="link" href="/lga">
               <li

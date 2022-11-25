@@ -68,6 +68,8 @@ export default function AddAgentsPage({ title }) {
     registrationDate: new Date(),
     transactionRef: "",
     nin: "",
+    sponsorCode: "",
+    sponsored: false,
   });
 
   const HOU = "HOUSE OF REPS.";
