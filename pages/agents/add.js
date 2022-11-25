@@ -224,7 +224,7 @@ export default function AddAgentsPage({ title }) {
     // if (name == "accountNumber") value = handleLength(value, 10);
 
     setAgent({ ...agent, [name]: value });
-    console.log(agent);
+    // console.log(agent);
   };
 
   function handleLength(value, maxLength) {

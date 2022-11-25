@@ -65,10 +65,11 @@ export default function Form6({
     agent.transactionRef = _reference;
     agent.sponsorCode = SPONSOR_CODE;
     agent.sponsored = true;
-
+    // console.log(agent);
     setStepIndex(6);
     uploadImageToFb();
-    // postAgent(agent);
+
+    //! postAgent(agent);
   };
 
   const handleChangeRef = (e) => {
