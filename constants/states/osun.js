@@ -1,7 +1,7 @@
 const SR = {
   name: "OSUN",
-  email: "osun@gmail.com",
-  password: "osun1",
+  email: "Osun@apcaims.com",
+  password: "uxm84",
   phone: "08108850572",
   statecode: "OSUN",
   img: "images/profile2.jpg",

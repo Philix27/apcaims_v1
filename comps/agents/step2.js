@@ -38,7 +38,7 @@ export default function Form2({
               required
               id="form-state"
             >
-              <option disabled>Select a state</option>
+              <option enable>Select a state</option>
 
               {data.states.map((_val, index) => {
                 return (
@@ -60,7 +60,7 @@ export default function Form2({
             required
             id="form-lga"
           >
-            <option disabled={true}>Select a LGA</option>
+            <option enable={true}>Select a LGA</option>
 
             {localGov.map((_val, index) => {
               return (
@@ -81,7 +81,7 @@ export default function Form2({
             required
             id="form-ward"
           >
-            <option disabled={true}>Select a state</option>
+            <option enable={true}>Select a Ward</option>
             {wards.map((_val, index) => {
               return (
                 <option value={_val} key={index}>
@@ -96,9 +96,9 @@ export default function Form2({
             Polling Unit
           </label>
           <input
-            type="text"
+            type="number"
             id="form-polling-unit"
-            placeholder="Enter Polling Unit"
+            placeholder="e.g 001, 002, 003 ..."
             name="pollingUnit"
             value={agent.pollingUnit}
             required
