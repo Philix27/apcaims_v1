@@ -94,7 +94,7 @@ export default function Form6({
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1.7, delay: 1, type: "tween" }}
     >
-      <form className="form">
+      <form className="form" action="#">
         <div className="payment">
           <h2>
             Step 6 <span> Payment</span>
@@ -124,7 +124,7 @@ export default function Form6({
         </div> */}
           <div className="buttons">
             <input
-              type="submit"
+              type="button"
               value="Proceed"
               onClick={handlePayment}
               className="btn"
