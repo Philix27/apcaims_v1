@@ -79,7 +79,7 @@ const states = [
 const sr = [
   {
     name: "developer",
-    email: "developer@mail.com",
+    email: "developer@apcaims.com",
     password: "agile",
     phone: "0910009202930292",
     statecode: "Developer",
