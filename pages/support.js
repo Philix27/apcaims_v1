@@ -57,7 +57,7 @@ export default function Contact() {
                 required
                 minLength={5}
                 id="name"
-                placeholder="Enter email address"
+                placeholder="Enter your name"
                 name="name"
               />
             </div>
