@@ -48,20 +48,20 @@ export default function Navbar() {
               <a>Home</a>
             </Link>
           </li>
-          <li
+          {/* <li
             onClick={() => setShowNav(!showNav)}
             className={_path == "/reg" ? "active" : ""}
           >
             <Link href="/lga">
               <a>LGA</a>
             </Link>
-          </li>
+          </li> */}
           <li
             onClick={() => setShowNav(!showNav)}
             className={_path == "/agents/add" ? "active" : ""}
           >
             <Link href="/agents/add">
-              <a>Become/Add an agent</a>
+              <a>Add Agent</a>
             </Link>
           </li>
           {user && (

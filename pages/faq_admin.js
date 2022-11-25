@@ -8,8 +8,8 @@ export default function Guide({ content }) {
   const md = new MarkdownIt();
   const cc = md.render(content);
   return (
-    <div>
-      <div className="guide">
+    <div className="guide">
+      <div className="content">
         <div className="markdown-section">
           <div dangerouslySetInnerHTML={{ __html: cc }}></div>
           {/* <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div> */}

@@ -1,16 +1,21 @@
 .guide {
-  width: 50vw;
-  margin: 20px auto;
-  margin-top: 40px;
-  margin-left: 30vw;
-  background-color: #fff;
-  padding: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  scroll-behavior: smooth;
-  overflow: scroll;
+  margin-left: 20vw;
+  padding: 0 20px;
+  .content {
+    // width: 50vw;
+    margin: 20px auto;
+    margin-top: 20px;
+    // margin-left: 20vw;
+    // background-color: #fff;
+    padding: 10px;
+    // box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    // border-radius: 10px;
+    // scroll-behavior: smooth;
+    // overflow: scroll;
+  }
 
   @include tabletSS {
+    padding: 0;
     width: 90vw;
     margin: 20px auto;
     margin-top: 60px;

@@ -76,11 +76,24 @@ export default function Sidebar() {
                 <span>
                   <FaRegRegistered />
                 </span>
-                BECOME/ADD AGENT
+                Add Agent
               </li>
             </a>
 
-            <a className="link" href="/lga">
+            <a className="link" href="/sponsor">
+              <li
+                className={
+                  _path == "/sponsor" ? "activeItem" : "sidebar_start_list_item"
+                }
+              >
+                <span>
+                  <MdMyLocation />
+                </span>
+                Sponsor
+              </li>
+            </a>
+
+            {/* <a className="link" href="/lga">
               <li
                 className={
                   _path == "/lga" ? "activeItem" : "sidebar_start_list_item"
@@ -91,7 +104,7 @@ export default function Sidebar() {
                 </span>
                 LGAs
               </li>
-            </a>
+            </a> */}
 
             {/* {user && (
               <a className="link" href={`/state/${user.name}`}>
