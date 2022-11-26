@@ -116,8 +116,9 @@ export default function Contact() {
     <>
       <Landing
         title="Sponsor Agents"
-        imgUrl="images/contact.jpg"
+        imgUrl="images/sponsor.jpg"
         subtitle="You can sponsor agents for"
+        opacity={0.55}
       />
       <div className="section formsPage contactUs">
         <motion.div

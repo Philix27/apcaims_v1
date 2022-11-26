@@ -62,14 +62,11 @@ export default function AgentForm() {
         <h4>
           ID: <span>{Date.parse(userProfile.registrationDate)}</span>
         </h4>
-        <h4>
+        {/* <h4>
           Address: <span>{userProfile.address}</span>
-        </h4>
+        </h4> */}
         <h4>
           Phone: <span>{userProfile.phone}</span>
-        </h4>
-        <h4>
-          Alternative Phone: <span>{userProfile.firstName}</span>
         </h4>
         <h4>
           Email: <span>{userProfile.email}</span>
