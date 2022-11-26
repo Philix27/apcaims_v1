@@ -21,7 +21,7 @@ export default function Contact() {
   const [ReadOnly, setMakeAllReadOnly] = useState(false);
   const [refvalid, setRefValid] = useState(false);
   const [refLength, setRefLength] = useState(false);
-  const [refSearchMsg, setRefSearchMsg] = useState("");
+  const [alreadyInuse, setAlreadyInUse] = useState("");
 
   const config = {
     reference: reference,
@@ -70,6 +70,7 @@ export default function Contact() {
       }
     }
     setErrorMsg(false);
+    setAlreadyInUse(false);
     setSponsor({ ...sponsor, [name]: value });
   };
 
@@ -94,7 +95,7 @@ export default function Contact() {
 
           console.log(data.data.data[0]);
           if (data.data.data[0]) {
-            setRefSearchMsg("Already in use");
+            setAlreadyInUse(true);
             setRefValid(false);
           } else {
             //! Proceed
@@ -195,6 +196,9 @@ export default function Contact() {
               />
               {refLength && (
                 <p className="errorMsg">Must be between 6 - 10 characters</p>
+              )}
+              {alreadyInuse && (
+                <p className="errorMsg">Ref Code already in use</p>
               )}
             </div>
             <div className="input_box">
