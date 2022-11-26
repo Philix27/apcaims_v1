@@ -112,8 +112,8 @@ export default function Contact() {
       sponsor.name &&
       sponsor.phone &&
       sponsor.unit &&
-      sponsor.amount &&
-      sponsor.refcode
+      sponsor.amount
+      // sponsor.refcode
     ) {
       // console.log("Validating");
       if (sponsor.amount >= 10000) {
@@ -140,181 +140,142 @@ export default function Contact() {
         subtitle="You can sponsor agents for"
         opacity={0.55}
       />
-      {skipEntry ? (
-        <div className="section formsPage contactUs">
-          <motion.div
-            className="sect "
-            initial={{ x: "-100vw", opacity: 0.1 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.3, delay: 0.5, type: "tween" }}
-          >
-            <form className="form" action="#">
-              <p>Each unit is per registration (Multiples of ₦500).</p>
-              <div className="input_box">
-                <label htmlFor="name" className="label">
-                  Name
-                </label>
-                <input
-                  required
-                  readOnly={ReadOnly}
-                  minLength={5}
-                  id="name"
-                  placeholder="Full name"
-                  name="name"
-                  value={sponsor.name}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="input_box">
-                <label htmlFor="email" className="label">
-                  Email
-                </label>
-                <input
-                  required
-                  minLength={5}
-                  readOnly={ReadOnly}
-                  id="email"
-                  placeholder="Enter email address"
-                  name="email"
-                  onChange={handleChange}
-                  value={sponsor.email}
-                />
-              </div>
-              <div className="input_box">
-                <label htmlFor="phone" className="label">
-                  Phone
-                </label>
-                <input
-                  required
-                  readOnly={ReadOnly}
-                  id="phone"
-                  placeholder="e.g 08123456789"
-                  name="phone"
-                  value={sponsor.phone}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="input_box">
-                <label htmlFor="refcode" className="label">
-                  Ref Code
-                </label>
-                <input
-                  required
-                  // minLength={7}
-                  readOnly
-                  id="refcode"
-                  placeholder="e.g your ref code"
-                  name="refcode"
-                  value={sponsor.refcode}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="input_box">
-                <label htmlFor="amount" className="label">
-                  Amount: ₦{numberWithCommas(sponsor.amount)}
-                </label>
-                <input
-                  type="number"
-                  required
-                  readOnly={ReadOnly}
-                  id="amount"
-                  placeholder="Enter amount in ₦"
-                  name="amount"
-                  value={sponsor.amount}
-                  onChange={handleChange}
-                />
-              </div>
 
-              <div className="input_box">
-                <label htmlFor="unit" className="label">
-                  Unit
-                </label>
-                <input
-                  type="number"
-                  readOnly
-                  required
-                  minLength={5}
-                  id="unit"
-                  placeholder="0 agents"
-                  name="unit"
-                  value={sponsor.unit}
-                  // onChange={handleChange}
-                />
-              </div>
-              {errorMsg && (
-                <p className="errorMsg">
-                  Kindly review the form, something is missing
-                </p>
-              )}
-              {isAmountTooLow && (
-                <p className="errorMsg">
-                  Minimum - ₦10,000, Maximum - ₦9,000,000
-                </p>
-              )}
+      <div className="section formsPage contactUs">
+        <motion.div
+          className="sect "
+          initial={{ x: "-100vw", opacity: 0.1 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.3, delay: 0.5, type: "tween" }}
+        >
+          <form className="form" action="#">
+            <p>Each unit is per registration (Multiples of ₦500).</p>
+            <div className="input_box">
+              <label htmlFor="name" className="label">
+                Name
+              </label>
+              <input
+                required
+                readOnly={ReadOnly}
+                minLength={5}
+                id="name"
+                placeholder="Full name"
+                name="name"
+                value={sponsor.name}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="input_box">
+              <label htmlFor="email" className="label">
+                Email
+              </label>
+              <input
+                required
+                minLength={5}
+                readOnly={ReadOnly}
+                id="email"
+                placeholder="Enter email address"
+                name="email"
+                onChange={handleChange}
+                value={sponsor.email}
+              />
+            </div>
+            <div className="input_box">
+              <label htmlFor="phone" className="label">
+                Phone
+              </label>
+              <input
+                required
+                readOnly={ReadOnly}
+                id="phone"
+                placeholder="e.g 08123456789"
+                name="phone"
+                value={sponsor.phone}
+                onChange={handleChange}
+              />
+            </div>
+            {/* <div className="input_box">
+              <label htmlFor="refcode" className="label">
+                Ref Code
+              </label>
+              <input
+                required
+                // minLength={7}
+                readOnly
+                id="refcode"
+                placeholder="e.g your ref code"
+                name="refcode"
+                value={sponsor.refcode}
+                onChange={handleChange}
+              />
+            </div> */}
+            <div className="input_box">
+              <label htmlFor="amount" className="label">
+                Amount: ₦{numberWithCommas(sponsor.amount)}
+              </label>
+              <input
+                type="number"
+                required
+                readOnly={ReadOnly}
+                id="amount"
+                placeholder="Enter amount in ₦"
+                name="amount"
+                value={sponsor.amount}
+                onChange={handleChange}
+              />
+            </div>
 
-              <div className="btnContainer">
-                {isAmountValid ? (
-                  <div className=" buttons">
-                    <input
-                      type="button"
-                      value="Proceed to Payment"
-                      onClick={handlePayment}
-                      className="btn"
-                    />
-                  </div>
-                ) : (
-                  <div className=" buttons">
-                    <input
-                      type="button"
-                      value="Validate"
-                      onClick={handleSubmit}
-                      className="btn"
-                    />
-                  </div>
-                )}
-              </div>
-            </form>
-          </motion.div>
-        </div>
-      ) : (
-        <div className="section formsPage contactUs">
-          <motion.div
-            className="sect "
-            initial={{ x: "-100vw", opacity: 0.1 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.3, delay: 0.5, type: "tween" }}
-          >
-            <form className="form" action="#">
-              <p>Enter your Ref Code to Continue.</p>
+            <div className="input_box">
+              <label htmlFor="unit" className="label">
+                Unit
+              </label>
+              <input
+                type="number"
+                readOnly
+                required
+                minLength={5}
+                id="unit"
+                placeholder="0 agents"
+                name="unit"
+                value={sponsor.unit}
+                // onChange={handleChange}
+              />
+            </div>
+            {errorMsg && (
+              <p className="errorMsg">
+                Kindly review the form, something is missing
+              </p>
+            )}
+            {isAmountTooLow && (
+              <p className="errorMsg">
+                Minimum - ₦10,000, Maximum - ₦9,000,000
+              </p>
+            )}
 
-              <div className="input_box">
-                <label htmlFor="entryRef" className="label">
-                  Ref Code
-                </label>
-                <input
-                  id="entryRef"
-                  placeholder="Enter ref code to proceed"
-                  name="entryRef"
-                  value={entryValue}
-                  onChange={handleChangeEntry}
-                />
-              </div>
-              {continueBtn && (
-                <div className="btnContainer">
-                  <div className=" buttons">
-                    <input
-                      type="button"
-                      value="Continue"
-                      onClick={() => setSkipEntry(true)}
-                      className="btn"
-                    />
-                  </div>
+            <div className="btnContainer">
+              {isAmountValid ? (
+                <div className=" buttons">
+                  <input
+                    type="button"
+                    value="Proceed to Payment"
+                    onClick={handlePayment}
+                    className="btn"
+                  />
+                </div>
+              ) : (
+                <div className=" buttons">
+                  <input
+                    type="button"
+                    value="Validate"
+                    onClick={handleSubmit}
+                    className="btn"
+                  />
                 </div>
               )}
-            </form>
-          </motion.div>
-        </div>
-      )}
+            </div>
+          </form>
+        </motion.div>
+      </div>
     </>
   );
 }

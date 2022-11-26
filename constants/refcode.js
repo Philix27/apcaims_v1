@@ -39,3 +39,5 @@ export const ListOfRefCodes = [
   "ZAMFARA_8364",
   "FCT_9826",
 ];
+
+// export const paidRefs = []
