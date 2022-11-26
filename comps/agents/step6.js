@@ -3,7 +3,47 @@ import { motion } from "framer-motion";
 import { usePaystackPayment } from "react-paystack";
 import axios from "axios";
 
-const SPONSOR_CODE = "FREE_REG";
+// const SPONSOR_CODE = "FREE_REG";
+const ListOfRefCodes = [
+  "ABIA_1175",
+  "ADADAMAWA_1676",
+  "AKWAIBOM_5633",
+  "ANAMBRA_5975",
+  "BAUCHI_3396",
+  "BAYELSA_8809",
+  "BENUE_9044",
+  "BORNO_9349",
+  "CROSSRIVER_7053",
+  "DELTA_8630",
+  "EBONYI_1738",
+  "EDO_1034",
+  "EKITI_9002",
+  "ENUGU_6620",
+  "GOMBE_2559",
+  "IMO_1179",
+  "JIGAWA_9880",
+  "KADUNA_3310",
+  "KANO_0403",
+  "KATSINA_3987",
+  "KEBBI_7654",
+  "KOGI_8357",
+  "KWARA_4775",
+  "LAGOS_7654",
+  "NASARAWA_4789",
+  "NIGER_9458",
+  "OGUN_8463",
+  "ONDO_6840",
+  "OSUN_3756",
+  "OYO_6734",
+  "PLATEAU_8315",
+  "RIVERS_3204",
+  "SOKOTO_3587",
+  "TARABA_8723",
+  "YOBE_6235",
+  "ZAMFARA_8364",
+  "FCT_9826",
+];
+
 export default function Form6({
   agent,
   stepIndex,
@@ -19,6 +59,7 @@ export default function Form6({
   // const reference = `${new Date()}`;
   const dateToday = new Date(); // Mon Jun 08 2020 16:47:55 GMT+0800 (China Standard Time)
   const reference = Date.parse(dateToday);
+  const [correctRefCode, setCorrectRefCode] = useState("");
   const [refCode, setRefCode] = useState("");
   const [refMatch, setRefMatch] = useState(false);
   const [showSubmit, setShowSubmit] = useState(false);
@@ -58,16 +99,35 @@ export default function Form6({
       ...agent,
       isApproved: true,
       transactionRef: _reference,
-      sponsorCode: SPONSOR_CODE,
+      sponsorCode: correctRefCode || "",
       sponsored: true,
     });
     agent.isApproved = true;
     agent.transactionRef = _reference;
-    agent.sponsorCode = SPONSOR_CODE;
+    agent.sponsorCode = correctRefCode || "";
     agent.sponsored = true;
     // console.log(agent);
     setStepIndex(6);
     uploadImageToFb();
+
+    //! postAgent(agent);
+  };
+  const testRefCode = () => {
+    const _reference = Date.UTC.toString();
+    setAgent({
+      ...agent,
+      isApproved: true,
+      transactionRef: _reference,
+      sponsorCode: correctRefCode || "",
+      sponsored: true,
+    });
+    agent.isApproved = true;
+    agent.transactionRef = _reference;
+    agent.sponsorCode = correctRefCode || "";
+    agent.sponsored = true;
+    console.log(agent);
+    setStepIndex(6);
+    // uploadImageToFb();
 
     //! postAgent(agent);
   };
@@ -77,14 +137,18 @@ export default function Form6({
     const value = e.target.value;
     if (name == "sponsorsCode") {
       // if (value.length > 10) value = value.slice(0, 10);
-      if (value === SPONSOR_CODE) {
+
+      if (ListOfRefCodes.includes(value)) {
         setRefMatch(true);
+        setCorrectRefCode(value);
+        console.log(value);
       } else {
         setRefMatch(false);
       }
     }
     setRefCode(value);
-    console.log(refCode);
+    // console.log(refCode);
+    // console.log(agent);
   };
 
   return (
@@ -158,6 +222,7 @@ export default function Form6({
                 type="button"
                 value="Submit"
                 onClick={sendWithoutPay}
+                // onClick={testRefCode}
                 className="btn"
               />
             </div>

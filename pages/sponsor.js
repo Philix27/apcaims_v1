@@ -57,7 +57,7 @@ export default function Contact() {
     const name = e.target.name;
     const value = e.target.value;
     if (name == "amount") {
-      if (value.length > 10) value = value.slice(0, 10);
+      if (value.length > 12) value = value.slice(0, 12);
       sponsor.unit = Math.trunc(value / 500);
     }
     if (name == "phone") {
