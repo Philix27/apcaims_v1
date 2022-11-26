@@ -248,7 +248,7 @@ export default function Contact() {
             )}
             {isAmountTooLow && (
               <p className="errorMsg">
-                Minimum - ₦10,000, Maximum - ₦9,000,000
+                Minimum - ₦10,000, Maximum - ₦9,500,000
               </p>
             )}
 
