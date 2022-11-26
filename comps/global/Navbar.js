@@ -108,14 +108,14 @@ export default function Navbar() {
               </Link>
             </li>
           )}
-          {/* <li
+          <li
             onClick={() => setShowNav(!showNav)}
-            className={_path == "/support" ? "active" : ""}
+            className={_path == "/sponsor" ? "active" : ""}
           >
-            <Link href="/support">
-              <a>Contact Us</a>
+            <Link href="/sponsor">
+              <a>Sponsor</a>
             </Link>
-          </li> */}
+          </li>
           <li
             onClick={() => setShowNav(!showNav)}
             className={_path == "/faq" ? "active" : ""}
