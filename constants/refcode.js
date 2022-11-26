@@ -1,5 +1,6 @@
 // const SPONSOR_CODE = "FREE_REG";
 export const ListOfRefCodes = [
+  "GABRIEL",
   //   "ABIA_1175",
   //   "ADADAMAWA_1676",
   //   "AKWAIBOM_5633",
