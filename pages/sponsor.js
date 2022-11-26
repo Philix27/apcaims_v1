@@ -36,6 +36,10 @@ export default function Contact() {
 
   const initializePayment = usePaystackPayment(config);
 
+  const tester = async () => {
+    await axios.post("https://rxedu-api.vercel.app/api/v1/sponsor", sponsor);
+    console.log("test passed");
+  };
   const handlePayment = () => {
     const onSuccess = async (reference) => {
       console.log("OnSucess");
@@ -245,6 +249,7 @@ export default function Contact() {
                     type="button"
                     value="Proceed to Payment"
                     onClick={handlePayment}
+                    // onClick={tester}
                     className="btn"
                   />
                 </div>
