@@ -12,11 +12,12 @@ export default function Contact() {
     name: "",
     email: "",
     phone: "",
-    amount: 0,
-    unit: 0,
+    amount: 500,
+    unit: 1,
     refcode: "",
     registrationDate: Date.now(),
   });
+  const [errorMsg, setErrorMsg] = useState(false);
   const [ReadOnly, setMakeAllReadOnly] = useState(false);
   const [refvalid, setRefValid] = useState(false);
   const [refLength, setRefLength] = useState(false);
@@ -25,8 +26,8 @@ export default function Contact() {
   const config = {
     reference: reference,
     email: sponsor.email,
-    // amount: `${sponsor.amount}00`,
-    amount: `10000`,
+    amount: `${sponsor.amount}00`,
+    // amount: `10000`,
     publicKey: "pk_live_bcddf6973cdcbd5811ae519ab726adb9cce4091f",
     phone: sponsor.phone,
     firstname: sponsor.name,
@@ -68,6 +69,7 @@ export default function Contact() {
         setRefLength(true);
       }
     }
+    setErrorMsg(false);
     setSponsor({ ...sponsor, [name]: value });
   };
 
@@ -98,7 +100,7 @@ export default function Contact() {
             //! Proceed
             setRefValid(true);
             setMakeAllReadOnly(true);
-            handlePayment();
+            // handlePayment();
           }
           // console.log("SOmething found - Success");
         } catch (e) {
@@ -108,6 +110,7 @@ export default function Contact() {
         setRefLength(true);
       }
     } else {
+      setErrorMsg(true);
       console.log("Something missing");
     }
   };
@@ -225,6 +228,11 @@ export default function Contact() {
                 // onChange={handleChange}
               />
             </div>
+            {errorMsg && (
+              <p className="errorMsg">
+                Kindly review the form, something is missing
+              </p>
+            )}
 
             <div className="btnContainer">
               {refvalid ? (
@@ -232,7 +240,7 @@ export default function Contact() {
                   <input
                     type="button"
                     value="Proceed to Payment"
-                    onClick={handleSubmit}
+                    onClick={handlePayment}
                     className="btn"
                   />
                 </div>
