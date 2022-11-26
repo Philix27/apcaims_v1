@@ -195,6 +195,21 @@ export default function Contact() {
               )}
             </div>
             <div className="input_box">
+              <label htmlFor="amount" className="label">
+                Enter Amount
+              </label>
+              <input
+                type="number"
+                required
+                readOnly={ReadOnly}
+                id="amount"
+                placeholder="Enter amount in ₦"
+                name="amount"
+                value={sponsor.amount}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="input_box">
               <label htmlFor="unit" className="label">
                 Unit
               </label>
@@ -208,21 +223,6 @@ export default function Contact() {
                 name="unit"
                 value={sponsor.unit}
                 // onChange={handleChange}
-              />
-            </div>
-            <div className="input_box">
-              <label htmlFor="amount" className="label">
-                Enter Amount
-              </label>
-              <input
-                type="number"
-                required
-                readOnly={ReadOnly}
-                id="amount"
-                placeholder="Enter amount in ₦"
-                name="amount"
-                value={sponsor.amount}
-                onChange={handleChange}
               />
             </div>
 
