@@ -17,6 +17,7 @@ export default function Contact() {
     amount: 500,
     unit: 1,
     refcode: "",
+    transactionRef: "",
     registrationDate: Date.now(),
   });
 
@@ -51,6 +52,7 @@ export default function Contact() {
   const handlePayment = () => {
     const onSuccess = async (reference) => {
       console.log("OnSucess");
+      setSponsor({ ...sponsor, transactionRef: reference });
       await axios.post("https://rxedu-api.vercel.app/api/v1/sponsor", sponsor);
     };
 

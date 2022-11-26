@@ -174,7 +174,7 @@ export default function Form6({
           />
         </div>
 
-        {refMatch && (
+        {/* {refMatch && (
           <div className="btnContainer">
             <div className="buttons">
               <input
@@ -182,19 +182,6 @@ export default function Form6({
                 value="Submit"
                 onClick={sendWithoutPay}
                 // onClick={testRefCode}
-                className="btn"
-              />
-            </div>
-          </div>
-        )}
-
-        {/* {showSubmit && (
-          <div className="btnContainer">
-            <div className="buttons">
-              <input
-                type="button"
-                value="Submit"
-                onClick={submitFile}
                 className="btn"
               />
             </div>
