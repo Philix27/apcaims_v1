@@ -46,7 +46,7 @@ export async function getServerSideProps(context) {
   const art = await axios(
     `https://rxedu-api.vercel.app/api/v1/agents_by_state?state=${query.state}`
   );
-
+  // console.log(art);
   return {
     props: {
       agentsList: art.data,

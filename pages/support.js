@@ -1,31 +1,49 @@
-import React, { useRef } from "react";
-// import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from "react";
+import { emailjs, sendForm } from "@emailjs/browser";
 import { Landing } from "../comps/global/Landing";
 import { motion } from "framer-motion";
+import { Modal } from "../comps/global/Modal";
+import { CircleLoader } from "react-spinners";
+import Modal2 from "../comps/global/Modal2";
 
 export default function Contact() {
   const form = useRef();
 
-  //   const sendEmail = (e) => {
-  //     e.preventDefault();
+  const [isSuccessful, setIsSuccessful] = useState(true);
+  const [formParams, setFormParams] = useState({
+    name: "",
+    email: "",
+    title: "",
+    comment: "",
+  });
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  //     emailjs
-  //       .sendForm(
-  //         "YOUR_SERVICE_ID",
-  //         "YOUR_TEMPLATE_ID",
-  //         form.current,
-  //         "YOUR_PUBLIC_KEY"
-  //       )
-  //       .then(
-  //         (result) => {
-  //           console.log(result.text);
-  //         },
-  //         (error) => {
-  //           console.log(error.text);
-  //         }
-  //       );
-  //   };
+    sendForm(
+      "service_qvozhje",
+      "template_bty5knr",
+      form.current,
+      "VRrx2rJ9jrvmjhAzY"
+    ).then(
+      (result) => {
+        console.log(result.text);
+        console.log("message sent");
+        setIsSuccessful(true);
+        // formParams.title = "";
+        // formParams.comment = "";
+        // setFormParams({ title: "", comment: "" });
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
 
+  const onChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setFormParams({ ...formParams, [name]: value });
+  };
   return (
     <>
       <Landing
@@ -33,6 +51,7 @@ export default function Contact() {
         imgUrl="images/contact.jpg"
         subtitle="We run a 247 customer care technical support services."
       />
+
       <div className="section formsPage contactUs">
         <motion.div
           className="sect "
@@ -42,9 +61,10 @@ export default function Contact() {
         >
           <form
             className="form"
-            action="mailto:aapcaims@gmail.com"
             method="post"
             type="text/plain"
+            ref={form}
+            onSubmit={sendEmail}
           >
             <h2>Email Us</h2>
 
@@ -55,34 +75,53 @@ export default function Contact() {
               <input
                 type="text"
                 required
-                minLength={5}
                 id="name"
                 placeholder="Enter your name"
                 name="name"
+                value={formParams.name}
+                onChange={onChange}
+              />
+            </div>
+            <div className="input_box">
+              <label htmlFor="email" className="label">
+                Email
+              </label>
+              <input
+                type="text"
+                required
+                minLength={5}
+                id="email"
+                onChange={onChange}
+                value={formParams.email}
+                placeholder="Enter your email"
+                name="email"
+              />
+            </div>
+            <div className="input_box">
+              <label htmlFor="email" className="label">
+                Title
+              </label>
+              <input
+                type="text"
+                required
+                minLength={5}
+                value={formParams.title}
+                onChange={onChange}
+                id="title"
+                placeholder="Subject of mail"
+                name="title"
               />
             </div>
             <div className="input_box">
               <label htmlFor="form-comment" className="label">
                 Comment
               </label>
-              {/* <input
-                type="text"
-                required
-                id="form-comment"
-                placeholder="Write your comment..."
-                name="comment"
-                // cols="40"
-                rows="10"
-                // minLength={5}
-                // multiline
-
-                // value={agent.email}
-                // onChange={handleChange}
-              /> */}
               <textarea
                 type="text"
                 required
                 id="form-comment"
+                value={formParams.comment}
+                onChange={onChange}
                 placeholder="Write your comment..."
                 name="comment"
                 rows="10"
