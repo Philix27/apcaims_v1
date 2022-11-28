@@ -48,11 +48,18 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
     if (value == "ALL") {
       setAgents(agentsList);
     } else {
-      var tempList = agts.filter(
-        (agent) => agent.electionType.toLowerCase() == _category.toLowerCase()
-      );
+      var tempList = agts.filter((agent) => {
+        if (agent.electionType.toLowerCase() == _category.toLowerCase()) {
+          return agent;
+        }
+      });
 
       setAgents(tempList);
+      // tempList = [];
+      console.log("After");
+      console.log(agts);
+      console.log("Temp List");
+      console.log(tempList);
     }
 
     // setSelectedCategory(_category);
@@ -91,14 +98,32 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
 
   return (
     <div className=" agentsList">
-      <div className="tableSection">
-        <div className="input">
+      <form className="form">
+        <div className="input_box">
           <input
             type="search"
             placeholder="Search for an agent"
             onChange={onSearch}
           />
         </div>
+        <div className="input_box">
+          <select
+            name="category"
+            defaultValue="All"
+            onChange={changeToCateorySelect}
+          >
+            {categoryList.map((_category, index) => {
+              return (
+                <option value={_category} key={index}>
+                  {_category}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+      </form>
+
+      <div className="tableSection">
         <table>
           <thead>
             <tr>

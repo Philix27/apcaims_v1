@@ -33,7 +33,9 @@ export default function Dashboard() {
       <Head>
         <title>APCAIMS | ADMIN</title>
       </Head>
-
+      {/* <div className="section">
+        <h2>{`${user.name} State `.toUpperCase()}</h2>
+      </div> */}
       <div className="dashboard">
         <Link href={`lga/${user.name}`}>
           <div className="card">
@@ -53,14 +55,15 @@ export default function Dashboard() {
             </div>
           </div>
         </Link>
-        {/* <div className="card">
-          <div className="topbar teal"></div>
-          <div className="content">
-            <h3>SENATORIAL</h3>
-            <p>89 Agents</p>
+        <Link href={`/summary/${user.name}`}>
+          <div className="card">
+            <div className="topbar teal"></div>
+            <div className="content">
+              <h3>SUMMARY</h3>
+            </div>
           </div>
-        </div>
-        <div className="card">
+        </Link>
+        {/* <div className="card">
           <div className="topbar purple"></div>
           <div className="content">
             <h3>HOUSE OF REPRESENTATIVES</h3>

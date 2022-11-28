@@ -1,5 +1,5 @@
 const SR = {
-  name: "Akwa Ibom",
+  name: "AKWA IBOM",
   email: "Akwaibom@apcaims.com",
   password: "img31",
   phone: "08108850572",
@@ -7,7 +7,6 @@ const SR = {
   img: "images/profile2.jpg",
   userType: "STATEREP",
 };
-
 
 const states = {
   statecode: "AKWAIBOM",

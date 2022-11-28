@@ -34,7 +34,7 @@ export default function LGAPage({ agentsList }) {
         <Head>
           <title>APCAIMS | LGA</title>
         </Head>
-        <LGAs userState={user.statecode} agentsList={agentsList.data} />
+        <LGAs userState={user.name} agentsList={agentsList.data} />
       </div>
     </div>
   );
@@ -42,16 +42,23 @@ export default function LGAPage({ agentsList }) {
 
 export async function getServerSideProps(context) {
   const { query } = context;
-  try {
-    let art;
-    art = await axios(
-      `https://rxedu-api.vercel.app/api/v1/agents_by_state?state=${query.state}`
-    );
-    return {
-      props: {
-        agentsList: art.data,
-      },
-    };
-  } catch (error) {}
+  console.log(query);
+  // try {
+  let art;
+  art = await axios(
+    `https://rxedu-api.vercel.app/api/v1/agents_by_state?state=${query.state}`
+  );
+  console.log(art);
+  // return {
+  //   props: {
+  //     agentsList: art.data,
+  //   },
+  // };
+  // } catch (error) {}
   // console.log(art);
+  return {
+    props: {
+      agentsList: art.data,
+    },
+  };
 }

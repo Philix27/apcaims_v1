@@ -5,7 +5,7 @@ import { useState } from "react";
 import Axios from "axios";
 import { useRouter } from "next/router";
 // import { lgas } from "../../constants/lga";
-import { data } from "../../constants/states/index";
+import { data } from "../constants/states/index";
 
 export default function LGAs({ userState, agentsList }) {
   const [agts, setAgents] = useState(agentsList);

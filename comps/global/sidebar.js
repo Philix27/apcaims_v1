@@ -137,7 +137,7 @@ export default function Sidebar() {
                   <span>
                     <MdSpaceDashboard />
                   </span>
-                  Dashboard
+                  {user.name}
                 </li>
               </a>
             )}
