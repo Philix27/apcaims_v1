@@ -33,10 +33,18 @@ export default function Dashboard() {
       <Head>
         <title>APCAIMS | ADMIN</title>
       </Head>
-      {/* <div className="section">
-        <h2>{`${user.name} State `.toUpperCase()}</h2>
-      </div> */}
+
       <div className="dashboard">
+        <Link href="/agents/add">
+          <a className="card">
+            <div className="bgAgent">
+              <div className="content">
+                <h3>ADD AGENT</h3>
+                <p>Add an agent to your state</p>
+              </div>
+            </div>
+          </a>
+        </Link>
         <Link href={`lga/${user.name}`}>
           <div className="card">
             <div className="topbar orange"></div>
@@ -63,30 +71,14 @@ export default function Dashboard() {
             </div>
           </div>
         </Link>
-        {/* <div className="card">
-          <div className="topbar purple"></div>
-          <div className="content">
-            <h3>HOUSE OF REPRESENTATIVES</h3>
-            <p>67 Agents</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="topbar blood"></div>
-          <div className="content">
-            <h3>STATE HOUSE OF ASSEMBLY</h3>
-            <p>67 Agents</p>
-          </div>
-        </div> */}
-        <Link href="/agents/add">
-          <a className="card">
-            <div className="bgAgent">
-              <div className="content">
-                <h3>ADD AGENT</h3>
-                <p>Add an agent to your state</p>
-              </div>
-            </div>
-          </a>
-        </Link>
+      </div>
+      <div className="section">
+        <h1>Wards</h1>
+        {/* <ul className="">
+        <li>The iou</li>
+        <li>The iou</li>
+        <li>The iou</li>
+      </ul> */}
       </div>
     </div>
   );

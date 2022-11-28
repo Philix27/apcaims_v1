@@ -1,25 +1,42 @@
 import axios from "axios";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import BarChart from "../../comps/barchart";
+import { data } from "../../constants/states/";
 
 export default function SummaryPage({ agentsList }) {
+  const router = useRouter();
+  const query = router.query;
+  const userState = query.state;
+
+  const selectedLg = data.states.filter((val) =>
+    val.state.toLowerCase().includes(userState.toLowerCase())
+  );
+  console.log("selectedLg");
+  console.log(selectedLg);
+
   function getCount(lganame) {
-    let ags = agentsList.filter((ag) => ag.lga == lganame);
+    let ags = agentsList.data.filter((ag) => ag.lga == lganame);
     return ags.length;
   }
-  const label = agentsList.data.map((lga) => lga.name);
+  const label = selectedLg[0].lga.map((lga) => lga.name);
+  const agentCount = selectedLg[0].lga.map((lga) => getCount(lga.name));
 
   const [userData, setUserData] = useState({
-    labels: label[0],
+    labels: label,
     datasets: [
       {
-        label: "Users Gained",
-        data: agentsList.data(),
+        label: "LGAs",
+        data: agentCount,
       },
     ],
   });
 
-  return <div>SummaryPage</div>;
+  return (
+    <div>
+      <BarChart chartdata={userData} />
+    </div>
+  );
 }
 
 export async function getServerSideProps(context) {
@@ -35,6 +52,7 @@ export async function getServerSideProps(context) {
       },
     };
   } catch (error) {
+    console.log("Opps an error");
     return {
       props: {
         agentsList: [],
