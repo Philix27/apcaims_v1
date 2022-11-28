@@ -12,6 +12,7 @@ import {
   MdOutlineEmail,
   MdOutlineHelp,
   MdContactMail,
+  MdSpaceDashboard,
 } from "react-icons/md";
 
 export default function Sidebar() {
@@ -62,23 +63,25 @@ export default function Sidebar() {
                 <span>
                   <RiHome5Fill />
                 </span>
-                HOME
+                Home
               </li>
             </a>
-            <a className="link" href="/agents/add">
-              <li
-                className={
-                  _path == "/agents/add"
-                    ? "activeItem"
-                    : "sidebar_start_list_item"
-                }
-              >
-                <span>
-                  <FaRegRegistered />
-                </span>
-                Add Agent
-              </li>
-            </a>
+            {!user && (
+              <a className="link" href="/agents/add">
+                <li
+                  className={
+                    _path == "/agents/add"
+                      ? "activeItem"
+                      : "sidebar_start_list_item"
+                  }
+                >
+                  <span>
+                    <FaRegRegistered />
+                  </span>
+                  Add Agent
+                </li>
+              </a>
+            )}
 
             <a className="link" href="/sponsor">
               <li
@@ -123,12 +126,18 @@ export default function Sidebar() {
               </a>
             )} */}
             {user && (
-              <a className="link" href={`/state/${user.name}`}>
-                <li className={"sidebar_start_list_item"}>
+              <a className="link" href="/dashboard">
+                <li
+                  className={
+                    _path == "/dashboard"
+                      ? "activeItem"
+                      : "sidebar_start_list_item"
+                  }
+                >
                   <span>
-                    <HiUserGroup />
+                    <MdSpaceDashboard />
                   </span>
-                  {user.name} Agents
+                  Dashboard
                 </li>
               </a>
             )}
@@ -183,18 +192,20 @@ export default function Sidebar() {
                 Contact Us
               </li>
             </a>
-            <a className="link" href="/faq">
-              <li
-                className={
-                  _path == "/faq" ? "activeItem" : "sidebar_start_list_item"
-                }
-              >
-                <span>
-                  <FaQuestion />
-                </span>
-                FAQ
-              </li>
-            </a>
+            {!user && (
+              <a className="link" href="/faq">
+                <li
+                  className={
+                    _path == "/faq" ? "activeItem" : "sidebar_start_list_item"
+                  }
+                >
+                  <span>
+                    <FaQuestion />
+                  </span>
+                  FAQ
+                </li>
+              </a>
+            )}
             {user && (
               <a className="link" href="/faq_admin">
                 <li

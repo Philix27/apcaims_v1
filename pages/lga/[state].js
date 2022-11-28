@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import LGAs from "../comps/lga";
+import LGAs from "../../comps/lga";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import axios from "axios";
 
-export default function States() {
+export default function LGAPage({ agentsList }) {
   const router = useRouter();
   const [user, setUser] = useState({
     name: "",
@@ -20,19 +20,7 @@ export default function States() {
     if (!fetchUser()) {
       router.push("/");
     } else {
-      // console.log("fetchUser()");
-      // console.log(fetchUser());
       setUser(fetchUser());
-
-      // try {
-      //   axios
-      //     .get(
-      //       `https://rxedu-api.vercel.app/api/v1/agents_by_state?state=${user.name}`
-      //     )
-      //     .then((response) => {
-      //       console.log(response);
-      //     });
-      // } catch (e) {}
     }
   }, []);
 
@@ -46,8 +34,24 @@ export default function States() {
         <Head>
           <title>APCAIMS | LGA</title>
         </Head>
-        <LGAs userState={user.statecode} />
+        <LGAs userState={user.statecode} agentsList={agentsList.data} />
       </div>
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const { query } = context;
+  try {
+    let art;
+    art = await axios(
+      `https://rxedu-api.vercel.app/api/v1/agents_by_state?state=${query.state}`
+    );
+    return {
+      props: {
+        agentsList: art.data,
+      },
+    };
+  } catch (error) {}
+  // console.log(art);
 }

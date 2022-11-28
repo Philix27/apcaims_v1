@@ -56,21 +56,23 @@ export default function Navbar() {
               <a>LGA</a>
             </Link>
           </li> */}
-          <li
-            onClick={() => setShowNav(!showNav)}
-            className={_path == "/agents/add" ? "active" : ""}
-          >
-            <Link href="/agents/add">
-              <a>Add Agent</a>
-            </Link>
-          </li>
+          {!user && (
+            <li
+              onClick={() => setShowNav(!showNav)}
+              className={_path == "/agents/add" ? "active" : ""}
+            >
+              <Link href="/agents/add">
+                <a>Add Agent</a>
+              </Link>
+            </li>
+          )}
           {user && (
             <li
               onClick={() => setShowNav(!showNav)}
-              className={_path == "/agents" ? "active" : ""}
+              className={_path == "/dashboard" ? "active" : ""}
             >
-              <Link href={`/state/${user.name}`}>
-                <a>{user.name} Agents</a>
+              <Link href="/dashboard">
+                <a>Dashboard</a>
               </Link>
             </li>
           )}
@@ -85,11 +87,6 @@ export default function Navbar() {
             </li>
           )} */}
 
-          {!user && (
-            <li>
-              <Link href="/">Not Signed In</Link>
-            </li>
-          )}
           {user ? (
             <li onClick={() => setShowNav(!showNav)}>
               <Link href="/login">
@@ -116,14 +113,16 @@ export default function Navbar() {
               <a>Sponsor</a>
             </Link>
           </li>
-          <li
-            onClick={() => setShowNav(!showNav)}
-            className={_path == "/faq" ? "active" : ""}
-          >
-            <Link href="/faq">
-              <a>FAQ</a>
-            </Link>
-          </li>
+          {!user && (
+            <li
+              onClick={() => setShowNav(!showNav)}
+              className={_path == "/faq" ? "active" : ""}
+            >
+              <Link href="/faq">
+                <a>FAQ</a>
+              </Link>
+            </li>
+          )}
           {user && (
             <li
               onClick={() => setShowNav(!showNav)}
