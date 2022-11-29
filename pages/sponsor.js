@@ -7,7 +7,7 @@ import { async } from "@firebase/util";
 import { ListOfRefCodes } from "../constants/refcode";
 // import ListOfRefCodes from "../constants/refcode";
 
-export default function Contact() {
+export default function Sponsor() {
   const dateToday = new Date(); // Mon Jun 08 2020 16:47:55 GMT+0800 (China Standard Time)
   const reference = Date.parse(dateToday);
   const [sponsor, setSponsor] = useState({
@@ -18,7 +18,7 @@ export default function Contact() {
     unit: 1,
     refcode: "",
     transactionRef: "",
-    registrationDate: Date.now(),
+    registrationDate: dateToday,
   });
 
   const [isAmountTooLow, setShowAmountTooLoo] = useState(false);
@@ -120,6 +120,7 @@ export default function Contact() {
         console.log("Validating");
         setAmountValid(true);
         setMakeAllReadOnly(true);
+        console.log(sponsor);
       } else {
         setAmountValid(false);
         setRefLength(true);

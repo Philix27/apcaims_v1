@@ -4,9 +4,9 @@
     padding-left: 22vw;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    padding-top: 80px;
+    padding-top: 10px;
     padding-right: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     @include tabletSS {
       grid-template-columns: repeat(2, 1fr);
       padding: 80px 20px;
@@ -77,6 +77,9 @@
       .blood {
         background-color: rgb(213, 62, 8);
       }
+      .primary {
+        background-color: $primaryColor;
+      }
     }
   }
   h1 {
@@ -91,5 +94,9 @@
       padding: 12px 15px;
       width: 60vw;
     }
+  }
+  .headingSection {
+    margin-left: 22vw;
+    padding: 20px;
   }
 }

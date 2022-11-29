@@ -126,7 +126,7 @@ export default function Sidebar() {
               </a>
             )} */}
             {user && (
-              <a className="link" href="/dashboard">
+              <a className="link" href={`/dashboard/${user.name}`}>
                 <li
                   className={
                     _path == "/dashboard"
