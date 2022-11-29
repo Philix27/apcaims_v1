@@ -63,7 +63,7 @@ export default function Dashboard({ agentsList, stateValue }) {
             </div>
           </a>
         </Link>
-        <Link href={`lga/${user.name}`}>
+        <Link href={`/lga/${user.name}`}>
           <div className="card">
             <div className="topbar orange"></div>
             <div className="content">
