@@ -174,7 +174,7 @@ export default function Form6({
           />
         </div>
 
-        {/* {refMatch && (
+        {refMatch && (
           <div className="btnContainer">
             <div className="buttons">
               <input
@@ -186,7 +186,7 @@ export default function Form6({
               />
             </div>
           </div>
-        )} */}
+        )}
       </form>
     </motion.div>
   );
