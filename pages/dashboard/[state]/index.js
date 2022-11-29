@@ -106,12 +106,30 @@ export default function Dashboard({ agentsList, stateValue }) {
             </div>
           </div>
         </Link>
+        <Link href={`/state/${user.name}`}>
+          <div className="card">
+            <div className="topbar teal"></div>
+            <div className="content">
+              <h3>STATE</h3>
+              <p>{filterAgentTypes("STATE")} Agents</p>
+            </div>
+          </div>
+        </Link>
         <Link href="#">
           <div className="card">
             <div className="topbar teal"></div>
             <div className="content">
               <h3>LOCAL GOVERNMENT</h3>
               <p>{filterAgentTypes("LOCAL GOVERNMENT")} Agents</p>
+            </div>
+          </div>
+        </Link>
+        <Link href={`/state/${user.name}`}>
+          <div className="card">
+            <div className="topbar teal"></div>
+            <div className="content">
+              <h3>WARD</h3>
+              <p>{filterAgentTypes("WARD")} Agents</p>
             </div>
           </div>
         </Link>
