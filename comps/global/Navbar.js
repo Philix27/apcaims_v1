@@ -92,7 +92,7 @@ export default function Navbar() {
               onClick={() => setShowNav(!showNav)}
               className={_path == "/dashboard" ? "active" : ""}
             >
-              <Link href="/dashboard">
+              <Link href={`/dashboard/${user.name}`}>
                 <a>{user.name}</a>
               </Link>
             </li>

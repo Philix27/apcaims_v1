@@ -1,4 +1,11 @@
 .dasboardWrapper {
+  .spacer {
+    display: none;
+    @include tabletSS {
+      display: block;
+      height: 80px;
+    }
+  }
   .dashboard {
     display: grid;
     padding-left: 22vw;
@@ -9,11 +16,11 @@
     padding-bottom: 10px;
     @include tabletSS {
       grid-template-columns: repeat(2, 1fr);
-      padding: 80px 20px;
+      padding: 30px 20px;
     }
     @include mobileSS {
       grid-template-columns: repeat(1, 1fr);
-      padding: 80px 20px;
+      // padding: 80px 20px;
     }
 
     .repad {
@@ -98,5 +105,9 @@
   .headingSection {
     margin-left: 22vw;
     padding: 20px;
+    @include tabletSS {
+      margin-left: 0;
+      padding: 0 20px;
+    }
   }
 }

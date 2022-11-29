@@ -48,7 +48,7 @@ export default function Dashboard({ agentsList, stateValue }) {
       <Head>
         <title>{user.name} | ADMIN</title>
       </Head>
-
+      <div className="spacer"></div>
       <div className="headingSection">
         <h1>{user.name} State Dashboard</h1>
       </div>
