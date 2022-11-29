@@ -7,7 +7,7 @@ import AgentModalContent from "./modalContent";
 import Link from "next/link";
 import { list } from "firebase/storage";
 
-const categoryList = [
+const electionTypes = [
   "ALL",
   "PRESIDENTIAL",
   "STATE HOUSE OF ASSEMBLY",
@@ -30,7 +30,7 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
   const onSearch = (e) => {
     const searchTerm = e.target.value;
     const tempList = [];
-    tempList = agentsList.filter((agent) => {
+    tempList = agts.filter((agent) => {
       const names = `${agent.firstName} ${agent.lastName} ${agent.name}`;
       if (agent.name) {
         return agent.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -43,19 +43,25 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
 
   const changeToCateorySelect = (e) => {
     const value = e.target.value;
+    setSelectedCategory(value);
+    console.log("Value", value);
     console.log("Before");
     console.log(agts);
     if (value == "ALL") {
       setAgents(agentsList);
     } else {
-      var tempList = agts.filter(
-        (agent) => agent.electionType.toLowerCase() == _category.toLowerCase()
+      // setAgents(agentsList);
+      var tempList = agentsList.filter(
+        (agent) => agent.electionType.toLowerCase() == value.toLowerCase()
       );
 
       setAgents(tempList);
+      // // tempList = [];
+      // console.log("After");
+      // console.log(agts);
+      // console.log("Temp List");
+      // console.log(tempList);
     }
-
-    // setSelectedCategory(_category);
   };
 
   const onDelete = (agent) => {
@@ -91,14 +97,35 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
 
   return (
     <div className=" agentsList">
+      <div className="card">
+        <form className="form">
+          <div className="input_box">
+            <input
+              type="search"
+              placeholder="Search for an agent"
+              onChange={onSearch}
+            />
+          </div>
+          <div className="input_box">
+            <select
+              name="category"
+              defaultValue="All"
+              value={selectedCategory}
+              onChange={changeToCateorySelect}
+            >
+              {electionTypes.map((_category, index) => {
+                return (
+                  <option value={_category} key={index}>
+                    {_category}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        </form>
+      </div>
+
       <div className="tableSection">
-        <div className="input">
-          <input
-            type="search"
-            placeholder="Search for an agent"
-            onChange={onSearch}
-          />
-        </div>
         <table>
           <thead>
             <tr>

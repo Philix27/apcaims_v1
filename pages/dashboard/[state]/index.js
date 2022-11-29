@@ -46,11 +46,11 @@ export default function Dashboard({ agentsList, stateValue }) {
   return (
     <div className="dasboardWrapper">
       <Head>
-        <title>APCAIMS | ADMIN</title>
+        <title>{user.name} | ADMIN</title>
       </Head>
 
       <div className="headingSection">
-        <h1>Dashboard</h1>
+        <h1>{user.name} State Dashboard</h1>
       </div>
       <div className="dashboard">
         <Link href="/agents/add">
@@ -97,7 +97,7 @@ export default function Dashboard({ agentsList, stateValue }) {
       </div>
 
       <div className="dashboard">
-        <Link href="#">
+        <Link href={`/state/${user.name}`}>
           <div className="card">
             <div className="topbar teal"></div>
             <div className="content">
@@ -142,6 +142,15 @@ export default function Dashboard({ agentsList, stateValue }) {
           <div className="card">
             <div className="topbar blood"></div>
             <div className="content">
+              <h3>SENATORIAL</h3>
+              <p>{filterElectionTypes("SENATORIAL")} Agents</p>
+            </div>
+          </div>
+        </Link>
+        <Link href="#">
+          <div className="card">
+            <div className="topbar blood"></div>
+            <div className="content">
               <h3>STATE HOUSE OF ASSEMBLY</h3>
               <p>{filterElectionTypes("STATE HOUSE OF ASSEMBLY")} Agents</p>
             </div>
@@ -165,6 +174,9 @@ export default function Dashboard({ agentsList, stateValue }) {
             </div>
           </div>
         </Link>
+      </div>
+      <div className="headingSection">
+        <h1>Wards</h1>
       </div>
     </div>
   );
