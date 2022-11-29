@@ -1,75 +1,62 @@
-import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { useRouter } from "next/router";
-import Head from "next/head";
-import Link from "next/link";
+import React, { useState } from "react";
+import Chart from "../../comps/chart";
+import { data } from "../../constants/states/";
 
-export default function Dashboard() {
+export default function AdminPage({ agentsList }) {
   const router = useRouter();
+  const query = router.query;
+  const userState = query.state;
 
-  useEffect(() => {
-    if (!fetchUser()) {
-      router.push("/");
-      console.log(fetchUser());
-    }
-  }, []);
+  const allStates = data.states.map((val) => val.state);
 
-  function fetchUser() {
-    return JSON.parse(localStorage.getItem("user"));
+  function getCount(stateName) {
+    let ags = agentsList.data.filter((ag) => ag.state == stateName);
+    return ags.length;
   }
+  console.log("agentsList");
+  console.log(agentsList);
+  const agentCount = allStates.map((val) => getCount(val));
+  console.log("agentCount");
+  console.log(agentCount);
+
+  const [userData, setUserData] = useState({
+    labels: allStates,
+    datasets: [
+      {
+        label: "Agent count",
+        data: agentCount,
+      },
+    ],
+  });
 
   return (
-    <div className="dasboardWrapper">
-      <Head>
-        <title>APCAIMS | ADMIN</title>
-      </Head>
-
-      <div className="dashboard">
-        <div className="card">
-          <div className="topbar orange"></div>
-          <div className="content">
-            <h3>PRESIDENTIAL</h3>
-            <p>45 Agents</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="topbar green"></div>
-          <div className="content">
-            <h3>GUBERNATORIAL</h3>
-            <p>76 Agents</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="topbar teal"></div>
-          <div className="content">
-            <h3>SENATORIAL</h3>
-            <p>89 Agents</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="topbar purple"></div>
-          <div className="content">
-            <h3>HOUSE OF REPRESENTATIVES</h3>
-            <p>67 Agents</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="topbar blood"></div>
-          <div className="content">
-            <h3>STATE HOUSE OF ASSEMBLY</h3>
-            <p>67 Agents</p>
-          </div>
-        </div>
-        <Link href="/agents/add">
-          <a className="card">
-            <div className="bgAgent">
-              <div className="content">
-                <h3>ADD AGENT</h3>
-                <p>Add an agent to your state</p>
-              </div>
-            </div>
-          </a>
-        </Link>
-      </div>
+    <div>
+      <Chart chartdata={userData} title={"All States"} chartType="BAR" />
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const { query } = context;
+  try {
+    let art;
+    art = await axios(`https://rxedu-api.vercel.app/api/v1/agent_all`);
+    // art = await axios(`localhost:3007/api/v1/agent_all`);
+    console.log(art);
+    return {
+      props: {
+        agentsList: art.data,
+      },
+    };
+  } catch (error) {
+    console.log("Opps an error");
+    return {
+      props: {
+        agentsList: [],
+      },
+    };
+  }
+  // console.log(art);
 }

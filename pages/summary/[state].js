@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import BarChart from "../../comps/barchart";
+import Chart from "../../comps/chart";
 import { data } from "../../constants/states/";
 
 export default function SummaryPage({ agentsList }) {
@@ -34,7 +34,11 @@ export default function SummaryPage({ agentsList }) {
 
   return (
     <div>
-      <BarChart chartdata={userData} />
+      <Chart
+        chartdata={userData}
+        title="Agents in the various LGAs"
+        chartType="DOUGHNUT"
+      />
     </div>
   );
 }

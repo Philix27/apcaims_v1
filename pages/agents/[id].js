@@ -39,17 +39,18 @@ export default function AgentForm() {
           Agents | {userProfile.firstName} {userProfile.firstName}
         </title>
       </Head>
+
       <div className="images">
         <img className="logo" src="/images/logo.png" />
       </div>
-      <div className="heading">
+      <div className="headTitle">
         <h3 className="red">AGENT REGISTRATION FORM</h3>
         <h2>ALL PROGRESSIVES CONGRESS</h2>
       </div>
       <div className="imagesProfile">
         <img src={userProfile.image} />
       </div>
-      <div className="heading">
+      <div className="headTitle">
         <h3 className="blue">PERSONAL INFORMATION</h3>
       </div>
       <div className="content">
