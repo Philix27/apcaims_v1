@@ -26,7 +26,7 @@ export const ListOfRefCodes = [
   "KWARA_TSH1",
   "LAGOS_INA8",
   "NASARAWA_ZAM4",
-  "NIGER_IYM4",
+  "NIGER_I569",
   "OGUN_DAK2",
   "ONDO_AGO3",
   "OSUN_RAW1",

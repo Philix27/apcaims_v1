@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <div className="verifyPage">
       <div className="section  formsPage">
-        <h2> Verify Your Agent Status</h2>
+        {/* <h2> Verify Your Agent Status</h2> */}
         <div className="form">
           <div className="input_box">
             <input
