@@ -6,6 +6,7 @@ export default function Chart({ chartdata, title, chartType }) {
   const options = {
     responsive: true,
     plugins: {
+      responsive: true,
       legend: {
         position: "top",
       },
@@ -13,10 +14,16 @@ export default function Chart({ chartdata, title, chartType }) {
         display: true,
         text: title,
       },
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
     },
   };
   return (
     <div className="section">
+      <Bar className="chart" data={chartdata} options={options} />
       {chartType == "DOUGHNUT" && (
         <Doughnut className="chart" data={chartdata} options={options} />
       )}

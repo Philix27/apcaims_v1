@@ -2,5 +2,11 @@
   // margin: auto;
   margin-left: 10vw;
   max-width: 60vw;
-  height: 75vh;
+  // height: 75vh;
+  @include tabletSS {
+    margin-left: 0;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
 }

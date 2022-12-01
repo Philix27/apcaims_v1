@@ -2,6 +2,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Chart from "../../comps/chart";
+import { bgColors } from "../../constants/chartColors";
 import { data } from "../../constants/states/";
 
 export default function SummaryPage({ agentsList }) {
@@ -28,6 +29,7 @@ export default function SummaryPage({ agentsList }) {
       {
         label: "LGAs",
         data: agentCount,
+        backgroundColor: bgColors,
       },
     ],
   });
