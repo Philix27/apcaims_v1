@@ -72,6 +72,7 @@ export default function AddAgentsPage({ title }) {
     sponsored: false,
     isAgent: false,
     dateOfBirth: "",
+    gender: "",
   });
 
   const HOU = "HOUSE OF REPS.";
@@ -286,6 +287,7 @@ export default function AddAgentsPage({ title }) {
       agent.nin &&
       profileImage &&
       agent.dateOfBirth &&
+      agent.gender &&
       agent.pollingUnit
     ) {
       e.preventDefault();

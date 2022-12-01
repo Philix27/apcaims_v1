@@ -62,6 +62,21 @@ export default function Form1({
         </div>
 
         <div className="input_box">
+          <label htmlFor="form-gender">Gender</label>
+          <select
+            name="gender"
+            onChange={handleChange}
+            value={agent.gender}
+            required
+            id="form-gender"
+          >
+            <option disabled>Select Gender</option>
+            <option value="MALE">MALE</option>
+            <option value="FEMALE">FEMALE</option>
+          </select>
+        </div>
+
+        <div className="input_box">
           <label htmlFor="form-email" className="label">
             Email
           </label>
