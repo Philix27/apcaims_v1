@@ -107,6 +107,24 @@ export default function Form1({
           />
         </div>
 
+        <div className="input_box">
+          <label htmlFor="dateOfBirth" className="label">
+            Date of Birth
+          </label>
+          <input
+            type="date"
+            // type="datetime-local"
+            id="dateOfBirth"
+            placeholder="Date"
+            name="dateOfBirth"
+            value={agent.dateOfBirth}
+            min="1910-01-01"
+            max="2002-01-01"
+            required
+            onChange={handleChange}
+          />
+        </div>
+
         <div className="btnContainer">
           <div className="buttons">
             <input

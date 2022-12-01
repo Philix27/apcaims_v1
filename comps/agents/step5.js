@@ -54,6 +54,10 @@ export default function Form5({
               <td>{agent.lastName}</td>
             </tr>
             <tr>
+              <td>Date of Birth</td>
+              <td>{agent.dateOfBirth}</td>
+            </tr>
+            <tr>
               <td>Email</td>
               <td>{agent.email}</td>
             </tr>
