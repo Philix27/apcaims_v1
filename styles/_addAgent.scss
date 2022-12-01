@@ -8,8 +8,7 @@
   align-items: center;
   justify-content: center;
   @include tabletSS {
-    // max-width: 500px;
-    padding: 10px 20px;
+    padding: 10px auto;
   }
   @include mobileSS {
     // padding: 120px 20px;
@@ -21,14 +20,13 @@
     padding: 12px 15px;
     border-radius: 20px;
     margin-top: 10px;
-    max-width: 400px;
+    max-width: 450px;
     // display: none;
     @include tabletSS {
-      // width: 400px;
+      margin-top: 40px;
     }
     @include mobileSS {
-      width: 80vw;
-      margin-top: 10px;
+      width: 93vw;
     }
     h2 {
       font-size: 2rem;
