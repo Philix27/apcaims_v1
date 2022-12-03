@@ -35,6 +35,7 @@ import { SOKOTO } from "./sokoto";
 import { TARABA } from "./taraba";
 import { YOBE } from "./yobe";
 import { ZAMFARA } from "./zamfara";
+import { ADMIN } from "./admin";
 
 const states = [
   ABIA.states,
@@ -123,6 +124,7 @@ const sr = [
   TARABA.SR,
   YOBE.SR,
   ZAMFARA.SR,
+  ADMIN.SR,
 ];
 
 const lgas = [

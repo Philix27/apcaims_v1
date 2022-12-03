@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Chart from "../../comps/chart";
 import { data } from "../../constants/states/";
 
@@ -8,7 +8,7 @@ export default function AdminPage({ agentsList }) {
   const router = useRouter();
   const query = router.query;
   const userState = query.state;
-
+  const [isLoading, setLoading] = useState(true);
   const allStates = data.states.map((val) => val.state);
 
   // function getCount(stateName) {
@@ -16,7 +16,7 @@ export default function AdminPage({ agentsList }) {
   //   return ags.length;
   // }
   // console.log("agentsList");
-  console.log(agentsList);
+
   // const agentCount = allStates.map((val) => getCount(val));
   // console.log("agentCount");
   // console.log(agentCount);
@@ -30,9 +30,41 @@ export default function AdminPage({ agentsList }) {
   //     },
   //   ],
   // });
+  async function getStateAgentCount(state) {
+    var art = [];
+    try {
+      // election-5iwoohvdw-philix.vercel.app
+      art = await axios.get(
+        `https://rxedu-api.vercel.app/api/v1/agents_by_state?state=${state}`
+      );
+      art = art.data.data;
+      console.log(art.length);
+      setLoading(false);
+    } catch (e) {
+      setLoading(true);
+    }
+
+    return art.length;
+  }
+
+  useEffect(async () => {
+    var state = "DELTA";
+    var art = await axios.get(
+      `https://rxedu-api.vercel.app/api/v1/agents_by_state?state=${state}`
+    );
+    art = art.data.data;
+    console.log(art.length);
+
+    return () => {
+      // cleanup;
+    };
+  }, []);
 
   return (
-    <div>
+    <div className="section">
+      <h1>Total Agents Registered </h1>
+      <h2>{numberWithCommas(agentsList.totalCount)}</h2>
+      {!isLoading && <h3>{getStateAgentCount("DELTA")}</h3>}
       {/* <Chart chartdata={userData} title={"All States"} chartType="BAR" /> */}
     </div>
   );
@@ -40,23 +72,21 @@ export default function AdminPage({ agentsList }) {
 
 export async function getServerSideProps(context) {
   const { query } = context;
-  try {
-    let art;
-    art = await axios(`https://rxedu-api.vercel.app/api/v1/agent`);
-    // art = await axios(`localhost:3007/api/v1/agent_all`);
-    console.log(art);
-    return {
-      props: {
-        agentsList: art,
-      },
-    };
-  } catch (error) {
-    console.log("Opps an error");
-    return {
-      props: {
-        agentsList: [],
-      },
-    };
-  }
-  // console.log(art);
+
+  let art;
+  art = await axios.get(`https://rxedu-api.vercel.app/api/v1/agent`);
+  // art = await axios(`localhost:3007/api/v1/agent_all`);
+
+  return {
+    props: {
+      agentsList: art.data,
+    },
+  };
+}
+
+function numberWithCommas(x) {
+  x = x.toString();
+  var pattern = /(-?\d+)(\d{3})/;
+  while (pattern.test(x)) x = x.replace(pattern, "$1,$2");
+  return x;
 }

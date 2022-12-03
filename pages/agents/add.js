@@ -14,10 +14,8 @@ import Form4 from "../../comps/agents/step4";
 import Form5 from "../../comps/agents/step5";
 import Form6 from "../../comps/agents/step6";
 import Form7 from "../../comps/agents/step7";
-import { usePaystackPayment } from "react-paystack";
-// import { sortByDate } from "../../utils";
 
-export default function AddAgentsPage({ title }) {
+export default function AddAgentsPage() {
   const router = useRouter();
   //! Logged In User
   const [userPresent, setUserPresentUser] = useState(false);

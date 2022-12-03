@@ -141,7 +141,7 @@ export default function Sidebar() {
                 </li>
               </a>
             )}
-            {/* {user && (
+            {/* {user.userType == "ADMIN" && (
               <a className="link" href="/admin">
                 <li
                   className={
