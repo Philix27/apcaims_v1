@@ -6,6 +6,7 @@ import Axios from "axios";
 import { useRouter } from "next/router";
 // import { lgas } from "../../constants/lga";
 import { data } from "../constants/states/index";
+import { utils } from "../utils";
 
 export default function LGAs({ userState, agentsList }) {
   const [agts, setAgents] = useState(agentsList);
@@ -35,7 +36,7 @@ export default function LGAs({ userState, agentsList }) {
               <tr key={index}>
                 <td>{index + 1}.</td>
                 <td>{lga.name}</td>
-                <td>{filterLga(lga.name)}</td>
+                <td>{utils.numberWithCommas(filterLga(lga.name))} </td>
               </tr>
             ))}
           </tbody>
@@ -43,7 +44,7 @@ export default function LGAs({ userState, agentsList }) {
             <tr style={{ fontWeight: 700 }}>
               <th>Total</th>
               <th>{`${selectedLg[0].lga.length} LGAs`}</th>
-              <th>{agentsList.length} Agents</th>
+              <th>{utils.numberWithCommas(agentsList.length)} Agents</th>
             </tr>
           </tfoot>
         </table>

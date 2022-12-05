@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import Chart from "../../comps/chart";
 import { data } from "../../constants/states/";
+import { utils } from "../../utils";
 
 export default function AdminPage({ agentsList }) {
   const router = useRouter();
@@ -63,7 +64,7 @@ export default function AdminPage({ agentsList }) {
   return (
     <div className="section">
       <h1>Total Agents Registered </h1>
-      <h2>{numberWithCommas(agentsList.totalCount)}</h2>
+      <h2>{utils.numberWithCommas(agentsList.totalCount)}</h2>
       {!isLoading && <h3>{getStateAgentCount("DELTA")}</h3>}
       {/* <Chart chartdata={userData} title={"All States"} chartType="BAR" /> */}
     </div>
@@ -82,11 +83,4 @@ export async function getServerSideProps(context) {
       agentsList: art.data,
     },
   };
-}
-
-function numberWithCommas(x) {
-  x = x.toString();
-  var pattern = /(-?\d+)(\d{3})/;
-  while (pattern.test(x)) x = x.replace(pattern, "$1,$2");
-  return x;
 }

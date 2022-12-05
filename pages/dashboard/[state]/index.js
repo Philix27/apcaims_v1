@@ -4,6 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import axios from "axios";
 import { data } from "../../../constants/states";
+import { utils } from "../../../utils";
 
 export default function Dashboard({ agentsList, stateValue }) {
   const router = useRouter();
@@ -72,13 +73,17 @@ export default function Dashboard({ agentsList, stateValue }) {
             </div>
           </div>
         </Link>
-        <Link href={`/state/${user.name}`}>
+        {/* <Link href={`/state/${user.name}`}> */}
+        <Link href={`#`}>
           <div className="card">
             <div className="topbar green"></div>
             <div className="content">
               <h3>Agents List</h3>
 
-              <p>{agentsList.data.length} Agents</p>
+              <p>
+                {utils.numberWithCommas(agentsList.data.length)}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
@@ -102,7 +107,10 @@ export default function Dashboard({ agentsList, stateValue }) {
             <div className="topbar teal"></div>
             <div className="content">
               <h3>PRESIDENTIAL</h3>
-              <p>{filterElectionTypes("PRESIDENTIAL")} Agents</p>
+              <p>
+                {utils.numberWithCommas(filterElectionTypes("PRESIDENTIAL"))}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
@@ -111,7 +119,10 @@ export default function Dashboard({ agentsList, stateValue }) {
             <div className="topbar teal"></div>
             <div className="content">
               <h3>SENATORIAL</h3>
-              <p>{filterElectionTypes("SENATORIAL")} Agents</p>
+              <p>
+                {utils.numberWithCommas(filterElectionTypes("SENATORIAL"))}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
@@ -120,7 +131,12 @@ export default function Dashboard({ agentsList, stateValue }) {
             <div className="topbar teal"></div>
             <div className="content">
               <h3>STATE HOUSE OF ASSEMBLY</h3>
-              <p>{filterElectionTypes("STATE HOUSE OF ASSEMBLY")} Agents</p>
+              <p>
+                {utils.numberWithCommas(
+                  filterElectionTypes("STATE HOUSE OF ASSEMBLY")
+                )}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
@@ -129,7 +145,10 @@ export default function Dashboard({ agentsList, stateValue }) {
             <div className="topbar teal"></div>
             <div className="content">
               <h3>HOUSE OF REPS.</h3>
-              <p>{filterElectionTypes("HOUSE OF REPS.")} Agents</p>
+              <p>
+                {utils.numberWithCommas(filterElectionTypes("HOUSE OF REPS."))}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
@@ -138,7 +157,10 @@ export default function Dashboard({ agentsList, stateValue }) {
             <div className="topbar teal"></div>
             <div className="content">
               <h3>GUBERNATORIAL</h3>
-              <p>{filterElectionTypes("GUBERNATORIAL")} Agents</p>
+              <p>
+                {utils.numberWithCommas(filterElectionTypes("GUBERNATORIAL"))}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
