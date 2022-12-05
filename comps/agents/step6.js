@@ -53,7 +53,7 @@ export default function Form6({
   };
 
   const sendWithoutPay = () => {
-    const _reference = Date.now();
+    const _reference = new Date();
     setAgent({
       ...agent,
       isApproved: true,

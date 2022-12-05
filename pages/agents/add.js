@@ -220,8 +220,11 @@ export default function AddAgentsPage() {
     if (name == "accountNumber") {
       if (value.length > 10) value = value.slice(0, 10);
     }
-    // if (name == "nin") value = handleLength(value, 11);
-    // if (name == "accountNumber") value = handleLength(value, 10);
+
+    // if (name == "dateOfBirth") {
+    //   console.log(Date.parse(value).toPrecision());
+    //   console.log(Date(value));
+    // }
 
     setAgent({ ...agent, [name]: value });
     // console.log(agent);
@@ -291,6 +294,8 @@ export default function AddAgentsPage() {
       e.preventDefault();
       console.log("Before Upload");
       setStepIndex(stepIndex + 1);
+      agent.dateOfBirth = Date.parse(agent.dateOfBirth);
+      setAgent({ ...agent, dateOfBirth: Date(agent.dateOfBirth) });
     } else {
       // console.log(agent);
       // setShowErrorMsg(true);
