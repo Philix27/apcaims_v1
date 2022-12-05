@@ -70,7 +70,7 @@ export default function AddAgentsPage() {
     sponsored: false,
     isAgent: false,
     dateOfBirth: "",
-    gender: "",
+    gender: "MALE",
   });
 
   const HOU = "HOUSE OF REPS.";
@@ -227,7 +227,7 @@ export default function AddAgentsPage() {
     // }
 
     setAgent({ ...agent, [name]: value });
-    // console.log(agent);
+    console.log(agent);
   };
 
   function handleLength(value, maxLength) {
@@ -294,8 +294,6 @@ export default function AddAgentsPage() {
       e.preventDefault();
       console.log("Before Upload");
       setStepIndex(stepIndex + 1);
-      agent.dateOfBirth = Date.parse(agent.dateOfBirth);
-      setAgent({ ...agent, dateOfBirth: Date(agent.dateOfBirth) });
     } else {
       // console.log(agent);
       // setShowErrorMsg(true);
