@@ -78,12 +78,9 @@ export default function Dashboard({ agentsList, stateValue }) {
           <div className="card">
             <div className="topbar green"></div>
             <div className="content">
-              <h3>Agents List</h3>
+              <h2> {utils.numberWithCommas(agentsList.data.length)}</h2>
 
-              <p>
-                {utils.numberWithCommas(agentsList.data.length)}
-                Agents
-              </p>
+              <p>Agents</p>
             </div>
           </div>
         </Link>
@@ -176,7 +173,6 @@ export async function getServerSideProps(context) {
     `${process.env.NEXT_PUBLIC_DOMAIN}/api/agents?state=${query.state}`
   );
 
-  // console.log(art);
   return {
     props: {
       agentsList: art.data,
