@@ -5,9 +5,10 @@ import Link from "next/link";
 import axios from "axios";
 import { data } from "../../../constants/states";
 import { utils } from "../../../utils";
-import { MdPersonAddAlt1 } from "react-icons/md";
+import { MdPersonAddAlt1, MdGroups } from "react-icons/md";
 import { GoGraph } from "react-icons/go";
-import { GrGroup } from "react-icons/gr";
+import { bgColors } from "../../../constants/chartColors";
+import Chart from "../../../comps/chart_bar";
 
 export default function Dashboard({ agentsList, stateValue }) {
   const router = useRouter();
@@ -47,6 +48,45 @@ export default function Dashboard({ agentsList, stateValue }) {
     return JSON.parse(localStorage.getItem("user"));
   }
 
+  const query = router.query;
+  const userState = query.state;
+
+  const selectedLg = data.states.filter((val) =>
+    val.state.toLowerCase().includes(userState.toLowerCase())
+  );
+  console.log("selectedLg");
+  console.log(selectedLg);
+
+  function getCount(lganame) {
+    let ags = agentsList.data.filter((ag) => ag.lga == lganame);
+    return ags.length;
+  }
+  const label = [
+    "SENATORIAL",
+    "STATE HOUSE OF ASSEMBLY",
+    "PRESIDENTIAL",
+    "HOUSE OF REPS.",
+    "GUBERNATORIAL",
+  ];
+  const electionTypeCount = [
+    filterElectionTypes("SENATORIAL"),
+    filterElectionTypes("STATE HOUSE OF ASSEMBLY"),
+    filterElectionTypes("PRESIDENTIAL"),
+    filterElectionTypes("HOUSE OF REPS."),
+    filterElectionTypes("GUBERNATORIAL"),
+  ];
+
+  const [userData, setUserData] = useState({
+    labels: label,
+    datasets: [
+      {
+        label: "LGAs",
+        data: electionTypeCount,
+        backgroundColor: bgColors,
+      },
+    ],
+  });
+
   return (
     <div className="dasboardWrapper">
       <Head>
@@ -57,17 +97,6 @@ export default function Dashboard({ agentsList, stateValue }) {
         <h1>{user.name} State Dashboard</h1>
       </div>
       <div className="dashboard">
-        {/* <Link href="/agents/add">
-          <a className="card">
-            <div className="bgAgent">
-              <div className="content">
-                <h3>ADD AGENT</h3>
-                <p>Add an agent to your state</p>
-              </div>
-            </div>
-          </a>
-        </Link> */}
-
         <Link href="/agents/add">
           <div className="topCard colorx">
             <h1>
@@ -85,10 +114,11 @@ export default function Dashboard({ agentsList, stateValue }) {
           </div>
         </Link>
 
+        {/* <Link href={`/state/${user.name}`}> */}
         <Link href={`#`}>
           <div className="topCard primary">
             <span className="icons">
-              <GrGroup color="#fff" />
+              <MdGroups size={30} />
             </span>
             <h1>{utils.numberWithCommas(agentsList.data.length)}</h1>
             <span className="smallName">Agents</span>
@@ -103,15 +133,6 @@ export default function Dashboard({ agentsList, stateValue }) {
             <span className="smallName">Summary</span>
           </div>
         </Link>
-
-        {/* <Link href={`/summary/${user.name}`}>
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>SUMMARY</h3>
-            </div>
-          </div>
-        </Link> */}
       </div>
 
       <div className="headingSection">
@@ -182,6 +203,13 @@ export default function Dashboard({ agentsList, stateValue }) {
         </Link>
       </div>
       <div className="headingSection">{/* <h1>Wards</h1> */}</div>
+      {/* <div className="chart">
+        <Chart
+          chartdata={userData}
+          title="Election Type"
+          chartType="DOUGHNUT"
+        />
+      </div> */}
     </div>
   );
 }

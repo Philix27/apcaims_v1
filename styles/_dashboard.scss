@@ -134,4 +134,11 @@
   .colorx {
     background-color: rgb(6, 161, 161);
   }
+  .chart {
+    width: 100%;
+    @include mobileSS {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
