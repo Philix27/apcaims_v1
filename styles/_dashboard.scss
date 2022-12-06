@@ -26,6 +26,21 @@
     .repad {
       padding-top: 0px;
     }
+    .topCard {
+      height: 150px;
+      width: 100%;
+      padding: 20px;
+      color: #fff;
+      // display: flex;
+      // flex-direction: column;
+      margin: auto;
+      border-radius: 10px;
+      text-align: center;
+      .icons {
+        color: #fff;
+        font-size: larger;
+      }
+    }
     .card {
       // min-height: 100px;
       height: 150px;
@@ -35,12 +50,14 @@
       border-radius: 10px;
       display: block;
       cursor: pointer;
+
       .bgAgent {
         height: 100%;
         background-color: rgb(6, 161, 161);
         color: #fff;
         border-radius: 10px;
       }
+
       .topbar {
         height: 15px;
         border-top-right-radius: 10px;
@@ -50,6 +67,7 @@
       .content {
         padding: 20px;
       }
+
       .btnDiv {
         width: 100%;
         display: flex;
@@ -64,28 +82,6 @@
 
       .btn:hover {
         background-color: #022044;
-      }
-
-      .red {
-        background-color: rgb(157, 8, 8);
-      }
-      .green {
-        background-color: green;
-      }
-      .orange {
-        background-color: orange;
-      }
-      .teal {
-        background-color: rgb(4, 122, 169);
-      }
-      .purple {
-        background-color: rgb(125, 4, 169);
-      }
-      .blood {
-        background-color: rgb(213, 62, 8);
-      }
-      .primary {
-        background-color: $primaryColor;
       }
     }
   }
@@ -109,5 +105,33 @@
       margin-left: 0;
       padding: 0 20px;
     }
+  }
+  .smallName {
+    padding-left: 5px;
+    font-size: medium;
+  }
+  .red {
+    background-color: rgb(157, 8, 8);
+  }
+  .green {
+    background-color: green;
+  }
+  .orange {
+    background-color: rgb(231, 150, 0);
+  }
+  .teal {
+    background-color: rgb(4, 122, 169);
+  }
+  .purple {
+    background-color: rgb(125, 4, 169);
+  }
+  .blood {
+    background-color: rgb(213, 62, 8);
+  }
+  .primary {
+    background-color: $primaryColor;
+  }
+  .colorx {
+    background-color: rgb(6, 161, 161);
   }
 }

@@ -5,6 +5,9 @@ import Link from "next/link";
 import axios from "axios";
 import { data } from "../../../constants/states";
 import { utils } from "../../../utils";
+import { MdPersonAddAlt1 } from "react-icons/md";
+import { GoGraph } from "react-icons/go";
+import { GrGroup } from "react-icons/gr";
 
 export default function Dashboard({ agentsList, stateValue }) {
   const router = useRouter();
@@ -54,7 +57,7 @@ export default function Dashboard({ agentsList, stateValue }) {
         <h1>{user.name} State Dashboard</h1>
       </div>
       <div className="dashboard">
-        <Link href="/agents/add">
+        {/* <Link href="/agents/add">
           <a className="card">
             <div className="bgAgent">
               <div className="content">
@@ -63,36 +66,52 @@ export default function Dashboard({ agentsList, stateValue }) {
               </div>
             </div>
           </a>
+        </Link> */}
+
+        <Link href="/agents/add">
+          <div className="topCard colorx">
+            <h1>
+              <MdPersonAddAlt1 />
+            </h1>
+
+            <span className="smallName">Add an agent to your state</span>
+          </div>
         </Link>
+
         <Link href={`/lga/${user.name}`}>
-          <div className="card">
-            <div className="topbar orange"></div>
-            <div className="content">
-              <h3>LGA</h3>
-              <p>{getAllLga[0].lga.length} LGAs</p>
-            </div>
+          <div className="topCard orange">
+            <h1>{getAllLga[0].lga.length}</h1>
+            <span className="smallName">LGAs</span>
           </div>
         </Link>
-        {/* <Link href={`/state/${user.name}`}> */}
+
         <Link href={`#`}>
-          <div className="card">
-            <div className="topbar green"></div>
-            <div className="content">
-              <h2> {utils.numberWithCommas(agentsList.data.length)}</h2>
-
-              <p>Agents</p>
-            </div>
+          <div className="topCard primary">
+            <span className="icons">
+              <GrGroup color="#fff" />
+            </span>
+            <h1>{utils.numberWithCommas(agentsList.data.length)}</h1>
+            <span className="smallName">Agents</span>
+          </div>
+        </Link>
+        <Link href={`/summary/${user.name}`}>
+          <div className="topCard teal">
+            <h1>
+              <GoGraph />
+            </h1>
+            {/* <h1>SUMMARY</h1> */}
+            <span className="smallName">Summary</span>
           </div>
         </Link>
 
-        <Link href={`/summary/${user.name}`}>
+        {/* <Link href={`/summary/${user.name}`}>
           <div className="card">
             <div className="topbar teal"></div>
             <div className="content">
               <h3>SUMMARY</h3>
             </div>
           </div>
-        </Link>
+        </Link> */}
       </div>
 
       <div className="headingSection">
@@ -106,7 +125,7 @@ export default function Dashboard({ agentsList, stateValue }) {
               <h3>PRESIDENTIAL</h3>
               <p>
                 {utils.numberWithCommas(filterElectionTypes("PRESIDENTIAL"))}
-                Agents
+                <span className="smallName">Agents</span>
               </p>
             </div>
           </div>
@@ -118,7 +137,7 @@ export default function Dashboard({ agentsList, stateValue }) {
               <h3>SENATORIAL</h3>
               <p>
                 {utils.numberWithCommas(filterElectionTypes("SENATORIAL"))}
-                Agents
+                <span className="smallName">Agents</span>
               </p>
             </div>
           </div>
@@ -132,7 +151,7 @@ export default function Dashboard({ agentsList, stateValue }) {
                 {utils.numberWithCommas(
                   filterElectionTypes("STATE HOUSE OF ASSEMBLY")
                 )}
-                Agents
+                <span className="smallName">Agents</span>
               </p>
             </div>
           </div>
@@ -144,7 +163,7 @@ export default function Dashboard({ agentsList, stateValue }) {
               <h3>HOUSE OF REPS.</h3>
               <p>
                 {utils.numberWithCommas(filterElectionTypes("HOUSE OF REPS."))}
-                Agents
+                <span className="smallName">Agents</span>
               </p>
             </div>
           </div>
@@ -156,7 +175,7 @@ export default function Dashboard({ agentsList, stateValue }) {
               <h3>GUBERNATORIAL</h3>
               <p>
                 {utils.numberWithCommas(filterElectionTypes("GUBERNATORIAL"))}
-                Agents
+                <span className="smallName">Agents</span>
               </p>
             </div>
           </div>
