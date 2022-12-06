@@ -5,6 +5,7 @@ import axios from "axios";
 import { usePaystackPayment } from "react-paystack";
 import { async } from "@firebase/util";
 import { ListOfRefCodes } from "../constants/refcode";
+import { utils } from "./utils";
 // import ListOfRefCodes from "../constants/refcode";
 
 export default function Contact() {
@@ -211,7 +212,7 @@ export default function Contact() {
               </div>
               <div className="input_box">
                 <label htmlFor="amount" className="label">
-                  Amount: ₦{numberWithCommas(sponsor.amount)}
+                  Amount: ₦{utils.numberWithCommas(sponsor.amount)}
                 </label>
                 <input
                   type="number"
@@ -317,11 +318,4 @@ export default function Contact() {
       )}
     </>
   );
-}
-
-function numberWithCommas(x) {
-  x = x.toString();
-  var pattern = /(-?\d+)(\d{3})/;
-  while (pattern.test(x)) x = x.replace(pattern, "$1,$2");
-  return x;
 }

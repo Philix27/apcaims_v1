@@ -4,6 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import axios from "axios";
 import { data } from "../../../constants/states";
+import { utils } from "../../../utils";
 
 export default function Dashboard({ agentsList, stateValue }) {
   const router = useRouter();
@@ -72,13 +73,17 @@ export default function Dashboard({ agentsList, stateValue }) {
             </div>
           </div>
         </Link>
-        <Link href={`/state/${user.name}`}>
+        {/* <Link href={`/state/${user.name}`}> */}
+        <Link href={`#`}>
           <div className="card">
             <div className="topbar green"></div>
             <div className="content">
               <h3>Agents List</h3>
 
-              <p>{agentsList.data.length} Agents</p>
+              <p>
+                {utils.numberWithCommas(agentsList.data.length)}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
@@ -92,110 +97,75 @@ export default function Dashboard({ agentsList, stateValue }) {
           </div>
         </Link>
       </div>
-      <div className="headingSection">
-        <h1>Agent Types</h1>
-      </div>
 
-      <div className="dashboard">
-        <Link href={`/state/${user.name}`}>
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>PRESIDENTIAL</h3>
-              <p>{filterAgentTypes("PRESIDENTIAL")} Agents</p>
-            </div>
-          </div>
-        </Link>
-        <Link href={`/state/${user.name}`}>
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>STATE</h3>
-              <p>{filterAgentTypes("STATE")} Agents</p>
-            </div>
-          </div>
-        </Link>
-        <Link href="#">
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>LOCAL GOVERNMENT</h3>
-              <p>{filterAgentTypes("LOCAL GOVERNMENT")} Agents</p>
-            </div>
-          </div>
-        </Link>
-        <Link href={`/state/${user.name}`}>
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>WARD</h3>
-              <p>{filterAgentTypes("WARD")} Agents</p>
-            </div>
-          </div>
-        </Link>
-        <Link href="#">
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>POLLING UNIT</h3>
-              <p>{filterAgentTypes("POLLING UNIT")} Agents</p>
-            </div>
-          </div>
-        </Link>
-      </div>
       <div className="headingSection">
         <h1>Election Types</h1>
       </div>
       <div className="dashboard">
         <Link href="#">
           <div className="card">
-            <div className="topbar blood"></div>
+            <div className="topbar teal"></div>
             <div className="content">
               <h3>PRESIDENTIAL</h3>
-              <p>{filterElectionTypes("PRESIDENTIAL")} Agents</p>
+              <p>
+                {utils.numberWithCommas(filterElectionTypes("PRESIDENTIAL"))}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
         <Link href="#">
           <div className="card">
-            <div className="topbar blood"></div>
+            <div className="topbar teal"></div>
             <div className="content">
               <h3>SENATORIAL</h3>
-              <p>{filterElectionTypes("SENATORIAL")} Agents</p>
+              <p>
+                {utils.numberWithCommas(filterElectionTypes("SENATORIAL"))}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
         <Link href="#">
           <div className="card">
-            <div className="topbar blood"></div>
+            <div className="topbar teal"></div>
             <div className="content">
               <h3>STATE HOUSE OF ASSEMBLY</h3>
-              <p>{filterElectionTypes("STATE HOUSE OF ASSEMBLY")} Agents</p>
+              <p>
+                {utils.numberWithCommas(
+                  filterElectionTypes("STATE HOUSE OF ASSEMBLY")
+                )}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
         <Link href="#">
           <div className="card">
-            <div className="topbar blood"></div>
+            <div className="topbar teal"></div>
             <div className="content">
               <h3>HOUSE OF REPS.</h3>
-              <p>{filterElectionTypes("HOUSE OF REPS.")} Agents</p>
+              <p>
+                {utils.numberWithCommas(filterElectionTypes("HOUSE OF REPS."))}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
         <Link href="#">
           <div className="card">
-            <div className="topbar blood"></div>
+            <div className="topbar teal"></div>
             <div className="content">
               <h3>GUBERNATORIAL</h3>
-              <p>{filterElectionTypes("GUBERNATORIAL")} Agents</p>
+              <p>
+                {utils.numberWithCommas(filterElectionTypes("GUBERNATORIAL"))}
+                Agents
+              </p>
             </div>
           </div>
         </Link>
       </div>
-      <div className="headingSection">
-        <h1>Wards</h1>
-      </div>
+      <div className="headingSection">{/* <h1>Wards</h1> */}</div>
     </div>
   );
 }
@@ -203,7 +173,7 @@ export default function Dashboard({ agentsList, stateValue }) {
 export async function getServerSideProps(context) {
   const { query } = context;
   const art = await axios.get(
-    `https://rxedu-api.vercel.app/api/v1/agents_by_state?state=${query.state}`
+    `${process.env.NEXT_PUBLIC_DOMAIN}/api/agents?state=${query.state}`
   );
 
   // console.log(art);

@@ -53,7 +53,7 @@ export default function Form6({
   };
 
   const sendWithoutPay = () => {
-    const _reference = Date.UTC.toString();
+    const _reference = new Date();
     setAgent({
       ...agent,
       isApproved: true,
@@ -119,14 +119,12 @@ export default function Form6({
     >
       <form className="form" action="#">
         <div className="payment">
-          <h2>
-            Step 6 <span> Payment</span>
-          </h2>
-          <p>
+          <h2>Step 6{/* <span> Payment</span> */}</h2>
+          {/* <p>
             You are to make a payment of just five hundred naira (₦500) to
             complete this registration.
           </p>
-          <p>Click Proceed to continue.</p>
+          <p>Click Proceed to continue.</p> */}
         </div>
         <div className="btnContainer">
           <div className=" buttons">
@@ -145,14 +143,14 @@ export default function Form6({
             className="btn"
           />
         </div> */}
-          <div className="buttons">
+          {/* <div className="buttons">
             <input
               type="button"
               value="Proceed"
               onClick={handlePayment}
               className="btn"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="payment">

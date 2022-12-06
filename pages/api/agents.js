@@ -1,19 +1,24 @@
-import connectMongo from "../../api/connectMongo";
-import AgentsKit from "../../api/controller/agents";
-import express from "express";
+import { controller } from "../../api/agents/index";
+import { connectToDatabase } from "../../utils/mongodb";
 
-/**
- *
- * @param {import('next').NextApiRequest} req
- * @param {import('next').NextApiResponse} res
- */
+export default async function handler(req, res) {
+  const { getAll } = controller;
+  const { db } = await connectToDatabase();
 
-const router = express.Router();
-router.route("/").get(StateRepKit.getAll).post(StateRepKit.create);
-router
-  .route("/:id")
-  .get(StateRepKit.getSingle)
-  .patch(StateRepKit.update)
-  .delete(StateRepKit.deleteAgent);
+  switch (req.method) {
+    case "GET": {
+      return getAll(db, req, res);
+    }
+    // case "POST": {
+    //   return addPost(req, res);
+    // }
 
-export default router;
+    // case "PUT": {
+    //   return updatePost(req, res);
+    // }
+
+    // case "DELETE": {
+    //   return deletePost(req, res);
+    // }
+  }
+}

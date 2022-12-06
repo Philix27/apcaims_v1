@@ -14,10 +14,8 @@ import Form4 from "../../comps/agents/step4";
 import Form5 from "../../comps/agents/step5";
 import Form6 from "../../comps/agents/step6";
 import Form7 from "../../comps/agents/step7";
-import { usePaystackPayment } from "react-paystack";
-// import { sortByDate } from "../../utils";
 
-export default function AddAgentsPage({ title }) {
+export default function AddAgentsPage() {
   const router = useRouter();
   //! Logged In User
   const [userPresent, setUserPresentUser] = useState(false);
@@ -72,7 +70,7 @@ export default function AddAgentsPage({ title }) {
     sponsored: false,
     isAgent: false,
     dateOfBirth: "",
-    gender: "",
+    gender: "MALE",
   });
 
   const HOU = "HOUSE OF REPS.";
@@ -222,11 +220,14 @@ export default function AddAgentsPage({ title }) {
     if (name == "accountNumber") {
       if (value.length > 10) value = value.slice(0, 10);
     }
-    // if (name == "nin") value = handleLength(value, 11);
-    // if (name == "accountNumber") value = handleLength(value, 10);
+
+    // if (name == "dateOfBirth") {
+    //   console.log(Date.parse(value).toPrecision());
+    //   console.log(Date(value));
+    // }
 
     setAgent({ ...agent, [name]: value });
-    // console.log(agent);
+    console.log(agent);
   };
 
   function handleLength(value, maxLength) {

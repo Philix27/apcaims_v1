@@ -389,10 +389,10 @@ const states = {
         "OKUMAGBA II",
         "PESSU",
         "UGBUWANGUE/EKUREDE-ITSEKIRI",
-        ],
-      name: "WARRI SOUTH"
-   },
-   {
+      ],
+      name: "WARRI SOUTH",
+    },
+    {
       wards: [
         "AJA - UDAIBO",
         "AKPIKPA",

@@ -69,6 +69,7 @@ export default function Form1({
             value={agent.gender}
             required
             id="form-gender"
+            placeholder="Selectt"
           >
             <option disabled>Select Gender</option>
             <option value="MALE">MALE</option>
