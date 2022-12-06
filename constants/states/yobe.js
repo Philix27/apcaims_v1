@@ -257,6 +257,11 @@ const states = {
         "NGIRABO",
         "WADI/KAFIYA",
         "ZAJIBIRI / DUMBAL",
+       ],
+        name: "YUNUSARI"
+    },
+    {
+      wards: [
         "ALANJIRORI",
         "GUMSHI",
         "GUYA",
