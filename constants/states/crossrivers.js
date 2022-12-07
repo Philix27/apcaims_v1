@@ -1,5 +1,5 @@
 const SR = {
-  name: "Cross Rivers",
+  name: "CROSS RIVERS",
   email: "Crossrivers@apcaims.com",
   password: "jds34",
   phone: "08108850572",
