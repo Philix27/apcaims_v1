@@ -110,12 +110,12 @@ export default function Dashboard({ agentsList, stateValue }) {
         <Link href={`/lga/${user.name}`}>
           <div className="topCard orange">
             <h1>{getAllLga[0].lga.length}</h1>
-            <span className="smallName">LGAs</span>
+            <span className="smallName">Local Government Areas</span>
           </div>
         </Link>
 
-        {/* <Link href={`/state/${user.name}`}> */}
-        <Link href={`#`}>
+        <Link href={`/state/${user.name}`}>
+          {/* <Link href={`#`}> */}
           <div className="topCard primary">
             <span className="icons">
               <MdGroups size={30} />

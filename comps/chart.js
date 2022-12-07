@@ -24,12 +24,12 @@ export default function Chart({ chartdata, title, chartType }) {
   return (
     <div className="section">
       <Bar className="chart" data={chartdata} options={options} />
-      {chartType == "DOUGHNUT" && (
+      {/* {chartType == "DOUGHNUT" && (
         <Doughnut className="chart" data={chartdata} options={options} />
       )}
       {chartType == "BAR" && (
         <Bar className="chart" data={chartdata} options={options} />
-      )}
+      )} */}
     </div>
   );
 }
