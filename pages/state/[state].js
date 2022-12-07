@@ -44,7 +44,7 @@ export default function AgentsPage({ agentsList }) {
 export async function getServerSideProps(context) {
   const { query } = context;
   const art = await axios(
-    `${process.env.NEXT_PUBLIC_DOMAIN}/api/agents?state=${query.state}`
+    `${process.env.NEXT_PUBLIC_DOMAIN}/api/agents_list?state=${query.state}`
   );
   // console.log(art);
   return {

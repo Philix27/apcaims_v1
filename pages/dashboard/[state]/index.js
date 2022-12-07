@@ -5,6 +5,10 @@ import Link from "next/link";
 import axios from "axios";
 import { data } from "../../../constants/states";
 import { utils } from "../../../utils";
+import { MdPersonAddAlt1, MdGroups } from "react-icons/md";
+import { GoGraph } from "react-icons/go";
+import { bgColors } from "../../../constants/chartColors";
+import Chart from "../../../comps/chart_bar";
 
 export default function Dashboard({ agentsList, stateValue }) {
   const router = useRouter();
@@ -44,6 +48,45 @@ export default function Dashboard({ agentsList, stateValue }) {
     return JSON.parse(localStorage.getItem("user"));
   }
 
+  const query = router.query;
+  const userState = query.state;
+
+  const selectedLg = data.states.filter((val) =>
+    val.state.toLowerCase().includes(userState.toLowerCase())
+  );
+  console.log("selectedLg");
+  console.log(selectedLg);
+
+  function getCount(lganame) {
+    let ags = agentsList.data.filter((ag) => ag.lga == lganame);
+    return ags.length;
+  }
+  const label = [
+    "SENATORIAL",
+    "STATE HOUSE OF ASSEMBLY",
+    "PRESIDENTIAL",
+    "HOUSE OF REPS.",
+    "GUBERNATORIAL",
+  ];
+  const electionTypeCount = [
+    filterElectionTypes("SENATORIAL"),
+    filterElectionTypes("STATE HOUSE OF ASSEMBLY"),
+    filterElectionTypes("PRESIDENTIAL"),
+    filterElectionTypes("HOUSE OF REPS."),
+    filterElectionTypes("GUBERNATORIAL"),
+  ];
+
+  const [userData, setUserData] = useState({
+    labels: label,
+    datasets: [
+      {
+        label: "LGAs",
+        data: electionTypeCount,
+        backgroundColor: bgColors,
+      },
+    ],
+  });
+
   return (
     <div className="dasboardWrapper">
       <Head>
@@ -55,45 +98,39 @@ export default function Dashboard({ agentsList, stateValue }) {
       </div>
       <div className="dashboard">
         <Link href="/agents/add">
-          <a className="card">
-            <div className="bgAgent">
-              <div className="content">
-                <h3>ADD AGENT</h3>
-                <p>Add an agent to your state</p>
-              </div>
-            </div>
-          </a>
+          <div className="topCard colorx">
+            <h1>
+              <MdPersonAddAlt1 />
+            </h1>
+
+            <span className="smallName">Add an agent to your state</span>
+          </div>
         </Link>
+
         <Link href={`/lga/${user.name}`}>
-          <div className="card">
-            <div className="topbar orange"></div>
-            <div className="content">
-              <h3>LGA</h3>
-              <p>{getAllLga[0].lga.length} LGAs</p>
-            </div>
-          </div>
-        </Link>
-        {/* <Link href={`/state/${user.name}`}> */}
-        <Link href={`#`}>
-          <div className="card">
-            <div className="topbar green"></div>
-            <div className="content">
-              <h3>Agents List</h3>
-
-              <p>
-                {utils.numberWithCommas(agentsList.data.length)}
-                Agents
-              </p>
-            </div>
+          <div className="topCard orange">
+            <h1>{getAllLga[0].lga.length}</h1>
+            <span className="smallName">Local Government Areas</span>
           </div>
         </Link>
 
+        <Link href={`/state/${user.name}`}>
+          {/* <Link href={`#`}> */}
+          <div className="topCard primary">
+            <span className="icons">
+              <MdGroups size={30} />
+            </span>
+            <h1>{utils.numberWithCommas(agentsList.data.length)}</h1>
+            <span className="smallName">Agents</span>
+          </div>
+        </Link>
         <Link href={`/summary/${user.name}`}>
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>SUMMARY</h3>
-            </div>
+          <div className="topCard teal">
+            <h1>
+              <GoGraph />
+            </h1>
+            {/* <h1>SUMMARY</h1> */}
+            <span className="smallName">Summary</span>
           </div>
         </Link>
       </div>
@@ -109,7 +146,7 @@ export default function Dashboard({ agentsList, stateValue }) {
               <h3>PRESIDENTIAL</h3>
               <p>
                 {utils.numberWithCommas(filterElectionTypes("PRESIDENTIAL"))}
-                Agents
+                <span className="smallName">Agents</span>
               </p>
             </div>
           </div>
@@ -121,7 +158,7 @@ export default function Dashboard({ agentsList, stateValue }) {
               <h3>SENATORIAL</h3>
               <p>
                 {utils.numberWithCommas(filterElectionTypes("SENATORIAL"))}
-                Agents
+                <span className="smallName">Agents</span>
               </p>
             </div>
           </div>
@@ -135,7 +172,7 @@ export default function Dashboard({ agentsList, stateValue }) {
                 {utils.numberWithCommas(
                   filterElectionTypes("STATE HOUSE OF ASSEMBLY")
                 )}
-                Agents
+                <span className="smallName">Agents</span>
               </p>
             </div>
           </div>
@@ -147,7 +184,7 @@ export default function Dashboard({ agentsList, stateValue }) {
               <h3>HOUSE OF REPS.</h3>
               <p>
                 {utils.numberWithCommas(filterElectionTypes("HOUSE OF REPS."))}
-                Agents
+                <span className="smallName">Agents</span>
               </p>
             </div>
           </div>
@@ -159,13 +196,20 @@ export default function Dashboard({ agentsList, stateValue }) {
               <h3>GUBERNATORIAL</h3>
               <p>
                 {utils.numberWithCommas(filterElectionTypes("GUBERNATORIAL"))}
-                Agents
+                <span className="smallName">Agents</span>
               </p>
             </div>
           </div>
         </Link>
       </div>
       <div className="headingSection">{/* <h1>Wards</h1> */}</div>
+      {/* <div className="chart">
+        <Chart
+          chartdata={userData}
+          title="Election Type"
+          chartType="DOUGHNUT"
+        />
+      </div> */}
     </div>
   );
 }
@@ -176,7 +220,6 @@ export async function getServerSideProps(context) {
     `${process.env.NEXT_PUBLIC_DOMAIN}/api/agents?state=${query.state}`
   );
 
-  // console.log(art);
   return {
     props: {
       agentsList: art.data,

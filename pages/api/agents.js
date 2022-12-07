@@ -3,6 +3,7 @@ import { connectToDatabase } from "../../utils/mongodb";
 
 export default async function handler(req, res) {
   const { getAll } = controller;
+
   const { db } = await connectToDatabase();
 
   switch (req.method) {
