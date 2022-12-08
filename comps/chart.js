@@ -5,6 +5,7 @@ import { Chart as ChartJS } from "chart.js/auto";
 export default function Chart({ chartdata, title, chartType }) {
   const options = {
     responsive: true,
+
     plugins: {
       responsive: true,
       legend: {

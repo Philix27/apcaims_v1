@@ -130,7 +130,7 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
           <thead>
             <tr>
               <th>No</th>
-              <th>Img</th>
+              {/* <th>Img</th> */}
               <th>Name</th>
               <th>Agent Type</th>
               <th>Election Type</th>
@@ -142,9 +142,9 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
               return (
                 <tr key={index}>
                   <td>{index + 1}.</td>
-                  <td>
+                  {/* <td>
                     <img src={agent.image} alt={agent.name}></img>
-                  </td>
+                  </td> */}
                   <td>{namer.toUpperCase()}</td>
                   <td>{agent.agentType}</td>
                   <td>{agent.electionType}</td>
