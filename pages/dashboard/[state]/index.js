@@ -54,8 +54,8 @@ export default function Dashboard({ agentsList, stateValue }) {
   const selectedLg = data.states.filter((val) =>
     val.state.toLowerCase().includes(userState.toLowerCase())
   );
-  console.log("selectedLg");
-  console.log(selectedLg);
+  // console.log("selectedLg");
+  // console.log(selectedLg);
 
   function getCount(lganame) {
     let ags = agentsList.data.filter((ag) => ag.lga == lganame);

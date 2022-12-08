@@ -2,11 +2,11 @@ import { connectToDatabase } from "../../utils/mongodb";
 
 export default async function handler(req, res) {
   const { db } = await connectToDatabase();
+  const agents = db.collection("agents");
 
   if ((req.method = "GET")) {
     try {
-      const data = await db
-        .collection("agents")
+      const data = await agents
         .find(
           {},
           {
@@ -16,7 +16,7 @@ export default async function handler(req, res) {
             },
           }
         )
-        // .limit(900)
+        // .limit(300000)
         .toArray();
       res.status(200).json({ length: data.length, data: data });
     } catch (e) {
