@@ -97,7 +97,7 @@ export default function Dashboard({ agentsList, stateValue }) {
         <h1>{user.name} State Dashboard</h1>
       </div>
       <div className="dashboard">
-        <Link href="/agents/add">
+        <Link passHref href="/agents/add">
           <div className="topCard colorx">
             <h1>
               <MdPersonAddAlt1 />
@@ -107,14 +107,14 @@ export default function Dashboard({ agentsList, stateValue }) {
           </div>
         </Link>
 
-        <Link href={`/lga/${user.name}`}>
+        <Link passHref href={`/lga/${user.name}`}>
           <div className="topCard orange">
             <h1>{getAllLga[0].lga.length}</h1>
             <span className="smallName">Local Government Areas</span>
           </div>
         </Link>
 
-        <Link href={`/state/${user.name}`}>
+        <Link passHref href={`/state/${user.name}`}>
           {/* <Link href={`#`}> */}
           <div className="topCard primary">
             <span className="icons">
@@ -124,7 +124,7 @@ export default function Dashboard({ agentsList, stateValue }) {
             <span className="smallName">Agents</span>
           </div>
         </Link>
-        <Link href={`/summary/${user.name}`}>
+        <Link passHref href={`/summary/${user.name}`}>
           <div className="topCard teal">
             <h1>
               <GoGraph />
@@ -139,7 +139,7 @@ export default function Dashboard({ agentsList, stateValue }) {
         <h1>Election Types</h1>
       </div>
       <div className="dashboard">
-        <Link href="#">
+        <Link passHref href="#">
           <div className="card">
             <div className="topbar teal"></div>
             <div className="content">
@@ -151,7 +151,7 @@ export default function Dashboard({ agentsList, stateValue }) {
             </div>
           </div>
         </Link>
-        <Link href="#">
+        <Link passHref href="#">
           <div className="card">
             <div className="topbar teal"></div>
             <div className="content">
@@ -163,7 +163,7 @@ export default function Dashboard({ agentsList, stateValue }) {
             </div>
           </div>
         </Link>
-        <Link href="#">
+        <Link passHref href="#">
           <div className="card">
             <div className="topbar teal"></div>
             <div className="content">
@@ -177,7 +177,7 @@ export default function Dashboard({ agentsList, stateValue }) {
             </div>
           </div>
         </Link>
-        <Link href="#">
+        <Link passHref href="#">
           <div className="card">
             <div className="topbar teal"></div>
             <div className="content">
@@ -189,7 +189,7 @@ export default function Dashboard({ agentsList, stateValue }) {
             </div>
           </div>
         </Link>
-        <Link href="#">
+        <Link passHref href="#">
           <div className="card">
             <div className="topbar teal"></div>
             <div className="content">
@@ -209,7 +209,7 @@ export default function Dashboard({ agentsList, stateValue }) {
       )}
       {user.userType == "ADMIN" && (
         <div className="dashboard">
-          <Link href="/dashboard/all_states">
+          <Link passHref href="/dashboard/all_states">
             <div className="card">
               <div className="topbar teal"></div>
               <div className="content">

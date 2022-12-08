@@ -16,6 +16,7 @@ export default async function handler(req, res) {
             },
           }
         )
+        // .limit(900)
         .toArray();
       res.status(200).json({ length: data.length, data: data });
     } catch (e) {

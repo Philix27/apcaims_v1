@@ -72,13 +72,18 @@ export default function Home() {
             <div className="agentCard" key={index}>
               {/* <Image src={gh.image} height={50} width={50} /> */}
               <div className="content">
-                <img src={gh.image} width={100} height={100} />
+                <img
+                  src={gh.image}
+                  width={100}
+                  height={100}
+                  alt="profile image"
+                />
                 <div className="text">
                   <h3>{namer.toUpperCase()}</h3>
                   <h5>{gh.email}</h5>
                 </div>
               </div>
-              <Link href={`/agents/${gh._id}`} className="link">
+              <Link passHref href={`/agents/${gh._id}`} className="link">
                 <div className="iconButton">
                   <AiFillEye size={25} />
                 </div>
