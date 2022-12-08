@@ -8,8 +8,6 @@ import { utils } from "../../utils";
 import { Circles } from "react-loader-spinner";
 
 function getCount(fGentList, state) {
-  console.log(state, fGentList);
-
   if (fGentList.data.length > 1) {
     let ags = fGentList.data.filter((ag) => ag.state == state);
     return ags.length;
