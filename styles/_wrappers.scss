@@ -16,7 +16,7 @@
 
   .comp {
     padding-left: 20vw;
-    @include mobileSS {
+    @include tabletSS {
       padding: 0;
       margin: 0;
     }

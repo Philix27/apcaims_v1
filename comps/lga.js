@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 // import { lgas } from "../../constants/lga";
 import { data } from "../constants/states/index";
 import { utils } from "../utils";
+import Link from "next/link";
 
 export default function LGAs({ userState, agentsList }) {
   const [agts, setAgents] = useState(agentsList);
@@ -15,14 +16,22 @@ export default function LGAs({ userState, agentsList }) {
   );
 
   const router = useRouter();
+
   function filterLga(lganame) {
     let ags = agentsList.filter((ag) => ag.lga == lganame);
     return ags.length;
   }
+  function filterElectionType(lganame, electionType) {
+    let ags = agentsList.filter(
+      (ag) => ag.lga == lganame && ag.electionType == electionType
+    );
+    return ags.length;
+  }
+
   return (
-    <div className="section">
-      <div className="tableSection">
-        <table>
+    <div>
+      {/* <div className="tableSection"> */}
+      {/* <table>
           <thead>
             <tr>
               <th>No</th>
@@ -32,12 +41,13 @@ export default function LGAs({ userState, agentsList }) {
           </thead>
           <tbody>
             {selectedLg[0].lga.map((lga, index) => (
-              // {selectedState[0].lga.map((lga, index) => (
+              // <Link href={`/lga_info/${useState}_${lga.name}`} passHref>
               <tr key={index}>
                 <td>{index + 1}.</td>
                 <td>{lga.name}</td>
                 <td>{utils.numberWithCommas(filterLga(lga.name))} </td>
               </tr>
+              // </Link>
             ))}
           </tbody>
           <tfoot>
@@ -47,8 +57,47 @@ export default function LGAs({ userState, agentsList }) {
               <th>{utils.numberWithCommas(agentsList.length)} Agents</th>
             </tr>
           </tfoot>
-        </table>
+        </table> */}
+
+      <div className="lgatable">
+        {selectedLg[0].lga.map((lga, index) => (
+          <div className="info" key={index}>
+            <div className="tile">
+              <h4>{`${index + 1}. ${lga.name}`}</h4>
+              <p>{utils.numberWithCommas(filterLga(lga.name))} agents</p>
+            </div>
+            <div className="moreInfo">
+              <h4>Election Type</h4>
+              <div className="moreInfoList">
+                <p>PRESIDENTIAL:</p>
+                <p>{filterElectionType(lga.name, "PRESIDENTIAL")}</p>
+              </div>
+              <div className="moreInfoList">
+                <p>SENATORIAL:</p>
+                <p>{filterElectionType(lga.name, "SENATORIAL")}</p>
+              </div>
+              <div className="moreInfoList">
+                <p>STATE HOUSE OF ASSEMBLY:</p>
+                <p>{filterElectionType(lga.name, "STATE HOUSE OF ASSEMBLY")}</p>
+              </div>
+              <div className="moreInfoList">
+                <p>HOUSE OF REPS.:</p>
+                <p>{filterElectionType(lga.name, "HOUSE OF REPS.")}</p>
+              </div>
+              <div className="moreInfoList">
+                <p>GUBERNATORIAL:</p>
+                <p>{filterElectionType(lga.name, "GUBERNATORIAL")}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        <div className="totalTile">
+          <h4>Total Agent Count</h4>
+          <p>{utils.numberWithCommas(agentsList.length)} agents</p>
+        </div>
       </div>
+      {/* </div> */}
     </div>
   );
 }

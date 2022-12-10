@@ -34,7 +34,7 @@ export default function LGAPage({ agentsList }) {
         <Head>
           <title>APCAIMS | LGA</title>
         </Head>
-        <LGAs userState={user.name} agentsList={agentsList.data} />
+        {/* <LGAs userState={user.name} agentsList={agentsList.data} /> */}
       </div>
     </div>
   );
@@ -43,19 +43,16 @@ export default function LGAPage({ agentsList }) {
 export async function getServerSideProps(context) {
   const { query } = context;
   console.log(query);
+  const val = query.state_lga;
+  const [state, lga] = val.split("_");
   // try {
   let art;
   art = await axios(
-    `${process.env.NEXT_PUBLIC_DOMAIN}/api/agents?state=${query.state}`
+    // `${process.env.NEXT_PUBLIC_DOMAIN}/api/agents?state=${state}&lga=${lga}`
+    `${process.env.NEXT_PUBLIC_DOMAIN}/api/lga_info?state=${"DELTA"}&lga=${lga}`
   );
   // console.log(art);
-  // return {
-  //   props: {
-  //     agentsList: art.data,
-  //   },
-  // };
-  // } catch (error) {}
-  // console.log(art);
+
   return {
     props: {
       agentsList: art.data,

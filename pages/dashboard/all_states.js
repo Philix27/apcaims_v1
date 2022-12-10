@@ -7,61 +7,50 @@ import { utils } from "../../utils";
 import { Circles } from "react-loader-spinner";
 
 export default function AllStatesPage({}) {
-  const [loading, setLoading] = useState(true);
-  const [gentsList, setGentsList] = useState([]);
-
-  function getCount(fGentList, state) {
-    if (fGentList.data.length > 1) {
-      let ags = fGentList.data.filter((ag) => ag.state == state);
-      return ags.length;
-    } else {
-      return 0;
-    }
-  }
+  const [showGraph, setShowGraph] = useState(false);
+  const [generateBtn, setGenerateBtn] = useState(true);
+  const [userData, setUserData] = useState({});
 
   const label = data.states.map((val) => val.state);
-  const agentCount = (_gentsList) =>
-    data.states.map((val) => getCount(_gentsList, val.state));
+  const __agentsList = [];
 
   async function fetchStates() {
+    setGenerateBtn(false);
     try {
-      let art;
-      art = await axios(`${process.env.NEXT_PUBLIC_DOMAIN}/api/all_states`);
-      setGentsList(art.data);
-      setLoading(false);
-      console.log("completed fetching");
+      await data.states.map(async (val, index) => {
+        let art = await axios(
+          `${process.env.NEXT_PUBLIC_DOMAIN}/api/agents_by_state?state=${val.state}`
+        );
+        art = art.data;
+        console.log(index, art.length);
+        __agentsList.push(art.length);
+        if (__agentsList.length == 37) {
+          console.log("completed fetching");
+
+          console.log(__agentsList);
+        }
+      });
+
+      // setShowGraph(true);
     } catch (e) {
       console.log(e);
     }
   }
 
-  useEffect(() => {
-    fetchStates();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="section">
-        <h1>Fetching Data...</h1>
-        <div className="loader">
-          <Circles
-            height="200"
-            width="200"
-            color="#1663b0"
-            ariaLabel="circles-loading"
-            visible={true}
-          />
-        </div>
-      </div>
-    );
-  } else {
-    const userData = {
+  const setupchart = () => {
+    // setShowGraph(false);
+    console.log(__agentsList);
+    // if (__agentsList.length < 1) {
+    setUserData({
       labels: label,
       datasets: [
         {
-          label: "Agents",
-          data: agentCount(gentsList),
-          minBarLength: 10,
+          label: `${utils.numberWithCommas(
+            __agentsList.reduce((partialSum, a) => partialSum + a, 0)
+          )} Agents`,
+          data: __agentsList,
+          // data: agentCount(gentsList),
+          minBarLength: 1,
           backgroundColor: bgColors,
           xAxisID: "States",
           yAxisID: "Agent count",
@@ -77,20 +66,34 @@ export default function AllStatesPage({}) {
           },
         },
       ],
-    };
+    });
+    // }
+    // setShowGraph(true);
+  };
 
-    return (
-      <div>
-        {/* <div className="section">
-          <h1>Agent's Count</h1>
-        </div> */}
+  return (
+    <div>
+      <div className="section">
+        {generateBtn && (
+          <a className="btn" onClick={() => fetchStates()}>
+            Generate Data
+          </a>
+        )}
 
+        {!generateBtn && (
+          <a className="btn" onClick={() => setupchart()}>
+            Show Graph
+          </a>
+        )}
+      </div>
+
+      {showGraph && (
         <Chart
           chartdata={userData}
-          title={`${utils.numberWithCommas(gentsList.length)} Agents`}
+          title="Agents in all states"
           chartType="DOUGHNUT"
         />
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 }
