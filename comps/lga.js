@@ -67,6 +67,7 @@ export default function LGAs({ userState, agentsList }) {
           <div className=" input_box ">
             <form>
               <select
+                className="select"
                 name="electionType"
                 value={selectedElectionType}
                 id="form-election-type"
