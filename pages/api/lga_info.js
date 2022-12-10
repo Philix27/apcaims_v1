@@ -3,17 +3,19 @@ import { connectToDatabase } from "../../utils/mongodb";
 export default async function handler(req, res) {
   const { db } = await connectToDatabase();
   const agentsCollection = db.collection("agents");
-  let { state, lga } = req.query;
+  let { state } = req.query;
 
   if ((req.method = "GET")) {
     try {
       const data = await agentsCollection
         .find(
-          { state: state, lga: lga },
+          { state: state },
           {
             projection: {
               agentType: 1,
               electionType: 1,
+              _id: 0,
+              lga: 1,
             },
           }
         )

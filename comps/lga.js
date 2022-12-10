@@ -27,38 +27,15 @@ export default function LGAs({ userState, agentsList }) {
     );
     return ags.length;
   }
+  function filterAgentType(lganame, agentType) {
+    let ags = agentsList.filter(
+      (ag) => ag.lga == lganame && ag.agentType == agentType
+    );
+    return ags.length;
+  }
 
   return (
     <div>
-      {/* <div className="tableSection"> */}
-      {/* <table>
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>LGA</th>
-              <th>No. Agents</th>
-            </tr>
-          </thead>
-          <tbody>
-            {selectedLg[0].lga.map((lga, index) => (
-              // <Link href={`/lga_info/${useState}_${lga.name}`} passHref>
-              <tr key={index}>
-                <td>{index + 1}.</td>
-                <td>{lga.name}</td>
-                <td>{utils.numberWithCommas(filterLga(lga.name))} </td>
-              </tr>
-              // </Link>
-            ))}
-          </tbody>
-          <tfoot>
-            <tr style={{ fontWeight: 700 }}>
-              <th>Total</th>
-              <th>{`${selectedLg[0].lga.length} LGAs`}</th>
-              <th>{utils.numberWithCommas(agentsList.length)} Agents</th>
-            </tr>
-          </tfoot>
-        </table> */}
-
       <div className="lgatable">
         {selectedLg[0].lga.map((lga, index) => (
           <div className="info" key={index}>
@@ -89,6 +66,30 @@ export default function LGAs({ userState, agentsList }) {
                 <p>{filterElectionType(lga.name, "GUBERNATORIAL")}</p>
               </div>
             </div>
+            <div className="moreInfo">
+              <h4>Agent Type</h4>
+
+              <div className="moreInfoList">
+                <p>PRESIDENTIAL:</p>
+                <p>{filterAgentType(lga.name, "PRESIDENTIAL")}</p>
+              </div>
+              <div className="moreInfoList">
+                <p>STATE:</p>
+                <p>{filterAgentType(lga.name, "STATE")}</p>
+              </div>
+              <div className="moreInfoList">
+                <p>LOCAL GOVERNMENT:</p>
+                <p>{filterAgentType(lga.name, "LOCAL GOVERNMENT")}</p>
+              </div>
+              <div className="moreInfoList">
+                <p>WARD:</p>
+                <p>{filterAgentType(lga.name, "WARD")}</p>
+              </div>
+              <div className="moreInfoList">
+                <p>POLLING UNIT:</p>
+                <p>{filterAgentType(lga.name, "POLLING UNIT")}</p>
+              </div>
+            </div>
           </div>
         ))}
 
@@ -100,4 +101,37 @@ export default function LGAs({ userState, agentsList }) {
       {/* </div> */}
     </div>
   );
+}
+
+{
+  /* <div className="tableSection"> */
+}
+{
+  /* <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>LGA</th>
+              <th>No. Agents</th>
+            </tr>
+          </thead>
+          <tbody>
+            {selectedLg[0].lga.map((lga, index) => (
+              // <Link href={`/lga_info/${useState}_${lga.name}`} passHref>
+              <tr key={index}>
+                <td>{index + 1}.</td>
+                <td>{lga.name}</td>
+                <td>{utils.numberWithCommas(filterLga(lga.name))} </td>
+              </tr>
+              // </Link>
+            ))}
+          </tbody>
+          <tfoot>
+            <tr style={{ fontWeight: 700 }}>
+              <th>Total</th>
+              <th>{`${selectedLg[0].lga.length} LGAs`}</th>
+              <th>{utils.numberWithCommas(agentsList.length)} Agents</th>
+            </tr>
+          </tfoot>
+        </table> */
 }

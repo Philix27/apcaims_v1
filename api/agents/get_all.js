@@ -11,6 +11,7 @@ export const getAll = async (db, req, res) => {
             lastName: 1,
             lga: 1,
             electionType: 1,
+            // agentType: 1,
             _id: 0,
           },
         }

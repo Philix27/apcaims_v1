@@ -46,16 +46,9 @@ export async function getServerSideProps(context) {
   // try {
   let art;
   art = await axios(
-    `${process.env.NEXT_PUBLIC_DOMAIN}/api/agents?state=${query.state}`
+    `${process.env.NEXT_PUBLIC_DOMAIN}/api/lga_info?state=${query.state}`
   );
-  // console.log(art);
-  // return {
-  //   props: {
-  //     agentsList: art.data,
-  //   },
-  // };
-  // } catch (error) {}
-  // console.log(art);
+
   return {
     props: {
       agentsList: art.data,

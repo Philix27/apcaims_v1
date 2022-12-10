@@ -5,7 +5,7 @@ const SR = {
   phone: "08108850572",
   statecode: "FCT",
   img: "images/profile2.jpg",
-  userType: "ADMIN",
+  userType: "STATEREP",
 };
 
 const states = {
