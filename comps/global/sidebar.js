@@ -125,7 +125,21 @@ export default function Sidebar() {
                 </li>
               </a>
             )} */}
-            {user && (
+
+            {user.userType == "ADMIN" ? (
+              <a className="link" href="/admin">
+                <li
+                  className={
+                    _path == "/admin" ? "activeItem" : "sidebar_start_list_item"
+                  }
+                >
+                  <span>
+                    <MdAdminPanelSettings />
+                  </span>
+                  ADMIN
+                </li>
+              </a>
+            ) : (
               <a className="link" href={`/dashboard/${user.name}`}>
                 <li
                   className={
@@ -138,20 +152,6 @@ export default function Sidebar() {
                     <MdSpaceDashboard />
                   </span>
                   {user.name}
-                </li>
-              </a>
-            )}
-            {user.userType == "ADMIN" && (
-              <a className="link" href="/admin">
-                <li
-                  className={
-                    _path == "/admin" ? "activeItem" : "sidebar_start_list_item"
-                  }
-                >
-                  <span>
-                    <MdAdminPanelSettings />
-                  </span>
-                  ADMIN
                 </li>
               </a>
             )}

@@ -202,27 +202,7 @@ export default function Dashboard({ agentsList, stateValue }) {
           </div>
         </Link>
       </div>
-      {user.userType == "ADMIN" && (
-        <div className="headingSection">
-          <h1>ADMIN</h1>
-        </div>
-      )}
-      {user.userType == "ADMIN" && (
-        <div className="dashboard">
-          <Link passHref href="/dashboard/all_states">
-            <div className="card">
-              <div className="topbar teal"></div>
-              <div className="content">
-                <h3>All States Data</h3>
-                {/* <p>
-              {utils.numberWithCommas(filterElectionTypes("GUBERNATORIAL"))}
-              <span className="smallName">Agents</span>
-            </p> */}
-              </div>
-            </div>
-          </Link>
-        </div>
-      )}
+      <div className="spacer"></div>
     </div>
   );
 }
