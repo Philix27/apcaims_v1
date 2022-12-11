@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -89,16 +88,17 @@ export default function Navbar() {
               </Link>
             </li>
           )}
-          {user.userType == "ADMIN" ? (
+          {user.userType == "ADMIN" && (
             <li
               onClick={() => setShowNav(!showNav)}
               className={_path == "/admin" ? "active" : ""}
             >
               <Link href={`/admin`}>
-                <a>ADMIN</a>
+                <a>ADMIN ONLY</a>
               </Link>
             </li>
-          ) : (
+          )}
+          {user && (
             <li
               onClick={() => setShowNav(!showNav)}
               className={_path == "/dashboard" ? "active" : ""}
@@ -108,8 +108,6 @@ export default function Navbar() {
               </Link>
             </li>
           )}
-
-          {/* {user && } */}
           {!user && (
             <li
               onClick={() => setShowNav(!showNav)}
