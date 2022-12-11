@@ -126,7 +126,7 @@ export default function Sidebar() {
               </a>
             )} */}
 
-            {user.userType == "ADMIN" ? (
+            {/* {user.userType == "ADMIN" ? (
               <a className="link" href="/admin">
                 <li
                   className={
@@ -154,8 +154,23 @@ export default function Sidebar() {
                   {user.name}
                 </li>
               </a>
+            )} */}
+            {user && (
+              <a className="link" href={`/dashboard/${user.name}`}>
+                <li
+                  className={
+                    _path == "/dashboard"
+                      ? "activeItem"
+                      : "sidebar_start_list_item"
+                  }
+                >
+                  <span>
+                    <MdSpaceDashboard />
+                  </span>
+                  {user.name}
+                </li>
+              </a>
             )}
-
             {user ? (
               <a className="link" href="/login" onClick={logOut}>
                 <li className={"sidebar_start_list_item"}>

@@ -88,7 +88,7 @@ export default function Navbar() {
               </Link>
             </li>
           )}
-          {user.userType == "ADMIN" && (
+          {/* {user.userType == "ADMIN" && (
             <li
               onClick={() => setShowNav(!showNav)}
               className={_path == "/admin" ? "active" : ""}
@@ -97,7 +97,7 @@ export default function Navbar() {
                 <a>ADMIN ONLY</a>
               </Link>
             </li>
-          )}
+          )} */}
           {user && (
             <li
               onClick={() => setShowNav(!showNav)}
