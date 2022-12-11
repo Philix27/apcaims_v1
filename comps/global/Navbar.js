@@ -10,7 +10,10 @@ export default function Navbar() {
   const show = "show";
   const [showNav, setShowNav] = useState(false);
 
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({
+    userType: "",
+    name: "",
+  });
 
   useEffect(() => {
     if (fetchUser()) {
@@ -86,7 +89,16 @@ export default function Navbar() {
               </Link>
             </li>
           )}
-
+          {user.userType == "ADMIN" && (
+            <li
+              onClick={() => setShowNav(!showNav)}
+              className={_path == "/admin" ? "active" : ""}
+            >
+              <Link href={`/admin`}>
+                <a>ADMIN ONLY</a>
+              </Link>
+            </li>
+          )}
           {user && (
             <li
               onClick={() => setShowNav(!showNav)}

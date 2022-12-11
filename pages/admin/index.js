@@ -26,7 +26,7 @@ export default function Dashboard({ agentsList, stateValue }) {
               <div className="topbar teal"></div>
               <div className="content">
                 <h3>{val.state}</h3>
-                <p>Informations and details for {val.state} state.</p>
+                <p>Informations and details for state.</p>
               </div>
             </div>
           </Link>

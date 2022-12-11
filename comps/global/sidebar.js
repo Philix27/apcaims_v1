@@ -141,7 +141,7 @@ export default function Sidebar() {
                 </li>
               </a>
             )}
-            {/* {user.userType == "ADMIN" && (
+            {user.userType == "ADMIN" && (
               <a className="link" href="/admin">
                 <li
                   className={
@@ -154,7 +154,7 @@ export default function Sidebar() {
                   ADMIN
                 </li>
               </a>
-            )} */}
+            )}
 
             {user ? (
               <a className="link" href="/login" onClick={logOut}>
