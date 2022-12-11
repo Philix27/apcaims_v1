@@ -90,11 +90,11 @@ export default function Dashboard({ agentsList, stateValue }) {
   return (
     <div className="dasboardWrapper">
       <Head>
-        <title>{user.name} | ADMIN</title>
+        <title>{userState} | ADMIN</title>
       </Head>
       <div className="spacer"></div>
       <div className="headingSection">
-        <h1>{user.name} State Dashboard</h1>
+        <h1>{userState} State Dashboard</h1>
       </div>
       <div className="dashboard">
         <Link passHref href="/agents/add">
@@ -107,14 +107,14 @@ export default function Dashboard({ agentsList, stateValue }) {
           </div>
         </Link>
 
-        <Link passHref href={`/lga/${user.name}`}>
+        <Link passHref href={`/lga/${userState}`}>
           <div className="topCard orange">
             <h1>{getAllLga[0].lga.length}</h1>
             <span className="smallName">Local Government Areas</span>
           </div>
         </Link>
 
-        <Link passHref href={`/state/${user.name}`}>
+        <Link passHref href={`/state/${userState}`}>
           {/* <Link href={`#`}> */}
           <div className="topCard primary">
             <span className="icons">
@@ -124,7 +124,7 @@ export default function Dashboard({ agentsList, stateValue }) {
             <span className="smallName">Agents</span>
           </div>
         </Link>
-        <Link passHref href={`/summary/${user.name}`}>
+        <Link passHref href={`/summary/${userState}`}>
           <div className="topCard teal">
             <h1>
               <GoGraph />
