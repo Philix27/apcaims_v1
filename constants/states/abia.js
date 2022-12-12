@@ -120,7 +120,7 @@ const states = {
       ],
       name: "ISIALA NGWA NORTH",
     },
-     {
+    {
       wards: [
         "AKUNEKPU EZIAMA NA OBUBA",
         "AMAISE / AMAISE ANABA",

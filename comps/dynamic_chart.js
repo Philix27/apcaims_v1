@@ -8,6 +8,7 @@ export default function DynamicChart({ chartdata, title, chartType }) {
 
     plugins: {
       responsive: true,
+
       legend: {
         position: "top",
       },
@@ -28,7 +29,12 @@ export default function DynamicChart({ chartdata, title, chartType }) {
         <Doughnut className="chart" data={chartdata} options={options} />
       )}
       {chartType == "BAR" && (
-        <Bar className="chart" data={chartdata} options={options} />
+        <Bar
+          className="chart"
+          data={chartdata}
+          options={options}
+          redraw={true}
+        />
       )}
       {/* {chartType == "BAR" && (
         <Bar className="chart" data={chartdata} options={options} />

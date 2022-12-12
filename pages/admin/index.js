@@ -41,8 +41,9 @@ export default function Dashboard({ statesCount }) {
     labels: statesCount.data.map((val) => val._id),
     datasets: [
       {
+        indexAxis: "y",
         axis: "y",
-        label: "LGAs",
+        label: "State",
         data: statesCount.data.map((val) => val.agentCount),
         backgroundColor: bgColors,
       },
@@ -50,7 +51,7 @@ export default function Dashboard({ statesCount }) {
   });
 
   return (
-    <div className="dasboardWrapper">
+    <div className="adminWrapper">
       <Head>
         <title>{userState} | ADMIN</title>
       </Head>
@@ -59,17 +60,13 @@ export default function Dashboard({ statesCount }) {
       <div className="headingSection">
         <h1>All States</h1>
       </div>
-      {/* <div className="headingSection">
-        <a className="btn" onClick={() => getAgentsCounts()}>
-          Run
-        </a>
-      </div> */}
-      <DynamicChart
-        chartdata={userData}
-        title="Agents in all states"
-        chartType="BAR"
-      />
-      {/* <Chart chartdata={userData} title="Agents by " chartType="DOUGHNUT" /> */}
+      <div>
+        <DynamicChart
+          chartdata={userData}
+          title="Agents in all states"
+          chartType="BAR"
+        />
+      </div>
       <div className="dashboard">
         {data.states.map((val, i) => (
           <Link passHref href={`/dashboard/${val.state}`} key={i}>
@@ -77,7 +74,6 @@ export default function Dashboard({ statesCount }) {
               <div className="topbar teal"></div>
               <div className="content">
                 <h3>{val.state}</h3>
-
                 <p>{stateAgentCount(val.state)} agents</p>
               </div>
             </div>

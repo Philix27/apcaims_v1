@@ -97,7 +97,7 @@ export default function LGAs({ userState, agentsList }) {
                 <p>PRESIDENTIAL:</p>
                 <p>{filterAgentType(lga.name, "PRESIDENTIAL")}</p>
               </div>
-              <div className="moreInfoList">
+              {/* <div className="moreInfoList">
                 <p>SENATORIAL:</p>
                 <p>{filterAgentType(lga.name, "SENATORIAL")}</p>
               </div>
@@ -108,7 +108,7 @@ export default function LGAs({ userState, agentsList }) {
               <div className="moreInfoList">
                 <p>HOUSE OF ASSEMBLY:</p>
                 <p>{filterAgentType(lga.name, "HOUSE OF ASSEMBLY")}</p>
-              </div>
+              </div> */}
               <div className="moreInfoList">
                 <p>STATE:</p>
                 <p>{filterAgentType(lga.name, "STATE")}</p>
