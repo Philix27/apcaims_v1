@@ -6,7 +6,7 @@ import { data } from "../../constants/states";
 import axios from "axios";
 import { utils } from "../../utils";
 import { parse } from "uuid";
-import Chart from "../../comps/chart";
+import DynamicChart from "../../comps/dynamic_chart";
 import { bgColors } from "../../constants/chartColors";
 
 export default function Dashboard({ statesCount }) {
@@ -41,6 +41,7 @@ export default function Dashboard({ statesCount }) {
     labels: statesCount.data.map((val) => val._id),
     datasets: [
       {
+        axis: "y",
         label: "LGAs",
         data: statesCount.data.map((val) => val.agentCount),
         backgroundColor: bgColors,
@@ -58,12 +59,16 @@ export default function Dashboard({ statesCount }) {
       <div className="headingSection">
         <h1>All States</h1>
       </div>
-      <div className="headingSection">
+      {/* <div className="headingSection">
         <a className="btn" onClick={() => getAgentsCounts()}>
           Run
         </a>
-      </div>
-      <Chart chartdata={userData} title="Agents in all states" />
+      </div> */}
+      <DynamicChart
+        chartdata={userData}
+        title="Agents in all states"
+        chartType="BAR"
+      />
       {/* <Chart chartdata={userData} title="Agents by " chartType="DOUGHNUT" /> */}
       <div className="dashboard">
         {data.states.map((val, i) => (
