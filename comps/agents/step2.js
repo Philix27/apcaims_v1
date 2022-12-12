@@ -42,7 +42,7 @@ export default function Form2({
 
               {data.states.map((_val, index) => {
                 return (
-                  <option value={_val.state} key={index}>
+                  <option value={_val.state.toUpperCase()} key={index}>
                     {_val.state}
                   </option>
                 );
