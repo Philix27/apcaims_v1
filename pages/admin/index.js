@@ -77,8 +77,7 @@ export default function Dashboard({ statesCount }) {
               <div className="topbar teal"></div>
               <div className="content">
                 <h3>{val.state}</h3>
-                <p>Informations and details for state.</p>
-                {/* <p>{utils.numberWithCommas(stateAgentCount(val.state))}</p> */}
+
                 <p>{stateAgentCount(val.state)} agents</p>
               </div>
             </div>
