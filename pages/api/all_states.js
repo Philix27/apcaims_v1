@@ -7,7 +7,17 @@ export default async function handler(req, res) {
   if ((req.method = "GET")) {
     try {
       const data = await agents
-        .aggregate([{ $match: {} }, { $group: { _id: "$state" } }])
+        .aggregate([
+          { $match: {} },
+          {
+            $group: {
+              _id: "$state",
+              agentCount: {
+                $count: {},
+              },
+            },
+          },
+        ])
         // .find(
         //   {},
         //   {

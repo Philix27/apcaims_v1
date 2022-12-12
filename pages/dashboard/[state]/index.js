@@ -8,7 +8,6 @@ import { utils } from "../../../utils";
 import { MdPersonAddAlt1, MdGroups } from "react-icons/md";
 import { GoGraph } from "react-icons/go";
 import { bgColors } from "../../../constants/chartColors";
-import Chart from "../../../comps/chart_bar";
 
 export default function Dashboard({ agentsList, stateValue }) {
   const router = useRouter();
