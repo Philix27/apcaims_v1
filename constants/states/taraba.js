@@ -208,6 +208,9 @@ const states = {
         "LISSAM II",
         "LUMBU",
         "RUFU",
+        "DIKA",
+        "JENUWA",
+        "KWAMBIA"
       ],
       name: "USSA",
     },
