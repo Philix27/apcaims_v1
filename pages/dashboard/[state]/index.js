@@ -11,6 +11,9 @@ import { bgColors } from "../../../constants/chartColors";
 
 export default function Dashboard({ agentsList, stateValue }) {
   const router = useRouter();
+  const query = router.query;
+  const userState = query.state;
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -46,7 +49,6 @@ export default function Dashboard({ agentsList, stateValue }) {
   useEffect(() => {
     if (!fetchUser()) {
       router.push("/");
-      // console.log(fetchUser());
     } else {
       setUser(fetchUser());
     }
@@ -55,9 +57,6 @@ export default function Dashboard({ agentsList, stateValue }) {
   function fetchUser() {
     return JSON.parse(localStorage.getItem("user"));
   }
-
-  const query = router.query;
-  const userState = query.state;
 
   const selectedLg = data.states.filter((val) =>
     val.state.toLowerCase().includes(userState.toLowerCase())

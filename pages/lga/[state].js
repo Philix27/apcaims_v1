@@ -6,6 +6,9 @@ import axios from "axios";
 
 export default function LGAPage({ agentsList }) {
   const router = useRouter();
+  const query = router.query;
+  const userState = query.state;
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -34,7 +37,7 @@ export default function LGAPage({ agentsList }) {
         <Head>
           <title>APCAIMS | LGA</title>
         </Head>
-        <LGAs userState={user.name} agentsList={agentsList.data} />
+        <LGAs userState={userState} agentsList={agentsList.data} />
       </div>
     </div>
   );
@@ -43,7 +46,6 @@ export default function LGAPage({ agentsList }) {
 export async function getServerSideProps(context) {
   const { query } = context;
   console.log(query);
-  // try {
   let art;
   art = await axios(
     `${process.env.NEXT_PUBLIC_DOMAIN}/api/lga_info?state=${query.state}`
