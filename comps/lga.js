@@ -93,10 +93,15 @@ export default function LGAs({ userState, agentsList }) {
             </div>
             <div className="moreInfo">
               <h4>Agent Type</h4>
-              <div className="moreInfoList">
-                <p>PRESIDENTIAL:</p>
-                <p>{filterAgentType(lga.name, "PRESIDENTIAL")}</p>
-              </div>
+              <Link
+                passHref
+                href={`/lga/agents/${userState}_${lga.name}_${selectedElectionType}_PRESIDENTIAL`}
+              >
+                <div className="moreInfoList">
+                  <p>PRESIDENTIAL:</p>
+                  <p>{filterAgentType(lga.name, "PRESIDENTIAL")}</p>
+                </div>
+              </Link>
               {/* <div className="moreInfoList">
                 <p>SENATORIAL:</p>
                 <p>{filterAgentType(lga.name, "SENATORIAL")}</p>
@@ -109,22 +114,43 @@ export default function LGAs({ userState, agentsList }) {
                 <p>HOUSE OF ASSEMBLY:</p>
                 <p>{filterAgentType(lga.name, "HOUSE OF ASSEMBLY")}</p>
               </div> */}
-              <div className="moreInfoList">
-                <p>STATE:</p>
-                <p>{filterAgentType(lga.name, "STATE")}</p>
-              </div>
-              <div className="moreInfoList">
-                <p>LOCAL GOVERNMENT</p>
-                <p>{filterAgentType(lga.name, "LOCAL GOVERNMENT")}</p>
-              </div>
-              <div className="moreInfoList">
-                <p>WARD:</p>
-                <p>{filterAgentType(lga.name, "WARD")}</p>
-              </div>
-              <div className="moreInfoList">
-                <p>POLLING UNIT:</p>
-                <p>{filterAgentType(lga.name, "POLLING UNIT")}</p>
-              </div>
+              <Link
+                passHref
+                href={`/lga/agents/${userState}_${lga.name}_${selectedElectionType}_STATE`}
+              >
+                <div className="moreInfoList">
+                  <p>STATE:</p>
+                  <p>{filterAgentType(lga.name, "STATE")}</p>
+                </div>
+              </Link>
+              <Link
+                passHref
+                href={`/lga/agents/${userState}_${lga.name}_${selectedElectionType}_LOCAL GOVERNMENT`}
+              >
+                <div className="moreInfoList">
+                  <p>LOCAL GOVERNMENT</p>
+                  <p>{filterAgentType(lga.name, "LOCAL GOVERNMENT")}</p>
+                </div>
+              </Link>
+              <Link
+                passHref
+                href={`/lga/agents/${userState}_${lga.name}_${selectedElectionType}_WARD`}
+              >
+                <div className="moreInfoList">
+                  <p>WARD:</p>
+                  <p>{filterAgentType(lga.name, "WARD")}</p>
+                </div>
+              </Link>
+              <Link
+                passHref
+                href={`/lga/agents/${userState}_${lga.name}_${selectedElectionType}_POLLING UNIT`}
+              >
+                <div className="moreInfoList">
+                  <p>POLLING UNIT:</p>
+                  <p>{filterAgentType(lga.name, "POLLING UNIT")}</p>
+                </div>
+              </Link>
+
               <div className="moreInfoList">
                 <p>TOTAL:</p>
                 <p>{calculateTotal(lga.name)}</p>
