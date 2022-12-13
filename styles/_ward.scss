@@ -1,16 +1,19 @@
 @import "colors";
 
-.lgatable {
+.wards {
   width: 80vw;
   padding: 60px 50px;
   margin: 0 auto;
+  margin-left: 20vw;
   @include tabletSS {
     width: 100vw;
     padding: 60px 25px;
+    margin-left: 0;
   }
   @include mobileSS {
     width: 100vw;
     padding: 60px 25px;
+    margin-left: 0;
   }
   .info {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -60,10 +63,6 @@
       border-bottom: 1px solid rgba(162, 161, 161, 0.513);
       padding-bottom: 2px;
       cursor: pointer;
-      &:hover {
-        background-color: $primaryColor;
-        color: #fff;
-      }
     }
   }
   .totalTile {

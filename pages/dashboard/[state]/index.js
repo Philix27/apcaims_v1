@@ -113,6 +113,13 @@ export default function Dashboard({ agentsList, stateValue }) {
             <span className="smallName">Local Government Areas</span>
           </div>
         </Link>
+        <Link passHref href={`/wards/${userState}`}>
+          <div className="topCard pink">
+            <h1>Wards</h1>
+            {/* <h1>{getAllLga[0].lga.length}</h1> */}
+            {/* <span className="smallName">Wards</span> */}
+          </div>
+        </Link>
 
         <Link passHref href={`/state/${userState}`}>
           {/* <Link href={`#`}> */}

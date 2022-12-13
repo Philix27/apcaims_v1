@@ -87,10 +87,12 @@ export default function LGAs({ userState, agentsList }) {
         </div>
         {selectedLg[0].lga.map((lga, index) => (
           <div className="info" key={index}>
-            <div className="tile">
-              <h4>{`${index + 1}. ${lga.name}`}</h4>
-              <p>{utils.numberWithCommas(filterLga(lga.name))} agents</p>
-            </div>
+            <Link href={`wards/${userState}_${lga.name}`}>
+              <div className="tile">
+                <h4>{`${index + 1}. ${lga.name}`}</h4>
+                <p>{utils.numberWithCommas(filterLga(lga.name))} agents</p>
+              </div>
+            </Link>
             <div className="moreInfo">
               <h4>Agent Type</h4>
               <Link
