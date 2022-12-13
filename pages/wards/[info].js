@@ -9,26 +9,7 @@ import Link from "next/link";
 export default function LGAs() {
   const router = useRouter();
   let { info } = router.query;
-  // let ll = info.split("_");
-  // console.log(ll);
-  // const property = {
-  //   state: ll[0],
-  //   lga: ll[1],
-  // };
 
-  function getWards() {
-    var lgaSelected = data.lgas.filter((lga) => lga.name == property.lga);
-    return lgaSelected[0].wards;
-  }
-  function getLgas() {
-    var ss = data.lgas.filter((state) => state.state == info);
-    const stateSelected = ss[0];
-    console.log(ss);
-    console.log(stateSelected);
-    // console.log(stateSelected.lga);
-    // return stateSelected.lga;
-    return [];
-  }
   const getStatesInfo = () =>
     data.states.filter((state) => state.state == info);
 
@@ -37,14 +18,14 @@ export default function LGAs() {
       <div>
         {getStatesInfo().map((state, index) => (
           <div className="info" key={index}>
-            {state.lga.map((lga, index) => (
-              <div className="info">
+            {state.lga.map((lga, lgaIndex) => (
+              <div className="info" key={lgaIndex}>
                 <div className="tile">
-                  <h4>{`${index + 1}. ${lga.name}`}</h4>
+                  <h4>{`${lgaIndex + 1}. ${lga.name}`}</h4>
                 </div>
                 <div className="moreInfo">
-                  {lga.wards.map((ward) => (
-                    <div className="moreInfoList">
+                  {lga.wards.map((ward, wardInex) => (
+                    <div className="moreInfoList" key={wardInex}>
                       <p>{ward}</p>
                     </div>
                   ))}
