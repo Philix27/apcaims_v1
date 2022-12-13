@@ -21,6 +21,15 @@ export default function Dashboard({ agentsList, stateValue }) {
     userType: "",
   });
 
+  const getAllWards = () => {
+    let all_wards = [];
+    getAllLga[0].lga.map((lga) => {
+      all_wards.concat(lga.wards);
+      lga.wards.map((val) => all_wards.push(val));
+    });
+    return all_wards.length;
+  };
+
   const getAllLga = data.states.filter((val) =>
     val.state.toLowerCase().includes(stateValue.toLowerCase())
   );
@@ -115,6 +124,7 @@ export default function Dashboard({ agentsList, stateValue }) {
         </Link>
         <Link passHref href={`/wards/${userState}`}>
           <div className="topCard pink">
+            <h1>{getAllWards()}</h1>
             <h1>Wards</h1>
             {/* <h1>{getAllLga[0].lga.length}</h1> */}
             {/* <span className="smallName">Wards</span> */}
