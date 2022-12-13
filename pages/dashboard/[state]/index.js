@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import axios from "axios";
-import { data } from "../../../constants/states";
+import { data } from "../../../constants/states/index";
 import { utils } from "../../../utils";
 import { MdPersonAddAlt1, MdGroups } from "react-icons/md";
 import { GoGraph } from "react-icons/go";

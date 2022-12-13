@@ -30,20 +30,11 @@ export default function LGAs() {
     return [];
   }
   const getStatesInfo = () =>
-    data.states.filter((state) => state.state == "DELTA");
+    data.states.filter((state) => state.state == info);
 
   return (
     <div className="wards">
       <div>
-        {/* {getLgas()} */}
-        {/* {console.log(getStatesInfo())} */}
-        {/* {getLgas().map((lga, index) => (
-          <div className="info" key={index}>
-            <div className="tile">
-              <h4>{`${index + 1}. ${lga.name}`}</h4>
-            </div>
-          </div>
-        ))} */}
         {getStatesInfo().map((state, index) => (
           <div className="info" key={index}>
             {state.lga.map((lga, index) => (
