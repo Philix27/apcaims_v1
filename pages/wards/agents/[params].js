@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import LGAs from "../../comps/lga";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { AiFillDelete } from "react-icons/ai";
@@ -65,7 +66,11 @@ export default function LGAPage({ info, agentsList }) {
                         <td>{namer.toUpperCase()}</td>
                         <td>{agent.agentType}</td>
                         <td>
-                          <FaUserEdit className="icon" />
+                          <Link href="/agents/edit">
+                            <a>
+                              <FaUserEdit className="icon" />
+                            </a>
+                          </Link>
                         </td>
                         <td>
                           <AiFillDelete className="icon delete" />

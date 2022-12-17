@@ -8,6 +8,7 @@ import { utils } from "../../../utils";
 import { MdPersonAddAlt1, MdGroups } from "react-icons/md";
 import { GoGraph } from "react-icons/go";
 import { bgColors } from "../../../constants/chartColors";
+import Sidebar from "../../../comps/global/sidebar";
 
 export default function Dashboard({ agentsList, stateValue }) {
   const router = useRouter();
@@ -99,6 +100,8 @@ export default function Dashboard({ agentsList, stateValue }) {
       <Head>
         <title>{userState} | ADMIN</title>
       </Head>
+      {/* <Sidebar /> */}
+
       <div className="spacer"></div>
       <div className="headingSection">
         <h1>{userState} State Dashboard</h1>
