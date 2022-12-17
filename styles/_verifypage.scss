@@ -1,5 +1,7 @@
 .verifyPage {
-  margin-left: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
   background-image: linear-gradient(rgba(9, 106, 163, 0.3), rgba(2, 4, 14, 0.3)),
     url(../public/images/bg.jpg);

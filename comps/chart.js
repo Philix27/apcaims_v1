@@ -24,7 +24,7 @@ export default function Chart({ chartdata, title, chartType }) {
   };
   return (
     <div className="section">
-      <Bar className="chart" data={chartdata} options={options} />
+      <Bar data={chartdata} options={options} />
       {/* {chartType == "DOUGHNUT" && (
         <Doughnut className="chart" data={chartdata} options={options} />
       )}

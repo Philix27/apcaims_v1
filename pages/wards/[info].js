@@ -17,8 +17,10 @@ export default function Wards({ agentsList }) {
   }
 
   return (
-    <div className="wards">
-      <div>
+    <div className="section">
+      <h1>{info} State</h1>
+      <h3>All LGAs and Wards</h3>
+      <div className="wards">
         {getStatesInfo().map((state, index) => (
           <div className="info" key={index}>
             {state.lga.map((lga, lgaIndex) => (

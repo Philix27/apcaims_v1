@@ -35,7 +35,7 @@ export default function SummaryPage({ agentsList }) {
   });
 
   return (
-    <div>
+    <div className="section">
       <Chart
         chartdata={userData}
         title="Agents in the various LGAs"

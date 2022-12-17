@@ -8,8 +8,8 @@
   }
   .dashboard {
     display: grid;
-    padding-left: 22vw;
-    grid-template-columns: repeat(3, 1fr);
+    // padding-left: 22vw;
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     padding-top: 10px;
     padding-right: 50px;
@@ -100,7 +100,7 @@
     }
   }
   .headingSection {
-    margin-left: 22vw;
+    // margin-left: 22vw;
     padding: 20px;
     @include tabletSS {
       margin-left: 0;

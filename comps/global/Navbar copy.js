@@ -89,7 +89,16 @@ export default function Navbar() {
               </Link>
             </li>
           )}
-
+          {/* {user.userType == "ADMIN" && (
+            <li
+              onClick={() => setShowNav(!showNav)}
+              className={_path == "/admin" ? "active" : ""}
+            >
+              <Link href={`/admin`}>
+                <a>ADMIN ONLY</a>
+              </Link>
+            </li>
+          )} */}
           {user && (
             <li
               onClick={() => setShowNav(!showNav)}
@@ -100,6 +109,35 @@ export default function Navbar() {
               </Link>
             </li>
           )}
+          {!user && (
+            <li
+              onClick={() => setShowNav(!showNav)}
+              className={_path == "/faq" ? "active" : ""}
+            >
+              <Link href="/faq">
+                <a className="link">FAQ</a>
+              </Link>
+            </li>
+          )}
+          {user && (
+            <li
+              onClick={() => setShowNav(!showNav)}
+              className={_path == "/faq_admin" ? "active" : ""}
+            >
+              <Link href="/faq_admin">
+                <a className="link">FAQ ADMIN</a>
+              </Link>
+            </li>
+          )}
+
+          <li
+            onClick={() => setShowNav(!showNav)}
+            className={_path == "/guide" ? "active" : ""}
+          >
+            <Link href="/guide">
+              <a className="link">Help</a>
+            </Link>
+          </li>
         </ul>
         <label className="icon">
           {showNav ? (

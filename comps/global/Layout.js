@@ -15,10 +15,10 @@ export default function Layout(props) {
         <link rel="icon" href="/images/logo.png" />
       </Head>
       <Navbar />
-      <Sidebar />
-      <HelpBtn />
+      {/* <Sidebar /> */}
+      {/* <HelpBtn /> */}
       {props.children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

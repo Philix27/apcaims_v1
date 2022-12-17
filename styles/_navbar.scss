@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   padding-left: 40px;
-  visibility: hidden;
+  // visibility: hidden;
   @media print {
     display: none;
   }
@@ -44,7 +44,7 @@
     height: 100%;
   }
   ul {
-    visibility: hidden;
+    // visibility: hidden;
     float: right;
     margin-right: 40px;
     @include laptop {
@@ -63,30 +63,31 @@
     }
 
     li {
-      display: inline-block;
       line-height: 50px;
+      display: inline-block;
+      // color: #fff;
       @include tabletSS {
         display: block;
         margin: 20px;
         line-height: 30px;
       }
       &:hover {
-        background-color: $primaryColor;
-        color: #fff;
+        color: $primaryColor;
+        background-color: $secondaryColor;
         transition: 0.5s;
-        @include tabletSS {
+        a {
           color: $primaryColor;
-          background-color: $secondaryColor;
         }
       }
       a {
         font-size: medium;
-        color: $primaryColor;
+        // color: $primaryColor;
         text-transform: uppercase;
+        color: #fff;
         margin: 0 20px;
-        &:hover {
-          color: #fff;
-        }
+        // &:hover {
+        //   color: #fff;
+        // }
         @include tabletSS {
           color: #fff;
         }
@@ -97,15 +98,10 @@
       color: #fff;
       transition: 0.5s;
       a {
-        color: #fff;
-        @include tabletSS {
-          color: $primaryColor;
-        }
-      }
-      @include tabletSS {
-        background-color: $secondaryColor;
         color: $primaryColor;
       }
+      background-color: $secondaryColor;
+      color: $primaryColor;
     }
   }
   label.icon {

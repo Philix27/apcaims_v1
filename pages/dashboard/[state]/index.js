@@ -96,149 +96,153 @@ export default function Dashboard({ agentsList, stateValue }) {
   });
 
   return (
-    <div className="dasboardWrapper">
-      <Head>
-        <title>{userState} | ADMIN</title>
-      </Head>
-      {/* <Sidebar /> */}
+    <div className="section">
+      <div className="dasboardWrapper">
+        <Head>
+          <title>{userState} | ADMIN</title>
+        </Head>
+        {/* <Sidebar /> */}
 
-      <div className="spacer"></div>
-      <div className="headingSection">
-        <h1>{userState} State Dashboard</h1>
-      </div>
-      <div className="dashboard">
-        <Link passHref href="/agents/add">
-          {/* <Link passHref href="/noreg"> */}
-          <div className="topCard colorx">
-            <h1>
-              <MdPersonAddAlt1 />
-            </h1>
-
-            <span className="smallName">Add an agent to your state</span>
-          </div>
-        </Link>
-
-        <Link passHref href={`/lga/${userState}`}>
-          <div className="topCard orange">
-            <h1>{getAllLga[0].lga.length}</h1>
-            <span className="smallName">Local Government Areas</span>
-          </div>
-        </Link>
-        <Link passHref href={`/wards/${userState}`}>
-          <div className="topCard pink">
-            <h1>{getAllWards()}</h1>
-            <h1>Wards</h1>
-            {/* <h1>{getAllLga[0].lga.length}</h1> */}
-            {/* <span className="smallName">Wards</span> */}
-          </div>
-        </Link>
-
-        <Link passHref href={`/state/${userState}`}>
-          {/* <Link href={`#`}> */}
-          <div className="topCard primary">
-            <span className="icons">
-              <MdGroups size={30} />
-            </span>
-            <h1>{utils.numberWithCommas(agentsList.data.length)}</h1>
-            <span className="smallName">Agents</span>
-          </div>
-        </Link>
-        <Link passHref href={`/summary/${userState}`}>
-          <div className="topCard teal">
-            <h1>
-              <GoGraph />
-            </h1>
-            {/* <h1>SUMMARY</h1> */}
-            <span className="smallName">Summary</span>
-          </div>
-        </Link>
-      </div>
-
-      <div className="headingSection">
-        <h1>Election Types</h1>
-      </div>
-      <div className="dashboard">
-        <Link passHref href="#">
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>PRESIDENTIAL</h3>
-              <p>
-                {utils.numberWithCommas(filterElectionTypes("PRESIDENTIAL"))}
-                <span className="smallName">Agents</span>
-              </p>
-            </div>
-          </div>
-        </Link>
-        <Link passHref href="#">
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>SENATORIAL</h3>
-              <p>
-                {utils.numberWithCommas(filterElectionTypes("SENATORIAL"))}
-                <span className="smallName">Agents</span>
-              </p>
-            </div>
-          </div>
-        </Link>
-        <Link passHref href="#">
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>STATE HOUSE OF ASSEMBLY</h3>
-              <p>
-                {utils.numberWithCommas(
-                  filterElectionTypes("STATE HOUSE OF ASSEMBLY")
-                )}
-                <span className="smallName">Agents</span>
-              </p>
-            </div>
-          </div>
-        </Link>
-        <Link passHref href="#">
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>HOUSE OF REPS.</h3>
-              <p>
-                {utils.numberWithCommas(filterElectionTypes("HOUSE OF REPS."))}
-                <span className="smallName">Agents</span>
-              </p>
-            </div>
-          </div>
-        </Link>
-        <Link passHref href="#">
-          <div className="card">
-            <div className="topbar teal"></div>
-            <div className="content">
-              <h3>GUBERNATORIAL</h3>
-              <p>
-                {utils.numberWithCommas(filterElectionTypes("GUBERNATORIAL"))}
-                <span className="smallName">Agents</span>
-              </p>
-            </div>
-          </div>
-        </Link>
-      </div>
-      {user.userType == "ADMIN" && (
+        <div className="spacer"></div>
         <div className="headingSection">
-          <h1>ADMIN</h1>
+          <h1>{userState} State Dashboard</h1>
         </div>
-      )}
-      {user.userType == "ADMIN" && (
         <div className="dashboard">
-          <Link passHref href="/admin">
+          <Link passHref href="/agents/add">
+            {/* <Link passHref href="/noreg"> */}
+            <div className="topCard colorx">
+              <h1>
+                <MdPersonAddAlt1 />
+              </h1>
+
+              <span className="smallName">Add an agent to your state</span>
+            </div>
+          </Link>
+
+          <Link passHref href={`/lga/${userState}`}>
+            <div className="topCard orange">
+              <h1>{getAllLga[0].lga.length}</h1>
+              <span className="smallName">Local Government Areas</span>
+            </div>
+          </Link>
+          <Link passHref href={`/wards/${userState}`}>
+            <div className="topCard pink">
+              <h1>{getAllWards()}</h1>
+              <h1>Wards</h1>
+              {/* <h1>{getAllLga[0].lga.length}</h1> */}
+              {/* <span className="smallName">Wards</span> */}
+            </div>
+          </Link>
+
+          <Link passHref href={`/state/${userState}`}>
+            {/* <Link href={`#`}> */}
+            <div className="topCard primary">
+              <span className="icons">
+                <MdGroups size={30} />
+              </span>
+              <h1>{utils.numberWithCommas(agentsList.data.length)}</h1>
+              <span className="smallName">Agents</span>
+            </div>
+          </Link>
+          <Link passHref href={`/summary/${userState}`}>
+            <div className="topCard teal">
+              <h1>
+                <GoGraph />
+              </h1>
+              {/* <h1>SUMMARY</h1> */}
+              <span className="smallName">Summary</span>
+            </div>
+          </Link>
+        </div>
+
+        <div className="headingSection">
+          <h1>Election Types</h1>
+        </div>
+        <div className="dashboard">
+          <Link passHref href="#">
             <div className="card">
               <div className="topbar teal"></div>
               <div className="content">
-                <h3>All States Data</h3>
-                <p>States Info</p>
+                <h3>PRESIDENTIAL</h3>
+                <p>
+                  {utils.numberWithCommas(filterElectionTypes("PRESIDENTIAL"))}
+                  <span className="smallName">Agents</span>
+                </p>
+              </div>
+            </div>
+          </Link>
+          <Link passHref href="#">
+            <div className="card">
+              <div className="topbar teal"></div>
+              <div className="content">
+                <h3>SENATORIAL</h3>
+                <p>
+                  {utils.numberWithCommas(filterElectionTypes("SENATORIAL"))}
+                  <span className="smallName">Agents</span>
+                </p>
+              </div>
+            </div>
+          </Link>
+          <Link passHref href="#">
+            <div className="card">
+              <div className="topbar teal"></div>
+              <div className="content">
+                <h3>STATE HOUSE OF ASSEMBLY</h3>
+                <p>
+                  {utils.numberWithCommas(
+                    filterElectionTypes("STATE HOUSE OF ASSEMBLY")
+                  )}
+                  <span className="smallName">Agents</span>
+                </p>
+              </div>
+            </div>
+          </Link>
+          <Link passHref href="#">
+            <div className="card">
+              <div className="topbar teal"></div>
+              <div className="content">
+                <h3>HOUSE OF REPS.</h3>
+                <p>
+                  {utils.numberWithCommas(
+                    filterElectionTypes("HOUSE OF REPS.")
+                  )}
+                  <span className="smallName">Agents</span>
+                </p>
+              </div>
+            </div>
+          </Link>
+          <Link passHref href="#">
+            <div className="card">
+              <div className="topbar teal"></div>
+              <div className="content">
+                <h3>GUBERNATORIAL</h3>
+                <p>
+                  {utils.numberWithCommas(filterElectionTypes("GUBERNATORIAL"))}
+                  <span className="smallName">Agents</span>
+                </p>
               </div>
             </div>
           </Link>
         </div>
-      )}
+        {user.userType == "ADMIN" && (
+          <div className="headingSection">
+            <h1>ADMIN</h1>
+          </div>
+        )}
+        {user.userType == "ADMIN" && (
+          <div className="dashboard">
+            <Link passHref href="/admin">
+              <div className="card">
+                <div className="topbar teal"></div>
+                <div className="content">
+                  <h3>All States Data</h3>
+                  <p>States Info</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

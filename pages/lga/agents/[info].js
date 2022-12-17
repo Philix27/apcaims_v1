@@ -32,42 +32,38 @@ export default function LGAPage({ info, agentsList }) {
   // console.log(router.query);
 
   return (
-    <div className="lgaWrapper">
-      <div className="comp">
-        <Head>
-          <title>APCAIMS | {info.lga} | INFO</title>
-        </Head>
-        <div className="section">
-          <h4>State | LGA | Election Type | Agent Type</h4>
-          <h2>
-            {info.state} | {info.lga} | {info.electionType} | {info.agentType}
-          </h2>
-          <div className="agentslist">
-            <div className="tableSection">
-              <table>
-                <thead>
-                  <tr>
-                    <th>No</th>
-                    <th>Name</th>
-                    <th>Agent Type</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {agentsList.data.map((agent, index) => {
-                    const namer = `${agent.lastName} ${agent.firstName}`;
-                    return (
-                      <tr key={index}>
-                        <td>{index + 1}.</td>
-                        <td>{namer.toUpperCase()}</td>
-                        <td>{agent.agentType}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+    <div className="section">
+      <Head>
+        <title>APCAIMS | {info.lga} | INFO</title>
+      </Head>
+
+      <h4>State | LGA | Election Type | Agent Type</h4>
+      <h2>
+        {info.state} | {info.lga} | {info.electionType} | {info.agentType}
+      </h2>
+
+      <div className="tableSection">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Name</th>
+              <th>Agent Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            {agentsList.data.map((agent, index) => {
+              const namer = `${agent.lastName} ${agent.firstName}`;
+              return (
+                <tr key={index}>
+                  <td>{index + 1}.</td>
+                  <td>{namer.toUpperCase()}</td>
+                  <td>{agent.agentType}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );

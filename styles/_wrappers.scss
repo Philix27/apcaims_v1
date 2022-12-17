@@ -12,23 +12,26 @@
 
 .lgaWrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
 
   .comp {
-    padding-left: 20vw;
     @include tabletSS {
-      padding: 0;
-      margin: 0;
+      padding: 10px;
+      margin: 10px;
+      width: 100%;
     }
   }
 }
 
 .agentsWrapper {
   display: flex;
-  flex-direction: row;
-
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
   .comp {
-    padding-left: 20vw;
+    // padding-left: 20vw;
     @include mobileSS {
       padding-left: 0;
     }

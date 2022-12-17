@@ -1,15 +1,8 @@
 .tableSection {
-  //   min-width: 100%;
   margin: 0 auto;
-
-  .deleted {
-    position: fixed;
-    top: 30px;
-    padding: 15px 20px;
-    background-color: $primaryColor;
-    color: #fff;
-    font-weight: 600;
-  }
+  display: flex;
+  width: 100%;
+  flex-direction: column;
   table {
     min-width: 70vw;
     border-collapse: collapse;

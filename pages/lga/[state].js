@@ -32,13 +32,11 @@ export default function LGAPage({ agentsList }) {
   }
 
   return (
-    <div className="lgaWrapper">
-      <div className="comp">
-        <Head>
-          <title>APCAIMS | LGA</title>
-        </Head>
-        <LGAs userState={userState} agentsList={agentsList.data} />
-      </div>
+    <div className="section">
+      <Head>
+        <title>APCAIMS | LGA</title>
+      </Head>
+      <LGAs userState={userState} agentsList={agentsList.data} />
     </div>
   );
 }
