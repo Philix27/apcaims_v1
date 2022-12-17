@@ -2,7 +2,11 @@ import { Schema, model, models } from "mongoose";
 
 const AgentSchema = new Schema({
   //! First Set
-  name: {
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
     type: String,
     required: true,
   },
@@ -30,6 +34,13 @@ const AgentSchema = new Schema({
     type: String,
     required: true,
   },
+  gender: {
+    type: String,
+  },
+  dateOfBirth: {
+    type: String,
+    // required: true,
+  },
   //! Second Set
   electionType: {
     type: String,
@@ -40,9 +51,13 @@ const AgentSchema = new Schema({
     type: String,
     required: true,
   },
-  image: {
+  pollingUnit: {
     type: String,
     required: true,
+  },
+  image: {
+    type: String,
+    // required: true,
   },
   bankName: {
     type: String,
@@ -52,8 +67,42 @@ const AgentSchema = new Schema({
     type: String,
     required: true,
   },
+  nin: {
+    type: String,
+    // required: true,
+  },
   status: {
     type: String,
+  },
+  //! Others
+  isApproved: {
+    type: Boolean,
+    default: false,
+    // required: true,
+  },
+  registrationDate: {
+    type: Date,
+    // required: true,
+  },
+  transactionRef: {
+    type: String,
+    // required: true,
+  },
+  sponsorID: {
+    type: String,
+    // required: true,
+  },
+  isAgent: {
+    type: Boolean,
+    default: false,
+  },
+  sponsored: {
+    type: Boolean,
+  },
+  sponsorCode: {
+    type: String,
+
+    // required: true,
   },
 });
 

@@ -10,16 +10,11 @@ export default async function handler(req, res) {
     case "GET": {
       return getAll(db, req, res);
     }
-    // case "POST": {
-    //   return addPost(req, res);
-    // }
-
-    // case "PUT": {
-    //   return updatePost(req, res);
-    // }
-
-    // case "DELETE": {
-    //   return deletePost(req, res);
-    // }
+    case "DELETE": {
+      const { id: id } = req.query;
+      // const data = await db.collection("agents").remove({ _id: id });
+      const data = await db.collection("agents").remove({ _id: ObjectId(id) });
+      return res.status(200).json({ msg: "deleted successfully" });
+    }
   }
 }

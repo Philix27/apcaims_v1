@@ -40,29 +40,3 @@ export async function connectToDatabase() {
   cached.conn = await cached.promise;
   return cached.conn;
 }
-
-//! Newer Version
-
-// let client;
-// let clientPromise;
-
-// if (process.env.NODE_ENV === "development") {
-//   console.log("Development Mode");
-
-//   if (!global._mongoClientPromise) {
-//     client = new MongoClient(uri, options);
-//     console.log("Connected inDevelopment Mode");
-//     global._mongoClientPromise = client.connect();
-//   }
-//   clientPromise = global._mongoClientPromise;
-// } else {
-//   console.log("Productions Mode");
-//   client = new MongoClient(uri, options);
-//   clientPromise = client.connect();
-// }
-
-// Export a module-scoped MongoClient promise. By doing this in a
-//
-// separate module, the client can be shared across functions.
-
-// export default clientPromise;

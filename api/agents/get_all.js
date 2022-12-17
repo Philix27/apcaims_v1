@@ -11,14 +11,13 @@ export const getAll = async (db, req, res) => {
             lastName: 1,
             lga: 1,
             electionType: 1,
-            // agentType: 1,
             _id: 0,
           },
         }
       )
       // .limit(10)
       .toArray();
-    res.status(200).json({ data: data });
+    res.status(200).json({ data: data, length: data.length });
   } catch (e) {
     console.log(e);
     console.log("Oops an error occured");

@@ -18,17 +18,6 @@ export default async function handler(req, res) {
             },
           },
         ])
-        // .find(
-        //   {},
-        //   {
-        //     projection: {
-        //       state: 1,
-        //       _id: 0,
-        //     },
-        //   }
-        // )
-
-        // .limit(30)
         .toArray();
       res.status(200).json({ length: data.length, data: data });
     } catch (e) {

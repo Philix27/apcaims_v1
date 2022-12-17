@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { data } from "../../constants/states/index";
 import axios from "axios";
+import Link from "next/link";
 
 export default function Wards({ agentsList }) {
   const router = useRouter();
@@ -28,10 +29,17 @@ export default function Wards({ agentsList }) {
                 </div>
                 <div className="moreInfo">
                   {lga.wards.map((ward, wardInex) => (
-                    <div className="moreInfoList" key={wardInex}>
-                      <p>{ward}</p>
-                      <p>{getWardsCount(lga.name, ward)}</p>
-                    </div>
+                    <Link
+                      key={wardInex}
+                      href={`/wards/agents/${state.state}_${lga.name}_${ward}`}
+                    >
+                      <a>
+                        <div className="moreInfoList">
+                          <p>{ward}</p>
+                          <p>{getWardsCount(lga.name, ward)}</p>
+                        </div>
+                      </a>
+                    </Link>
                   ))}
                 </div>
               </div>

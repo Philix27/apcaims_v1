@@ -63,6 +63,10 @@
       border-bottom: 1px solid rgba(162, 161, 161, 0.513);
       padding-bottom: 2px;
       cursor: pointer;
+      &:hover {
+        background-color: $primaryColor;
+        color: #fff;
+      }
     }
   }
   .totalTile {
