@@ -3,10 +3,7 @@ import { ref, deleteObject } from "firebase/storage";
 import axios from "axios";
 // import Agent from "../types/agent"
 
-export default async function deleteAgent(
-  agentID: string,
-  imgUrl: string
-): Promise<void> {
+export default async function deleteAgent(agentID, imgUrl) {
   const desertRef = ref(storage, imgUrl);
 
   await deleteObject(desertRef)
@@ -22,4 +19,4 @@ export default async function deleteAgent(
     });
 }
 
-async function updateAgentInfo(agent: Agent): Promise<void> {}
+// async function updateAgentInfo(agent: Agent): Promise<void> {}

@@ -67,8 +67,8 @@ export default function Sidebar() {
               </li>
             </a>
             {!user && (
-              <a className="link" href="/agents/add">
-                {/* <a className="link" href="/noreg"> */}
+              // <a className="link" href="/agents/add">
+              <a className="link" href="/noreg">
                 <li
                   className={
                     // _path == "/agents/add"

@@ -55,8 +55,8 @@ export default function Navbar() {
               onClick={() => setShowNav(!showNav)}
               className={_path == "/agents/add" ? "active" : ""}
             >
-              <Link href="/agents/add">
-                {/* <Link href="/noreg"> */}
+              {/* <Link href="/agents/add"> */}
+              <Link href="/noreg">
                 <a className="link">Add Agent</a>
               </Link>
             </li>

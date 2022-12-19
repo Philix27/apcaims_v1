@@ -7,7 +7,7 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <h2>Sorry, registration has been closed temporarily.</h2>
+        <h2>Sorry, we are having some downtime.</h2>
       </div>
     </div>
   );

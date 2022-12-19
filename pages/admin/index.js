@@ -55,7 +55,6 @@ export default function Dashboard({ statesCount }) {
       <Head>
         <title>{userState} | ADMIN</title>
       </Head>
-      <div className="spacer"></div>
 
       <div className="headingSection">
         <h1>All States</h1>
@@ -67,6 +66,7 @@ export default function Dashboard({ statesCount }) {
           chartType="BAR"
         />
       </div>
+
       <div className="dashboard">
         {data.states.map((val, i) => (
           <Link passHref href={`/dashboard/${val.state}`} key={i}>

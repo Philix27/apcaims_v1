@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { AiFillDelete } from "react-icons/ai";
 import { FaUserEdit } from "react-icons/fa";
+import deleteAgent from "../../../functions/deleteagent";
 
 export default function LGAPage({ info, agentsList }) {
   const router = useRouter();
@@ -66,14 +67,17 @@ export default function LGAPage({ info, agentsList }) {
                         <td>{namer.toUpperCase()}</td>
                         <td>{agent.agentType}</td>
                         <td>
-                          <Link href="/agents/edit">
+                          <Link href={`/agents/edit/${agent._id}`}>
                             <a>
                               <FaUserEdit className="icon" />
                             </a>
                           </Link>
                         </td>
                         <td>
-                          <AiFillDelete className="icon delete" />
+                          <AiFillDelete
+                            className="icon delete"
+                            // onClick={() => deleteAgent(agent._id, agent.image)}
+                          />
                         </td>
                       </tr>
                     );

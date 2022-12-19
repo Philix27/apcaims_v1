@@ -1,4 +1,9 @@
 .adminWrapper {
+  width: 80%;
+  margin: 0 auto;
+  @include tabletSS {
+    width: 100%;
+  }
   .spacer {
     display: none;
     @include tabletSS {
@@ -8,15 +13,11 @@
   }
   .charter {
     background-color: #0b1c31;
-    // margin: 10px auto;
-
-    // margin-left: 20vw;
     height: 80vh;
   }
 
   .dashboard {
     display: grid;
-    padding-left: 22vw;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     padding-top: 10px;
@@ -28,7 +29,6 @@
     }
     @include mobileSS {
       grid-template-columns: repeat(1, 1fr);
-      // padding: 80px 20px;
     }
 
     .repad {
@@ -108,12 +108,8 @@
     }
   }
   .headingSection {
-    margin-left: 22vw;
-    padding: 20px;
-    @include tabletSS {
-      margin-left: 0;
-      padding: 0 20px;
-    }
+    padding-top: 60px;
+    padding-left: 40px;
   }
   .smallName {
     padding-left: 5px;

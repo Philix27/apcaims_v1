@@ -16,6 +16,7 @@ export default async function handler(req, res) {
               electionType: 1,
               firstName: 1,
               lastName: 1,
+              lastName: 1,
               _id: 1,
               lga: 1,
             },
