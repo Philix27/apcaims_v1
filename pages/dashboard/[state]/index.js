@@ -108,8 +108,8 @@ export default function Dashboard({ agentsList, stateValue }) {
           <h1>{userState} State Dashboard</h1>
         </div>
         <div className="dashboard">
-          <Link passHref href="/agents/add">
-            {/* <Link passHref href="/noreg"> */}
+          {/* <Link passHref href="/agents/add"> */}
+          <Link passHref href="/noreg">
             <div className="topCard colorx">
               <h1>
                 <MdPersonAddAlt1 />
