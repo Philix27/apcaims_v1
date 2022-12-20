@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { usePaystackPayment } from "react-paystack";
-import axios from "axios";
+// import { usePaystackPayment } from "react-paystack";
 import { ListOfRefCodes } from "../../constants/refcode";
 export default function Form6({
   agent,
@@ -33,24 +32,28 @@ export default function Form6({
     lastname: agent.lastName,
     metadata: agent,
   };
-  const initializePayment = usePaystackPayment(config);
+  // const initializePayment = usePaystackPayment(config);
 
-  const handlePayment = () => {
-    const onSuccess = (reference) => {
-      console.log("OnSucess");
-      setAgent({ ...agent, isApproved: true, transactionRef: reference });
-      // agent.transactionRef = reference;
-      // agent.isApproved = true;
-      setStepIndex(6);
-      uploadImageToFb();
-    };
+  // const handlePayment = () => {
+  //   const onSuccess = (reference) => {
+  //     console.log("OnSucess");
+  //     setAgent({ ...agent, isApproved: true, transactionRef: reference });
+  //     // agent.transactionRef = reference;
+  //     // agent.isApproved = true;
+  //     setStepIndex(6);
+  //     uploadImageToFb();
+  //   };
 
-    const onClose = () => {
-      // console.log("closed");
-    };
+  //   const onClose = () => {
+  //     // console.log("closed");
+  //   };
 
-    initializePayment(onSuccess, onClose);
-  };
+  //   try {
+  //     initializePayment(onSuccess, onClose);
+  //   } catch (e) {
+  //     console.log("Initails Loading");
+  //   }
+  // };
 
   const sendWithoutPay = () => {
     const _reference = new Date();
