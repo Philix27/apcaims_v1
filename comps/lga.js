@@ -2,15 +2,13 @@ import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { TiEdit } from "react-icons/ti";
 import { useState } from "react";
-import Axios from "axios";
 import { useRouter } from "next/router";
-// import { lgas } from "../../constants/lga";
 import { data } from "../constants/states/index";
 import { utils } from "../utils";
 import Link from "next/link";
 
 export default function LGAs({ userState, agentsList }) {
-  const [agts, setAgents] = useState(agentsList);
+  // const [agts, setAgents] = useState(agentsList);
   const [selectedElectionType, setElectionType] = useState("PRESIDENTIAL");
   const selectedLg = data.states.filter((val) =>
     val.state.toLowerCase().includes(userState.toLowerCase())
