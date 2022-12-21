@@ -8,7 +8,6 @@ import { utils } from "../../../utils";
 import { MdPersonAddAlt1, MdGroups } from "react-icons/md";
 import { GoGraph } from "react-icons/go";
 import { bgColors } from "../../../constants/chartColors";
-import Sidebar from "../../../comps/global/sidebar";
 
 export default function Dashboard({ agentsList, stateValue }) {
   const router = useRouter();
@@ -101,8 +100,6 @@ export default function Dashboard({ agentsList, stateValue }) {
         <Head>
           <title>{userState} | ADMIN</title>
         </Head>
-        {/* <Sidebar /> */}
-
         <div className="spacer"></div>
         <div className="headingSection">
           <h1>{userState} State Dashboard</h1>
@@ -129,13 +126,10 @@ export default function Dashboard({ agentsList, stateValue }) {
             <div className="topCard pink">
               <h1>{getAllWards()}</h1>
               <h1>Wards</h1>
-              {/* <h1>{getAllLga[0].lga.length}</h1> */}
-              {/* <span className="smallName">Wards</span> */}
             </div>
           </Link>
 
           <Link passHref href={`/state/${userState}`}>
-            {/* <Link href={`#`}> */}
             <div className="topCard primary">
               <span className="icons">
                 <MdGroups size={30} />
@@ -149,7 +143,6 @@ export default function Dashboard({ agentsList, stateValue }) {
               <h1>
                 <GoGraph />
               </h1>
-              {/* <h1>SUMMARY</h1> */}
               <span className="smallName">Summary</span>
             </div>
           </Link>
