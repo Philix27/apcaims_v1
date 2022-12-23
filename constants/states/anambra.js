@@ -75,6 +75,7 @@ const states = {
     },
     {
       wards: [
+        "ADAZI ANI I",
         "ADAZI ANI II",
         "ADAZI ENU I",
         "ADAZI ENU II",
@@ -394,6 +395,7 @@ const states = {
         "OGBUNKA II",
         "OWERRE-EZUKALA I",
         "OWERRE-EZUKALA II",
+        "UMUCHUKWU",
         "UMUNZE I",
         "UMUNZE II",
         "UMUNZE III",
