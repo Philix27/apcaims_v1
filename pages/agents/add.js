@@ -150,7 +150,7 @@ export default function AddAgentsPage() {
     } else if (name == "image") {
       const _file = e.target.files[0];
       if (_file) {
-        if (_file.size < 2000000) {
+        if (_file.size < 500000) {
           // setTempImage()
           setProfileImage(_file);
           handleConversion(_file);
@@ -159,7 +159,7 @@ export default function AddAgentsPage() {
           // value = null;
           setProfileImage(null);
           console.log(_file);
-          alert("Image is above 1MB");
+          alert("Image is above 500kb");
         }
       } else {
         console.log("no file yet");

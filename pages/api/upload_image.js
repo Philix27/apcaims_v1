@@ -26,7 +26,7 @@ const s3 = new S3({
 export default async function handler(req, res) {
   const ex = req.query.fileType.toString().split("/")[1];
   const KEY = `${randomUUID()}`;
-  console.log("API reached");
+  // console.log("API reached");
 
   console.log(KEY);
 
@@ -37,7 +37,10 @@ export default async function handler(req, res) {
     ContentType: `image/${ex}`,
   };
   const uploadUrl = await s3.getSignedUrl("putObject", s3Params);
-  console.log(uploadUrl);
+  // console.log(uploadUrl);
 
+  // GetObjectCommand(bucketParams);
+  // Convert the ReadableStream to a string.
+  // return await data.Body.transformToString();
   res.status(200).json({ uploadUrl, KEY });
 }

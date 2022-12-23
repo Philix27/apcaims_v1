@@ -1,6 +1,7 @@
 import asyncWrapper from "../asyncWrapper";
 import Agents from "../models/agent";
 import customError from "../customErrors";
+import multer from "multer";
 
 const getAll = asyncWrapper(async (req, res, next) => {
   const data = await Agents.find().sort("name");
@@ -9,6 +10,14 @@ const getAll = asyncWrapper(async (req, res, next) => {
 
 const create = asyncWrapper(async (req, res) => {
   const data = await Agents.create(req.body);
+  const Storage = multer.diskStorage({
+    destination: "uploads",
+    filename: (req, file, cb) => {
+      cb(null, file.originalname);
+    },
+  });
+
+  const upload = multer({ storage: Storage }).single("Tesing image");
   res.status(201).json(req.body);
 });
 
