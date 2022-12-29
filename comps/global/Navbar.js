@@ -50,6 +50,14 @@ export default function Navbar() {
               <a className="link">Home</a>
             </Link>
           </li>
+          <li
+            className={_path == "/verify" ? "active" : ""}
+            onClick={() => setShowNav(!showNav)}
+          >
+            <Link href="/verify">
+              <a className="link">Verify</a>
+            </Link>
+          </li>
           {/* {!user && (
             <li
               onClick={() => setShowNav(!showNav)}
@@ -83,10 +91,10 @@ export default function Navbar() {
           {user && (
             <li
               onClick={() => setShowNav(!showNav)}
-              className={_path == "/dashboard" ? "active" : ""}
+              className={_path == `/dashboard/${user.name}` ? "active" : ""}
             >
               <Link href={`/dashboard/${user.name}`}>
-                <a className="link">{user.name}</a>
+                <a className="link">dashboard</a>
               </Link>
             </li>
           )}

@@ -7,6 +7,9 @@
   padding-bottom: 20px;
   margin: 0 auto;
   bottom: 0;
+  @media print {
+    display: none;
+  }
   @include tabletSS {
     padding: 25px 25px;
   }

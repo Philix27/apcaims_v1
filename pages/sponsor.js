@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import axios from "axios";
 import { usePaystackPayment } from "react-paystack";
-import { async } from "@firebase/util";
 import { ListOfRefCodes } from "../constants/refcode";
 import { utils } from "../utils";
 // import ListOfRefCodes from "../constants/refcode";

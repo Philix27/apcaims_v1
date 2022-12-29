@@ -35,13 +35,11 @@ export default function SummaryPage({ agentsList }) {
   });
 
   return (
-    <div className="section">
-      <Chart
-        chartdata={userData}
-        title="Agents in the various LGAs"
-        chartType="DOUGHNUT"
-      />
-    </div>
+    <Chart
+      chartdata={userData}
+      title="Agents in the various LGAs"
+      chartType="DOUGHNUT"
+    />
   );
 }
 

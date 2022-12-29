@@ -8,7 +8,7 @@ export const H1 = ({ title, color, bold }) => {
 
 const Style = styled.h1`
   font-size: 2rem;
-  font-weight: ${({ bold }) => (bold ? 800 : 300)};
+  font-weight: 300;
   color: ${({ color }) => (color ? color : darkFontColor)};
 `;
 

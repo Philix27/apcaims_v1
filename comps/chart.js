@@ -25,6 +25,7 @@ export default function Chart({ chartdata, title, chartType }) {
   return (
     <div className="section">
       <Bar data={chartdata} options={options} />
+      {/* <Doughnut className="chart" data={chartdata} options={options} /> */}
       {/* {chartType == "DOUGHNUT" && (
         <Doughnut className="chart" data={chartdata} options={options} />
       )}

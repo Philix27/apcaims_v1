@@ -1,16 +1,40 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import React, { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
-import { AiFillEye } from "react-icons/ai";
-import { Button } from "../_styles/btn";
 import { H1 } from "../_styles/H1";
+import { Landing } from "../comps/global/Landing";
+import {
+  home,
+  gridContainer,
+  card,
+  img,
+  description,
+} from "../styles/home.module.scss";
 
+const listic = [
+  {
+    id: "e3",
+    title: "Manage Agents",
+    image: "/images/bg.jpg",
+    desc: "View the status of all your agents accross the various wards and polling unit.",
+  },
+  {
+    id: "33",
+    title: "Analytics",
+    image: "/images/lac.jpg",
+    desc: "Helping you make better and informed decision.",
+  },
+  {
+    title: "Add Agents",
+    image: "/images/organise.jpg",
+    id: "r3",
+    desc: "Support your party by becoming an agent.",
+  },
+];
 export default function Home() {
   const [agentList, setAgentList] = useState([]);
   const [searchValue, setSearchValue] = useState();
   const [agentMsg, setAgentMsg] = useState("Search for an agent");
-  const [notAgent, setNotAgent] = useState(true);
 
   const handleSubmit = async (e) => {
     console.log("Submitted");
@@ -46,59 +70,30 @@ export default function Home() {
   };
 
   return (
-    <div className="verifyPage">
+    <div className={home}>
+      <Landing
+        title="APCAIMS"
+        imgUrl="images/bg.jpg"
+        subtitle="APC Agents Manager "
+        opacity={0.55}
+      />
       <div className="section ">
-        <div className="note">
-          {/* <H1
-            title="Registration ends on the 31st of December, 2022."
-            bold={true}
-          /> */}
-        </div>
+        <H1 title="Registration ends on the 31st of December, 2022." />
+        <Link href="/verify">
+          <div className="btn">Print your form</div>
+        </Link>
+      </div>
 
-        <div className="form">
-          <div className="input_box">
-            <input
-              type="text"
-              id="form-email"
-              placeholder=" Enter your NIN to verify"
-              name="searchTerm"
-              onChange={handleChange}
-            />
-          </div>
-          <div className="buttons">
-            <input
-              type="submit"
-              value="Search"
-              onClick={handleSubmit}
-              className="btn"
-            />
-          </div>
-        </div>
-        {agentList.map((gh, index) => {
-          const namer = `${gh.lastName} ${gh.firstName}`;
-          return (
-            <div className="agentCard" key={index}>
-              {/* <Image src={gh.image} height={50} width={50} /> */}
-              <div className="content">
-                <img
-                  src={gh.image}
-                  width={100}
-                  height={100}
-                  alt="profile image"
-                />
-                <div className="text">
-                  <h3>{namer.toUpperCase()}</h3>
-                  <h5>{gh.email}</h5>
-                </div>
-              </div>
-              <Link passHref href={`/agents/${gh._id}`} className="link">
-                <div className="iconButton">
-                  <AiFillEye size={25} />
-                </div>
-              </Link>
+      <div className={gridContainer}>
+        {listic.map(({ title, image, id, desc }) => (
+          <div key={id} className={card}>
+            <img className={img} src={image} />
+            <div className={description}>
+              <h3>{title}</h3>
+              <p>{desc}</p>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );
