@@ -44,7 +44,9 @@ export default function Home({ content }) {
         setUserLoggedIn(true);
         localStorage.setItem("user", JSON.stringify(userLoggedIn[0]));
 
-        router.push(`/`);
+        router.push(`/`).then(() => {
+          router.reload(window.location.pathname);
+        });
         // router.push(`/dashboard/${userLoggedIn[0].name}`);
         // router.reload(window.location.pathname);
         console.log("Logged in successfully");
