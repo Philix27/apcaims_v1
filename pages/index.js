@@ -46,7 +46,9 @@ export default function Home() {
   return (
     <div className="verifyPage">
       <div className="section ">
-        {/* <h2> Verify Your Agent Status</h2> */}
+        <div className="note">
+          <h2> Registration ends on the 31st of December, 2022.</h2>
+        </div>
         <div className="form">
           <div className="input_box">
             <input
