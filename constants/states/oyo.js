@@ -1,7 +1,7 @@
 const SR = {
   name: "OYO",
   email: "Oyo@apcaims.com",
-  password: "mfj04",
+  password: "oyo_apc_@3i",
   phone: "08108850572",
   statecode: "OYO",
   img: "images/profile2.jpg",
@@ -143,9 +143,9 @@ const states = {
     },
     {
       wards: [
-         "WARD 10 NW7",
-         "WARD 11 NW7",
-         "WARD 2 NI (PART II)",
+        "WARD 10 NW7",
+        "WARD 11 NW7",
+        "WARD 2 NI (PART II)",
         "WARD 3 NW1",
         "WARD 4 NW2",
         "WARD 5 NW3 (PART I)",

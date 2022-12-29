@@ -1,7 +1,7 @@
 const SR = {
   name: "TARABA",
   email: "Taraba@apcaims.com",
-  password: "mhr20",
+  password: "taraba_apc_q99",
   phone: "08108850572",
   statecode: "TARABA",
   img: "images/profile2.jpg",
@@ -210,7 +210,7 @@ const states = {
         "RUFU",
         "DIKA",
         "JENUWA",
-        "KWAMBIA"
+        "KWAMBIA",
       ],
       name: "USSA",
     },

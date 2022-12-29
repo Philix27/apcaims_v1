@@ -1,7 +1,7 @@
 const SR = {
   name: "YOBE",
   email: "Yobe@apcaims.com",
-  password: "axd96",
+  password: "yobe_apc_4eP",
   phone: "08108850572",
   statecode: "YOBE",
   img: "images/profile2.jpg",
@@ -257,11 +257,8 @@ const states = {
         "NGIRABO",
         "WADI/KAFIYA",
         "ZAJIBIRI / DUMBAL",
-
-       ],
-        name: "YUNUSARI"
-
-
+      ],
+      name: "YUNUSARI",
     },
     {
       wards: [

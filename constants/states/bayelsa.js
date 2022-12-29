@@ -1,7 +1,7 @@
 const SR = {
   name: "BAYELSA",
   email: "Bayelsa@apcaims.com",
-  password: "eio04",
+  password: "bayelsa_apc_003",
   phone: "08108850572",
   statecode: "BAYELSA",
   img: "images/profile2.jpg",
@@ -9,10 +9,10 @@ const SR = {
 };
 
 export const states = {
-    state: "BAYELSA",
-    lga: [
-      {
-        wards: [
+  state: "BAYELSA",
+  lga: [
+    {
+      wards: [
         "BRASS I",
         "BRASS WARD II",
         "CAPE FARMOSA",

@@ -1,7 +1,7 @@
 const SR = {
   name: "BAUCHI",
   email: "Bauchi@apcaims.com",
-  password: "znp58",
+  password: "bauchi_apc_122",
   phone: "08108850572",
   statecode: "BAUCHI",
   img: "images/profile2.jpg",

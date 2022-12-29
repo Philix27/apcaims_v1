@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import axios from "axios";
 import { AiFillEye } from "react-icons/ai";
+import { Button } from "../_styles/btn";
+import { H1 } from "../_styles/H1";
 
 export default function Home() {
   const [agentList, setAgentList] = useState([]);
@@ -47,8 +49,13 @@ export default function Home() {
     <div className="verifyPage">
       <div className="section ">
         <div className="note">
-          <h2> Registration ends on the 31st of December, 2022.</h2>
+          {/* <h2> Registration ends on the 31st of December, 2022.</h2> */}
+          <H1
+            title="Registration ends on the 31st of December, 2022."
+            bold={true}
+          />
         </div>
+
         <div className="form">
           <div className="input_box">
             <input
