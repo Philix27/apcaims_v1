@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { fontColor, primaryColor } from "./colors";
+import { fontColor, primaryColor, darkFontColor } from "./colors";
 
 //! Heading 1
 export const H1 = ({ title, color, bold }) => {
@@ -9,7 +9,7 @@ export const H1 = ({ title, color, bold }) => {
 const Style = styled.h1`
   font-size: 2rem;
   font-weight: ${({ bold }) => (bold ? 800 : 300)};
-  color: ${({ color }) => (color ? color : fontColor)};
+  color: ${({ color }) => (color ? color : darkFontColor)};
 `;
 
 //! Heading 2

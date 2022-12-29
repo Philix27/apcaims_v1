@@ -49,11 +49,10 @@ export default function Home() {
     <div className="verifyPage">
       <div className="section ">
         <div className="note">
-          {/* <h2> Registration ends on the 31st of December, 2022.</h2> */}
-          <H1
+          {/* <H1
             title="Registration ends on the 31st of December, 2022."
             bold={true}
-          />
+          /> */}
         </div>
 
         <div className="form">
