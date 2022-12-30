@@ -25,10 +25,10 @@ const listic = [
     desc: "Helping you make better and informed decision.",
   },
   {
-    title: "Add Agents",
+    title: "Have all your agents data in one place",
     image: "/images/organise.jpg",
     id: "r3",
-    desc: "Support your party by becoming an agent.",
+    desc: "Always stay organised",
   },
 ];
 export default function Home() {

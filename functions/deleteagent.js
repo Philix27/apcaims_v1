@@ -19,4 +19,10 @@ export default async function deleteAgent(agentID, imgUrl) {
     });
 }
 
-// async function updateAgentInfo(agent: Agent): Promise<void> {}
+export async function updateAgentInfo(agent) {
+  axios
+    .patch(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`, agent)
+    .then((val) => {
+      console.log("Deleted Successfully");
+    });
+}

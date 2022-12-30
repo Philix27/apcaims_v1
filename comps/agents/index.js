@@ -6,6 +6,9 @@ import { Modal } from "../global/Modal";
 import AgentModalContent from "./modalContent";
 import Link from "next/link";
 import { list } from "firebase/storage";
+import { AiFillDelete } from "react-icons/ai";
+import { FaUserEdit } from "react-icons/fa";
+import deleteAgent from "../../functions/deleteagent";
 
 const electionTypes = [
   "ALL",
@@ -133,7 +136,8 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
               {/* <th>Img</th> */}
               <th>Name</th>
               <th>Agent Type</th>
-              {/* <th>Election Type</th> */}
+              <th>Edit</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -148,6 +152,19 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
                   <td>{namer.toUpperCase()}</td>
                   <td>{agent.agentType}</td>
                   {/* <td>{agent.electionType}</td> */}
+                  <td>
+                    <Link href={`/agents/edit/${agent._id}`}>
+                      <a>
+                        <FaUserEdit className="icon" />
+                      </a>
+                    </Link>
+                  </td>
+                  <td>
+                    <AiFillDelete
+                      className="icon delete"
+                      // onClick={() => deleteAgent(agent._id, agent.image)}
+                    />
+                  </td>
                 </tr>
               );
             })}
