@@ -54,8 +54,8 @@ export default function LGAPage({ info, agentsList }) {
                     <th>No</th>
                     <th>Name</th>
                     <th>Agent Type</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    {/* <th>Edit</th>
+                    <th>Delete</th> */}
                   </tr>
                 </thead>
                 <tbody>
@@ -66,7 +66,7 @@ export default function LGAPage({ info, agentsList }) {
                         <td>{index + 1}.</td>
                         <td>{namer.toUpperCase()}</td>
                         <td>{agent.agentType}</td>
-                        <td>
+                        {/* <td>
                           <Link href={`/agents/edit/${agent._id}`}>
                             <a>
                               <FaUserEdit className="icon" />
@@ -78,7 +78,7 @@ export default function LGAPage({ info, agentsList }) {
                             className="icon delete"
                             // onClick={() => deleteAgent(agent._id, agent.image)}
                           />
-                        </td>
+                        </td> */}
                       </tr>
                     );
                   })}

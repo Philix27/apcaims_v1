@@ -2,13 +2,14 @@ import React from "react";
 import { useState } from "react";
 import Axios from "axios";
 import { useRouter } from "next/router";
-import { Modal } from "../global/Modal";
-import AgentModalContent from "./modalContent";
+// import { Modal } from "../global/Modal";
+// import AgentModalContent from "./modalContent";
 import Link from "next/link";
-import { list } from "firebase/storage";
+// import { list } from "firebase/storage";
 import { AiFillDelete } from "react-icons/ai";
 import { FaUserEdit } from "react-icons/fa";
 import deleteAgent from "../../functions/deleteagent";
+import Pagination from "./pagination";
 
 const electionTypes = [
   "ALL",
@@ -19,8 +20,22 @@ const electionTypes = [
   "SENATORIAL",
 ];
 export default function AgentsComp({ agentsList, totalCount, length }) {
-  const [isSuccessful, setIsSuccessful] = useState(false);
+  //* pagination params
   const [agts, setAgents] = useState(agentsList);
+
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [agentsPerPage, setAgentsPerPage] = useState(50);
+
+  //* Get current agents
+  const indexOfLastAgent = currentPage * agentsPerPage;
+  const indexOfFirstAgent = indexOfLastAgent - agentsPerPage;
+  const currentAgents = agts.slice(indexOfFirstAgent, indexOfLastAgent);
+  // const currentAgents = agentsList.slice(1, 7);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const [isSuccessful, setIsSuccessful] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [clickedAgent, setClickedAgent] = useState({});
   const router = useRouter();
@@ -59,11 +74,6 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
       );
 
       setAgents(tempList);
-      // // tempList = [];
-      // console.log("After");
-      // console.log(agts);
-      // console.log("Temp List");
-      // console.log(tempList);
     }
   };
 
@@ -72,8 +82,6 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
       .then((response) => {
         setIsSuccessful(true);
         alert("Deleted Successfully");
-
-        // console.log("Successfully Deleted ");
         router.reload(window.location.pathname);
         setTimeout(() => {
           setIsSuccessful(false);
@@ -141,17 +149,16 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
             </tr>
           </thead>
           <tbody>
-            {agts.map((agent, index) => {
+            {currentAgents.map((agent, index) => {
               const namer = `${agent.lastName} ${agent.firstName}`;
               return (
                 <tr key={index}>
-                  <td>{index + 1}.</td>
+                  <td>{index + indexOfFirstAgent + 1}.</td>
                   {/* <td>
                     <img src={agent.image} alt={agent.name}></img>
                   </td> */}
                   <td>{namer.toUpperCase()}</td>
                   <td>{agent.agentType}</td>
-                  {/* <td>{agent.electionType}</td> */}
                   <td>
                     <Link href={`/agents/edit/${agent._id}`}>
                       <a>
@@ -170,7 +177,12 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
             })}
           </tbody>
         </table>
-        <div>{listWidget.map((wid, index) => wid)}</div>
+        {/* <div>{listWidget.map((wid, index) => wid)}</div> */}
+        <Pagination
+          agentsPerPage={agentsPerPage}
+          totalAgents={agentsList.length}
+          paginate={paginate}
+        />
       </div>
     </div>
   );
