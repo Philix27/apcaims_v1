@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   let { state, limit, page } = req.query;
   // if (!limit) limit = 20;
   // if (!page) page = 1;
-  limit = parseInt(limit) || 3000;
+  limit = parseInt(limit) || 4000;
   page = parseInt(page) || 1;
 
   if ((req.method = "GET")) {

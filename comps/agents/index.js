@@ -11,6 +11,7 @@ import { FaUserEdit } from "react-icons/fa";
 import deleteAgent from "../../functions/deleteagent";
 import Pagination from "./pagination";
 import NotificationPopup from "../notification";
+import DeletePopup from "./deletePopup";
 
 const electionTypes = [
   "ALL",
@@ -20,10 +21,12 @@ const electionTypes = [
   "HOUSE OF REPS.",
   "SENATORIAL",
 ];
+
 export default function AgentsComp({ agentsList, totalCount, length }) {
   //* pagination params
   const [agts, setAgents] = useState(agentsList);
 
+  const [showDeleteDialog, setDeleteDialog] = useState(false);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [agentsPerPage, setAgentsPerPage] = useState(50);
@@ -37,6 +40,8 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const [isSuccessful, setIsSuccessful] = useState(false);
+  const [agentIDToDelete, setAgentIDToDelete] = useState("");
+
   const [showModal, setShowModal] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [clickedAgent, setClickedAgent] = useState({});
@@ -79,12 +84,19 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
     }
   };
 
-  const onDelete = (agent) => {
+  const proceedFunc = () => {
+    setDeleteDialog(false);
+    onDelete(agentIDToDelete);
+  };
+  const cancelFunc = () => {
+    setDeleteDialog(false);
+  };
+
+  const onDelete = (agentID) => {
     setDeleting(true);
-    Axios.delete(`https://rxedu-api.vercel.app/api/v1/agent/${agent._id}`)
+    Axios.delete(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`)
       .then((response) => {
         setIsSuccessful(true);
-        alert("Deleted Successfully");
         router.reload(window.location.pathname);
         setTimeout(() => {
           setIsSuccessful(false);
@@ -173,10 +185,10 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
                   <td>
                     <AiFillDelete
                       className="icon delete"
-                      onClick={() =>
-                        // deleteAgent(agent._id, agent.image, setDeleting)
-                        onDelete(agent)
-                      }
+                      onClick={() => {
+                        setDeleteDialog(true);
+                        setAgentIDToDelete(agent._id);
+                      }}
                     />
                   </td>
                 </tr>
@@ -195,6 +207,14 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
         <NotificationPopup
           heading="Deleting..."
           msg="This agent is being deleted"
+        />
+      )}
+      {showDeleteDialog && (
+        <DeletePopup
+          heading="Do you want to delete this agent?"
+          msg="Click yes to continue."
+          proceedFunc={proceedFunc}
+          cancelFunc={cancelFunc}
         />
       )}
     </div>
