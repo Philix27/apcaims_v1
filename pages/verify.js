@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 import { AiFillEye } from "react-icons/ai";
-import { H1 } from "../_styles/H1";
 
 export default function Home() {
   const [agentList, setAgentList] = useState([]);
@@ -45,10 +44,6 @@ export default function Home() {
   return (
     <div className="verifyPage">
       <div className="section ">
-        <div className="note">
-          <H1 title="Registration ends on the 31st of December, 2022." />
-        </div>
-
         <div className="form">
           <div className="input_box">
             <input

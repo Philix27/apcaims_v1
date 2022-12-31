@@ -94,7 +94,10 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
 
   const onDelete = (agentID) => {
     setDeleting(true);
-    Axios.delete(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`)
+    // Axios.delete(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`)
+    Axios.patch(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`, {
+      isRemoved: true,
+    })
       .then((response) => {
         setIsSuccessful(true);
         router.reload(window.location.pathname);
@@ -167,32 +170,34 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
           <tbody>
             {currentAgents.map((agent, index) => {
               const namer = `${agent.lastName} ${agent.firstName}`;
-              return (
-                <tr key={index}>
-                  <td>{index + indexOfFirstAgent + 1}.</td>
-                  {/* <td>
+              if (!agent.isRemoved) {
+                return (
+                  <tr key={index}>
+                    <td>{index + indexOfFirstAgent + 1}.</td>
+                    {/* <td>
                     <img src={agent.image} alt={agent.name}></img>
                   </td> */}
-                  <td>{namer.toUpperCase()}</td>
-                  <td>{agent.agentType}</td>
-                  <td>
-                    <Link href={`/agents/edit/${agent._id}`}>
-                      <a>
-                        <FaUserEdit className="icon" />
-                      </a>
-                    </Link>
-                  </td>
-                  <td>
-                    <AiFillDelete
-                      className="icon delete"
-                      onClick={() => {
-                        setDeleteDialog(true);
-                        setAgentIDToDelete(agent._id);
-                      }}
-                    />
-                  </td>
-                </tr>
-              );
+                    <td>{namer.toUpperCase()}</td>
+                    <td>{agent.agentType}</td>
+                    <td>
+                      <Link href={`/agents/edit/${agent._id}`}>
+                        <a>
+                          <FaUserEdit className="icon" />
+                        </a>
+                      </Link>
+                    </td>
+                    <td>
+                      <AiFillDelete
+                        className="icon delete"
+                        onClick={() => {
+                          setDeleteDialog(true);
+                          setAgentIDToDelete(agent._id);
+                        }}
+                      />
+                    </td>
+                  </tr>
+                );
+              }
             })}
           </tbody>
         </table>
