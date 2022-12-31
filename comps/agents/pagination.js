@@ -3,7 +3,7 @@ import { pagination, ul } from "./../../styles/paginate.module.scss";
 
 export default function Pagination({ agentsPerPage, totalAgents, paginate }) {
   let pageNumbers = [];
-  console.log(totalAgents, totalAgents);
+
   for (let i = 1; i <= Math.ceil(totalAgents / agentsPerPage); i++) {
     pageNumbers.push(i);
   }

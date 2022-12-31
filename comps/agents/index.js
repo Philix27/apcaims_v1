@@ -10,6 +10,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { FaUserEdit } from "react-icons/fa";
 import deleteAgent from "../../functions/deleteagent";
 import Pagination from "./pagination";
+import NotificationPopup from "../notification";
 
 const electionTypes = [
   "ALL",
@@ -37,6 +38,7 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
 
   const [isSuccessful, setIsSuccessful] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const [clickedAgent, setClickedAgent] = useState({});
   const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState("ALL");
@@ -78,6 +80,7 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
   };
 
   const onDelete = (agent) => {
+    setDeleting(true);
     Axios.delete(`https://rxedu-api.vercel.app/api/v1/agent/${agent._id}`)
       .then((response) => {
         setIsSuccessful(true);
@@ -85,7 +88,8 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
         router.reload(window.location.pathname);
         setTimeout(() => {
           setIsSuccessful(false);
-        }, 5000);
+          setDeleting(false);
+        }, 3000);
       })
       .catch((e) => {
         console.log(e);
@@ -107,7 +111,7 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
   }
 
   return (
-    <div className=" agentsList">
+    <div className="agentsList">
       <div className="card">
         <form className="form">
           <div className="input_box">
@@ -169,7 +173,10 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
                   <td>
                     <AiFillDelete
                       className="icon delete"
-                      onClick={() => deleteAgent(agent._id, agent.image)}
+                      onClick={() =>
+                        // deleteAgent(agent._id, agent.image, setDeleting)
+                        onDelete(agent)
+                      }
                     />
                   </td>
                 </tr>
@@ -184,6 +191,12 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
           paginate={paginate}
         />
       </div>
+      {deleting && (
+        <NotificationPopup
+          heading="Deleting..."
+          msg="This agent is being deleted"
+        />
+      )}
     </div>
   );
 }

@@ -3,7 +3,12 @@ import { ref, deleteObject } from "firebase/storage";
 import axios from "axios";
 // import Agent from "../types/agent"
 
-export default async function deleteAgent(agentID, imgUrl) {
+export default async function deleteAgent(
+  agentID,
+  imgUrl,
+  setDeleting,
+  router
+) {
   const desertRef = ref(storage, imgUrl);
 
   // await deleteObject(desertRef)
@@ -18,10 +23,15 @@ export default async function deleteAgent(agentID, imgUrl) {
   //     console.log(error);
   //   });
   // alert("Are you sure you want to delete this user?");
+  setDeleting(true);
   axios
     .delete(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`)
     .then((val) => {
       console.log("Deleted Successfully");
+    })
+    .then(() => {
+      setDeleting(false);
+      router.reload(window.location.pathname);
     });
 }
 
