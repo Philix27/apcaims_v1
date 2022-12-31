@@ -4,10 +4,7 @@
 .pagination {
   max-width: 70vw;
   margin: 0 auto;
-  @mobiless {
-    max-width: 90vw;
-    padding: 0 10px;
-  }
+
   .ul {
     display: flex;
     flex-wrap: wrap;

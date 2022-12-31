@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   let { state, limit, page } = req.query;
   // if (!limit) limit = 20;
   // if (!page) page = 1;
-  limit = parseInt(limit) || 20;
+  limit = parseInt(limit) || 3000;
   page = parseInt(page) || 1;
 
   if ((req.method = "GET")) {
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
             },
           }
         )
-        // .limit(limit)
+        .limit(limit)
         .toArray();
       // res.status(200).json({ data: data });
       res.status(200).json({ length: fullData.length, data: data });

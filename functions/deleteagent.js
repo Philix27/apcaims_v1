@@ -6,16 +6,22 @@ import axios from "axios";
 export default async function deleteAgent(agentID, imgUrl) {
   const desertRef = ref(storage, imgUrl);
 
-  await deleteObject(desertRef)
-    .then(() => {
-      axios
-        .delete(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`)
-        .then((val) => {
-          console.log("Deleted Successfully");
-        });
-    })
-    .catch((error) => {
-      console.log(error);
+  // await deleteObject(desertRef)
+  //   .then(() => {
+  //     axios
+  //       .delete(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`)
+  //       .then((val) => {
+  //         console.log("Deleted Successfully");
+  //       });
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
+  // alert("Are you sure you want to delete this user?");
+  axios
+    .delete(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`)
+    .then((val) => {
+      console.log("Deleted Successfully");
     });
 }
 

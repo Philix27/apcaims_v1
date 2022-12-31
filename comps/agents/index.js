@@ -169,7 +169,7 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
                   <td>
                     <AiFillDelete
                       className="icon delete"
-                      // onClick={() => deleteAgent(agent._id, agent.image)}
+                      onClick={() => deleteAgent(agent._id, agent.image)}
                     />
                   </td>
                 </tr>
