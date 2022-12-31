@@ -163,8 +163,8 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
               {/* <th>Img</th> */}
               <th>Name</th>
               <th>Agent Type</th>
-              <th>Edit</th>
-              <th>Delete</th>
+              {/* <th>Edit</th>
+              <th>Delete</th> */}
             </tr>
           </thead>
           <tbody>
@@ -174,12 +174,9 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
                 return (
                   <tr key={index}>
                     <td>{index + indexOfFirstAgent + 1}.</td>
-                    {/* <td>
-                    <img src={agent.image} alt={agent.name}></img>
-                  </td> */}
                     <td>{namer.toUpperCase()}</td>
                     <td>{agent.agentType}</td>
-                    <td>
+                    {/* <td>
                       <Link href={`/agents/edit/${agent._id}`}>
                         <a>
                           <FaUserEdit className="icon" />
@@ -194,7 +191,7 @@ export default function AgentsComp({ agentsList, totalCount, length }) {
                           setAgentIDToDelete(agent._id);
                         }}
                       />
-                    </td>
+                    </td> */}
                   </tr>
                 );
               }
