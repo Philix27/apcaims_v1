@@ -7,9 +7,18 @@ import axios from "axios";
 import { AiFillDelete } from "react-icons/ai";
 import { FaUserEdit } from "react-icons/fa";
 import deleteAgent from "../../../functions/deleteagent";
+import NotificationPopup from "../../../comps/notification";
+import DeletePopup from "../../../comps/agents/deletePopup";
 
 export default function LGAPage({ info, agentsList }) {
   const router = useRouter();
+  const [showDeleteDialog, setDeleteDialog] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [isSuccessful, setIsSuccessful] = useState(false);
+  const [agentIDToDelete, setAgentIDToDelete] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [clickedAgent, setClickedAgent] = useState({});
 
   const [user, setUser] = useState({
     name: "",
@@ -33,8 +42,33 @@ export default function LGAPage({ info, agentsList }) {
     return JSON.parse(localStorage.getItem("user"));
   }
 
-  //   console.log("Reached World Params");
+  const proceedFunc = () => {
+    setDeleteDialog(false);
+    onDelete(agentIDToDelete);
+  };
+  const cancelFunc = () => {
+    setDeleteDialog(false);
+  };
 
+  const onDelete = (agentID) => {
+    setDeleting(true);
+    // Axios.delete(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`)
+    Axios.patch(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`, {
+      isRemoved: true,
+    })
+      .then((response) => {
+        setIsSuccessful(true);
+        router.reload(window.location.pathname);
+        setTimeout(() => {
+          setIsSuccessful(false);
+          setDeleting(false);
+        }, 3000);
+      })
+      .catch((e) => {
+        console.log(e);
+        console.log("Opps an error ocured");
+      });
+  };
   return (
     <div className="lgaWrapper">
       <div className="comp">
@@ -54,8 +88,8 @@ export default function LGAPage({ info, agentsList }) {
                     <th>No</th>
                     <th>Name</th>
                     <th>Agent Type</th>
-                    {/* <th>Edit</th>
-                    <th>Delete</th> */}
+                    <th>Edit</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -66,7 +100,7 @@ export default function LGAPage({ info, agentsList }) {
                         <td>{index + 1}.</td>
                         <td>{namer.toUpperCase()}</td>
                         <td>{agent.agentType}</td>
-                        {/* <td>
+                        <td>
                           <Link href={`/agents/edit/${agent._id}`}>
                             <a>
                               <FaUserEdit className="icon" />
@@ -76,15 +110,32 @@ export default function LGAPage({ info, agentsList }) {
                         <td>
                           <AiFillDelete
                             className="icon delete"
-                            // onClick={() => deleteAgent(agent._id, agent.image)}
+                            onClick={() => {
+                              setDeleteDialog(true);
+                              setAgentIDToDelete(agent._id);
+                            }}
                           />
-                        </td> */}
+                        </td>
                       </tr>
                     );
                   })}
                 </tbody>
               </table>
             </div>
+            {deleting && (
+              <NotificationPopup
+                heading="Deleting..."
+                msg="This agent is being deleted"
+              />
+            )}
+            {showDeleteDialog && (
+              <DeletePopup
+                heading="Do you want to delete this agent?"
+                msg="Click yes to continue."
+                proceedFunc={proceedFunc}
+                cancelFunc={cancelFunc}
+              />
+            )}
           </div>
         </div>
       </div>

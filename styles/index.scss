@@ -40,6 +40,10 @@
 @import "paginate.module";
 @import "notification.module";
 @import "deletepopup.module";
+@import "dashboard_new";
+@import "lgalist.module";
+@import "wardlist.module";
+@import "statelist.module";
 
 :root {
   --fontFamily: "Roboto", sans-serif;

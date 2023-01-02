@@ -1,24 +1,74 @@
-.adminWrapper {
-  width: 80%;
-  margin: 0 auto;
-  @include tabletSS {
-    width: 100%;
+@import "screensize";
+@import "variables";
+
+.dasboard_new {
+  width: 90%;
+  margin: 10px auto;
+  // padding: 0 50px;
+
+  .tabSection {
+    nav {
+      display: flex;
+      align-items: center;
+      // background-color: #fff;
+      border-radius: 10px;
+      font-weight: 300;
+      .active {
+        // background-color: $primaryColor;
+        color: $primaryColor;
+        background-color: #b8d6f4;
+        // font-size: large;
+        font-weight: 700;
+        border-radius: 15px 15px 0px 0px;
+        box-shadow: -5px -5px 3px -2px rgba(0, 0, 0, 0.15);
+        transition: all 1s ease;
+      }
+      label {
+        display: block;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        &:hover {
+          color: $primaryColor;
+          background-color: #b8d6f4;
+          border-radius: 15px 15px 0px 0px;
+        }
+      }
+    }
+    hr {
+      // border-color: $primaryColor;
+      border-top: 1px solid #aeb9c5;
+    }
   }
+
+  .contentSection {
+    // margin-top: 20px;
+
+    .hideWidget {
+      display: none;
+    }
+    .showWidget {
+      background-color: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      min-height: 50vh;
+      padding: 20px 20px;
+    }
+  }
+
   .spacer {
-    display: none;
+    // display: none;
+    height: 100px;
+
     @include tabletSS {
       display: block;
       height: 80px;
     }
   }
-  .charter {
-    background-color: #0b1c31;
-    height: 80vh;
-  }
-
   .dashboard {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // padding-left: 22vw;
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     padding-top: 10px;
     padding-right: 50px;
@@ -29,6 +79,7 @@
     }
     @include mobileSS {
       grid-template-columns: repeat(1, 1fr);
+      // padding: 80px 20px;
     }
 
     .repad {
@@ -45,7 +96,6 @@
       border-radius: 10px;
       text-align: center;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
       .icons {
         color: #fff;
         font-size: larger;
@@ -109,8 +159,12 @@
     }
   }
   .headingSection {
-    padding-top: 60px;
-    padding-left: 40px;
+    // margin-left: 22vw;
+    padding: 20px;
+    @include tabletSS {
+      margin-left: 0;
+      padding: 0 20px;
+    }
   }
   .smallName {
     padding-left: 5px;
@@ -130,6 +184,9 @@
   }
   .purple {
     background-color: rgb(125, 4, 169);
+  }
+  .pink {
+    background-color: rgb(154, 60, 76);
   }
   .blood {
     background-color: rgb(213, 62, 8);
