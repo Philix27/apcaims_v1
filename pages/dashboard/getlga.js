@@ -45,7 +45,7 @@ export default function AddLga() {
         {localGovs.map((lga, index) => (
           <div key={index} className="listItem">
             {index + 1}. <span className="lgaTitle">{lga.name}</span>
-            <CopyToClipboard text={lga.name}>
+            <CopyToClipboard text={lga.name.trim()}>
               <button>Copy</button>
             </CopyToClipboard>
           </div>
