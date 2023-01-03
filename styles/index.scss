@@ -200,3 +200,38 @@ body {
     }
   }
 }
+
+.addLga {
+  margin-top: 100px;
+  background-color: #fff;
+  padding: 20px;
+  min-height: 70vh;
+  display: block;
+
+  .lgaList {
+    align-content: flex-start;
+    padding: 20px;
+    .listItem {
+      display: flex;
+    }
+    button {
+      padding: 5px 15px;
+      margin-left: 20px;
+      background-color: $primaryColor;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.1s ease;
+      border-color: #fff;
+      border-width: 1px;
+      border-style: solid;
+
+      &:hover {
+        background-color: rgb(41, 157, 239);
+      }
+    }
+  }
+  .lgaTitle {
+    padding-left: 20px;
+  }
+}

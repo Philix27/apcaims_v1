@@ -55,16 +55,9 @@ export default function DashboardComp({ agentsList, userState = "DELTA" }) {
     return ags.length;
   }
   const [activeIndex, setActiveIndex] = useState(0);
-  const tabs = [
-    <LgaList state="DELTA" />,
-    <LgaList state="DELTA" />,
-    <LgaList state="DELTA" />,
-  ];
 
   function setTabActive(position) {
     setActiveIndex(position);
-    // console.log("position", position);
-    // console.log("activeIndex", activeIndex);
   }
   return (
     <div className="dasboard_new">
@@ -115,10 +108,10 @@ export default function DashboardComp({ agentsList, userState = "DELTA" }) {
       </div>
       <section className="contentSection">
         <div className={activeIndex == 0 ? "showWidget" : "hideWidget"}>
-          <LgaList state="DELTA" />
+          <LgaList state="BAUCHI" />
         </div>
         <div className={activeIndex == 1 ? "showWidget" : "hideWidget"}>
-          <WardList state="DELTA" />
+          <WardList state="ADAMAWA" />
         </div>
         <div className={activeIndex == 2 ? "showWidget" : "hideWidget"}>
           <LgaList state="DELTA" />

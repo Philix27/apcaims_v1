@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { data } from "../../constants/states/index";
 import {
   stateList,
@@ -6,11 +6,11 @@ import {
   loadingDiv,
   listItem,
 } from "../../styles/statelist.module.scss";
-import useAllStates from "../../graphql/getstates.hook";
+import { useQuery } from "@apollo/client";
+import GET_ALL_STATES from "../../graphql/getstates.hook";
 
-export default function StateList() {
-  const { error, loading, data } = useAllStates();
-
+export default function AddLgaList() {
+  const { error, loading, data } = useQuery(GET_ALL_STATES);
   if (error)
     return <div className={errorDiv}>Oops... Something went wrong</div>;
   if (loading) return <div className={loadingDiv}>Loading....</div>;

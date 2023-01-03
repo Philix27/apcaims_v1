@@ -13,7 +13,7 @@ export default function LgaList({ state }) {
   );
   return (
     <div className={lgaList}>
-      <h3>Local Governments</h3>
+      <h3> {state} - Local Governments</h3>
       <div>
         {selectedLg[0].lga.map((lga, index) => (
           <div key={index} className={listItem}>
