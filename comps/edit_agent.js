@@ -8,6 +8,8 @@ import {
   headings,
   successMsg,
   loadingMsg,
+  dataItem,
+  errorMsg,
 } from "../styles/edit_page.module.scss";
 import axios from "axios";
 
@@ -20,30 +22,24 @@ export default function EditAgentComp({ agentInfo }) {
   const GUBA = "GUBERNATORIAL";
   const PRES = "PRESIDENTIAL";
 
-  const errorMsgs = [];
-
   const [agent, setAgent] = useState(agentInfo);
   const [updateSuccessful, setUpdateSuccessful] = useState(false);
   const [isLoading, setLoading] = useState(false);
-  const [showSenatorialDistrict, setShowSenatorialDistrict] = useState(false);
-  const [showFedConst, setFedCosnt] = useState(false);
-  const [showStateConst, setStateConst] = useState(false);
-  const [senatorial_district, setSenatorial_district] = useState([]);
+  const [hasErrorMsg, setShowErrorMsg] = useState(false);
+
   const [agentTypeList, setAgentTypeList] = useState([]);
   const [newValues, setNewValue] = useState({
     agentType: "",
     electionType: PRES,
+    phone: "",
+    email: "",
   });
   // TODO: Set conditionals for the listTypes
 
-  function validateStep1() {
-    if (agent.name || agent.name.length < 10) {
-      errorMsgs.push("Name must be more than 10 characters");
-    }
-  }
-
   const handleChange = (e) => {
     e.preventDefault();
+    setShowErrorMsg(false);
+    setLoading(false);
     const name = e.target.name;
     const value = e.target.value;
     if (name == "electionType") {
@@ -55,13 +51,7 @@ export default function EditAgentComp({ agentInfo }) {
           "WARD",
           "POLLING UNIT",
         ]);
-        setFedCosnt(false);
-        setStateConst(false);
-        setShowSenatorialDistrict(false);
       } else if (value == HOU) {
-        setFedCosnt(true);
-        setStateConst(false);
-        setShowSenatorialDistrict(false);
         setAgentTypeList([
           "HOUSE OF REPS",
           "LOCAL GOVERNMENT",
@@ -69,19 +59,10 @@ export default function EditAgentComp({ agentInfo }) {
           "POLLING UNIT",
         ]);
       } else if (value == STAT) {
-        setFedCosnt(false);
-        setStateConst(true);
-        setShowSenatorialDistrict(false);
         setAgentTypeList(["HOUSE OF ASSEMBLY", "WARD", "POLLING UNIT"]);
       } else if (value == GUBA) {
-        setFedCosnt(false);
-        setStateConst(false);
-        setShowSenatorialDistrict(false);
         setAgentTypeList(["STATE", "LOCAL GOVERNMENT", "WARD", "POLLING UNIT"]);
       } else if (value == SEN) {
-        setFedCosnt(false);
-        setStateConst(false);
-        setShowSenatorialDistrict(true);
         setAgentTypeList([
           "SENATORIAL",
           "LOCAL GOVERNMENT",
@@ -89,6 +70,9 @@ export default function EditAgentComp({ agentInfo }) {
           "POLLING UNIT",
         ]);
       }
+    }
+    if (name == "phone") {
+      if (value.length > 11) value = value.slice(0, 11);
     }
     setNewValue({ ...newValues, [name]: value });
   };
@@ -102,18 +86,25 @@ export default function EditAgentComp({ agentInfo }) {
     setLoading(false);
     window.setTimeout(() => {
       router.reload(window.location.pathname);
-    }, 5000);
+    }, 2000);
   };
   const handleSubmit = (e) => {
-    e.preventDefault();
-
     console.log("In submit func");
-    if (newValues.agentType && newValues.electionType) {
-      console.log("Submit Pass");
-      setLoading(true);
-      updateInformation(newValues);
+    if (newValues.agentType && newValues.electionType && newValues.phone) {
+      if (newValues.email.length > 9) {
+        console.log("Submit Pass");
+        setLoading(true);
+        console.log(newValues);
+        updateInformation(newValues);
+        // 07067332341;
+      } else {
+        setShowErrorMsg(true);
+      }
+    } else {
+      console.log(newValues);
     }
   };
+
   return (
     <div className={editpage}>
       <motion.div
@@ -122,15 +113,30 @@ export default function EditAgentComp({ agentInfo }) {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1.7, delay: 1, type: "tween" }}
       >
-        <form onSubmit={handleSubmit} className="form">
+        <div className="form">
           <h2>
             {agent.firstName} {agent.lastName}'s Data
           </h2>
           <div className={headings}>
             <h3>Previous Data</h3>
-            <p>Election Type: {agent.electionType}</p>
-            <p>Agent Type: {agent.agentType}</p>
-            <h3>Select new group</h3>
+            <div className={dataItem}>
+              <p>Election Type: </p>
+              <p>{agent.electionType}</p>
+            </div>
+            <div className={dataItem}>
+              <p>Agent Type: </p>
+              <p>{agent.agentType}</p>
+            </div>
+            <div className={dataItem}>
+              <p>Email: </p>
+              <p>{agent.email}</p>
+            </div>
+            <div className={dataItem}>
+              <p>Phone: </p>
+              <p>{agent.phone}</p>
+            </div>
+
+            {/* <h3>Select new group</h3> */}
           </div>
           <div className="input_box">
             <label htmlFor="form-election-type">Election Type</label>
@@ -152,55 +158,6 @@ export default function EditAgentComp({ agentInfo }) {
             </select>
           </div>
 
-          {/* {showSenatorialDistrict && (
-            <div className="input_box">
-              <label htmlFor="form-senatorial" className="label">
-                Senatorial District
-              </label>
-              <input
-                type="text"
-                id="form-senatorial"
-                placeholder="Enter Senatorial District"
-                name="senatorial_district"
-                required
-                minLength={3}
-                onChange={handleChange}
-              />
-            </div>
-          )}
-          {showFedConst && (
-            <div className="input_box">
-              <label htmlFor="form-fed_const" className="label">
-                Federal Constituency
-              </label>
-              <input
-                type="text"
-                id="form-fed_const"
-                placeholder="Enter Fedral Constituency"
-                name="fed_const"
-                required
-                minLength={3}
-                onChange={handleChange}
-              />
-            </div>
-          )}
-          {showStateConst && (
-            <div className="input_box">
-              <label htmlFor="form-state_const" className="label">
-                State Constituency
-              </label>
-              <input
-                type="text"
-                id="form-state_const"
-                placeholder="Enter State Constituency"
-                name="state_const"
-                required
-                minLength={3}
-                onChange={handleChange}
-              />
-            </div>
-          )} */}
-
           <div className="input_box">
             <label htmlFor="form-category">Agent Type</label>
             <select
@@ -218,6 +175,41 @@ export default function EditAgentComp({ agentInfo }) {
               })}
             </select>
           </div>
+
+          <div className="input_box">
+            <label htmlFor="form-email" className="label">
+              Email
+            </label>
+            <input
+              type="text"
+              required
+              minLength={9}
+              maxLength={34}
+              id="form-email"
+              placeholder="Enter email address"
+              name="email"
+              value={newValues.email}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="input_box">
+            <label htmlFor="form-phone" className="label">
+              Phone Number
+            </label>
+            <input
+              type="number"
+              required
+              id="form-phone"
+              minLength={11}
+              maxLength={15}
+              placeholder="e.g 08101234567"
+              name="phone"
+              value={newValues.phone}
+              onChange={handleChange}
+            />
+          </div>
+
           <div className="btnContainer">
             <div className="buttons">
               <input
@@ -238,7 +230,12 @@ export default function EditAgentComp({ agentInfo }) {
               <p>Updated successfully!</p>
             </div>
           )}
-        </form>
+          {hasErrorMsg && (
+            <div className={errorMsg}>
+              <p>Ensure all fields are properly filled. </p>
+            </div>
+          )}
+        </div>
       </motion.div>
     </div>
   );

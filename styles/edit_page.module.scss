@@ -29,6 +29,14 @@
       color: $bigFontColor;
       padding: 5px;
     }
+    .dataItem {
+      display: flex;
+      padding-left: 20px;
+      justify-content: space-between;
+      background-color: $background1;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
   }
   .successMsg {
     background-color: $background1;
@@ -55,6 +63,23 @@
     padding: 10px;
     border-radius: 10px;
     border-color: $primaryColor;
+    border-style: solid;
+    border-width: 1px;
+    p {
+      font-weight: 300;
+    }
+    @include mobileSS {
+      width: 80%;
+    }
+  }
+  .errorMsg {
+    background-color: $background1;
+    margin: 0 auto;
+    width: 50%;
+    color: rgb(254, 36, 36);
+    padding: 10px;
+    border-radius: 10px;
+    border-color: rgb(254, 36, 36);
     border-style: solid;
     border-width: 1px;
     p {
