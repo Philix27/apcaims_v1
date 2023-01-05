@@ -59,6 +59,13 @@ export default function DashboardComp({ agentsList, userState = "DELTA" }) {
   function setTabActive(position) {
     setActiveIndex(position);
   }
+  const tabTitles = [
+    "All States",
+    "State Rep",
+    "Local Government",
+    "Wards",
+    "Agents",
+  ];
   return (
     <div className="dasboard_new">
       <Head>
@@ -67,63 +74,35 @@ export default function DashboardComp({ agentsList, userState = "DELTA" }) {
       <div className="spacer"></div>
       <div className="tabSection">
         <nav>
-          <label
-            className={activeIndex == 0 ? " active" : ""}
-            onClick={() => setTabActive(0)}
-          >
-            State Rep
-          </label>
-          <label
-            className={activeIndex == 1 ? " active" : ""}
-            onClick={() => setTabActive(1)}
-          >
-            Local Government
-          </label>
-          <label
-            className={activeIndex == 2 ? " active" : ""}
-            onClick={() => setTabActive(2)}
-          >
-            Wards
-          </label>
-          <label
-            className={activeIndex == 3 ? " active" : ""}
-            onClick={() => setTabActive(3)}
-          >
-            Polling Unit
-          </label>
-          <label
-            className={activeIndex == 4 ? " active" : ""}
-            onClick={() => setTabActive(4)}
-          >
-            Agents
-          </label>
-          <label
-            className={activeIndex == 5 ? " active" : ""}
-            onClick={() => setTabActive(5)}
-          >
-            All States
-          </label>
+          {tabTitles.map((title, index) => {
+            return (
+              <label
+                className={activeIndex == index ? " active" : ""}
+                onClick={() => setTabActive(index)}
+              >
+                {title}
+              </label>
+            );
+          })}
         </nav>
         <hr />
       </div>
       <section className="contentSection">
         <div className={activeIndex == 0 ? "showWidget" : "hideWidget"}>
-          <LgaList state="BAUCHI" />
+          <StateList />
         </div>
         <div className={activeIndex == 1 ? "showWidget" : "hideWidget"}>
-          <WardList state="ADAMAWA" />
+          <LgaList state="BAUCHI" />
         </div>
         <div className={activeIndex == 2 ? "showWidget" : "hideWidget"}>
-          <LgaList state="DELTA" />
+          <WardList state="ADAMAWA" />
         </div>
         <div className={activeIndex == 3 ? "showWidget" : "hideWidget"}>
           <LgaList state="DELTA" />
         </div>
+
         <div className={activeIndex == 4 ? "showWidget" : "hideWidget"}>
           <LgaList state="DELTA" />
-        </div>
-        <div className={activeIndex == 5 ? "showWidget" : "hideWidget"}>
-          <StateList />
         </div>
       </section>
     </div>

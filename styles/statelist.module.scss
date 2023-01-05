@@ -13,6 +13,13 @@
       background-color: $background1;
       color: $primaryColor;
     }
+    h4 {
+      span {
+        font-size: small;
+        font-weight: 300;
+        padding-left: 10px;
+      }
+    }
     .content {
       padding-left: 20px;
       p {

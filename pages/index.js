@@ -78,7 +78,7 @@ export default function Home() {
         opacity={0.55}
       />
       <div className="section ">
-        <H1 title="Registration ends on the 31st of December, 2022." />
+        {/* <H1 title="Registration ends on the 31st of December, 2022." /> */}
         <Link href="/verify">
           <div className="btn">Print your form</div>
         </Link>

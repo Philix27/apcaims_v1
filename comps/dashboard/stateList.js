@@ -1,5 +1,4 @@
-import React from "react";
-import { data } from "../../constants/states/index";
+import React, { useState } from "react";
 import {
   stateList,
   errorDiv,
@@ -15,6 +14,8 @@ export default function StateList() {
     return <div className={errorDiv}>Oops... Something went wrong</div>;
   if (loading) return <div className={loadingDiv}>Loading....</div>;
 
+  const [selectedState, setSelectedState] = useState("");
+
   if (data) {
     return (
       <div className={stateList}>
@@ -22,9 +23,11 @@ export default function StateList() {
         {data.getAllStates.map(({ name, capital }, index) => (
           <div key={index} className={listItem}>
             <h4>
-              {index + 1}. {name}
-              <h5>{capital}</h5>
+              {index + 1}. {name} <span>{capital}</span>
             </h4>
+            <div onClick={() => setSelectedState(name)}>
+              <h3>Stop coming out</h3>
+            </div>
           </div>
         ))}
       </div>
