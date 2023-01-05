@@ -52,10 +52,12 @@ export default function LGAPage({ info, agentsList }) {
 
   const onDelete = (agentID) => {
     setDeleting(true);
-    // Axios.delete(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`)
-    Axios.patch(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`, {
-      isRemoved: true,
-    })
+    axios
+      .delete(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`)
+      // axios
+      //   .patch(`https://rxedu-api.vercel.app/api/v1/agent/${agentID}`, {
+      //     isRemoved: true,
+      //   })
       .then((response) => {
         setIsSuccessful(true);
         router.reload(window.location.pathname);
@@ -122,23 +124,23 @@ export default function LGAPage({ info, agentsList }) {
                 </tbody>
               </table>
             </div>
-            {deleting && (
-              <NotificationPopup
-                heading="Deleting..."
-                msg="This agent is being deleted"
-              />
-            )}
-            {showDeleteDialog && (
-              <DeletePopup
-                heading="Do you want to delete this agent?"
-                msg="Click yes to continue."
-                proceedFunc={proceedFunc}
-                cancelFunc={cancelFunc}
-              />
-            )}
           </div>
         </div>
       </div>
+      {deleting && (
+        <NotificationPopup
+          heading="Deleting..."
+          msg="This agent is being deleted"
+        />
+      )}
+      {showDeleteDialog && (
+        <DeletePopup
+          heading="Do you want to delete this agent?"
+          msg="Click yes to continue."
+          proceedFunc={proceedFunc}
+          cancelFunc={cancelFunc}
+        />
+      )}
     </div>
   );
 }
