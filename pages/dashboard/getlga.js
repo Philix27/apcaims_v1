@@ -23,66 +23,75 @@ export default function AddLga() {
   };
 
   return (
-    <div className="lgaWardInfo">
-      <div className="item">
-        <h3>Get LGAs</h3>
-        <form className="form">
-          <div className="input_box">
-            <label htmlFor="form-state">State</label>
-            <select
-              name="state"
-              onChange={handleChange}
-              // value={agent.state}
-              required
-              id="form-state"
-            >
-              <option disabled>Select a state</option>
-
-              {data.states.map((_val, index) => {
-                return (
-                  <option value={_val.state.toUpperCase()} key={index}>
-                    {_val.state}
-                  </option>
-                );
-              })}
-            </select>
-          </div>
-        </form>
-        <div className="lgaList">
-          <h3>List of LGAs</h3>
-          {localGovs.map((lga, index) => (
-            <div
-              key={index}
-              className={
-                selectedLga == lga.name ? "selectedListItem" : "listItem"
-              }
-            >
-              {index + 1}. <span className="lgaTitle">{lga.name}</span>
-              <CopyToClipboard
-                text={lga.name.trim()}
-                // onClick={() => handleOnLgaClick(lga.name)}
+    <>
+      <div className="lgaWardInfo">
+        <div className="item">
+          <h3>Get LGAs</h3>
+          <form className="form">
+            <div className="input_box">
+              <label htmlFor="form-state">State</label>
+              <select
+                name="state"
+                onChange={handleChange}
+                // value={agent.state}
+                required
+                id="form-state"
               >
-                <button onClick={() => handleOnLgaClick(lga.name)}>Copy</button>
-              </CopyToClipboard>
+                <option disabled>Select a state</option>
+
+                {data.states.map((_val, index) => {
+                  return (
+                    <option value={_val.state.toUpperCase()} key={index}>
+                      {_val.state}
+                    </option>
+                  );
+                })}
+              </select>
             </div>
-          ))}
-        </div>
-      </div>
-      <div className="item">
-        <div>
+          </form>
           <div className="lgaList">
-            <h3>Wards for {selectedLga}</h3>
-            {wards.map((ward, index) => (
-              <div key={index} className="listItem">
-                {index + 1}. <span className="lgaTitle">{ward}</span>
-                <CopyToClipboard text={ward.trim()}>
-                  <button>Copy</button>
+            <h3>List of LGAs</h3>
+            {localGovs.map((lga, index) => (
+              <div
+                key={index}
+                className={
+                  selectedLga == lga.name ? "selectedListItem" : "listItem"
+                }
+              >
+                {index + 1}. <span className="lgaTitle">{lga.name}</span>
+                <CopyToClipboard
+                  text={lga.name.trim()}
+                  // onClick={() => handleOnLgaClick(lga.name)}
+                >
+                  <button onClick={() => handleOnLgaClick(lga.name)}>
+                    Copy
+                  </button>
                 </CopyToClipboard>
               </div>
             ))}
           </div>
         </div>
+        <div className="item">
+          <div>
+            <div className="lgaList">
+              <h3>Wards for {selectedLga}</h3>
+              {wards.map((ward, index) => (
+                <div key={index} className="listItem">
+                  {index + 1}. <span className="lgaTitle">{ward}</span>
+                  <CopyToClipboard text={ward.trim()}>
+                    <button>Copy</button>
+                  </CopyToClipboard>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      <div className="section">
+        <a href="https://drive.google.com/drive/folders/1gQQ6Es-2xer6QWJCQxpNpQ2x3D3ZtKzH">
+          Polling Unit Spread Sheet
+        </a>
+      </div>
+    </>
   );
 }
