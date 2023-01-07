@@ -1,7 +1,7 @@
 const SR = {
   name: "YOBE",
   email: "Yobe@apcaims.com",
-  password: "yobe_apc_4eP",
+  password: "yobe_x455h",
   phone: "08108850572",
   statecode: "YOBE",
   img: "images/profile2.jpg",

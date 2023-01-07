@@ -1,7 +1,7 @@
 const SR = {
   name: "EKITI",
   email: "Ekiti@apcaims.com",
-  password: "ekiti_apc_ek3",
+  password: "ekiti_etf3",
   phone: "08108850572",
   statecode: "EKITI",
   img: "images/profile2.jpg",
