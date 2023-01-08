@@ -33,7 +33,7 @@ export default function Wards({ agentsList }) {
                   {lga.wards.map((ward, wardInex) => (
                     <Link
                       key={wardInex}
-                      href={`/wards/agents/${state.state}_${lga.name}_${ward}`}
+                      href={`/wards/agents/${state.state}~${lga.name}~${ward}`}
                     >
                       <a>
                         <div className="moreInfoList">

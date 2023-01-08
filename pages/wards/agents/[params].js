@@ -147,7 +147,7 @@ export default function LGAPage({ info, agentsList }) {
 
 export async function getServerSideProps(context) {
   const { query } = context;
-  let ll = query.params.split("_");
+  let ll = query.params.split("~");
   console.log(query.params);
   console.log(ll);
   const info = {
