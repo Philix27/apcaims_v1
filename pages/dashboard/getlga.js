@@ -87,11 +87,11 @@ export default function AddLga() {
           </div>
         </div>
       </div>
-      <div className="section">
+      {/* <div className="section">
         <a href="https://drive.google.com/drive/folders/1gQQ6Es-2xer6QWJCQxpNpQ2x3D3ZtKzH">
           Polling Unit Spread Sheet
         </a>
-      </div>
+      </div> */}
     </>
   );
 }
