@@ -28,7 +28,10 @@ export default function Footer() {
       </div>
 
       <div className="copyright">
-        <p>2022 Copyright &copy; All Rights Reserved</p>
+        <p>2022 Copyright &copy;</p>
+      </div>
+      <div className="copyright">
+        <p> Powered by Hexelan</p>
       </div>
     </div>
   );
