@@ -32,7 +32,8 @@ export default function Footer() {
       </div>
       <div className="copyright">
         <p>
-          <a href="http://www.hexelan.co/">Powered by Hexelan</a>
+          {/* <a href="http://www.hexelan.co/">Powered by Hexelan</a> */}
+          Powered by Hexelan
         </p>
       </div>
     </div>

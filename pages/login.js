@@ -110,11 +110,14 @@ export default function Home({ content }) {
                 onChange={handleChange}
               />
             </div>
+
             <div className="buttons">
               <input
                 type="submit"
-                value="Login"
-                onClick={handleSubmit}
+                // value="Login"
+                value="Sorry, cannot login."
+                // onClick={handleSubmit}
+                onClick={() => {}}
                 className="btn"
               />
             </div>
