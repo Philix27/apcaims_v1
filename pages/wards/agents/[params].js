@@ -135,12 +135,20 @@ export default function LGAPage({ info, agentsList }) {
       )}
       {showDeleteDialog && (
         <DeletePopup
+          heading="Oopx.. "
+          msg="Cannot Delete Info"
+          proceedFunc={() => {}}
+          cancelFunc={cancelFunc}
+        />
+      )}
+      {/* {showDeleteDialog && (
+        <DeletePopup
           heading="Do you want to delete this agent?"
           msg="Click yes to continue."
           proceedFunc={proceedFunc}
           cancelFunc={cancelFunc}
         />
-      )}
+      )} */}
     </div>
   );
 }
