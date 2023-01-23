@@ -8,7 +8,7 @@ import path from "path";
 import matter from "gray-matter";
 import MarkdownIt from "markdown-it";
 
-export default function Home({ content }) {
+export default function LoginPage({ content }) {
   const router = useRouter();
   const md = new MarkdownIt();
   const cc = md.render(content);
@@ -114,10 +114,10 @@ export default function Home({ content }) {
             <div className="buttons">
               <input
                 type="submit"
-                value="Login"
-                // value="Sorry, cannot login."
-                onClick={handleSubmit}
-                // onClick={() => {}}
+                // value="Login"
+                value="Sorry, cannot login."
+                // onClick={handleSubmit}
+                onClick={() => {}}
                 className="btn"
               />
             </div>
